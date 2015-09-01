@@ -1,0 +1,132 @@
+~inc:header.inc~
+<div id="content">
+
+<div id="status">
+	<div id="loading" style="display:none">Error:<br />Connection to demo board was lost.</div>
+	<div id="display">
+		<span style="float:right;font-size:9px;font-weight:normal;padding-top:8px;text-indent:0px">(click to toggle)</span>
+		<p>Network Status:<br /><span class="leds">
+		<a id="led7" onclick="newAJAXCommand('leds.cgi?led=7');">&bull;</a>
+		<a id="led6" onclick="newAJAXCommand('leds.cgi?led=6');">&bull;</a>
+		<a id="led5" onclick="newAJAXCommand('leds.cgi?led=5');">&bull;</a>
+		<a id="led4" onclick="newAJAXCommand('leds.cgi?led=4');">&bull;</a>
+		<a id="led3" onclick="newAJAXCommand('leds.cgi?led=3');">&bull;</a>
+		<a id="led2" onclick="newAJAXCommand('leds.cgi?led=2');">&bull;</a>
+		<a id="led1" onclick="newAJAXCommand('leds.cgi?led=1');">&bull;</a>
+		<a id="led0">&bull;</a>
+		</span></p>
+		<p>Buttons:<br />
+		<span id="btn3">?</span> &nbsp;
+		<span id="btn2">?</span> &nbsp;
+		<span id="btn1">?</span> &nbsp;
+		<span id="btn0">?</span></p>
+		<p>Battery Temp: <span id="pot0" style="font-weight:normal">?</span>C</p>
+	</div>
+</div>
+
+<meta http-equiv="refresh" content="15" >
+<a href="javascript:document.location.reload();"
+ONMOUSEOVER="window.status='Refresh'; return true"
+ONMOUSEOUT="window.status='Refresh Done.'">
+<img src="images/refresh.gif" 
+width="115" height="31" border="0" /></a>
+
+
+<h1>Solar Host Controller: Multi Battery Micro Controller</h1>
+
+<table style="padding-left: 10px;">
+<tr><td><b>Build:</b></td><td>&nbsp;</td><td>~builddate~</td></tr>
+<tr><td><b>IP Addr:</b></td><td>&nbsp;</td><td>~config_ip~</td></tr>
+<tr><td><b>Host:</b></td><td>&nbsp;</td><td>~config_hostname~</td></tr>
+</table>
+<ul>
+<li><b> MBMC</b> - Data Display Version  ~mbmcdata(100)~</li>
+<li><b> MBMC</b> - Controller Version,ID ~mbmcdata(101)~</li>
+<li><b> MBMC</b> - Controller Voltage   ~mbmcdata(4)~VDC</li>
+~mbmcdata(203)~
+~mbmcdata(204)~
+~mbmcdata(205)~
+~mbmcdata(206)~
+~mbmcdata(207)~
+~mbmcdata(208)~
+</ul></b>
+<pre>
+RPV Voltage	~mbmcdata(23)~VDC	Voltage Drop	~mbmcdata(25)~VDC
+RPV Current	~mbmcdata(24)~ADC	MPV Current	~mbmcdata(26)~ADC
+
+PV Voltage	~mbmcdata(1)~VDC	CC Voltage	~mbmcdata(0)~VDC
+PV Current	~mbmcdata(5)~ADC	Load Current	~mbmcdata(7)~ADC
+
+Input Power	~mbmcdata(50)~W		Load Power	~mbmcdata(51)~W
+PV E-factor	~mbmcdata(16)~		CC E-factor	~mbmcdata(18)~
+Usage E-factor	~mbmcdata(17)~		PCube Z		~mbmcdata(130)~
+Battery Current	~mbmcdata(6)~ADC
+
+~mbmcdata(202)~
+~mbmcdata(52)~
+B1 Voltage      ~mbmcdata(2)~VDC	 B1 Current	~mbmcdata(21)~ADC
+B2 Voltage      ~mbmcdata(3)~VDC	 B2 Current	~mbmcdata(22)~ADC
+B1 SOC 		~mbmcdata(14)~
+B2 SOC 		~mbmcdata(15)~
+
+Inverter on Battery	~mbmcdata(10)~
+Charger  on Battery	~mbmcdata(11)~
+Next Battery to Charge	~mbmcdata(9)~
+External Charger is	~mbmcdata(200)~
+Power Diversion is	~mbmcdata(201)~
+</pre>
+
+<pre>
+Solar Data Points archived	~mbmcdata(121)~ 
+Network Time 	GMT ~mbmcdata(122)~
+Data Sent	~mbmcdata(110)~	Data Recv'd	~mbmcdata(111)~ 
+Cmds Sent	~mbmcdata(112)~	Cmds Recv'd	~mbmcdata(113)~ 
+Network Timeouts	~mbmcdata(120)~
+Network CRC Errors	~mbmcdata(123)~</p>
+</pre>
+
+<p></p>
+
+</div>
+
+<script type="text/javascript">
+<!--
+// Parses the xmlResponse from status.xml and updates the status box
+function updateStatus(xmlData) {
+	var mainstat = document.getElementById('display').style.display;
+	var loadstat = document.getElementById('loading').style.display;
+
+	// Check if a timeout occurred
+	if(!xmlData)
+	{
+		mainstat = 'none';
+		loadstat = 'inline';
+		return;
+	}
+
+	// Make sure we're displaying the status display
+	mainstat = 'inline';
+	loadstat = 'none';
+
+	// Loop over all the LEDs
+	for(i = 0; i < 8; i++)
+		document.getElementById('led' + i).style.color = (getXMLValue(xmlData, 'led' + i) == '1') ? '#090' : '#ddd';
+
+	// Loop over all the buttons
+	for(i = 0; i < 4; i++)
+		document.getElementById('btn' + i).innerHTML = (getXMLValue(xmlData, 'btn' + i) == 'up') ? '&Lambda;' : 'V';
+
+	// Update the POT value
+	document.getElementById('pot0').innerHTML = getXMLValue(xmlData, 'pot0');
+}
+setTimeout("newAJAXCommand('status.xml', updateStatus, true)",500);
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+document.getElementById('hello').innerHTML = "PIC32MX";
+//-->
+</script>
+
+~inc:footer.inc~

@@ -1,0 +1,76 @@
+<!-- ~inc:header.inc~ -->
+<div id="content">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+	<head>
+		<title>MBMC Charts</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="local/webfxlayout.js"></script>
+    <script type="text/javascript" src="includes/excanvas.js"></script>
+    <script type="text/javascript" src="includes/wz_jsgraphics.js"></script>
+		<script type="text/javascript" src="includes/chart.js"></script>
+		<script type="text/javascript" src="includes/canvaschartpainter.js"></script>
+		<script type="text/javascript" src="includes/jgchartpainter.js.js"></script>
+		<script type="text/javascript" src="includes/demo_e.js"></script>
+		<link rel="stylesheet" type="text/css" href="includes/canvaschart.css" />
+		<style type="text/css">
+			.chart { margin-left: 20px; }
+		</style>
+	</head>
+	<body onload="demo_e();">
+		<!-- WebFX Layout Include -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var articleMenu= new WebFXMenu;
+
+			~mbmchist5(0,0)~
+			~mbmchist5(1,0)~
+			~mbmchist5(2,0)~
+			~mbmchist5(3,0)~
+			~mbmchist5(4,0)~
+			~mbmchist5(5,0)~
+			~mbmchist5(6,0)~
+
+			articleMenu.left  = 384;
+			articleMenu.top   = 86;
+			articleMenu.width = 140;
+			articleMenu.add(new WebFXMenuItem("Introduction", "chart.html"));
+			articleMenu.add(new WebFXMenuItem("Implementation", "implementation.html"));
+			articleMenu.add(new WebFXMenuItem("Usage", "usage.html"));
+			articleMenu.add(new WebFXMenuItem("API", "api.html"));
+			articleMenu.add(new WebFXMenuItem("Demo", "demo.html"));
+			articleMenu.add(new WebFXMenuItem("SVG Demo (mozilla/opera only)", "svgdemo.xhtml"));
+			articleMenu.add(new WebFXMenuItem("JsGraphics Demo", "jsgdemo.html"));
+			articleMenu.add(new WebFXMenuSeparator);
+			articleMenu.add(new WebFXMenuItem("Download", "http://webfx.eae.net/download/chart103.zip"));
+			webfxMenuBar.add(new WebFXMenuButton("Article Menu", null, null, articleMenu));
+
+			webfxLayout.writeTitle("MBMC Harvest Charts");
+			webfxLayout.writeMenu();
+			webfxLayout.writeDesignedByEdger();
+			//]]>
+		</script>
+		<!-- End WebFX Layout Includes -->
+		<div class="webfx-main-body">
+   	 <h2>MBMC Data Plots   Times GMT ~mbmcdata(122)~</h2>
+			<p></p>
+			<h3>Start ~mbmchist1(122,1)~</h3> 
+			<h3>End   ~mbmchist1(123,1)~</h3>
+			<p>
+				<div id="chart_e"  class="chart" style="width: 1000px; height: 600px;"></div>
+			</p>
+			<h3>Start ~mbmchist1(122,1)~</h3> 
+			<h3>End   ~mbmchist1(123,1)~</h3>
+			<p>
+				<div id="chart4_e"  class="chart" style="width: 1000px; height: 600px;"></div>
+			</p>
+			<p class="author">Author: NSASPOOK</p>
+			<!-- end webfx-main-body -->
+		</div>
+	</body>
+</html>
+
+
+~inc:footer.inc~

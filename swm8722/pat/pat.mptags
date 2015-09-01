@@ -1,0 +1,136 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+BLINKER_H	K:\ibs_monitor\pat\blinker.h	9;"	d	line:9
+Blink_Init	K:\ibs_monitor\pat\blinker.c	38;"	f	line:38	signature:(void)
+Blink_Init	K:\ibs_monitor\pat\blinker.h	13;"	p	line:13	signature:(void)
+COMM_ENABLE::LATBbits.LATB3	K:\ibs_monitor\pat\pat.h	78;"	d	line:78
+COMM_ERROR::LATAbits.LATA4	K:\ibs_monitor\pat\pat.h	79;"	d	line:79
+CONFIG_CHAR::'?'	K:\ibs_monitor\pat\pat.h	108;"	d	line:108
+CONFIG_REPEATS::9	K:\ibs_monitor\pat\pat.h	109;"	d	line:109
+FALSE::0	K:\ibs_monitor\pat\pat.h	51;"	d	line:51
+FINE_REG::LATBbits.LATB0	K:\ibs_monitor\pat\pat.h	77;"	d	line:77
+IBSPORTA::TRISA	K:\ibs_monitor\pat\pat.h	63;"	d	line:63
+IBSPORTB::TRISB	K:\ibs_monitor\pat\pat.h	64;"	d	line:64
+IBSPORT_IOA::0b00000000	K:\ibs_monitor\pat\pat.h	65;"	d	line:65
+IBSPORT_IOB::0b00010010	K:\ibs_monitor\pat\pat.h	66;"	d	line:66
+IHC_CODE0::'r'	K:\ibs_monitor\pat\pat.h	87;"	d	line:87
+IHC_CODE0H::800	K:\ibs_monitor\pat\pat.h	91;"	d	line:91
+IHC_CODE0L::400	K:\ibs_monitor\pat\pat.h	92;"	d	line:92
+IHC_CODE0_FINE::5	K:\ibs_monitor\pat\pat.h	89;"	d	line:89
+IHC_CODE0_TUNE::30	K:\ibs_monitor\pat\pat.h	88;"	d	line:88
+IHC_CODE0_VFINE::1	K:\ibs_monitor\pat\pat.h	90;"	d	line:90
+IHC_CODE1::'e'	K:\ibs_monitor\pat\pat.h	93;"	d	line:93
+IHC_CODE1H::900	K:\ibs_monitor\pat\pat.h	94;"	d	line:94
+IHC_CODE1L::200	K:\ibs_monitor\pat\pat.h	95;"	d	line:95
+IHC_CODE2::'f'	K:\ibs_monitor\pat\pat.h	96;"	d	line:96
+IHC_CODE2H::900	K:\ibs_monitor\pat\pat.h	97;"	d	line:97
+IHC_CODE2L::300	K:\ibs_monitor\pat\pat.h	98;"	d	line:98
+IHC_CODE3::'u'	K:\ibs_monitor\pat\pat.h	99;"	d	line:99
+IHC_CODE3H::1050	K:\ibs_monitor\pat\pat.h	100;"	d	line:100
+IHC_CODE3L::700	K:\ibs_monitor\pat\pat.h	101;"	d	line:101
+IHC_CODE4::'i'	K:\ibs_monitor\pat\pat.h	102;"	d	line:102
+IHC_CODE4H::700	K:\ibs_monitor\pat\pat.h	103;"	d	line:103
+IHC_CODE4L::300	K:\ibs_monitor\pat\pat.h	104;"	d	line:104
+IHC_SAMPLES::2	K:\ibs_monitor\pat\pat.h	106;"	d	line:106
+INTTYPES	K:\ibs_monitor\pat\pat.h	8;"	d	line:8
+LED0::LATAbits.LATA0	K:\ibs_monitor\pat\pat.h	68;"	d	line:68
+LED1::LATAbits.LATA1	K:\ibs_monitor\pat\pat.h	69;"	d	line:69
+LED2::LATAbits.LATA2	K:\ibs_monitor\pat\pat.h	70;"	d	line:70
+LED3::LATAbits.LATA3	K:\ibs_monitor\pat\pat.h	71;"	d	line:71
+LED4::LATBbits.LATB6	K:\ibs_monitor\pat\pat.h	72;"	d	line:72
+LED5::LATBbits.LATB7	K:\ibs_monitor\pat\pat.h	73;"	d	line:73
+LED6::LATAbits.LATA6	K:\ibs_monitor\pat\pat.h	74;"	d	line:74
+LED7::LATBbits.LATB5	K:\ibs_monitor\pat\pat.h	75;"	d	line:75
+LEDOFF::1	K:\ibs_monitor\pat\pat.h	55;"	d	line:55
+LEDON::0	K:\ibs_monitor\pat\pat.h	54;"	d	line:54
+LEDS	K:\ibs_monitor\pat\pat.c	80;"	v	line:80
+LINK_COUNT::10	K:\ibs_monitor\pat\pat.h	111;"	d	line:111
+MAX_DATA::6	K:\ibs_monitor\pat\pat.h	61;"	d	line:61
+OFF::0	K:\ibs_monitor\pat\pat.h	53;"	d	line:53
+ON::1	K:\ibs_monitor\pat\pat.h	52;"	d	line:52
+OUTBITS2	K:\ibs_monitor\pat\pat.h	34;"	s	line:34
+OUTBITS_TYPE2	K:\ibs_monitor\pat\pat.h	43;"	t	line:43
+Obits2	K:\ibs_monitor\pat\pat.h	45;"	u	line:45
+PAT_H_INCLUDED	K:\ibs_monitor\pat\pat.h	2;"	d	line:2
+SAMPLEFREQ::0xe7b2	K:\ibs_monitor\pat\pat.h	59;"	d	line:59
+TIMERFAST::61000	K:\ibs_monitor\pat\pat.h	58;"	d	line:58
+TIMEROFFSET::34268	K:\ibs_monitor\pat\pat.h	57;"	d	line:57
+TRACE_BIT::LATBbits.LATB0	K:\ibs_monitor\pat\pat.h	76;"	d	line:76
+TRUE::1	K:\ibs_monitor\pat\pat.h	50;"	d	line:50
+V	K:\ibs_monitor\pat\pat.c	79;"	v	line:79
+V_data	K:\ibs_monitor\pat\pat.h	21;"	s	line:21
+V_data	K:\ibs_monitor\pat\pat.h	32;"	t	line:32
+b0	K:\ibs_monitor\pat\pat.h	35;"	m	line:35	struct:OUTBITS2
+b1	K:\ibs_monitor\pat\pat.h	36;"	m	line:36	struct:OUTBITS2
+b2	K:\ibs_monitor\pat\pat.h	37;"	m	line:37	struct:OUTBITS2
+b3	K:\ibs_monitor\pat\pat.h	38;"	m	line:38	struct:OUTBITS2
+b4	K:\ibs_monitor\pat\pat.h	39;"	m	line:39	struct:OUTBITS2
+b5	K:\ibs_monitor\pat\pat.h	40;"	m	line:40	struct:OUTBITS2
+b6	K:\ibs_monitor\pat\pat.h	41;"	m	line:41	struct:OUTBITS2
+b7	K:\ibs_monitor\pat\pat.h	42;"	m	line:42	struct:OUTBITS2
+blink	K:\ibs_monitor\pat\pat.h	22;"	m	line:22	struct:V_data
+blink_alt	K:\ibs_monitor\pat\pat.h	22;"	m	line:22	struct:V_data
+blink_led	K:\ibs_monitor\pat\blinker.c	3;"	f	line:3	signature:(uint8_t led, uint8_t on_led, uint8_t start)
+blink_led	K:\ibs_monitor\pat\blinker.h	14;"	p	line:14	signature:(uint8_t, uint8_t,uint8_t)
+blink_led_alt	K:\ibs_monitor\pat\blinker.c	27;"	f	line:27	signature:(uint8_t alt)
+blink_led_alt	K:\ibs_monitor\pat\blinker.h	15;"	p	line:15	signature:(uint8_t)
+blink_out	K:\ibs_monitor\pat\pat.h	22;"	m	line:22	struct:V_data
+blink_speed	K:\ibs_monitor\pat\pat.c	87;"	v	line:87
+build_date	K:\ibs_monitor\pat\pat.c	89;"	v	line:89
+build_time	K:\ibs_monitor\pat\pat.c	89;"	v	line:89
+config	K:\ibs_monitor\pat\pat.h	31;"	m	line:31	struct:V_data
+config_found	K:\ibs_monitor\pat\pat.c	103;"	l	line:103	file:
+do_config	K:\ibs_monitor\pat\pat.c	344;"	f	line:344	signature:(void)
+do_config	K:\ibs_monitor\pat\pat.c	74;"	p	line:74	file:	signature:(void)
+fine	K:\ibs_monitor\pat\pat.h	22;"	m	line:22	struct:V_data
+ibs_block_done	K:\ibs_monitor\pat\pat.h	25;"	m	line:25	struct:V_data
+ibs_d	K:\ibs_monitor\pat\pat.c	86;"	v	line:86
+ibs_data	K:\ibs_monitor\pat\pat.c	84;"	v	line:84
+ibs_stream_file	K:\ibs_monitor\pat\pat.c	81;"	v	line:81
+ibs_stream_file_prev	K:\ibs_monitor\pat\pat.c	81;"	v	line:81
+ihc_count	K:\ibs_monitor\pat\pat.c	85;"	v	line:85
+ihc_d	K:\ibs_monitor\pat\pat.c	82;"	v	line:82
+ihc_d_abs	K:\ibs_monitor\pat\pat.h	23;"	m	line:23	struct:V_data
+ihc_d_prev	K:\ibs_monitor\pat\pat.c	104;"	l	line:104	file:
+ihc_d_roc	K:\ibs_monitor\pat\pat.c	105;"	l	line:105
+ihc_data0	K:\ibs_monitor\pat\pat.h	26;"	m	line:26	struct:V_data
+ihc_data1	K:\ibs_monitor\pat\pat.h	27;"	m	line:27	struct:V_data
+ihc_data2	K:\ibs_monitor\pat\pat.h	28;"	m	line:28	struct:V_data
+ihc_data3	K:\ibs_monitor\pat\pat.h	29;"	m	line:29	struct:V_data
+ihc_data4	K:\ibs_monitor\pat\pat.h	30;"	m	line:30	struct:V_data
+init_ihcmon	K:\ibs_monitor\pat\pat.c	384;"	f	line:384	signature:(void)
+init_ihcmon	K:\ibs_monitor\pat\pat.c	75;"	p	line:75	file:	signature:(void)
+init_stream_params	K:\ibs_monitor\pat\pat.c	433;"	f	line:433	signature:(void)
+init_stream_params	K:\ibs_monitor\pat\pat.c	76;"	p	line:76	file:	signature:(void)
+inreg	K:\ibs_monitor\pat\pat.h	24;"	m	line:24	struct:V_data
+int16_t	K:\ibs_monitor\pat\pat.h	16;"	t	line:16
+int32_t	K:\ibs_monitor\pat\pat.h	17;"	t	line:17
+int64_t	K:\ibs_monitor\pat\pat.h	18;"	t	line:18
+int8_t	K:\ibs_monitor\pat\pat.h	15;"	t	line:15
+is_led_blinking	K:\ibs_monitor\pat\blinker.c	23;"	f	line:23	signature:(uint8_t led)
+is_led_blinking	K:\ibs_monitor\pat\blinker.h	16;"	p	line:16	signature:(uint8_t)
+is_led_on	K:\ibs_monitor\pat\blinker.c	34;"	f	line:34	signature:(uint8_t led)
+is_led_on	K:\ibs_monitor\pat\blinker.h	17;"	p	line:17	signature:(uint8_t)
+led_cache	K:\ibs_monitor\pat\pat.c	103;"	l	line:103	file:
+link_count	K:\ibs_monitor\pat\pat.c	84;"	v	line:84
+link_ok	K:\ibs_monitor\pat\pat.c	85;"	v	line:85
+main	K:\ibs_monitor\pat\pat.c	461;"	f	line:461	signature:(void)
+old_alt	K:\ibs_monitor\pat\blinker.c	29;"	l	line:29
+out_bits	K:\ibs_monitor\pat\pat.h	47;"	m	line:47	union:Obits2
+out_byte	K:\ibs_monitor\pat\pat.h	46;"	m	line:46	union:Obits2
+sw_work	K:\ibs_monitor\pat\pat.c	282;"	f	line:282	signature:(void)
+sw_work	K:\ibs_monitor\pat\pat.c	73;"	p	line:73	file:	signature:(void)
+timer0_off	K:\ibs_monitor\pat\pat.c	84;"	v	line:84
+tm_handler	K:\ibs_monitor\pat\pat.c	101;"	f	line:101	signature:(void)
+tm_handler	K:\ibs_monitor\pat\pat.c	72;"	p	line:72	file:	signature:(void)
+tm_int	K:\ibs_monitor\pat\pat.c	93;"	f	line:93	signature:(void)
+uint16_t	K:\ibs_monitor\pat\pat.h	11;"	t	line:11
+uint32_t	K:\ibs_monitor\pat\pat.h	12;"	t	line:12
+uint64_t	K:\ibs_monitor\pat\pat.h	13;"	t	line:13
+uint8_t	K:\ibs_monitor\pat\pat.h	10;"	t	line:10

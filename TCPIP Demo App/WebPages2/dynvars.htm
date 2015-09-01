@@ -1,0 +1,117 @@
+<!-- ~inc:header.inc~ -->
+<div id="content">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+	<head>
+		<title>MBMC Charts</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="local/webfxlayout.js"></script>
+    <script type="text/javascript" src="includes/excanvas.js"></script>
+    <script type="text/javascript" src="includes/wz_jsgraphics.js"></script>
+		<script type="text/javascript" src="includes/chart.js"></script>
+		<script type="text/javascript" src="includes/canvaschartpainter.js"></script>
+		<script type="text/javascript" src="includes/jgchartpainter.js.js"></script>
+		<script type="text/javascript" src="includes/demo.js"></script>
+		<link rel="stylesheet" type="text/css" href="includes/canvaschart.css" />
+		<style type="text/css">
+			.chart { margin-left: 20px; }
+		</style>
+	</head>
+	<body onload="demo();">
+		<!-- WebFX Layout Include -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var articleMenu= new WebFXMenu;
+
+			~mbmchist1(0,0)~
+			~mbmchist1(1,0)~
+			~mbmchist1(2,0)~
+			~mbmchist1(3,0)~
+			~mbmchist1(5,0)~
+			~mbmchist1(6,0)~
+			~mbmchist1(7,0)~
+			~mbmchist1(8,0)~
+
+			~mbmchist2(0,0)~
+			~mbmchist2(1,0)~
+			~mbmchist2(2,0)~
+			~mbmchist2(3,0)~
+			~mbmchist2(5,0)~
+			~mbmchist2(6,0)~
+			~mbmchist2(7,0)~
+			~mbmchist2(8,0)~
+
+			~mbmchist3(0,0)~
+			~mbmchist3(1,0)~
+			~mbmchist3(2,0)~
+			~mbmchist3(3,0)~
+			~mbmchist3(5,0)~
+			~mbmchist3(6,0)~
+			~mbmchist3(7,0)~
+			~mbmchist3(8,0)~
+
+			~mbmchist4(0,0)~
+			~mbmchist4(1,0)~
+			~mbmchist4(2,0)~
+			~mbmchist4(3,0)~
+			~mbmchist4(4,0)~
+
+			var mbmcsoc1=new Array (~mbmcdata(14)~,0);
+			var mbmcsoc2=new Array (0,~mbmcdata(15)~);
+
+			articleMenu.left  = 384;
+			articleMenu.top   = 86;
+			articleMenu.width = 140;
+			articleMenu.add(new WebFXMenuItem("Introduction", "chart.html"));
+			articleMenu.add(new WebFXMenuItem("Implementation", "implementation.html"));
+			articleMenu.add(new WebFXMenuItem("Usage", "usage.html"));
+			articleMenu.add(new WebFXMenuItem("API", "api.html"));
+			articleMenu.add(new WebFXMenuItem("Demo", "demo.html"));
+			articleMenu.add(new WebFXMenuItem("SVG Demo (mozilla/opera only)", "svgdemo.xhtml"));
+			articleMenu.add(new WebFXMenuItem("JsGraphics Demo", "jsgdemo.html"));
+			articleMenu.add(new WebFXMenuSeparator);
+			articleMenu.add(new WebFXMenuItem("Download", "http://webfx.eae.net/download/chart103.zip"));
+			webfxMenuBar.add(new WebFXMenuButton("Article Menu", null, null, articleMenu));
+
+			webfxLayout.writeTitle("MBMC Status Charts");
+			webfxLayout.writeMenu();
+			webfxLayout.writeDesignedByEdger();
+			//]]>
+		</script>
+		<!-- End WebFX Layout Includes -->
+		<div class="webfx-main-body">
+   	 <h2>MBMC Data Plots   Times GMT ~mbmcdata(122)~</h2>
+			<p></p>
+			<h3>Start ~mbmchist1(122,0)~</h3> 
+			<h3>End   ~mbmchist1(123,0)~</h3>
+			<pre>Power X20 on secondary vertical scale                                        *</pre>
+			<p>
+				<div id="chart"  class="chart" style="width: 1000px; height: 600px;"></div>
+			</p>
+			<h3>Start ~mbmchist1(122,1)~</h3> 
+			<h3>End   ~mbmchist1(123,1)~</h3>
+			<p>
+				<div id="chart2" class="chart" style="width: 1000px; height: 600px;"></div>
+			</p>
+	    		<p>
+	    			<div id="chart5" class="chart" style="width: 1000px; height: 600px;"></div>
+	  		</p>
+			<h3>Battery State Of Charge</h3>
+	    		<p>
+	    			<div id="chart4" class="chart" style="width: 1000px; height: 600px;"></div>
+	  		</p>
+			<h3>Start ~mbmchist1(122,2)~</h3> 
+			<h3>End   ~mbmchist1(123,2)~</h3>
+			<p>
+				<div id="chart3" class="chart" style="width: 1000px; height: 600px;"></div>
+			</p>
+			<p class="author">Author: NSASPOOK</p>
+			<!-- end webfx-main-body -->
+		</div>
+	</body>
+</html>
+
+
+~inc:footer.inc~

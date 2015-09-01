@@ -1,0 +1,33 @@
+ CT-0:00:16 CU-0:00:00 CD-0:00:00 C10 Charging, Battery load test starting.
+ CT-0:00:26 CU-0:00:00 CD-0:00:00 Battery1 LV12538mV, BV12480mV, CV12480mV, I1 2490mA ESR-PRE R23.
+ CT-0:00:27 CU-0:00:00 CD-0:00:00 Battery1 Slope Voltage 12403mV.
+ CT-0:00:35 CU-0:00:00 CD-0:00:00 Battery1 LV12480mV, BV12384mV, CV12147mV, SV19mV, I1 2490mA, I2 7750mA ESR R14 ESR-DELTA 243.
+ CT-0:00:35 CU-0:00:00 CD-0:00:00 C7  Charging, Battery load test complete.
+ CT-0:00:39 CU-0:00:00 CD-0:00:00 C11 Charging, Battery load test return.
+ CT-0:00:39 CU-0:00:00 CD-0:00:00 Battery 2 BC  R2  Running,  Starting Battery Check.
+ CT-0:00:40 CU-0:00:00 CD-0:00:00 Resetting Charge Controller on Battery 2, Absorp Current 000mA, End Amps 2700mA.
+ CT-0:00:47 CU-0:00:00 CD-0:00:00 C10 Charging, Battery load test starting.
+ CT-0:00:57 CU-0:00:00 CD-0:00:00 Battery2 LV12466mV, BV12388mV, CV12388mV, I1 2470mA ESR-PRE R31.
+ CT-0:00:57 CU-0:00:00 CD-0:00:00 Battery2 Slope Voltage 12310mV.
+ CT-0:01:06 CU-0:00:00 CD-0:00:00 Battery2 LV12388mV, BV12290mV, CV11436mV, SV20mV, I1 2470mA, I2 7660mA ESR R22 ESR-DELTA 169.
+ CT-0:01:06 CU-0:00:00 CD-0:00:00 C7  Charging, Battery load test complete.
+ CT-0:01:10 CU-0:00:00 CD-0:00:00 C11 Charging, Battery load test return.
+
+
+CT: Runtime clock from boot time
+CU: Uptime charge cycle
+CD: Downtime charge cycle
+
+Voltages:
+LV: unloaded voltage in the ESR-PRE first test, first load voltage on the second test
+BV: Battery voltage at the battery terminals
+CV: Charge Controller voltage, not used in ESR routines
+Slope Voltage: Battery Voltage about 1 second after the second load switched on.
+SV: The voltage change from 1 second into the second test until just before the loads are switched off. For the discharge slope.
+
+I1: first load current
+I2: first and second load currents
+
+ESR-PRE:	ESR baseline with first load only, mainly used for ESR DELTA
+EST:		Battery Bank ESR from the completed test using two-tier testing.
+EST-DELTA:	A ESR change value used for SOC calculations.

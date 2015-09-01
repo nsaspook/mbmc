@@ -1,0 +1,24 @@
+<meta http-equiv="refresh" content="30" >
+~inc:header.inc~
+<div id="content">
+
+<h1>Controller Commands</h1>
+
+<pre>
+Selecting the option and clicking the <b>Send</b> button 
+will send the command to the Solar Controller.
+Use only one option at a time.
+
+Pressing the <b>Reset</b> buttion will clear all Selections. 
+</pre>
+
+<h2>The Utility Charger is ~mbmcdata(200)~.</h2>
+
+<form method="get" action="forms.htm">
+<input type="radio" name="led4" value="1" /> Force Charger to Next battery.<br />
+<input type="radio" name="led3" value="1" /> Turn On  Utility powered Charger.<br />
+<input type="radio" name="led2" value="1" /> Turn Off Utility powered Charger.<br />
+<input type="radio" name="led1" value="1" /> Set SOC to 100% on Battery being Charged.<br />
+<br /><input type="submit" value="Send" style="margin-top:5px;"> <INPUT type="reset">
+</form> 
+~inc:footer.inc~

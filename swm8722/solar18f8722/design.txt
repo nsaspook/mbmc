@@ -1,0 +1,69 @@
+Hardware and software design:
+/*
+ * This program controls and monitors solar power battery arrays on a 12vdc system
+ * MBMC uses a simple expert machine to try and keep current the energy stored in a bank of batteries
+ * The main physics functions are contained in the noload_soc, update_cef, ChargeBatt and pick_batt functions
+ * Much work is needed to make the program flow logical but making it work first is the current effort
+ * The network interface processor on a pic32 will be able to analyze the collected data for better control at some future point
+ *
+ * standard program units:
+ * Voltage  in (unsigned long/unsigned int) millivolts,
+ * Current in (long) tenths of amps
+ * Watts Power in (unsigned long)
+ * Ah battery capacity (unsigned long) milliAh when in 32 bit variables/ (int) tenths of Ah when in 16 bit variables for net in/out Ah balance usage h[0],h[6]
+ *
+ * R: structure, real values from measurements
+ * C: structure, calculated values from measurements or programs
+ * B: structure, battery parameters
+ *
+ * USART2 		is the host comm port 38400
+ * USART1		MBMC host network 38400
+ * Timer0		1 second clock
+ * Timer3		work thread , background I/O clock ~20HZ
+ * Timer2
+ * 0..11 analog channels are active
+ * PORTA		analog inputs
+ * External ADC voltage ref on ana3
+ * adc0	systemvoltage			PIC Controller supply voltage to 5VDC regulator
+ * adc1	ccvoltage				Charging voltage at battery from CC
+ * adc2	currentin				50A AMPLOC sensor input from PV array
+ * adc11 rawp1/inputvoltage		Voltage from PV array, cal is still on ana3 slot
+ * adc4	rawp2/primarypower[B1]	Voltage a primary inverter battery
+ * PORTB		external control i/o
+ * PORTC0		C40 charge controller led input
+ * PORTD		switch input
+ * PORTE		battery/charge relays
+ * PORTF						analog inputs
+ * adc5	current					300A AMPLOC sensor battery output to inverter
+ * adc6 rawp3/primarypower[B2]	Voltage for backup battery
+ * adc8 currentcharger 			50A AMPLOC sensor on 15vdc 10A ps for external charger.
+ * adc9 thermo_batt				thermistor input 10K at 25C RF4
+ * adc10 Ground REF				zero adc charge cap
+ * adc_cal[10-13]				current sensors zero offset stored in eeprom 10=a50, 11=a50c, 12=a300, 14=future
+ * cal table 98,123,ADC_NULL,161,119,ADC_NULL,ADC_NULL,ADC_NULL,ADC_NULL with checksum as last data item in adc_cal[]
+ * PORTH0		run flasher led onboard.
+ * PORTJ		load/input relays
+ * PORTG		high current battery load
+ * 4x20 LCD status panel and led status lights.
+ * currentload					The current going the power the inverter or other load.
+ *
+ *
+ * nsaspook@nsaspook.com Copyright 2014
+ * Fairview, Oregon
+ * MMC-SD card routines from ELM-CHAN,www.captain.at,www.microchipc.com and others
+ */
+
+
+Edit xlcd.h for correct pin I/O
+BE SURE to include all XLCD files to compile your versions with the correct ports defined
+
+C18 3.40
+C32 2.02
+Preserve EEPROM on Program
+
+Track total current in and out between charges. measure start of charge to float
+to tune CEF and battery health.
+
+MPLABX 2.20 is the IDE for all software
+
+The PIC32 host now has a telnet server to connect to the SOlar controller serial command port
