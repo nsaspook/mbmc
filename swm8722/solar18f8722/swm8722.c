@@ -333,6 +333,7 @@
 //  26.3    Add fresh data flag for remote data monitor and increase update rate while in charging modes
 //  26.4    Fix B_GANGED bug in daq.c
 //  30.0    New fixes branch
+//  30.1    Use AGM cells for controller power so change 'S' to 'M'
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
@@ -2305,7 +2306,7 @@ void main(void) // Lets Party
 			putrs2USART(" Init Battery Data \r\n");
 			cell[z].id = 'L';
 			if (z > 2) {
-				write_data_eeprom('S', 5, z, 0);
+				write_data_eeprom('M', 5, z, 0);
 			} else {
 				write_data_eeprom('L', 5, z, 0);
 			}
@@ -2367,8 +2368,8 @@ void main(void) // Lets Party
 				term_time();
 				putrs2USART(" Invalid battery type eeprom data \r\n"); // init eeprom data
 				if (z > HISTBATTNUM) {
-					write_data_eeprom('S', 5, z, EEPROM_BAT);
-					cell[z].id = 'S';
+					write_data_eeprom('M', 5, z, EEPROM_BAT);
+					cell[z].id = 'M';
 				} else {
 					write_data_eeprom('L', 5, z, EEPROM_BAT);
 					cell[z].id = 'L';
@@ -2381,8 +2382,8 @@ void main(void) // Lets Party
 		for (z = 0; z <= battnum; z++) {
 
 			if (z > HISTBATTNUM) {
-				write_data_eeprom('S', 5, z, EEPROM_BAT);
-				cell[z].id = 'S';
+				write_data_eeprom('M', 5, z, EEPROM_BAT);
+				cell[z].id = 'M';
 			} else {
 				write_data_eeprom('L', 5, z, EEPROM_BAT);
 				cell[z].id = 'L';
