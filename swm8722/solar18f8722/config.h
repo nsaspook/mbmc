@@ -65,8 +65,8 @@
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4
 #define B1AH		225     	// FLA costco GC2
 #define	B2AH		225    		// FLA costco CG2
-#define B3AH		9      		// gell cell
-#define	B4AH		9      		// gell cell
+#define B3AH		30      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4AH		30      	// AGM cell
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
 #define	PerkC1		1.25    	// Peukert Comp Batt #1
 #define PerkC2		1.25		// Peukert Comp Batt #2

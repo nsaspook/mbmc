@@ -279,6 +279,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		cell[z].weight -= (float) hist[z].udod * W_DOD_F; // user depth of discharge factor
 
 		if (cell[z].id == 'S') cell[z].weight += SMALLCOMP; // Small Gell Cell  comp factor
+		if (cell[z].id == 'M') cell[z].weight += MIDCOMP; // Small Gell Cell  comp factor
 		if (z == B1) cell[z].weight -= PRIPOINTS; // points off  for primary battery
 		if (z == B2) {
 			if (B_GANGED || (DIPSW3 == HIGH)) cell[z].weight = MAXWEIGHT;
@@ -758,8 +759,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	cell[bn].discharged = FALSE;
 	cell[bn].dead = FALSE;
 
-	if (B_GANGED && (bn==B2)) {
-		cell[B2]=cell[B1]; // clone the cell data
+	if (B_GANGED && (bn == B2)) {
+		cell[B2] = cell[B1]; // clone the cell data
 	}
 
 	if (cell[bn].voltage < BATTCRIT) cell[bn].critical = TRUE; // set battery flags

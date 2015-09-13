@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  30.0 FB  "                  // version text header
-#define	MAGIC		0x0300  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  30.1 FB  "                  // version text header
+#define	MAGIC		0x0301  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -271,6 +271,7 @@
 
 /* battery runtime charge factors	*/
 #define	SMALLCOMP	1200.0  // normalize factor for small gell cells in weight cals
+#define MIDCOMP		1200.0  // normalize factor for small AGM cells
 #define	DSOC_L		75      // divert power SOC setpoint for BOI
 #define	DSOC_H		85      // divert power SOC setpoint for BOI
 #define WFLOAT_LOW      23000.0 // divert power lowest wweight for any battery
