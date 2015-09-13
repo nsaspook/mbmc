@@ -2299,6 +2299,11 @@ void main(void) // Lets Party
 	hist[B4].ah = B4AH;
 	term_time();
 	putrs2USART(" Configure battery operational data \r\n");
+	cell[B0].id = 'N'; /* none */
+	cell[B1].id = B1ID;
+	cell[B2].id = B2ID;
+	cell[B3].id = B3ID;
+	cell[B4].id = B4ID;
 
 	for (z = 0; z <= battnum; z++) {
 		if (DIPSW1 == HIGH) { // clear battery data
@@ -2362,32 +2367,20 @@ void main(void) // Lets Party
 	if (read_data_eeprom(0, EEPROM_BAT) == CHECKMARK) { // load battery types from EEPROM
 		for (z = 0; z <= battnum; z++) { // 1 + number of batteries, 0 is the controller supply voltage
 			eep_char = read_data_eeprom(EEPROM_BAT + 2, z);
-			if ((eep_char == 'S') || (eep_char == 'M') || (eep_char == 'L')) {
-				cell[z].id = eep_char;
+			if ((eep_char == 'S') || (eep_char == 'M') || (eep_char == 'L') || (eep_char == 'N')) {
 			} else {
 				term_time();
 				putrs2USART(" Invalid battery type eeprom data \r\n"); // init eeprom data
-				if (z > HISTBATTNUM) {
-					write_data_eeprom('M', 5, z, EEPROM_BAT);
-					cell[z].id = 'M';
-				} else {
-					write_data_eeprom('L', 5, z, EEPROM_BAT);
-					cell[z].id = 'L';
-				}
+				write_data_eeprom(cell[z].id, 5, z, EEPROM_BAT);
 			}
 		}
 	} else {
 		term_time();
 		putrs2USART(" Invalid battery eeprom data \r\n"); // init eeprom data
 		for (z = 0; z <= battnum; z++) {
-
-			if (z > HISTBATTNUM) {
-				write_data_eeprom('M', 5, z, EEPROM_BAT);
-				cell[z].id = 'M';
-			} else {
-				write_data_eeprom('L', 5, z, EEPROM_BAT);
-				cell[z].id = 'L';
-			}
+			term_time();
+			putrs2USART(" Invalid battery type eeprom data \r\n"); // init eeprom data
+			write_data_eeprom(cell[z].id, 5, z, EEPROM_BAT);
 		}
 	}
 	term_time();
