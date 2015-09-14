@@ -169,55 +169,57 @@
 #define	SOLARLOW	6000ul    	// Voltage from PV array to stop charger connections
 #define LOADLOW		1000ul		// always turnoff the load below this
 #define PWMHIGH		14200ul		// input voltage from PV to start PWM loads
-#define DVOLTAGE        11900ul         // lowest voltage while running diversion.
+#define DVOLTAGE        12100ul         // lowest voltage while running diversion.
 #define GANGEDHIGH      13800ul         // voltage limit to supply controller voltage while ganged
 #define GANGEDHYST      14500ul         // upper limit to disconnect from supplying power
 
 /* battery condition defines */
 #define	LOAD_CHECK	100l		// 10A load
-#define	AHADJ		0.33        	// dyn Ah adjustment factor for very low SOC, reduce the actual rate by this amount
+#define	AHADJ		0.33		// dyn Ah adjustment factor for very low SOC, reduce the actual rate by this amount
 #define	CHRG_HIGH	18000ul   	// max voltage while in a charge cycle to have charger on.
 #define BATTHIGH	16500ul   	// over-voltage point from charge controller
-#define BATTABSORP      14000ul         // absorption voltage min
+#define BATTABSORP	14000ul     // absorption voltage min
 #define BATTFRESH	13200ul   	// float voltage after charge
-#define	BATTADJ		11900ul		// >15%	At this point under load start adjusting the Ah used by a static amount
-#define BATTFLAT	11200ul		// Close to full discharged (flat but usable)
-#define BATTCRIT	10400ul   	// Fully discharged
+#define	BATTADJ		11800ul		// >15%	At this point under load start adjusting the Ah used by a static amount
+#define BATTFLAT	11400ul		// Close to full discharged (flat but usable)
+#define BATTCRIT	10900ul   	// Fully discharged
 #define BATTLOW		8000ul		// unuseable (damaged) battery
 #define	BATTDROP	5000ul		// Max voltage drop from unloaded to test test loaded
 #define BATTBOOST	200ul		// hyst voltage
 #define BATTCHECK	5          	// number of battery rechecks
-#define BATTWATER       500000ul        // charging in seconds before checking the water levels in the battery.
+#define BATTWATER	500000ul	// charging in seconds before checking the water levels in the battery.
 #define BLOAD1		50l       	// load resistor in ohms*10
 #define BLOAD2		25l       	// ditto
 #define GELL_R_COMP     760L            // voltage drop from current limiting during testing.
+#define AGM_R_COMP		200L            // voltage drop from current limiting during testing.
 #define GELL_ESR_COMP   660L            // voltage drop from current limiting static.
-#define B0B		0		// null battery
-#define	B1B		1
-#define	B2B		2
+#define AGM_ESR_COMP	100L            // voltage drop from current limiting static.
+#define B0B				0		// null battery
+#define	B1B				1
+#define	B2B				2
 #define B3B             3
 #define B4B             4
 #define	VENTTIME	1200
 #define D_TIME		1800		// power diversion timeouts seconds
-#define C_TIME		600		// charger power timeouts seconds
+#define C_TIME		600			// charger power timeouts seconds
 #define	MAXRUNTIME	95.0
-#define MINRUNTIME      0.05
+#define MINRUNTIME	0.05
 #define	VENTENABLE	HIGH
 #define	LOGGERTIME	30
 
 /* ADC scaling defines */
-#define AMP300_OF	521ul     // dc offset for amploc amp300 sensor raw bit count
-#define AMP300_MAX	2380ul    // Vo at max current n/a
-#define AMP300_SEN	8ul       // mV/A
-#define AMP50_OF	510ul     // dc offset for amploc amp50 sensor raw bit count
-#define AMP50_MAX	11400ul   // Vo at max current n/a
-#define AMP50_SEN	23ul      // mV/A
-#define AMP50c_OF	510ul     // dc offset for amploc amp50 sensor raw bit count
-#define AMP50c_MAX	11400ul   // Vo at max current n/a
-#define AMP50c_SEN	23ul      // mV/A
-#define	AMPZ		2         // ADC value less that this is still zero.
-#define	THERMO_OFF	420	  // adc counts for 0C
-#define	THERMO_SEN	0.2875	  // C per adc count
+#define AMP300_OF	521ul		// dc offset for amploc amp300 sensor raw bit count
+#define AMP300_MAX	2380ul		// Vo at max current n/a
+#define AMP300_SEN	8ul			// mV/A
+#define AMP50_OF	510ul		// dc offset for amploc amp50 sensor raw bit count
+#define AMP50_MAX	11400ul		// Vo at max current n/a
+#define AMP50_SEN	23ul		// mV/A
+#define AMP50c_OF	510ul		// dc offset for amploc amp50 sensor raw bit count
+#define AMP50c_MAX	11400ul		// Vo at max current n/a
+#define AMP50c_SEN	23ul		// mV/A
+#define	AMPZ		2			// ADC value less that this is still zero.
+#define	THERMO_OFF	420			// adc counts for 0C
+#define	THERMO_SEN	0.2875		// C per adc count
 
 /*	ADC offsets	defines */
 #define ADC0_OFF	1713
@@ -233,7 +235,7 @@
 #define ADC10_OFF	488		// Ground REF connection
 #define	ADC_SLOTS	14		// 14 ADC data slots + 1 checksum at the end
 #define ADC_INDEX	8		// max adc gain array select number
-#define ADC_NULL	127             // zero offset value
+#define ADC_NULL	127		// zero offset value
 /* The number of samples must be high to sample several complete PWM cycles from the CC to get stable voltage and current measurements at lower ranges. */
 #define ADC_SAMP_F	128
 #define ADC_SAMP_S	512
@@ -253,39 +255,39 @@
 #define	CCLEDSOLID	180     // need to check this
 
 #define INVERTERON	120     // if current to inverter is more than this AMPS it's ON and loaded
-#define	GASSING		250	// possible h2 gas above this charging current
+#define	GASSING		250		// possible h2 gas above this charging current
 #define	LPCHANC		12      // digital filter channels
-#define	LP_PWM		0	// PWM period filter channel
-#define LP_CCEFF	1	// channel for CCEFF
+#define	LP_PWM		0		// PWM period filter channel
+#define LP_CCEFF	1		// channel for CCEFF
 #define	LP_CCVOLTAGE	2	// ccvoltage
-#define LP_CURRENT	3	// current channel
+#define LP_CURRENT	3		// current channel
 #define LP_CURRENTIN	4	// currentin channel
 #define LP_CURRENTCHARGER   5	// charger
-#define LP_PEUKERT	6	// peukert channels [6..8]
-#define LP_PVVOLTAGE    9       // PV inputvoltage
+#define LP_PEUKERT	6		// peukert channels [6..8]
+#define LP_PVVOLTAGE    9	// PV inputvoltage
 
-#define PWM_LIMIT	24	// max level from CCEFF
-#define	PWM_FACTOR	4	// PWM CCEFF gain factor
-#define PWM_POWER	6	// Min Power from PV to allow PWM diversion
-#define PWM_SLOPE       4       // When to start using gain factor
+#define PWM_LIMIT	24		// max level from CCEFF
+#define	PWM_FACTOR	4		// PWM CCEFF gain factor
+#define PWM_POWER	6		// Min Power from PV to allow PWM diversion
+#define PWM_SLOPE	4		// When to start using gain factor
 
 /* battery runtime charge factors	*/
-#define	SMALLCOMP	1200.0  // normalize factor for small gell cells in weight cals
-#define MIDCOMP		1200.0  // normalize factor for small AGM cells
+#define	SMALLCOMP	1200.0  // normalize factor for small gell cells in weight cals mV
+#define MIDCOMP		10.0	// normalize factor for small AGM cells
 #define	DSOC_L		75      // divert power SOC setpoint for BOI
 #define	DSOC_H		85      // divert power SOC setpoint for BOI
-#define WFLOAT_LOW      23000.0 // divert power lowest wweight for any battery
-#define MAXWEIGHT	50000.0	// highest weight value possible
-#define	MINWEIGHT	10000.0	// lowest weight value possible
-#define PLUSWEIGHT      1000.0   // must be at least this much diff to cause a alert
-#define ALERT_TIME      120     // delay between alerts
+#define WFLOAT_LOW      24000.0 // divert power lowest weight for any battery
+#define MAXWEIGHT		50000.0	// highest weight value possible
+#define	MINWEIGHT		10000.0	// lowest weight value possible
+#define PLUSWEIGHT      1000.0		// must be at least this much diff to cause a alert
+#define ALERT_TIME      120			// delay between alerts
 #define W_BASE_F        100.0
 #define W_DOD_F         20.0
 #define W_IR_F          0.2
 #define W_AH_F          2.0
 #define W_CYC_F         10.0
-#define	PRIPOINTS	0.0   // weight points for primary battery
-#define	INVPOINTS	2000.0   // weight points for battery on inverter
+#define	PRIPOINTS	0.0			// weight points for primary battery
+#define	INVPOINTS	2000.0		// weight points for battery on inverter
 #define	LOWPOINTS       12000.0	// weight points for a very low battery
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
 
@@ -295,12 +297,12 @@
 #define Temp_ADJ_FL	1.20	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
 #define Temp_ZERO	267l	// Temperature for base battery rate capacity in tenths of C
 #define	CEF_HSOC	0.45    // Charge Efficiency Factor, high SOC
-#define CEF_MSOC        0.70    // middle
+#define CEF_MSOC	0.70    // middle
 #define	CEF_LSOC	0.90    // Charge Efficiency Factor, low SOC
-#define CEF_OVER        0.99    // CEF overflow in calc
+#define CEF_OVER	0.99    // CEF overflow in calc
 #define CEF_MAX		0.95 	// Invalid charge factor above this, should be about the same as CEF_LOSC
 #define CEF_MIN		0.40	// Invalid charge factor below this
-#define CEF_RESET       0.80    // reset AH values below this point.
+#define CEF_RESET	0.80    // reset AH values below this point.
 #define CEF_DERATE	1.20	// Ahi derate factor to start dynamic CEF corrections
 #define	SOC_DERATE	70      // derate CEF above this
 #define SOC_CEF		100	// Max state of charge to update dynamic charge efficiency factors
@@ -309,8 +311,8 @@
 #define RFACTOR_BANK    9       // above this current start to bank the rest_rate instead of just making it vanish on every update
 #define RFACTOR_RATE    2u      // rate in mA to restore batery Ah capacity every 10 seconds from Rest Reserve Bank
 #define RFACTOR_BSOC    50u     // don't collect rest reserve Ah below this SOC
-#define BFACTOR		15l	// default for battery Ah cap recovery factor [0..100]
-#define BFACTOR_MAX	100l	// 100 max factor * 100 to scale to .1A units
+#define BFACTOR			15l			// default for battery Ah cap recovery factor [0..100]
+#define BFACTOR_MAX		100l		// 100 max factor * 100 to scale to .1A units
 #define BFACTOR_BANK    9       // above this current start to bank the bound_rate instead of just making it vanish on every update
 #define BFACTOR_RATE    1       // rate in mA to restore batery Ah capacity every 10 seconds from Bound Reserve Bank
 #define BFACTOR_BSOC    60u     // don't collect Bound reserve Ah below this SOC
@@ -334,7 +336,7 @@
 #define	SS_RATE		9.00     	// STATIC SOC RATE Ah factor for static voltage cal to SOC and Aho
 #define SOCFULL		85u      	// this is as good a full charge after a full C40 cycle timeout or float
 
-#define MAXALM		7		// alarm message buffer size
+#define MAXALM		7			// alarm message buffer size
 #define	MAX_TWEAK_CMD	4      		// number of T tweak command choices
 
 //	program constants
@@ -355,8 +357,8 @@
 #define	NTP_SIZE	4               // length in bytes of ntp date var
 #define FT20		20              // default value for fast ticks
 #define SD_18		18
-#define C_TEMP16	16		// temp string buffer size
-#define C_TEMP7		7		// float string buffer size
+#define C_TEMP16	16			// temp string buffer size
+#define C_TEMP7		7			// float string buffer size
 #define HOST_TIMEOUT	256		// network timeout MBMC
 #define SDT1            1
 #define SDT2            2               // SD card types
