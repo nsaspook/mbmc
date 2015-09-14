@@ -317,7 +317,7 @@
 #define BFACTOR_RATE    1       // rate in mA to restore batery Ah capacity every 10 seconds from Bound Reserve Bank
 #define BFACTOR_BSOC    60u     // don't collect Bound reserve Ah below this SOC
 #define BFACTOR_TEMP    2l      // SOC voltage correction factor for C.temp_drate
-#define BFACTOR_DIODE   700l    // Isolation diode voltage drop
+#define BFACTOR_DIODE   300l    // Isolation diode voltage drop
 #define BVSOC_SLOTS     26      // Battery to SOC data table slots
 #define BVSOC_FRESH     85      // SOC for FRESH flag
 #define BVSOC_HIGH      12900L  // Battery voltage above this is usually from an aborted charge cycle so it might not be fully charged
