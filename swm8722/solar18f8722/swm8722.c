@@ -2411,7 +2411,7 @@ void main(void) // Lets Party
 		putrs2USART(" History eeprom data ");
 		for (z = 0; z < battnum; z++) {
 			tmp8 = read_data_eeprom(EEPROM_HIS + 2, z);
-			sprintf(bootstr2, " %i:", (int16_t) tmp8);
+			sprintf(bootstr2, " %x:", (int16_t) tmp8);
 			puts2USART(bootstr2);
 		}
 		putrs2USART("\r\n");
