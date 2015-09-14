@@ -279,7 +279,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		cell[z].weight -= (float) hist[z].udod * W_DOD_F; // user depth of discharge factor
 
 		if (cell[z].id == 'S') cell[z].weight += SMALLCOMP; // Small Gell Cell  comp factor
-		if (cell[z].id == 'M') cell[z].weight += MIDCOMP; // Small Gell Cell  comp factor
+		if (cell[z].id == 'M') cell[z].weight += MIDCOMP; // Small AGM Cell  comp factor
 		if (z == B1) cell[z].weight -= PRIPOINTS; // points off  for primary battery
 		if (z == B2) {
 			if (B_GANGED || (DIPSW3 == HIGH)) cell[z].weight = MAXWEIGHT;
@@ -664,6 +664,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			cell[bn].noload = R.ccvoltage; // set unloaded battery voltage
 		}
 		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].noload += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'M') cell[bn].noload += AGM_R_COMP;
 		BATLOAD = R_ON; // battery load relay/on
 		wdttime(BATTEST); // drain the battery
 		if (!P.SYSTEM_STABLE) wdttime(BATTEST); // drain the battery MORE
@@ -674,6 +675,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			cell[bn].voltage = R.ccvoltage; // set first loaded battery voltage
 		}
 		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].voltage += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'M') cell[bn].voltage += AGM_R_COMP;
 
 		hist[bn].esr = NULL0;
 		if (use_dual_load) {
@@ -739,8 +741,11 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	} else {
 		if (bn > HISTBATTNUM) { // fill in for gell cells
 			ADC_read(); // read unloaded battery voltage from charge line.
-			if (cell[bn].id == 'S')
-				cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
+			if (cell[bn].id == 'S') {
+			cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
+			} else {
+				cell[bn].noload = R.ccvoltage += AGM_ESR_COMP; // set unloaded battery voltage
+			}
 			cell[bn].voltage = cell[bn].noload; // set loaded battery voltage
 			hist[bn].esr = (uint16_t) ((float) 150.0 * (4600.0 / (float) (cell[bn].voltage - 8000.0))); // set static esr
 			hist[bn].h[10] = hist[bn].esr;
