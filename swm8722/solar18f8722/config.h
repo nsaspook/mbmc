@@ -35,24 +35,24 @@
  *  ~500 Watts total
  * http://ecmweb.com/green-building/highs-and-lows-photovoltaic-system-calculations
  * Vadj = Vmp × {100% + [(Tmod - 25°C) × TC Vmp]}
-    where,
-    Vadj is the temperature adjusted voltage
-    Vmp is the module?s rated maximum power voltage
-    Tmod is the temperature of the PV module
-    25°C is the STC condition we must adjust from
-    TC Vmp = Temperature correction factor in %/°C
+	where,
+	Vadj is the temperature adjusted voltage
+	Vmp is the module?s rated maximum power voltage
+	Tmod is the temperature of the PV module
+	25°C is the STC condition we must adjust from
+	TC Vmp = Temperature correction factor in %/°C
  *
  *  Less than 6 in. of space between the module and roof surface: Tmod = Ambient + 35°C.
-    More than 6 in. of space between the module and roof surface: Tmod = Ambient + 30°C.
-    PV array mounted on a top of pole or elevated ground mount: Tmod = Ambient + 25°C.
-    Tmod = 37°C +35°C = 72°C
+	More than 6 in. of space between the module and roof surface: Tmod = Ambient + 30°C.
+	PV array mounted on a top of pole or elevated ground mount: Tmod = Ambient + 25°C.
+	Tmod = 37°C +35°C = 72°C
  */
 
-#define A_VMP		17300.0 	// array voltage at power max, millivolts units, 25c
+#define A_VMP			17300.0 	// array voltage at power max, millivolts units, 25c
 #define A_VMP_TEMP      A_VMP/0.80      // Hot voltage value, 37c
-#define	A_IMP		267.05  	// array current at power max,  0.1 A units
-#define	A_SSC		294.45  	// array short circuit current, 0.1 A units
-#define	PVP_MAX		4619965ul 	// max possible power in milliWatts*10, 25c
+#define	A_IMP			267.05  	// array current at power max,  0.1 A units
+#define	A_SSC			294.45  	// array short circuit current, 0.1 A units
+#define	PVP_MAX			4619965ul 	// max possible power in milliWatts*10, 25c
 #define	PVP_MAX_TEMP	3695972ul 	// max possible power in milliWatts*10, 37c
 #define PW_MAX		(PVP_MAX_TEMP/10ul)*16ul	// mAh for a full 16hr day and full power at 37c
 #define PW_DIVERSION    PW_MAX/6        // the most power sent to diversion per day in auto
@@ -65,8 +65,8 @@
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4
 #define B1AH		225     	// FLA costco GC2
 #define	B2AH		225    		// FLA costco CG2
-#define B3AH		20      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
-#define	B4AH		20      	// AGM cell
+#define B3AH		12      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4AH		12      	// AGM cell
 #define B1ID		'L'     	// FLA costco GC2
 #define	B2ID		'L'    		// FLA costco CG2
 #define B3ID		'M'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
@@ -74,18 +74,18 @@
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
 #define	PerkC1		1.25    	// Peukert Comp Batt #1
 #define PerkC2		1.25		// Peukert Comp Batt #2
-#define	DF		1.0     	// discharge floor of battery total Ah, normally 1.0  reduce below 1.0 to reserve Ah capacity
+#define	DF			1.0     	// discharge floor of battery total Ah, normally 1.0  reduce below 1.0 to reserve Ah capacity
 #define KW_VOLTS        122l            // Volts for initial power calc in .kwo, set in noload_soc()
 #define USER_DOD        1.0/0.5         // Percent of battery cap that we normally use. 1.0 is a full discharge
-#define CONT_DOD        0.8             // Controller power batteries
-#define SOC_DF		20		// SOC below this is a full discharge for record keeping
+#define CONT_DOD        0.4             // Controller power batteries
+#define SOC_DF			40				// SOC below this is a full discharge for record keeping
 #define SOC_FF          65              // SOC above this is a full recharge for record keeping
 #define SOC_FR          25              // SOC for data reset at CC float while charging.
-#define SOC_FRESH	90		// static SOC value
-#define SOC_FULL	100		// static SOC value
+#define SOC_FRESH		90		// static SOC value
+#define SOC_FULL		100		// static SOC value
 #define SOC_VCOMP       12800ul         // use rest voltage SOC below this on battery not on inverter or charging
-#define	HELP_TIME	7200    	// charger boost time for morning help (seconds)
-#define	DUALLOAD	TRUE		// Have low and high current loads for battery testing.
+#define	HELP_TIME		7200    	// charger boost time for morning help (seconds)
+#define	DUALLOAD		TRUE		// Have low and high current loads for battery testing.
 #define CHARGER_MINV    12000ul         // if the voltage is less than this the charger is not operating
 #define CHARGER_DELAY   20              // time delay in worksecs before resetting the charger if it trips
 /* Alarm and logging */
@@ -103,6 +103,6 @@
 #define MIN_ABSORP      10800ul         // time in seconds for absorption phase.
 #define CC_RESET_MAX	3		// Max amount of times to reset the Charge controller after float to rebulk
 // PWM gain feedback control
-#define PWM_EXP		1.65		// CCEFF_DIFF -> x^y <- PWM_EXP
+#define PWM_EXP			1.65		// CCEFF_DIFF -> x^y <- PWM_EXP
 /* End user parameters */
 #endif /* CONFIG_H_INCLUDED */
