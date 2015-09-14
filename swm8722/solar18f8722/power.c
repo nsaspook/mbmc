@@ -663,7 +663,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		} else {
 			cell[bn].noload = R.ccvoltage; // set unloaded battery voltage
 		}
-		if (bn > HISTBATTNUM) cell[bn].noload += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].noload += GELL_R_COMP;
 		BATLOAD = R_ON; // battery load relay/on
 		wdttime(BATTEST); // drain the battery
 		if (!P.SYSTEM_STABLE) wdttime(BATTEST); // drain the battery MORE
@@ -673,7 +673,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		} else {
 			cell[bn].voltage = R.ccvoltage; // set first loaded battery voltage
 		}
-		if (bn > HISTBATTNUM) cell[bn].voltage += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].voltage += GELL_R_COMP;
 
 		hist[bn].esr = NULL0;
 		if (use_dual_load) {
@@ -739,7 +739,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	} else {
 		if (bn > HISTBATTNUM) { // fill in for gell cells
 			ADC_read(); // read unloaded battery voltage from charge line.
-			cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
+			if (cell[bn].id == 'S')
+				cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
 			cell[bn].voltage = cell[bn].noload; // set loaded battery voltage
 			hist[bn].esr = (uint16_t) ((float) 150.0 * (4600.0 / (float) (cell[bn].voltage - 8000.0))); // set static esr
 			hist[bn].h[10] = hist[bn].esr;
