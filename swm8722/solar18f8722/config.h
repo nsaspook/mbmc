@@ -67,6 +67,10 @@
 #define	B2AH		225    		// FLA costco CG2
 #define B3AH		20      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
 #define	B4AH		20      	// AGM cell
+#define B1ID		'L'     	// FLA costco GC2
+#define	B2ID		'L'    		// FLA costco CG2
+#define B3ID		'M'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4ID		'M'      	// AGM cell
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
 #define	PerkC1		1.25    	// Peukert Comp Batt #1
 #define PerkC2		1.25		// Peukert Comp Batt #2
