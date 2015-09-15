@@ -187,7 +187,7 @@
       <C18-LD>
         <property key="cod-file" value="true"/>
         <property key="extra-lib-directories"
-                  value="../C:/Program Files (x86)/Microchip/mplabc18/v3.40/lib;;."/>
+                  value="../C:/Program Files (x86)/Microchip/mplabc18/v3.40/lib;."/>
         <property key="hex-output-format" value="INHX32"/>
         <property key="map-file" value="&quot;$(BINDIR_)$(TARGETBASE).map&quot;"/>
       </C18-LD>
@@ -202,6 +202,7 @@
       </C18LanguageToolchain>
       <ICD3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="Freeze Peripherals" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>

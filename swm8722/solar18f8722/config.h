@@ -81,11 +81,11 @@
 #define SOC_DF			40				// SOC below this is a full discharge for record keeping
 #define SOC_FF          65              // SOC above this is a full recharge for record keeping
 #define SOC_FR          25              // SOC for data reset at CC float while charging.
-#define SOC_FRESH		90		// static SOC value
-#define SOC_FULL		100		// static SOC value
+#define SOC_FRESH		90				// static SOC value
+#define SOC_FULL		100				// static SOC value
 #define SOC_VCOMP       12800ul         // use rest voltage SOC below this on battery not on inverter or charging
-#define	HELP_TIME		7200    	// charger boost time for morning help (seconds)
-#define	DUALLOAD		TRUE		// Have low and high current loads for battery testing.
+#define	HELP_TIME		7200			// charger boost time for morning help (seconds)
+#define	DUALLOAD		TRUE			// Have low and high current loads for battery testing.
 #define CHARGER_MINV    12000ul         // if the voltage is less than this the charger is not operating
 #define CHARGER_DELAY   20              // time delay in worksecs before resetting the charger if it trips
 /* Alarm and logging */
@@ -96,13 +96,13 @@
 #define	WCHARGER	20000.0 	// turn on charger if battery weight on inverter is below this point
 #define ALERTLOW	11500ul		// set alert flag in pick_batt at this level
 #define ALERTCHRG	12000ul		// turn on external charger at this level during a battery alert
-#define BSOCLOW		20		// when battery SOC less that this, really start making it next on the charge list
+#define BSOCLOW		20			// when battery SOC less that this, really start making it next on the charge list
 #define	HELP_SOC	30u      	// state of charge to begin charger help in morning
 #define	CHARGER_MIN	20ll		// current from PV must be less that this to turn on utility battery charger
 // Battery absorption time parameters
 #define MIN_ABSORP      10800ul         // time in seconds for absorption phase.
-#define CC_RESET_MAX	3		// Max amount of times to reset the Charge controller after float to rebulk
+#define CC_RESET_MAX	3				// Max amount of times to reset the Charge controller after float to rebulk
 // PWM gain feedback control
-#define PWM_EXP			1.65		// CCEFF_DIFF -> x^y <- PWM_EXP
+#define PWM_EXP			1.65			// CCEFF_DIFF -> x^y <- PWM_EXP
 /* End user parameters */
 #endif /* CONFIG_H_INCLUDED */
