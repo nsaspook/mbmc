@@ -68,7 +68,7 @@
 #define LCD_W           20			// chars per line
 #define LCD_STR         LCD_W+2		// char string for LCD messages
 #define MESG_W          212			// message string buffer
-#define	LL1		0x00		// LCD line addresses
+#define	LL1		0x00				// LCD line addresses
 #define	LL2		0x40
 #define LL3		0x14
 #define	LL4		0x54
@@ -146,7 +146,7 @@
 #define BATTREST	3600		// rest time for battery voltages to settle after a charge cycle
 #define	CHRGTIME	50      	// charged alarm time
 #define SDTIME		30       	// SD card timeout
-#define	SUPDELAY	60		// solarup delay for start of day
+#define	SUPDELAY	60			// solarup delay for start of day
 #define DAYDELAY	86400		// Seconds in 24 hours
 #define DARKDELAY	3600		// darkness delay, a few hours total
 #define	BATCHARGE_S	7200    	// seconds in 2 hours
@@ -156,10 +156,10 @@
 #define	BATCHARGE_L	43200   	// seconds in 12 hours
 #define BATCAP_L	225
 #define	BTEST_DELAY	1800		// seconds between battery tests
-#define BFTEST		10		// number of loops for the charge loop
+#define BFTEST		10			// number of loops for the charge loop
 #define	TIMEOFF		60      	// seconds in 1 min
 #define	WORKSEC		10      	// run every this time seconds
-#define DISPSEC		600		//
+#define DISPSEC		600			//
 #define ADC_STEP	488     	// mv per dac step
 #define	ADC_MULT	344     	// voltage div factor
 /* Solar input voltage limits */
@@ -329,6 +329,7 @@
 #define BVSOC_SV_OFF    25L     // correction of vots to SOC for system controller during GANGED
 #define BVSOC_CURRENT   50L     // switching point for R and L SoC methods
 #define END_RATIO       0.12     // End amps from battery capacity, value scaled to result in mA for end-amps
+#define END_RATIO_MED	0.30     // End amps from battery capacity, value scaled to result in mA for end-amps for M batteries
 
 #define	DCURRENT	0.0     	// default discharge current 0.1A units "3.6 is the lowest possible value = .36A", use AH_DAY_OFF
 #define	AH_DAY_LOSS1	2000l      	// Ah lost in 24 hours from natural discharge or controller usage BATT1.
