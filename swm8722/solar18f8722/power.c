@@ -742,7 +742,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		if (bn > HISTBATTNUM) { // fill in for gell cells
 			ADC_read(); // read unloaded battery voltage from charge line.
 			if (cell[bn].id == 'S') {
-			cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
+				cell[bn].noload = R.ccvoltage += GELL_ESR_COMP; // set unloaded battery voltage
 			} else {
 				cell[bn].noload = R.ccvoltage += AGM_ESR_COMP; // set unloaded battery voltage
 			}
@@ -815,6 +815,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	B.absorp_time = 0; // reset absorption timer
 	absorp_current = 0; // zero out end-amps data
 	end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO); // make a End-Amps from the adjusted battery rate
+	if (cell[bn].id == 'M') end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_MED);
 	B.start_aho = hist[bn].ahop; // use the adjusted load current
 	B.start_ahu = hist[bn].h[0]; // the current balance of current in/out for the battery ,h[0] is in tenth amp units
 	cycles_tmp = cell[bn].cycles;
@@ -1165,7 +1166,13 @@ void ResetC40(uint8_t bn, uint8_t save_relay, uint8_t resetno)
 		wdttime(BATRUNF);
 	}
 
-	sprintf(bootstr2, " Resetting Charge Controller on Battery %i, Absorp Current %li00mA, End Amps %li00mA.\r\n", bn, ABSL(absorp_current), (int32_t) ((float) hist[bn].rate * END_RATIO));
+	if (cell[bn].id == 'M') {
+		sprintf(bootstr2, " Resetting Charge Controller on Battery %i, Absorp Current %li00mA, End Amps %li00mA.\r\n",
+			bn, ABSL(absorp_current), (int32_t) ((float) hist[bn].rate * END_RATIO_MED));
+	} else {
+		sprintf(bootstr2, " Resetting Charge Controller on Battery %i, Absorp Current %li00mA, End Amps %li00mA.\r\n",
+			bn, ABSL(absorp_current), (int32_t) ((float) hist[bn].rate * END_RATIO));
+	}
 	puts2USART(bootstr2);
 	SOLAROFF = R_ON; // PV off before C40
 	wdttime(BATRUNF);
