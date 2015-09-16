@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  30.2 FB  "                  // version text header
-#define	MAGIC		0x0302  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  30.3 FB  "                  // version text header
+#define	MAGIC		0x0303  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -18,16 +18,16 @@
 #define	TIMEROFFSET	26474           // timer0 16bit counter value for 1 second to overflow
 #define	TIMER3REG	3048            // timer3 value for 20Hz clock
 #define BUF_SIZE 	128
-#define LOW		(uint8_t)0               // digital output state levels, sink
-#define	HIGH            (uint8_t)1               // digital output state levels, source
-#define	ON		LOW       		//
-#define OFF		HIGH			//
-#define	S_ON            LOW       		// low select/on for chip/led
-#define S_OFF           HIGH			// high deselect/off chip/led
-#define	R_ON            LOW       		// control relay states, relay is on when output gate is low
-#define R_OFF           HIGH			// control relay states
-#define NO		LOW
-#define YES		HIGH
+#define LOW			(uint8_t)0               // digital output state levels, sink
+#define	HIGH		(uint8_t)1               // digital output state levels, source
+#define	ON			LOW       		//
+#define OFF			HIGH			//
+#define	S_ON		LOW       		// low select/on for chip/led
+#define S_OFF		HIGH			// high deselect/off chip/led
+#define	R_ON		LOW       		// control relay states, relay is on when output gate is low
+#define R_OFF		HIGH			// control relay states
+#define NO			LOW
+#define YES			HIGH
 #if defined(__18CXX)
 #define NULL0           (uint8_t)0
 #else
@@ -43,13 +43,13 @@
 #define SHIFT16         16
 #define SHIFT24         24
 #define SHIFT30         30
-#define	ERR1		1
-#define	ERR2		2
-#define	XON		0x11
+#define	ERR1			1
+#define	ERR2			2
+#define	XON				0x11
 #define	XOFF            0x13
-#define	H		1
-#define	L		2
-#define	HL		3
+#define	H				1
+#define	L				2
+#define	HL				3
 #define	BMT_FLAG_0	0b00000001      // soc 100 tested and saved
 #define BMT_FLAG_1	0b00000010      //
 #define	BMT_FLAG_2	0b00000100
@@ -90,7 +90,7 @@
 
 #define LOW_VECTOR      0x18            // ISR low address
 #define HIGH_VECTOR     0x8             // ISR high address
-#define POWER_SLOTS	3		// realtime battery voltage array size, 0 is the null battery
+#define POWER_SLOTS		3				// realtime battery voltage array size, 0 is the null battery
 
 #define	CCLED		PORTCbits.RC0
 #define	SDSAFE		LATCbits.LATC1   	// SD card is safe to remove
@@ -140,7 +140,7 @@
 #define	BLINK_RATE	20000
 #define	BATRUN 		15       	//
 #define	BATRUNF		5       	// faster delay
-#define BATRUNS         500             // Really long time
+#define BATRUNS		500             // Really long time
 #define	BATTEST		40       	// full load testing time
 #define BATTEST_SLOPE	2		// Short time to find discharge slope
 #define BATTREST	3600		// rest time for battery voltages to settle after a charge cycle
@@ -183,6 +183,8 @@
 #define	BATTADJ		11800ul		// >15%	At this point under load start adjusting the Ah used by a static amount
 #define BATTFLAT	11400ul		// Close to full discharged (flat but usable)
 #define BATTCRIT	10900ul   	// Fully discharged
+#define BATTSYS		9000ul		// controller system voltage critical level
+#define BATTSYSLOW	10500ul		// controller system voltage low
 #define BATTLOW		8000ul		// unuseable (damaged) battery
 #define	BATTDROP	5000ul		// Max voltage drop from unloaded to test test loaded
 #define BATTBOOST	200ul		// hyst voltage
