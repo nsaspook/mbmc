@@ -2492,10 +2492,10 @@ void main(void) // Lets Party
 			cell[B0].noload = R.systemvoltage;
 			cell[B0].charge = R.ccvoltage;
 			cell[B0].cycles++;
-			if (cell[B0].voltage < BATTFLAT) P.BCHECK = TRUE; // check array for low voltage
+			if (cell[B0].voltage < BATTSYSLOW) P.BCHECK = TRUE; // check array for low voltage
 
 			for (z = 1; z <= battnum; z++) {
-				if (cell[B0].voltage < BATTCRIT) cell[z].critical = TRUE; // set battery as critical if the whole array is failing
+				if (cell[B0].voltage < BATTSYS) cell[z].critical = TRUE; // set battery as critical if the whole array is failing
 				if (cell[z].valid == cell[B0].valid) {
 					update_hist();
 					voltfp(cell[z].charge, f1);
