@@ -79,7 +79,7 @@
 #define USER_DOD        1.0/0.5         // Percent of battery cap that we normally use. 1.0 is a full discharge
 #define CONT_DOD        0.4             // Controller power batteries
 #define SOC_DF			40				// SOC below this is a full discharge for record keeping
-#define SOC_FF          65              // SOC above this is a full recharge for record keeping
+#define SOC_FF          90              // SOC above this is a full recharge for record keeping
 #define SOC_FR          25              // SOC for data reset at CC float while charging.
 #define SOC_FRESH		90				// static SOC value
 #define SOC_FULL		100				// static SOC value

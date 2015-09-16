@@ -100,7 +100,7 @@ uint8_t save_daily(void)
 {
 	static uint8_t z = 0;
 
-	for (z = 0; z < battnum; z++) {
+	for (z = 0; z <= battnum; z++) {
 		write_data_eeprom(hist[z].h[11], battnum, z, EEPROM_HIS); // total charge cycles
 	}
 	P.SAVE_DAILY = FALSE;

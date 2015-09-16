@@ -2095,7 +2095,7 @@ void init_hist_data(void)
 	SDC0.harvest.u_total = 0;
 	SDC0.harvest.count = 0;
 	SDC0.DAYCLOCK = FALSE;
-	for (j = 1; j <= HISTBATTNUM; j++) {
+	for (j = 0; j <= battnum; j++) { // set all data including the dummy battery
 		for (k = 0; k < HPARAM_SIZE; k++) {
 			hist[j].h[k] = 0; // zero primary battery history data
 		}
@@ -2309,11 +2309,12 @@ void main(void) // Lets Party
 		if (DIPSW1 == HIGH) { // clear battery data
 			term_time();
 			putrs2USART(" Init Battery Data \r\n");
-			cell[z].id = 'L';
+			cell[z].id = B1ID;
 			if (z > 2) {
-				write_data_eeprom('M', 5, z, 0);
+				write_data_eeprom(B3ID, 5, z, 0);
+				cell[z].id = B3ID;
 			} else {
-				write_data_eeprom('L', 5, z, 0);
+				write_data_eeprom(B1ID, 5, z, 0);
 			}
 		}
 		cell[z].voltage = 0;
@@ -2409,7 +2410,7 @@ void main(void) // Lets Party
 	if (read_data_eeprom(0, EEPROM_HIS) == CHECKMARK) { // load old history data from EEPROM
 		term_time();
 		putrs2USART(" History eeprom data ");
-		for (z = 0; z < battnum; z++) {
+		for (z = 0; z <= battnum; z++) {
 			tmp8 = read_data_eeprom(EEPROM_HIS + 2, z);
 			sprintf(bootstr2, " %x:", (int16_t) tmp8);
 			puts2USART(bootstr2);
@@ -2419,7 +2420,7 @@ void main(void) // Lets Party
 		term_time();
 		sprintf(bootstr2, " Invalid History eeprom data, size: %i\r\n", (int16_t) sizeof(hist[0].h)); // init eeprom data
 		puts2USART(bootstr2);
-		for (z = 0; z < battnum; z++) {
+		for (z = 0; z <= battnum; z++) {
 			write_data_eeprom(hist[z].h[11], battnum, z, EEPROM_HIS); // total charge cycles
 		}
 	}
