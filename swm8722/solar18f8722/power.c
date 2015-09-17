@@ -998,7 +998,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 
 		if ((CCMODE == FLOAT_M) || (CCMODE == FLOAT_W)) { // in float charge signal from C40 controller
 			if (ABSL(absorp_current) <= end_amps) ccreset = 0; // Don't reset CC if the battery is charged at 100% by end-amp value
-			if (((bn <= HISTBATTNUM) || (cell[bn].id != 'S')) && (B.absorp_time < MIN_ABSORP) && ccreset) {
+			if ((cell[bn].id != 'S') && (B.absorp_time < MIN_ABSORP) && ccreset) {
 				term_time();
 				putrs2USART(chrgcode5);
 				ResetC40(bn, TRUE, CC_RESET_MAX - (--ccreset)); // one less controller reset, count up reset times
