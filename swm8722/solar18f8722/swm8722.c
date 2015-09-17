@@ -334,6 +334,7 @@
 //  26.4    Fix B_GANGED bug in daq.c
 //  30.0    New fixes branch
 //  30.1    Use AGM cells for controller power so change 'S' to 'M'
+//  30.4    Fix accounting bug on battery 3
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
