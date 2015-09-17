@@ -222,8 +222,6 @@ void tick_handler(void) // This is the high priority ISR routine
 					} else {
 						absorp_current = -R.currentin;
 					}
-				} else {
-					if (ccled_flag.ticks < CCLEDSOLID) absorp_current = 0;
 				}
 			}
 		}
@@ -248,8 +246,6 @@ void tick_handler(void) // This is the high priority ISR routine
 					} else {
 						absorp_current = -R.currentin;
 					}
-				} else {
-					if (ccled_flag.ticks < CCLEDSOLID) absorp_current = 0;
 				}
 			}
 		}
