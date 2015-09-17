@@ -999,14 +999,6 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 				an = (ai - ao) / 100;
 				hist[buth[hmin].boi].h[6] = (int16_t) an; // remove charge from battery (real)
 			}
-
-			if (an < (int16_t) hist[buth[hmin].boi].h[1]) {
-				hist[buth[hmin].boi].h[1] = (int16_t) an; // lowest discharge ever
-				hist[z].h[3] = (int16_t) ((int16_t) an + hist[z].h[3]) / 2; // avg discharge
-			}
-			if (an < (int16_t) hist[buth[hmin].boi].h[2]) {
-				hist[buth[hmin].boi].h[2] = (int16_t) an; // lowest discharge this cycle
-			}
 		} // end of worksec functions
 
 		if (!PIE1bits.TX1IE) { // don't update during host xmit
