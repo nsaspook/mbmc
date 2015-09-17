@@ -331,7 +331,7 @@
 #define BVSOC_SV_OFF    25L     // correction of vots to SOC for system controller during GANGED
 #define BVSOC_CURRENT   50L     // switching point for R and L SoC methods
 #define END_RATIO       0.12     // End amps from battery capacity, value scaled to result in mA for end-amps
-#define END_RATIO_MED	0.30     // End amps from battery capacity, value scaled to result in mA for end-amps for M batteries
+#define END_RATIO_MED	0.40     // End amps from battery capacity, value scaled to result in mA for end-amps for M batteries
 
 #define	DCURRENT	0.0     	// default discharge current 0.1A units "3.6 is the lowest possible value = .36A", use AH_DAY_OFF
 #define	AH_DAY_LOSS1	2000l      	// Ah lost in 24 hours from natural discharge or controller usage BATT1.

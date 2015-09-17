@@ -76,6 +76,17 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 		return DIVERSION;
 	}
 
+	if (AC_OFF_I && DIVERSION == R_ON) { /* the inverter has tripped while diversion is running */
+		if (DIVERSION == R_ON) { // if on then off
+			alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
+			alarm_buffer[almctr++].alm_num = 11;
+			alarm_codes.alm_flag = TRUE;
+			check_alarm(CCS.boi, " divert3 "); // send alarm codes to terminal if alm_flag is set
+		}
+		DIVERSION = R_OFF;
+		return DIVERSION;
+	}
+
 	if (sw == ON) {
 		s_crit(HL);
 		d_on = V.timerint_count;
@@ -952,7 +963,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				if ((bn <= HISTBATTNUM) && (BAT2 == R_OFF)) {
 					BAT2 = R_ON; // battery #2 relay/on, no controller V
 					term_time();
-					putrs2USART(" Battery 2 disconnected from controller voltage buss\r\n");
+					putrs2USART(" Battery 2 disconnected from controller voltage bus\r\n");
 				}
 			}
 		}
@@ -963,7 +974,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if ((bn <= HISTBATTNUM) && (BAT2 == R_ON)) {
 				BAT2 = R_OFF; // battery #2 relay/off, supply controller V
 				term_time();
-				putrs2USART(" Battery 2 connected to controller voltage buss due to buss undervolt\r\n");
+				putrs2USART(" Battery 2 connected to controller voltage buss due to bus undervolt\r\n");
 			}
 		}
 		s_crit(HL);
