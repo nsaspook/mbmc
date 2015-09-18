@@ -435,6 +435,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		sprintf(bootstr2, "B2 %u %iA %iA,%i,%i                       ", hist[B2].bsoc, hist[B2].h[1] / 10, hist[B2].h[2] / 10, hist[B2].h[4], hist[B2].h[5]); // battery 2 history
 	} else {
 		sprintf(bootstr2, "B2&B1 are GANGED                       "); // battery 2 history
+		if (CCS.boi == B1) {
+			CCS.bn = B1;
+			pick = B1;
+		}
 	}
 	LCD_VC_puts(VC2, DS3, YES);
 
