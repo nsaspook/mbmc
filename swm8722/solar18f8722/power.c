@@ -1093,6 +1093,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if (CCMODE == FLOAT_M) { // exit routine
 				term_time();
 				putrs2USART(chrgcode3);
+				divert_power(OFF, YES, 0);
+				cell[bn].critical = FALSE;
 				break;
 			}
 			if ((R.inputvoltage < SOLARLOW) && (CCMODE != IDLE_M)) { // input is too low to charge (normal)
