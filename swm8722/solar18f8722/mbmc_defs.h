@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  30.4 FB  "                  // version text header
-#define	MAGIC		0x0304  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.0 FB  "                  // version text header
+#define	MAGIC		0x0400  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -18,16 +18,16 @@
 #define	TIMEROFFSET	26474           // timer0 16bit counter value for 1 second to overflow
 #define	TIMER3REG	3048            // timer3 value for 20Hz clock
 #define BUF_SIZE 	128
-#define LOW			(uint8_t)0               // digital output state levels, sink
+#define LOW		(uint8_t)0               // digital output state levels, sink
 #define	HIGH		(uint8_t)1               // digital output state levels, source
-#define	ON			LOW       		//
-#define OFF			HIGH			//
+#define	ON		LOW       		//
+#define OFF		HIGH			//
 #define	S_ON		LOW       		// low select/on for chip/led
 #define S_OFF		HIGH			// high deselect/off chip/led
 #define	R_ON		LOW       		// control relay states, relay is on when output gate is low
 #define R_OFF		HIGH			// control relay states
-#define NO			LOW
-#define YES			HIGH
+#define NO		LOW
+#define YES		HIGH
 #if defined(__18CXX)
 #define NULL0           (uint8_t)0
 #else

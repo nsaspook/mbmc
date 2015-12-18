@@ -233,7 +233,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 				//		putrs2USART(lowbatt0);
 			}
 		}
-		if (SYNCSOC && cell[z].cconline) { // check for # SOC SYNC command
+		if (P.SYNCSOC && cell[z].cconline) { // check for # SOC SYNC command
 			s_crit(HL);
 			hist[z].udod = 0;
 			hist[z].bsoc = 100;
@@ -248,7 +248,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			B.start_ahi = hist[z].ahir; // uint32_t
 			B.start_aho = hist[z].aho; // uint32_t
 			B.start_ahu = hist[z].h[0]; // in tenth amp units (interger)
-			SYNCSOC = FALSE;
+			P.SYNCSOC = FALSE;
 			e_crit();
 		}
 		if ((hist[z].bsoc > 100) && (cell[z].cconline) && (R.currentin > 10)) { // if SOC while charging gets over 100 limit it to 100

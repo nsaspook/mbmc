@@ -425,7 +425,7 @@ void tick_handler(void) // This is the high priority ISR routine
 					mbmcflag.mbmc_cmd = HOST_CMD_d;
 					break;
 				case HOST_CMD_SOC:
-					SYNCSOC = TRUE; // received * command from host, set flag on controller, non-interactive.
+					P.SYNCSOC = TRUE; // received * command from host, set flag on controller, non-interactive.
 					mbmcflag.mbmc_cmd = HOST_CMD_SOC;
 					break;
 				case HOST_ACK:
@@ -494,7 +494,7 @@ void tick_handler(void) // This is the high priority ISR routine
 			SYS_HELP = TRUE;
 			break;
 		case '*': // Set boc to 100% SOC
-			SYNC_SOC = TRUE;
+			P.SETBATT_SOC = TRUE;
 			break;
 		case '#': // Display system data on rs-232 terminal
 			SYS_DATA = TRUE;

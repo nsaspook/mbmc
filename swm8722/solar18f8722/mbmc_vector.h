@@ -28,7 +28,7 @@ extern volatile uint16_t hirez_count[7], solarup_delay;
 extern union Timers hirez_0, hirez_1;
 extern volatile uint8_t fast_ticks, real_ticks, XON_XOFF, battnum,
 	glitch_count, almctr, DISPLAY_MODE, dsi,
-	c2raw, HOST_COMM, SYNC_SOC, SYNCSOC, SYS_HELP, SYS_DATA, MOD_DATA,
+	c2raw, HOST_COMM, SETBATT_SOC, SYNCSOC, SYS_HELP, SYS_DATA, MOD_DATA,
 	SET_ADC, TWEAK, keynum, SIM_FLAG, b_read,
 	PERKOSW_R, GANGED_MODE, B_GANGED, GANG_OVERRIDE, DIVERSION_set;
 extern volatile struct ccledtype ccled_flag;

@@ -335,6 +335,7 @@
 //  30.0    New fixes branch
 //  30.1    Use AGM cells for controller power so change 'S' to 'M'
 //  30.4    Fix accounting bug on battery 3
+//  40.0    New developement branch
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
@@ -460,7 +461,7 @@ volatile int16_t venttimer = VENTTIME, loggertime = LOGGERTIME;
 int16_t a50 = 0, a300 = 0, a50c = 0, therm = 0, worktick = 0, cef = 0, cef_calc = 0, cef_save = 0;
 
 volatile struct P_data P = {TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE,
-	FALSE, FALSE, FALSE, FALSE, FALSE};
+	FALSE, FALSE, FALSE, FALSE, FALSE, FALSE};
 
 // BCHECK = TRUE, TIMERFLAG = FALSE,  PRIPOWEROK = TRUE,FORCEOUT = FALSE, ,WORKERFLAG = FALSE CHARGEROVERRIDE = FALSE, FAILSAFE = FALSE,
 //  MORNING_HELP = FALSE, SYSTEM_STABLE = FALSE, HOLD_PROC = FALSE, POWER_UNSTABLE = FALSE,  SET_BATT = FALSE,, BLANK_LCD = FALSE
@@ -468,7 +469,7 @@ volatile struct P_data P = {TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE
 //         FORCEDAY = FALSE, COOLING = FALSE,
 //	UPDATE_EEP = FALSE, RESET_ZEROS = FALSE,
 volatile uint8_t
-SYNC_SOC = FALSE, SYNCSOC = FALSE, SYS_DATA = FALSE, MOD_DATA = FALSE, SYS_HELP = FALSE, SET_ADC = FALSE,
+SYS_DATA = FALSE, MOD_DATA = FALSE, SYS_HELP = FALSE, SET_ADC = FALSE,
 	WDT_TO = FALSE, EEP_ER = FALSE, PERKOSW_R = FALSE, TWEAK = FALSE, GANGED_MODE = FALSE, XON_XOFF = FALSE, DISPLAY_MODE = FALSE, GANG_OVERRIDE = FALSE;
 
 volatile uint8_t battnum = MAXBATT, critc_level = 0, keynum = 0, b_read = 0,
@@ -713,9 +714,9 @@ void update_hist(void) // compute the runtime data from current data
 		hold_process();
 		P.HOLD_PROC = FALSE;
 	}
-	if (SYNC_SOC) { // Set SOC/BSOC to battery being charged to 100%
+	if (P.SETBATT_SOC) { // Set SOC/BSOC to battery being charged to 100%
 		sync_battsoc();
-		SYNC_SOC = FALSE;
+		P.SETBATT_SOC = FALSE;
 	}
 	if (SYS_DATA) { // display System data on rs-232 port
 		system_data();
@@ -1034,10 +1035,10 @@ void sync_battsoc(void) // set battery SOC to 100% when C40 is in float
 	}
 	if (YNKEY == NO_M) {
 		putrs2USART(sync2);
-		SYNCSOC = FALSE;
+		P.SYNCSOC = FALSE;
 		return;
 	}
-	SYNCSOC = TRUE;
+	P.SYNCSOC = TRUE;
 	putrs2USART(sync1);
 }
 
