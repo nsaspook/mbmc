@@ -334,7 +334,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 				if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 				if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
 				CCS.bn = z; // set to battery we wish to possibly charge next
-				if ((CCS.boc != CCS.bn) && (cell[CCS.boc].weight > (cell[CCS.bn].weight + PLUSWEIGHT)) || (cell[z].weight < LOWPOINTS)) {
+				if ((CCS.boc != CCS.bn) && (cell[CCS.boc].weight > (cell[CCS.bn].weight + PLUSWEIGHT)) && (cell[CCS.bn].weight < LOWPOINTS)) {
 					if (B_GANGED && (CCS.bn == B2)) { // stop bogus B2 alarms during ganged operation
 						CCS.bn = B1; // force to only B1 during ganged
 					} else {

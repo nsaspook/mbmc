@@ -290,7 +290,7 @@
 #define W_CYC_F         10.0
 #define	PRIPOINTS	0.0			// weight points for primary battery
 #define	INVPOINTS	2000.0		// weight points for battery on inverter
-#define	LOWPOINTS       12000.0	// weight points for a very low battery
+#define	LOWPOINTS       20000.0	// weight points for a very low battery
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
 
 /* Battery charge/discharge adjustment factors */

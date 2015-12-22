@@ -94,7 +94,7 @@
 #define	MODEL_UPDATE    TRUE            // update the model database from runtime data
 // Battery discharge action parameters
 #define	WCHARGER	20000.0 	// turn on charger if battery weight on inverter is below this point
-#define ALERTLOW	11500ul		// set alert flag in pick_batt at this level
+#define ALERTLOW	11000ul		// set alert flag in pick_batt at this level
 #define ALERTCHRG	12000ul		// turn on external charger at this level during a battery alert
 #define BSOCLOW		20			// when battery SOC less that this, really start making it next on the charge list
 #define	HELP_SOC	30u      	// state of charge to begin charger help in morning
