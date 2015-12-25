@@ -539,6 +539,7 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 			result = ((rate + (usage / 10.0)) / rate) * 100.0; //FIXME needs a sanity check, compute SOC from usage rates
 			if (result <= 0.0) result = 0.0; // don't go less than zero
 			B.r_soc[z] = (uint8_t) result; // Ah counting results
+			if (B.r_soc[z] > 101) B.r_soc[z] = hist[z].bsoc; //FIXME a sanity check
 			if ((z != CCS.boi) && (z != CCS.boc) && (z <= HISTBATTNUM) && (R.primarypower[z] < SOC_VCOMP) && (hist[z].bsoc > BVSOC_MINC)) { // use rest voltage when possible
 				Get_RestSOC(z, P.STATIC_SOC, DO_BLEND); // use rest voltage table for SOC, sets hist[z].bsoc in Get_RestSOC
 				//hist[z].bsoc = hist[z].bsoc - (hist[z].esr - hist[z].h[10]); // use ESR history to bring down the SOC if they differ
