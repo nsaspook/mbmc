@@ -5,6 +5,9 @@ void config_pic(uint16_t hw_config)
 	static int8_t z;
 	if (hw_config == 8722u) {
 		_asm nop _endasm // asm code to disable compiler optimizations
+		/* set these boot bits so we can check for rests later */
+		RCONbits.BOR = 1;
+		RCONbits.POR = 1;
 		if (RCONbits.TO == (uint8_t) LOW) WDT_TO = TRUE;
 		if (EECON1bits.WRERR && (EECON1bits.EEPGD == (uint8_t) LOW)) EEP_ER = TRUE;
 		/* Configure all PORT  pins  */
@@ -149,7 +152,7 @@ void config_pic(uint16_t hw_config)
 		/* Enable all high/low priority interrupts */
 		INTCONbits.GIEH = HIGH;
 		INTCONbits.GIEL = HIGH;
-		max_eeprom_data=1024;
+		max_eeprom_data = 1024;
 	}
 }
 

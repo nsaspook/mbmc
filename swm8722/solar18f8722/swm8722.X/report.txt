@@ -10095,414 +10095,414 @@ FN_END		0x1a414	101
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"
 FN_START	0x1a416	3	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"	"config_pic"	"external"	
 ADJUST		0x1a416	3	1
-ADJUST		0x1a4ac	72	1
-ADJUST		0x1a4ae	72	1
-ADJUST		0x1a4b2	72	1
-CALL		0x1a4b4	72	"C:\MCC18\v3_39\src\pmc_common\USART\u1open.c"	"Open1USART"	0
-ADJUST		0x1a4b8	72	-3
-ADJUST		0x1a4ce	85	1
-ADJUST		0x1a4d0	85	1
-ADJUST		0x1a4d4	85	1
-CALL		0x1a4d6	85	"C:\MCC18\v3_39\src\pmc_common\USART\u2open.c"	"Open2USART"	0
-ADJUST		0x1a4da	85	-3
-CALL		0x1a4e6	90	"C:\MCC18\v3_39\src\pmc_common\USART\u1read.c"	"Read1USART"	0
-CALL		0x1a4f4	93	"C:\MCC18\v3_39\src\pmc_common\USART\u2read.c"	"Read2USART"	0
-ADJUST		0x1a502	97	1
-ADJUST		0x1a504	97	1
-CALL		0x1a506	97	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ansidraw"	0
-ADJUST		0x1a50a	97	-2
-ADJUST		0x1a514	100	1
-ADJUST		0x1a518	100	1
-ADJUST		0x1a51c	100	1
-CALL		0x1a51e	100	"C:\MCC18\v3_39\src\pmc_common\ADC\adcopen.c"	"OpenADC"	0
-ADJUST		0x1a522	100	-3
-ADJUST		0x1a52a	104	1
-CALL		0x1a52c	104	"C:\MCC18\v3_39\src\pmc_common\Timers\t0open.c"	"OpenTimer0"	0
-ADJUST		0x1a530	104	-1
-ADJUST		0x1a534	106	1
-CALL		0x1a536	106	"C:\MCC18\v3_39\src\pmc_common\Timers\t3open.c"	"OpenTimer3"	0
-ADJUST		0x1a53a	106	-1
-ADJUST		0x1a540	108	1
-CALL		0x1a542	108	"C:\MCC18\v3_39\src\pmc_common\Timers\t4open.c"	"OpenTimer4"	0
-ADJUST		0x1a546	108	-1
-ADJUST		0x1a548	109	1
-CALL		0x1a54a	109	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4open.c"	"OpenPWM4"	0
-ADJUST		0x1a54e	109	-1
-ADJUST		0x1a558	113	1
-ADJUST		0x1a55a	113	1
-CALL		0x1a55c	113	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4setdc.c"	"SetDCPWM4"	0
-ADJUST		0x1a560	113	-2
-ADJUST		0x1a588	128	1
-ADJUST		0x1a58c	128	1
-CALL		0x1a58e	128	"C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c"	"WriteTimer0"	0
-ADJUST		0x1a592	128	-2
-ADJUST		0x1a596	129	1
-ADJUST		0x1a59a	129	1
-CALL		0x1a59c	129	"C:\MCC18\v3_39\src\pmc_common\Timers\t3write.c"	"WriteTimer3"	0
-ADJUST		0x1a5a0	129	-2
-ADJUST		0x1a5c2	154	-1
-FN_END		0x1a5c8	154	
-FN_START	0x1a5ca	156	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"	"start_pic"	"external"	
-ADJUST		0x1a5ca	156	1
-ADJUST		0x1a5ec	166	-1
-FN_END		0x1a5f2	166	
-FN_START	0x1a5f4	171	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"	"start_workerthread"	"external"	
-FN_END		0x1a5f6	172	
+ADJUST		0x1a4b0	75	1
+ADJUST		0x1a4b2	75	1
+ADJUST		0x1a4b6	75	1
+CALL		0x1a4b8	75	"C:\MCC18\v3_39\src\pmc_common\USART\u1open.c"	"Open1USART"	0
+ADJUST		0x1a4bc	75	-3
+ADJUST		0x1a4d2	88	1
+ADJUST		0x1a4d4	88	1
+ADJUST		0x1a4d8	88	1
+CALL		0x1a4da	88	"C:\MCC18\v3_39\src\pmc_common\USART\u2open.c"	"Open2USART"	0
+ADJUST		0x1a4de	88	-3
+CALL		0x1a4ea	93	"C:\MCC18\v3_39\src\pmc_common\USART\u1read.c"	"Read1USART"	0
+CALL		0x1a4f8	96	"C:\MCC18\v3_39\src\pmc_common\USART\u2read.c"	"Read2USART"	0
+ADJUST		0x1a506	100	1
+ADJUST		0x1a508	100	1
+CALL		0x1a50a	100	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ansidraw"	0
+ADJUST		0x1a50e	100	-2
+ADJUST		0x1a518	103	1
+ADJUST		0x1a51c	103	1
+ADJUST		0x1a520	103	1
+CALL		0x1a522	103	"C:\MCC18\v3_39\src\pmc_common\ADC\adcopen.c"	"OpenADC"	0
+ADJUST		0x1a526	103	-3
+ADJUST		0x1a52e	107	1
+CALL		0x1a530	107	"C:\MCC18\v3_39\src\pmc_common\Timers\t0open.c"	"OpenTimer0"	0
+ADJUST		0x1a534	107	-1
+ADJUST		0x1a538	109	1
+CALL		0x1a53a	109	"C:\MCC18\v3_39\src\pmc_common\Timers\t3open.c"	"OpenTimer3"	0
+ADJUST		0x1a53e	109	-1
+ADJUST		0x1a544	111	1
+CALL		0x1a546	111	"C:\MCC18\v3_39\src\pmc_common\Timers\t4open.c"	"OpenTimer4"	0
+ADJUST		0x1a54a	111	-1
+ADJUST		0x1a54c	112	1
+CALL		0x1a54e	112	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4open.c"	"OpenPWM4"	0
+ADJUST		0x1a552	112	-1
+ADJUST		0x1a55c	116	1
+ADJUST		0x1a55e	116	1
+CALL		0x1a560	116	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4setdc.c"	"SetDCPWM4"	0
+ADJUST		0x1a564	116	-2
+ADJUST		0x1a58c	131	1
+ADJUST		0x1a590	131	1
+CALL		0x1a592	131	"C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c"	"WriteTimer0"	0
+ADJUST		0x1a596	131	-2
+ADJUST		0x1a59a	132	1
+ADJUST		0x1a59e	132	1
+CALL		0x1a5a0	132	"C:\MCC18\v3_39\src\pmc_common\Timers\t3write.c"	"WriteTimer3"	0
+ADJUST		0x1a5a4	132	-2
+ADJUST		0x1a5c6	157	-1
+FN_END		0x1a5cc	157	
+FN_START	0x1a5ce	159	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"	"start_pic"	"external"	
+ADJUST		0x1a5ce	159	1
+ADJUST		0x1a5f0	169	-1
+FN_END		0x1a5f6	169	
+FN_START	0x1a5f8	174	"/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c"	"start_workerthread"	"external"	
+FN_END		0x1a5fa	175	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"
-FN_START	0x1a5f8	5	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"_fchop"	"external"	
-FN_END		0x1a7b0	41	
-FN_START	0x1a7b2	13	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"__pa_0"	"static"	
-FN_END		0x1a7be	13	
-FN_START	0x1a7c0	28	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"__pa_1"	"static"	
-FN_END		0x1a7cc	28	
+FN_START	0x1a5fc	5	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"_fchop"	"external"	
+FN_END		0x1a7b4	41	
+FN_START	0x1a7b6	13	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"__pa_0"	"static"	
+FN_END		0x1a7c2	13	
+FN_START	0x1a7c4	28	"C:\MCC18\v3_39\src\extended\stdclib\fchop.c"	"__pa_1"	"static"	
+FN_END		0x1a7d0	28	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"
-FN_START	0x1a7ce	111	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc8_calculate"	"external"	
-ADJUST		0x1a7ce	111	1
-CALL		0x1a7ce	111	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1a7d2	111	3
-ADJUST		0x1a836	120	-4
-FN_END		0x1a83c	120	
-FN_START	0x1a83e	125	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc16"	"external"	
-ADJUST		0x1a83e	125	1
-CALL		0x1a83e	125	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1a842	125	2
-ADJUST		0x1a8b8	140	-3
-FN_END		0x1a8be	140	
-FN_START	0x1a8c0	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc16_ccitt"	"external"	
-ADJUST		0x1a8c0	143	1
-CALL		0x1a8c0	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1a8c4	143	4
-ADJUST		0x1a8ee	148	1
-ADJUST		0x1a8f0	148	1
+FN_START	0x1a7d2	111	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc8_calculate"	"external"	
+ADJUST		0x1a7d2	111	1
+CALL		0x1a7d2	111	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1a7d6	111	3
+ADJUST		0x1a83a	120	-4
+FN_END		0x1a840	120	
+FN_START	0x1a842	125	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc16"	"external"	
+ADJUST		0x1a842	125	1
+CALL		0x1a842	125	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1a846	125	2
+ADJUST		0x1a8bc	140	-3
+FN_END		0x1a8c2	140	
+FN_START	0x1a8c4	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"crc16_ccitt"	"external"	
+ADJUST		0x1a8c4	143	1
+CALL		0x1a8c4	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1a8c8	143	4
 ADJUST		0x1a8f2	148	1
-ADJUST		0x1a91a	148	1
+ADJUST		0x1a8f4	148	1
+ADJUST		0x1a8f6	148	1
 ADJUST		0x1a91e	148	1
 ADJUST		0x1a922	148	1
-CALL		0x1a924	148	"mul24.O"	"__mul24"	0
-ADJUST		0x1a928	148	-1
-ADJUST		0x1a92a	148	-1
+ADJUST		0x1a926	148	1
+CALL		0x1a928	148	"mul24.O"	"__mul24"	0
+ADJUST		0x1a92c	148	-1
 ADJUST		0x1a92e	148	-1
-ADJUST		0x1a972	150	-5
-FN_END		0x1a978	150	
-FN_START	0x1a97a	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"__pa_0"	"static"	
-FN_END		0x1a982	143	
+ADJUST		0x1a932	148	-1
+ADJUST		0x1a976	150	-5
+FN_END		0x1a97c	150	
+FN_START	0x1a97e	143	"/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c"	"__pa_0"	"static"	
+FN_END		0x1a986	143	
 FILE		0x0	0	"itoa.O"
-FN_START	0x1a984	29	"itoa.O"	"itoa"	"visibility"	
-ADJUST		0x1a984	29	1
+FN_START	0x1a988	29	"itoa.O"	"itoa"	"visibility"	
 ADJUST		0x1a988	29	1
-ADJUST		0x1a98e	32	1
-ADJUST		0x1a994	32	1
-ADJUST		0x1a99a	37	1
-ADJUST		0x1a9a4	43	1
-ADJUST		0x1a9a6	43	1
-ADJUST		0x1a9ac	43	1
-ADJUST		0x1a9ae	43	1
-ADJUST		0x1a9b0	52	1
-ADJUST		0x1a9b2	54	1
-ADJUST		0x1a9b4	56	1
-ADJUST		0x1a9c0	57	1
-ADJUST		0x1a9c2	57	1
-ADJUST		0x1a9c4	59	1
-ADJUST		0x1a9c6	59	1
-ADJUST		0x1a9ca	61	1
-ADJUST		0x1a9cc	61	1
-ADJUST		0x1aa1a	89	1
-ADJUST		0x1aa1e	89	-1
-ADJUST		0x1aa22	89	1
-ADJUST		0x1aa26	89	-1
-FN_END		0x1aa3c	100	
+ADJUST		0x1a98c	29	1
+ADJUST		0x1a992	32	1
+ADJUST		0x1a998	32	1
+ADJUST		0x1a99e	37	1
+ADJUST		0x1a9a8	43	1
+ADJUST		0x1a9aa	43	1
+ADJUST		0x1a9b0	43	1
+ADJUST		0x1a9b2	43	1
+ADJUST		0x1a9b4	52	1
+ADJUST		0x1a9b6	54	1
+ADJUST		0x1a9b8	56	1
+ADJUST		0x1a9c4	57	1
+ADJUST		0x1a9c6	57	1
+ADJUST		0x1a9c8	59	1
+ADJUST		0x1a9ca	59	1
+ADJUST		0x1a9ce	61	1
+ADJUST		0x1a9d0	61	1
+ADJUST		0x1aa1e	89	1
+ADJUST		0x1aa22	89	-1
+ADJUST		0x1aa26	89	1
+ADJUST		0x1aa2a	89	-1
+FN_END		0x1aa40	100	
 FILE		0x0	0	"itobcd.O"
-FN_START	0x1aa64	27	"itobcd.O"	"itoBCD"	"visibility"	
-ADJUST		0x1aa66	27	1
-ADJUST		0x1aa6c	27	1
-ADJUST		0x1aa72	32	1
-ADJUST		0x1aa7e	42	1
-ADJUST		0x1aa82	45	1
-ADJUST		0x1aa8c	53	1
-ADJUST		0x1aaa2	67	-1
-FN_END		0x1aaa4	69	
+FN_START	0x1aa68	27	"itobcd.O"	"itoBCD"	"visibility"	
+ADJUST		0x1aa6a	27	1
+ADJUST		0x1aa70	27	1
+ADJUST		0x1aa76	32	1
+ADJUST		0x1aa82	42	1
+ADJUST		0x1aa86	45	1
+ADJUST		0x1aa90	53	1
+ADJUST		0x1aaa6	67	-1
+FN_END		0x1aaa8	69	
 FILE		0x0	0	"rand.O"
-FN_START	0x1aab8	37	"rand.O"	"srand"	"visibility"	
-ADJUST		0x1aaba	37	1
-ADJUST		0x1aac0	37	1
-FN_END		0x1aac4	39	
-FN_START	0x1aac6	45	"rand.O"	"rand"	"visibility"	
-ADJUST		0x1aac8	47	1
-ADJUST		0x1aacc	50	1
-ADJUST		0x1aace	53	1
-ADJUST		0x1aad2	55	1
-ADJUST		0x1aada	60	-1
-ADJUST		0x1aadc	62	-1
-FN_END		0x1aaf6	76	
+FN_START	0x1aabc	37	"rand.O"	"srand"	"visibility"	
+ADJUST		0x1aabe	37	1
+ADJUST		0x1aac4	37	1
+FN_END		0x1aac8	39	
+FN_START	0x1aaca	45	"rand.O"	"rand"	"visibility"	
+ADJUST		0x1aacc	47	1
+ADJUST		0x1aad0	50	1
+ADJUST		0x1aad2	53	1
+ADJUST		0x1aad6	55	1
+ADJUST		0x1aade	60	-1
+ADJUST		0x1aae0	62	-1
+FN_END		0x1aafa	76	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"
-FN_START	0x1aaf8	5	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"_PackMath"	"external"	
-FN_END		0x1abc2	37	
-FN_START	0x1abc4	33	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_0"	"static"	
-FN_END		0x1abd2	33	
-FN_START	0x1abd4	23	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_1"	"static"	
-FN_END		0x1abdc	23	
-FN_START	0x1abde	34	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	"static"	
-FN_END		0x1abe6	34	
-FN_START	0x1abe8	14	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_3"	"static"	
-FN_END		0x1abee	14	
-FN_START	0x1abf0	35	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_4"	"static"	
-FN_END		0x1abf6	35	
-FN_START	0x1abf8	10	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	"static"	
-FN_END		0x1ac02	11	
-FN_START	0x1ac04	34	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	"static"	
-FN_END		0x1ac0c	34	
+FN_START	0x1aafc	5	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"_PackMath"	"external"	
+FN_END		0x1abc6	37	
+FN_START	0x1abc8	33	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_0"	"static"	
+FN_END		0x1abd6	33	
+FN_START	0x1abd8	23	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_1"	"static"	
+FN_END		0x1abe0	23	
+FN_START	0x1abe2	34	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	"static"	
+FN_END		0x1abea	34	
+FN_START	0x1abec	14	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_3"	"static"	
+FN_END		0x1abf2	14	
+FN_START	0x1abf4	35	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_4"	"static"	
+FN_END		0x1abfa	35	
+FN_START	0x1abfc	10	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	"static"	
+FN_END		0x1ac06	11	
+FN_START	0x1ac08	34	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	"static"	
+FN_END		0x1ac10	34	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\UnpkMath.c"
-FN_START	0x1ac0e	25	"C:\MCC18\v3_39\src\extended\stdclib\UnpkMath.c"	"_UnpkMath"	"external"	
-FN_END		0x1ace8	58	
-FN_START	0x1acea	54	"C:\MCC18\v3_39\src\extended\stdclib\UnpkMath.c"	"__pa_0"	"static"	
-FN_END		0x1acf2	54	
+FN_START	0x1ac12	25	"C:\MCC18\v3_39\src\extended\stdclib\UnpkMath.c"	"_UnpkMath"	"external"	
+FN_END		0x1acec	58	
+FN_START	0x1acee	54	"C:\MCC18\v3_39\src\extended\stdclib\UnpkMath.c"	"__pa_0"	"static"	
+FN_END		0x1acf6	54	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\ldexp.c"
-FN_START	0x1acf4	20	"C:\MCC18\v3_39\src\extended\stdclib\ldexp.c"	"ldexp"	"external"	
-FN_END		0x1ada0	39	
-FN_START	0x1ada2	27	"C:\MCC18\v3_39\src\extended\stdclib\ldexp.c"	"__pa_0"	"static"	
-FN_END		0x1adae	27	
+FN_START	0x1acf8	20	"C:\MCC18\v3_39\src\extended\stdclib\ldexp.c"	"ldexp"	"external"	
+FN_END		0x1ada4	39	
+FN_START	0x1ada6	27	"C:\MCC18\v3_39\src\extended\stdclib\ldexp.c"	"__pa_0"	"static"	
+FN_END		0x1adb2	27	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\frexp.c"
-FN_START	0x1adb0	23	"C:\MCC18\v3_39\src\extended\stdclib\frexp.c"	"frexp"	"external"	
-FN_END		0x1ae54	42	
-FN_START	0x1ae56	30	"C:\MCC18\v3_39\src\extended\stdclib\frexp.c"	"__pa_0"	"static"	
-FN_END		0x1ae62	30	
+FN_START	0x1adb4	23	"C:\MCC18\v3_39\src\extended\stdclib\frexp.c"	"frexp"	"external"	
+FN_END		0x1ae58	42	
+FN_START	0x1ae5a	30	"C:\MCC18\v3_39\src\extended\stdclib\frexp.c"	"__pa_0"	"static"	
+FN_END		0x1ae66	30	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"
-FN_START	0x1ae64	82	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"	"_do_cinit"	"external"	
-FN_END		0x1af00	185	
+FN_START	0x1ae68	82	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"	"_do_cinit"	"external"	
+FN_END		0x1af04	185	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"
-FN_START	0x1af02	19	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"OpenXLCD"	"external"	
-ADJUST		0x1af02	19	1
-CALL		0x1af1e	43	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayPORXLCD"	0
-ADJUST		0x1af24	45	1
-CALL		0x1af24	45	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1af28	46	1
-CALL		0x1af2a	46	"d10ktcyx.O"	"Delay10KTCYx"	0
-ADJUST		0x1af2e	46	-1
-ADJUST		0x1af32	48	1
-CALL		0x1af32	48	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1af36	49	1
-CALL		0x1af38	49	"d10ktcyx.O"	"Delay10KTCYx"	0
-ADJUST		0x1af3c	49	-1
-ADJUST		0x1af40	52	1
-CALL		0x1af40	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1af42	53	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-CALL		0x1af42	53	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af46	58	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-CALL		0x1af46	58	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-ADJUST		0x1af4a	59	1
-CALL		0x1af4e	59	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"WriteCmdXLCD"	0
-ADJUST		0x1af52	59	-1
-CALL		0x1af54	62	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af54	62	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1af5a	63	1
-CALL		0x1af5a	63	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1af5c	64	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af5c	64	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1af62	65	1
-CALL		0x1af62	65	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1af64	68	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af64	68	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1af6a	69	1
-CALL		0x1af6a	69	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1af6c	72	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af6c	72	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1af72	73	1
-CALL		0x1af72	73	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1af74	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0x1af74	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1af7a	77	1
-CALL		0x1af7c	77	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"SetDDRamAddr"	0
-ADJUST		0x1af80	77	-1
-ADJUST		0x1af82	80	-1
-FN_END		0x1af88	80	
-FN_START	0x1af8a	73	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_0"	"static"	
-FN_END		0x1af92	73	
-FN_START	0x1af94	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	"static"	
-FN_END		0x1af9a	76	
+FN_START	0x1af06	19	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"OpenXLCD"	"external"	
+ADJUST		0x1af06	19	1
+CALL		0x1af22	43	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayPORXLCD"	0
+ADJUST		0x1af28	45	1
+CALL		0x1af28	45	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1af2c	46	1
+CALL		0x1af2e	46	"d10ktcyx.O"	"Delay10KTCYx"	0
+ADJUST		0x1af32	46	-1
+ADJUST		0x1af36	48	1
+CALL		0x1af36	48	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1af3a	49	1
+CALL		0x1af3c	49	"d10ktcyx.O"	"Delay10KTCYx"	0
+ADJUST		0x1af40	49	-1
+ADJUST		0x1af44	52	1
+CALL		0x1af44	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1af46	53	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+CALL		0x1af46	53	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af4a	58	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+CALL		0x1af4a	58	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+ADJUST		0x1af4e	59	1
+CALL		0x1af52	59	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"WriteCmdXLCD"	0
+ADJUST		0x1af56	59	-1
+CALL		0x1af58	62	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af58	62	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1af5e	63	1
+CALL		0x1af5e	63	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1af60	64	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af60	64	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1af66	65	1
+CALL		0x1af66	65	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1af68	68	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af68	68	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1af6e	69	1
+CALL		0x1af6e	69	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1af70	72	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af70	72	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1af76	73	1
+CALL		0x1af76	73	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1af78	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0x1af78	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1af7e	77	1
+CALL		0x1af80	77	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"SetDDRamAddr"	0
+ADJUST		0x1af84	77	-1
+ADJUST		0x1af86	80	-1
+FN_END		0x1af8c	80	
+FN_START	0x1af8e	73	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_0"	"static"	
+FN_END		0x1af96	73	
+FN_START	0x1af98	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	"static"	
+FN_END		0x1af9e	76	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u2open.c"
-FN_START	0x1af9c	64	"C:\MCC18\v3_39\src\pmc_common\USART\u2open.c"	"Open2USART"	"external"	
-FN_END		0x1b01e	114	
+FN_START	0x1afa0	64	"C:\MCC18\v3_39\src\pmc_common\USART\u2open.c"	"Open2USART"	"external"	
+FN_END		0x1b022	114	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u1open.c"
-FN_START	0x1b020	71	"C:\MCC18\v3_39\src\pmc_common\USART\u1open.c"	"Open1USART"	"external"	
-FN_END		0x1b098	119	
+FN_START	0x1b024	71	"C:\MCC18\v3_39\src\pmc_common\USART\u1open.c"	"Open1USART"	"external"	
+FN_END		0x1b09c	119	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"
-FN_START	0x1b09a	7	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	"external"	
-FN_END		0x1b10a	16	
+FN_START	0x1b09e	7	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	"external"	
+FN_END		0x1b10e	16	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\putc.c"
-FN_START	0x1b10c	7	"C:\MCC18\v3_39\src\extended\stdclib\putc.c"	"putc"	"external"	
-FN_END		0x1b170	34	
+FN_START	0x1b110	7	"C:\MCC18\v3_39\src\extended\stdclib\putc.c"	"putc"	"external"	
+FN_END		0x1b174	34	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\ADC\adcopen.c"
-FN_START	0x1b172	68	"C:\MCC18\v3_39\src\pmc_common\ADC\adcopen.c"	"OpenADC"	"external"	
-FN_END		0x1b1d4	89	
+FN_START	0x1b176	68	"C:\MCC18\v3_39\src\pmc_common\ADC\adcopen.c"	"OpenADC"	"external"	
+FN_END		0x1b1d8	89	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\SPI\spi1open.c"
-FN_START	0x1b1d6	13	"C:\MCC18\v3_39\src\pmc_common\SPI\spi1open.c"	"OpenSPI1"	"external"	
-FN_END		0x1b232	59	
+FN_START	0x1b1da	13	"C:\MCC18\v3_39\src\pmc_common\SPI\spi1open.c"	"OpenSPI1"	"external"	
+FN_END		0x1b236	59	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"
-FN_START	0x1b234	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	"external"	
-FN_END		0x1b28e	21	
+FN_START	0x1b238	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	"external"	
+FN_END		0x1b292	21	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\fabs.c"
-FN_START	0x1b290	28	"C:\MCC18\v3_39\src\extended\stdclib\fabs.c"	"fabs"	"external"	
-FN_END		0x1b2de	33	
+FN_START	0x1b294	28	"C:\MCC18\v3_39\src\extended\stdclib\fabs.c"	"fabs"	"external"	
+FN_END		0x1b2e2	33	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\EEP\write_B.c"
-FN_START	0x1b2e0	45	"C:\MCC18\v3_39\src\pmc_common\EEP\write_B.c"	"Write_b_eep"	"external"	
-FN_END		0x1b32c	60	
+FN_START	0x1b2e4	45	"C:\MCC18\v3_39\src\pmc_common\EEP\write_B.c"	"Write_b_eep"	"external"	
+FN_END		0x1b330	60	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putrxlcd.c"
-FN_START	0x1b32e	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putrxlcd.c"	"putrsXLCD"	"external"	
-ADJUST		0x1b32e	16	1
-CALL		0x1b338	18	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b33e	20	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-CALL		0x1b346	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1b348	21	1
-CALL		0x1b34c	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	0
-ADJUST		0x1b350	21	-1
-ADJUST		0x1b364	25	-1
-FN_END		0x1b36a	25	
-FN_START	0x1b36c	18	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putrxlcd.c"	"__pa_0"	"static"	
-FN_END		0x1b37a	18	
+FN_START	0x1b332	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putrxlcd.c"	"putrsXLCD"	"external"	
+ADJUST		0x1b332	16	1
+CALL		0x1b33c	18	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b342	20	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+CALL		0x1b34a	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1b34c	21	1
+CALL		0x1b350	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	0
+ADJUST		0x1b354	21	-1
+ADJUST		0x1b368	25	-1
+FN_END		0x1b36e	25	
+FN_START	0x1b370	18	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putrxlcd.c"	"__pa_0"	"static"	
+FN_END		0x1b37e	18	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4setdc.c"
-FN_START	0x1b37c	16	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4setdc.c"	"SetDCPWM4"	"external"	
-FN_END		0x1b3c6	28	
+FN_START	0x1b380	16	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4setdc.c"	"SetDCPWM4"	"external"	
+FN_END		0x1b3ca	28	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"
-FN_START	0x1b3c8	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	"external"	
-FN_END		0x1b40c	21	
+FN_START	0x1b3cc	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	"external"	
+FN_END		0x1b410	21	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"
-FN_START	0x1b40e	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"SetDDRamAddr"	"external"	
-ADJUST		0x1b40e	13	1
-CALL		0x1b42a	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b42a	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b438	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b438	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-ADJUST		0x1b43e	60	-1
-FN_END		0x1b444	60	
-FN_START	0x1b446	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"__pa_0"	"static"	
-FN_END		0x1b452	41	
+FN_START	0x1b412	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"SetDDRamAddr"	"external"	
+ADJUST		0x1b412	13	1
+CALL		0x1b42e	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b42e	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b43c	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b43c	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+ADJUST		0x1b442	60	-1
+FN_END		0x1b448	60	
+FN_START	0x1b44a	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setddram.c"	"__pa_0"	"static"	
+FN_END		0x1b456	41	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setcgram.c"
-FN_START	0x1b454	14	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setcgram.c"	"SetCGRamAddr"	"external"	
-ADJUST		0x1b454	14	1
-CALL		0x1b470	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b470	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b47e	50	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b47e	50	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0x1b484	61	-1
-FN_END		0x1b48a	61	
-FN_START	0x1b48c	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setcgram.c"	"__pa_0"	"static"	
-FN_END		0x1b498	42	
+FN_START	0x1b458	14	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setcgram.c"	"SetCGRamAddr"	"external"	
+ADJUST		0x1b458	14	1
+CALL		0x1b474	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b474	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b482	50	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b482	50	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0x1b488	61	-1
+FN_END		0x1b48e	61	
+FN_START	0x1b490	39	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/setcgram.c"	"__pa_0"	"static"	
+FN_END		0x1b49c	42	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"
-FN_START	0x1b49a	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	"external"	
-ADJUST		0x1b49a	16	1
-CALL		0x1b4b4	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b4b4	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b4c2	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b4c2	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-ADJUST		0x1b4c8	63	-1
-FN_END		0x1b4ce	63	
-FN_START	0x1b4d0	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"__pa_0"	"static"	
-FN_END		0x1b4dc	44	
+FN_START	0x1b49e	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	"external"	
+ADJUST		0x1b49e	16	1
+CALL		0x1b4b8	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b4b8	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b4c6	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b4c6	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+ADJUST		0x1b4cc	63	-1
+FN_END		0x1b4d2	63	
+FN_START	0x1b4d4	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"__pa_0"	"static"	
+FN_END		0x1b4e0	44	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"
-FN_START	0x1b4de	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"WriteCmdXLCD"	"external"	
-ADJUST		0x1b4de	13	1
-CALL		0x1b4f8	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b4f8	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b506	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b506	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-ADJUST		0x1b50c	60	-1
-FN_END		0x1b512	60	
-FN_START	0x1b514	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"__pa_0"	"static"	
-FN_END		0x1b520	41	
+FN_START	0x1b4e2	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"WriteCmdXLCD"	"external"	
+ADJUST		0x1b4e2	13	1
+CALL		0x1b4fc	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b4fc	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b50a	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b50a	49	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+ADJUST		0x1b510	60	-1
+FN_END		0x1b516	60	
+FN_START	0x1b518	38	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/wcmdxlcd.c"	"__pa_0"	"static"	
+FN_END		0x1b524	41	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readdata.c"
-FN_START	0x1b522	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readdata.c"	"ReadDataXLCD"	"external"	
-ADJUST		0x1b522	16	1
-ADJUST		0x1b52c	16	1
-CALL		0x1b532	33	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b538	35	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b544	42	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b54a	44	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-ADJUST		0x1b55e	55	-2
-FN_END		0x1b564	55	
+FN_START	0x1b526	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readdata.c"	"ReadDataXLCD"	"external"	
+ADJUST		0x1b526	16	1
+ADJUST		0x1b530	16	1
+CALL		0x1b536	33	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b53c	35	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b548	42	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b54e	44	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+ADJUST		0x1b562	55	-2
+FN_END		0x1b568	55	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readaddr.c"
-FN_START	0x1b566	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readaddr.c"	"ReadAddrXLCD"	"external"	
-ADJUST		0x1b566	16	1
-ADJUST		0x1b570	16	1
-CALL		0x1b576	32	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b57c	34	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b588	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b58e	43	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-ADJUST		0x1b5a2	53	-2
-FN_END		0x1b5a8	53	
+FN_START	0x1b56a	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/readaddr.c"	"ReadAddrXLCD"	"external"	
+ADJUST		0x1b56a	16	1
+ADJUST		0x1b574	16	1
+CALL		0x1b57a	32	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b580	34	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b58c	41	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b592	43	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+ADJUST		0x1b5a6	53	-2
+FN_END		0x1b5ac	53	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\EEP\read_B.c"
-FN_START	0x1b5aa	35	"C:\MCC18\v3_39\src\pmc_common\EEP\read_B.c"	"Read_b_eep"	"external"	
-FN_END		0x1b5ea	45	
+FN_START	0x1b5ae	35	"C:\MCC18\v3_39\src\pmc_common\EEP\read_B.c"	"Read_b_eep"	"external"	
+FN_END		0x1b5ee	45	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4open.c"
-FN_START	0x1b5ec	14	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4open.c"	"OpenPWM4"	"external"	
-FN_END		0x1b62c	36	
+FN_START	0x1b5f0	14	"C:\MCC18\v3_39\src\pmc_common\PWM\pw4open.c"	"OpenPWM4"	"external"	
+FN_END		0x1b630	36	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\Timers\t3open.c"
-FN_START	0x1b62e	29	"C:\MCC18\v3_39\src\pmc_common\Timers\t3open.c"	"OpenTimer3"	"external"	
-FN_END		0x1b66c	55	
+FN_START	0x1b632	29	"C:\MCC18\v3_39\src\pmc_common\Timers\t3open.c"	"OpenTimer3"	"external"	
+FN_END		0x1b670	55	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putsxlcd.c"
-FN_START	0x1b66e	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putsxlcd.c"	"putsXLCD"	"external"	
-ADJUST		0x1b66e	16	1
-CALL		0x1b684	20	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
-ADJUST		0x1b694	21	1
-CALL		0x1b698	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	0
-ADJUST		0x1b69c	21	-1
-ADJUST		0x1b6a6	25	-1
-FN_END		0x1b6ac	25	
+FN_START	0x1b672	16	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/putsxlcd.c"	"putsXLCD"	"external"	
+ADJUST		0x1b672	16	1
+CALL		0x1b688	20	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	0
+ADJUST		0x1b698	21	1
+CALL		0x1b69c	21	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/writdata.c"	"WriteDataXLCD"	0
+ADJUST		0x1b6a0	21	-1
+ADJUST		0x1b6aa	25	-1
+FN_END		0x1b6b0	25	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u2read.c"
-FN_START	0x1b6ae	16	"C:\MCC18\v3_39\src\pmc_common\USART\u2read.c"	"Read2USART"	"external"	
-FN_END		0x1b6ea	38	
+FN_START	0x1b6b2	16	"C:\MCC18\v3_39\src\pmc_common\USART\u2read.c"	"Read2USART"	"external"	
+FN_END		0x1b6ee	38	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u1read.c"
-FN_START	0x1b6ec	17	"C:\MCC18\v3_39\src\pmc_common\USART\u1read.c"	"Read1USART"	"external"	
-FN_END		0x1b728	39	
+FN_START	0x1b6f0	17	"C:\MCC18\v3_39\src\pmc_common\USART\u1read.c"	"Read1USART"	"external"	
+FN_END		0x1b72c	39	
 FILE		0x0	0	"d10ktcyx.O"
-FN_START	0x1b766	19	"d10ktcyx.O"	"Delay10KTCYx"	"visibility"	
-ADJUST		0x1b768	21	1
-FN_END		0x1b79a	50	
+FN_START	0x1b76a	19	"d10ktcyx.O"	"Delay10KTCYx"	"visibility"	
+ADJUST		0x1b76c	21	1
+FN_END		0x1b79e	50	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\Timers\t0open.c"
-FN_START	0x1b79c	18	"C:\MCC18\v3_39\src\pmc_common\Timers\t0open.c"	"OpenTimer0"	"external"	
-FN_END		0x1b7d0	31	
+FN_START	0x1b7a0	18	"C:\MCC18\v3_39\src\pmc_common\Timers\t0open.c"	"OpenTimer0"	"external"	
+FN_END		0x1b7d4	31	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\Timers\t4open.c"
-FN_START	0x1b7d2	16	"C:\MCC18\v3_39\src\pmc_common\Timers\t4open.c"	"OpenTimer4"	"external"	
-FN_END		0x1b804	31	
+FN_START	0x1b7d6	16	"C:\MCC18\v3_39\src\pmc_common\Timers\t4open.c"	"OpenTimer4"	"external"	
+FN_END		0x1b808	31	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\Timers\t3write.c"
-FN_START	0x1b806	12	"C:\MCC18\v3_39\src\pmc_common\Timers\t3write.c"	"WriteTimer3"	"external"	
-FN_END		0x1b834	19	
+FN_START	0x1b80a	12	"C:\MCC18\v3_39\src\pmc_common\Timers\t3write.c"	"WriteTimer3"	"external"	
+FN_END		0x1b838	19	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c"
-FN_START	0x1b836	16	"C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c"	"WriteTimer0"	"external"	
-FN_END		0x1b864	24	
+FN_START	0x1b83a	16	"C:\MCC18\v3_39\src\pmc_common\Timers\t0write.c"	"WriteTimer0"	"external"	
+FN_END		0x1b868	24	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\ADC\adcsetch.c"
-FN_START	0x1b866	30	"C:\MCC18\v3_39\src\pmc_common\ADC\adcsetch.c"	"SetChanADC"	"external"	
-FN_END		0x1b894	36	
+FN_START	0x1b86a	30	"C:\MCC18\v3_39\src\pmc_common\ADC\adcsetch.c"	"SetChanADC"	"external"	
+FN_END		0x1b898	36	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\USART\u2write.c"
-FN_START	0x1b896	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2write.c"	"Write2USART"	"external"	
-FN_END		0x1b8c2	24	
+FN_START	0x1b89a	14	"C:\MCC18\v3_39\src\pmc_common\USART\u2write.c"	"Write2USART"	"external"	
+FN_END		0x1b8c6	24	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"
-FN_START	0x1b8c4	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	"external"	
-CALL		0x1b8c8	15	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b8ce	17	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
-CALL		0x1b8d6	37	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-CALL		0x1b8da	46	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-FN_END		0x1b8dc	55	
-FN_START	0x1b8de	37	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	"static"	
-FN_END		0x1b8ee	42	
+FN_START	0x1b8c8	13	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"BusyXLCD"	"external"	
+CALL		0x1b8cc	15	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b8d2	17	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"DelayFor18TCY"	0
+CALL		0x1b8da	37	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+CALL		0x1b8de	46	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+FN_END		0x1b8e0	55	
+FN_START	0x1b8e2	37	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	"static"	
+FN_END		0x1b8f2	42	
 FILE		0x0	0	"isdigit.O"
-FN_START	0x1b8f0	19	"isdigit.O"	"isdigit"	"visibility"	
-FN_END		0x1b912	37	
+FN_START	0x1b8f4	19	"isdigit.O"	"isdigit"	"visibility"	
+FN_END		0x1b916	37	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"
-FN_START	0x1b934	33	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"	"_startup"	"external"	
-FN_END		0x1b950	52	
+FN_START	0x1b938	33	"C:\MCC18\v3_39\src\extended\startup\c018iz_e.c"	"_startup"	"external"	
+FN_END		0x1b954	52	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\ADC\adcread.c"
-FN_START	0x1b96e	26	"C:\MCC18\v3_39\src\pmc_common\ADC\adcread.c"	"ReadADC"	"external"	
-FN_END		0x1b984	27	
+FN_START	0x1b972	26	"C:\MCC18\v3_39\src\pmc_common\ADC\adcread.c"	"ReadADC"	"external"	
+FN_END		0x1b988	27	
 FILE		0x0	0	"d10tcyx.O"
-FN_START	0x1b986	17	"d10tcyx.O"	"Delay10TCYx"	"visibility"	
-ADJUST		0x1b988	19	1
-FN_END		0x1b99a	32	
+FN_START	0x1b98a	17	"d10tcyx.O"	"Delay10TCYx"	"visibility"	
+ADJUST		0x1b98c	19	1
+FN_END		0x1b99e	32	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\EEP\busy_eep.c"
-FN_START	0x1b9ae	14	"C:\MCC18\v3_39\src\pmc_common\EEP\busy_eep.c"	"Busy_eep"	"external"	
-FN_END		0x1b9b2	15	
+FN_START	0x1b9b2	14	"C:\MCC18\v3_39\src\pmc_common\EEP\busy_eep.c"	"Busy_eep"	"external"	
+FN_END		0x1b9b6	15	
 FILE		0x0	0	"C:\MCC18\v3_39\src\pmc_common\ADC\adcconv.c"
-FN_START	0x1b9b4	24	"C:\MCC18\v3_39\src\pmc_common\ADC\adcconv.c"	"ConvertADC"	"external"	
-FN_END		0x1b9b6	25	
+FN_START	0x1b9b8	24	"C:\MCC18\v3_39\src\pmc_common\ADC\adcconv.c"	"ConvertADC"	"external"	
+FN_END		0x1b9ba	25	
 FILE		0x0	0	"C:\MCC18\v3_39\src\extended\stdclib\__init.c"
-FN_START	0x1b9b8	9	"C:\MCC18\v3_39\src\extended\stdclib\__init.c"	"__init"	"external"	
-FN_END		0x1b9b8	9	
+FN_START	0x1b9bc	9	"C:\MCC18\v3_39\src\extended\stdclib\__init.c"	"__init"	"external"	
+FN_END		0x1b9bc	9	
