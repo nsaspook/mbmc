@@ -90,7 +90,7 @@
 
 #define LOW_VECTOR      0x18            // ISR low address
 #define HIGH_VECTOR     0x8             // ISR high address
-#define POWER_SLOTS		3				// realtime battery voltage array size, 0 is the null battery
+#define POWER_SLOTS	3		// realtime battery voltage array size, 0 is the null battery
 
 #define	CCLED		PORTCbits.RC0
 #define	SDSAFE		LATCbits.LATC1   	// SD card is safe to remove
@@ -146,7 +146,7 @@
 #define BATTREST	3600		// rest time for battery voltages to settle after a charge cycle
 #define	CHRGTIME	50      	// charged alarm time
 #define SDTIME		30       	// SD card timeout
-#define	SUPDELAY	60			// solarup delay for start of day
+#define	SUPDELAY	60		// solarup delay for start of day
 #define DAYDELAY	86400		// Seconds in 24 hours
 #define DARKDELAY	3600		// darkness delay, a few hours total
 #define	BATCHARGE_S	7200    	// seconds in 2 hours
@@ -193,7 +193,7 @@
 #define BLOAD1		50l       	// load resistor in ohms*10
 #define BLOAD2		25l       	// ditto
 #define GELL_R_COMP     760L            // voltage drop from current limiting during testing.
-#define AGM_R_COMP		200L            // voltage drop from current limiting during testing.
+#define AGM_R_COMP	200L            // voltage drop from current limiting during testing.
 #define GELL_ESR_COMP   660L            // voltage drop from current limiting static.
 #define AGM_ESR_COMP	100L            // voltage drop from current limiting static.
 #define B0B				0		// null battery
@@ -284,7 +284,7 @@
 #define PLUSWEIGHT      1000.0	// must be at least this much diff to cause a alert
 #define ALERT_TIME      120	// delay between alerts
 #define W_BASE_F        100.0
-#define W_DOD_F         20.0
+#define W_DOD_F         50.0
 #define W_IR_F          0.2
 #define W_AH_F          2.0
 #define W_CYC_F         10.0

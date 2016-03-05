@@ -740,10 +740,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				hist[bn].esr = 1957;
 			}
 			if (hist[bn].esr < hist[bn].h[10]) hist[bn].h[10] = hist[bn].esr; // check for lowest esr
-			esr_delta = ((float) (t_esr - hist[bn].esr)) / ((float) (t_esr + hist[bn].esr)); // the change in esr with resistance
+			esr_delta = ((float) ((int32_t) t_esr - (int32_t) hist[bn].esr)) / ((float) ((int32_t) t_esr + (int32_t) hist[bn].esr)); // the change in esr with resistance
 			ADC_read(); // read  battery voltages.
 			term_time();
-			sprintf(bootstr2, " Battery%i LV%limV, BV%limV, CV%limV, SV%limV, I1 %i0mA, I2 %i0mA ESR R%i ESR-DELTA %i.\r\n", bn, cell[bn].voltage, R.primarypower[bn], R.ccvoltage, voltage_slope - R.primarypower[bn], load_i1, load_i2, hist[bn].esr, (int16_t) (esr_delta * 1000.0));
+			sprintf(bootstr2, " Battery%i LV%limV, BV%limV, CV%limV, SV%limV, I1 %i0mA, I2 %i0mA ESR R%i ESR-DELTA %li.\r\n", bn, cell[bn].voltage, R.primarypower[bn], R.ccvoltage, voltage_slope - R.primarypower[bn], load_i1, load_i2, hist[bn].esr, (int32_t) (esr_delta * 1000.0));
 			puts2USART(bootstr2);
 		} else {
 			load_i1 = cell[bn].voltage / BLOAD1; // find current 0.1 A units
