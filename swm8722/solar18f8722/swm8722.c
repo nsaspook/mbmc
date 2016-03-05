@@ -336,6 +336,7 @@
 //  30.1    Use AGM cells for controller power so change 'S' to 'M'
 //  30.4    Fix accounting bug on battery 3
 //  40.0    New developement branch
+//  40.1    Lots of global variables but embedded C is one trick monkey
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags

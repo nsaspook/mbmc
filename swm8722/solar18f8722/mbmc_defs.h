@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.0 FB  "                  // version text header
-#define	MAGIC		0x0400  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.1 FB  "                  // version text header
+#define	MAGIC		0x0401  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -182,10 +182,10 @@
 #define BATTFRESH	13200ul   	// float voltage after charge
 #define	BATTADJ		11800ul		// >15%	At this point under load start adjusting the Ah used by a static amount
 #define BATTFLAT	11400ul		// Close to full discharged (flat but usable)
-#define BATTCRIT	10900ul   	// Fully discharged
+#define BATTCRIT	11200ul   	// Fully discharged
 #define BATTSYS		9000ul		// controller system voltage critical level
 #define BATTSYSLOW	10500ul		// controller system voltage low
-#define BATTLOW		8000ul		// unuseable (damaged) battery
+#define BATTLOW		10000ul		// unuseable (damaged) battery
 #define	BATTDROP	5000ul		// Max voltage drop from unloaded to test test loaded
 #define BATTBOOST	200ul		// hyst voltage
 #define BATTCHECK	5          	// number of battery rechecks
@@ -279,10 +279,10 @@
 #define	DSOC_L		75      // divert power SOC setpoint for BOI
 #define	DSOC_H		85      // divert power SOC setpoint for BOI
 #define WFLOAT_LOW      24000.0 // divert power lowest weight for any battery
-#define MAXWEIGHT		50000.0	// highest weight value possible
-#define	MINWEIGHT		10000.0	// lowest weight value possible
-#define PLUSWEIGHT      1000.0		// must be at least this much diff to cause a alert
-#define ALERT_TIME      120			// delay between alerts
+#define MAXWEIGHT	50000.0	// highest weight value possible
+#define	MINWEIGHT	10000.0	// lowest weight value possible
+#define PLUSWEIGHT      1000.0	// must be at least this much diff to cause a alert
+#define ALERT_TIME      120	// delay between alerts
 #define W_BASE_F        100.0
 #define W_DOD_F         20.0
 #define W_IR_F          0.2
@@ -313,8 +313,8 @@
 #define RFACTOR_BANK    9       // above this current start to bank the rest_rate instead of just making it vanish on every update
 #define RFACTOR_RATE    2u      // rate in mA to restore batery Ah capacity every 10 seconds from Rest Reserve Bank
 #define RFACTOR_BSOC    50u     // don't collect rest reserve Ah below this SOC
-#define BFACTOR			15l			// default for battery Ah cap recovery factor [0..100]
-#define BFACTOR_MAX		100l		// 100 max factor * 100 to scale to .1A units
+#define BFACTOR		15l	// default for battery Ah cap recovery factor [0..100]
+#define BFACTOR_MAX	100l	// 100 max factor * 100 to scale to .1A units
 #define BFACTOR_BANK    9       // above this current start to bank the bound_rate instead of just making it vanish on every update
 #define BFACTOR_RATE    1       // rate in mA to restore batery Ah capacity every 10 seconds from Bound Reserve Bank
 #define BFACTOR_BSOC    60u     // don't collect Bound reserve Ah below this SOC

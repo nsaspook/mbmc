@@ -7,9 +7,6 @@
 uint8_t charger_power(uint8_t sw, uint8_t now)
 {
 	if (sw == ON) {
-		s_crit(HL);
-		c_on = V.timerint_count;
-		e_crit();
 		if (now == YES) { // Do it now
 			if (CHARGERL == R_OFF) { // if off then on
 				alarm_buffer[almctr].bn = CCS.boc;
@@ -19,6 +16,9 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 			}
 			if (!AC_OFF_U) { // check for utility power
 				CHARGERL = R_ON;
+				s_crit(HL);
+				c_on = V.timerint_count;
+				e_crit();
 			}
 		} else { // Wait to stop power glitching
 			if (((c_on - c_off) > C_TIME) || (c_off == NULL0)) { // wait if charger was just shut off.
@@ -30,13 +30,13 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 				}
 				if (!AC_OFF_U) { // check for utility power
 					CHARGERL = R_ON;
+					s_crit(HL);
+					c_on = V.timerint_count;
+					e_crit();
 				}
 			}
 		}
 	} else {
-		s_crit(HL);
-		c_off = V.timerint_count;
-		e_crit();
 		if (now == YES) { // Do it now
 			if (CHARGERL == R_ON) { // if on then off
 				alarm_buffer[almctr].bn = CCS.boi;
@@ -45,6 +45,9 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 				check_alarm(CCS.boi, " charger3 "); // send alarm codes to terminal if alm_flag is set
 			}
 			CHARGERL = R_OFF;
+			s_crit(HL);
+			c_off = V.timerint_count;
+			e_crit();
 		} else {
 			if (((c_off - c_on) > C_TIME) || (c_on == NULL0)) { // wait if charger was just turned on.
 				if (CHARGERL == R_ON) { // if on then off
@@ -54,6 +57,9 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 					check_alarm(CCS.boi, " charger4 "); // send alarm codes to terminal if alm_flag is set
 				}
 				CHARGERL = R_OFF;
+				s_crit(HL);
+				c_off = V.timerint_count;
+				e_crit();
 			}
 		}
 	}
