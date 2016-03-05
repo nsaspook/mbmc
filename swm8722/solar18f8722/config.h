@@ -63,10 +63,10 @@
 
 /* Battery Ah caps	in 1.0A units */
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4
-#define B1AH		225     	// FLA costco GC2
-#define	B2AH		225    		// FLA costco CG2
-#define B3AH		12      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
-#define	B4AH		12      	// AGM cell
+#define B1AH		208     	// FLA costco GC2
+#define	B2AH		208    		// FLA costco CG2
+#define B3AH		24      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4AH		24      	// AGM cell
 #define B1ID		'L'     	// FLA costco GC2
 #define	B2ID		'L'    		// FLA costco CG2
 #define B3ID		'M'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
@@ -74,18 +74,18 @@
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
 #define	PerkC1		1.25    	// Peukert Comp Batt #1
 #define PerkC2		1.25		// Peukert Comp Batt #2
-#define	DF			1.0     	// discharge floor of battery total Ah, normally 1.0  reduce below 1.0 to reserve Ah capacity
+#define	DF		1.0     	// discharge floor of battery total Ah, normally 1.0  reduce below 1.0 to reserve Ah capacity
 #define KW_VOLTS        122l            // Volts for initial power calc in .kwo, set in noload_soc()
-#define USER_DOD        1.0/0.5         // Percent of battery cap that we normally use. 1.0 is a full discharge
+#define USER_DOD        1.0/0.5         // Percent of battery cap that we normally use. 1.0 is a full discharge, 2.0 50% discharge
 #define CONT_DOD        0.4             // Controller power batteries
-#define SOC_DF			40				// SOC below this is a full discharge for record keeping
+#define SOC_DF		40		// SOC below this is a full discharge for record keeping
 #define SOC_FF          90              // SOC above this is a full recharge for record keeping
 #define SOC_FR          25              // SOC for data reset at CC float while charging.
-#define SOC_FRESH		90				// static SOC value
-#define SOC_FULL		100				// static SOC value
+#define SOC_FRESH	90		// static SOC value
+#define SOC_FULL	100		// static SOC value
 #define SOC_VCOMP       12800ul         // use rest voltage SOC below this on battery not on inverter or charging
-#define	HELP_TIME		7200			// charger boost time for morning help (seconds)
-#define	DUALLOAD		TRUE			// Have low and high current loads for battery testing.
+#define	HELP_TIME	7200		// charger boost time for morning help (seconds)
+#define	DUALLOAD	TRUE		// Have low and high current loads for battery testing.
 #define CHARGER_MINV    12000ul         // if the voltage is less than this the charger is not operating
 #define CHARGER_DELAY   20              // time delay in worksecs before resetting the charger if it trips
 /* Alarm and logging */
