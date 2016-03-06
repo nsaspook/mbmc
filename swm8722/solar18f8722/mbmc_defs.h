@@ -18,8 +18,8 @@
 #define	TIMEROFFSET	26474           // timer0 16bit counter value for 1 second to overflow
 #define	TIMER3REG	3048            // timer3 value for 20Hz clock
 #define BUF_SIZE 	128
-#define LOW		(uint8_t)0               // digital output state levels, sink
-#define	HIGH		(uint8_t)1               // digital output state levels, source
+#define LOW		(uint8_t)0              // digital output state levels, sink
+#define	HIGH		(uint8_t)1              // digital output state levels, source
 #define	ON		LOW       		//
 #define OFF		HIGH			//
 #define	S_ON		LOW       		// low select/on for chip/led
