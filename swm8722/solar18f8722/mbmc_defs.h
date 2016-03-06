@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.1 FB  "                  // version text header
-#define	MAGIC		0x0401  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.2 FB  "                  // version text header
+#define	MAGIC		0x0402  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -253,11 +253,12 @@
 #define	CCFLOATTIME	600    // seconds to check to see if we continue in float
 #define	CCLEDBLINK	14     	// seconds to count blink clocks.
 #define CCONEBLINK	25      // C40 is working
-#define CCFOURBLINKS    77 	// C40 in absorption mode
+#define CCFOURBLINKS    79 	// C40 in absorption mode
 #define	CCLEDSOLID	180     // need to check this
 
 #define INVERTERON	120     // if current to inverter is more than this AMPS it's ON and loaded
-#define	GASSING		250		// possible h2 gas above this charging current
+#define	GASSING		250	// possible h2 gas above this charging current
+#define GASSING_V	14400l	// possible h2 gas above this charging voltage
 #define	LPCHANC		12      // digital filter channels
 #define	LP_PWM		0		// PWM period filter channel
 #define LP_CCEFF	1		// channel for CCEFF
@@ -330,8 +331,9 @@
 #define BVSOC_C_OFF     2L      // correction of vots to SOC for high current
 #define BVSOC_SV_OFF    25L     // correction of vots to SOC for system controller during GANGED
 #define BVSOC_CURRENT   50L     // switching point for R and L SoC methods
-#define END_RATIO       0.12     // End amps from battery capacity, value scaled to result in mA for end-amps
-#define END_RATIO_MED	0.90     // End amps from battery capacity, value scaled to result in mA for end-amps for M batteries
+#define END_RATIO       0.16    // End amps from battery capacity, value scaled to result in mA for end-amps for L batteries
+#define END_RATIO_MED	0.60    // End amps from battery capacity, value scaled to result in mA for end-amps for M batteries
+#define END_RATIO_SM	0.60    // End amps from battery capacity, value scaled to result in mA for end-amps for S batteries
 
 #define	DCURRENT	0.0     	// default discharge current 0.1A units "3.6 is the lowest possible value = .36A", use AH_DAY_OFF
 #define	AH_DAY_LOSS1	2000l      	// Ah lost in 24 hours from natural discharge or controller usage BATT1.

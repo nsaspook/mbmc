@@ -838,6 +838,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	absorp_current = 0; // zero out end-amps data
 	end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO); // make a End-Amps from the adjusted battery rate
 	if (cell[bn].id == 'M') end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_MED);
+	if (cell[bn].id == 'S') end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_SM);
 	B.start_aho = hist[bn].ahop; // use the adjusted load current
 	B.start_ahu = hist[bn].h[0]; // the current balance of current in/out for the battery ,h[0] is in tenth amp units
 	cycles_tmp = cell[bn].cycles;
