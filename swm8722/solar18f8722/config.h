@@ -34,25 +34,25 @@
 /*  KYOCERA KD135GX-LFBS one, SHARP ND-123UJF one,NE-80EJEA two, SUNFORCE 15W panels five
  *  ~500 Watts total
  * http://ecmweb.com/green-building/highs-and-lows-photovoltaic-system-calculations
- * Vadj = Vmp × {100% + [(Tmod - 25°C) × TC Vmp]}
+ * Vadj = Vmp ? {100% + [(Tmod - 25?C) ? TC Vmp]}
 	where,
 	Vadj is the temperature adjusted voltage
 	Vmp is the module?s rated maximum power voltage
 	Tmod is the temperature of the PV module
-	25°C is the STC condition we must adjust from
-	TC Vmp = Temperature correction factor in %/°C
+	25?C is the STC condition we must adjust from
+	TC Vmp = Temperature correction factor in %/?C
  *
- *  Less than 6 in. of space between the module and roof surface: Tmod = Ambient + 35°C.
-	More than 6 in. of space between the module and roof surface: Tmod = Ambient + 30°C.
-	PV array mounted on a top of pole or elevated ground mount: Tmod = Ambient + 25°C.
-	Tmod = 37°C +35°C = 72°C
+ *  Less than 6 in. of space between the module and roof surface: Tmod = Ambient + 35?C.
+	More than 6 in. of space between the module and roof surface: Tmod = Ambient + 30?C.
+	PV array mounted on a top of pole or elevated ground mount: Tmod = Ambient + 25?C.
+	Tmod = 37?C +35?C = 72?C
  */
 
-#define A_VMP			17300.0 	// array voltage at power max, millivolts units, 25c
+#define A_VMP		17300.0 	// array voltage at power max, millivolts units, 25c
 #define A_VMP_TEMP      A_VMP/0.80      // Hot voltage value, 37c
-#define	A_IMP			267.05  	// array current at power max,  0.1 A units
-#define	A_SSC			294.45  	// array short circuit current, 0.1 A units
-#define	PVP_MAX			4619965ul 	// max possible power in milliWatts*10, 25c
+#define	A_IMP		267.05  	// array current at power max,  0.1 A units
+#define	A_SSC		294.45  	// array short circuit current, 0.1 A units
+#define	PVP_MAX		4619965ul 	// max possible power in milliWatts*10, 25c
 #define	PVP_MAX_TEMP	3695972ul 	// max possible power in milliWatts*10, 37c
 #define PW_MAX		(PVP_MAX_TEMP/10ul)*16ul	// mAh for a full 16hr day and full power at 37c
 #define PW_DIVERSION    PW_MAX/6        // the most power sent to diversion per day in auto

@@ -189,7 +189,7 @@
 #define	BATTDROP	5000ul		// Max voltage drop from unloaded to test test loaded
 #define BATTBOOST	200ul		// hyst voltage
 #define BATTCHECK	5          	// number of battery rechecks
-#define BATTWATER	500000ul	// charging in seconds before checking the water levels in the battery.
+#define BATTWATER	250000ul	// charging in seconds before checking the water levels in the battery.
 #define BLOAD1		50l       	// load resistor in ohms*10
 #define BLOAD2		25l       	// ditto
 #define GELL_R_COMP     760L            // voltage drop from current limiting during testing.
