@@ -277,7 +277,9 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			hist[z].rest_factor = RFACTOR; // Efficency factor of battery recovery
 			e_crit();
 		}
-		cell[z].weight = (float) hist[z].bsoc * W_BASE_F;
+		
+		/* start calculation of battery selection weight for each power battery */
+		cell[z].weight = (float) hist[z].bsoc * W_BASE_F; // battery selection weigth factor base
 		cell[z].weight += (float) (cell[z].noload);
 
 		if (CCMODE != FLOAT_W) { // use realtime data if floating charge, maybe faster switching to next battery
@@ -336,7 +338,6 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		if (z <= HISTBATTNUM) {
 			s_crit(HL);
 			if (((R.primarypower[z] < ALERTLOW) || (hist[z].bsoc < BSOCLOW)) || ((CCS.bn == z) && (CCS.alert))) {
-				//		cell[z].weight -= MINWEIGHT; // move it down by a large amount
 				if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 				if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
 				CCS.bn = z; // set to battery we wish to possibly charge next

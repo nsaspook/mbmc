@@ -284,13 +284,13 @@
 #define	MINWEIGHT	10000.0	// lowest weight value possible
 #define PLUSWEIGHT      1000.0	// must be at least this much diff to cause a alert
 #define ALERT_TIME      120	// delay between alerts
-#define W_BASE_F        100.0
-#define W_DOD_F         50.0
-#define W_IR_F          0.2
-#define W_AH_F          2.0
-#define W_CYC_F         10.0
-#define	PRIPOINTS	0.0			// weight points for primary battery
-#define	INVPOINTS	2000.0		// weight points for battery on inverter
+#define W_BASE_F        100.0	// battery selection weigth factor base +, lower total weights pick next battery
+#define W_DOD_F         58.0	// user depth of discharge factor -
+#define W_IR_F          0.2	// internal resistance factor -
+#define W_AH_F          2.0	// pure Ah factor -
+#define W_CYC_F         10.0	// charge cycles factor, age/usage -
+#define	PRIPOINTS	0.0	// weight points for primary battery
+#define	INVPOINTS	2000.0	// weight points for battery on inverter
 #define	LOWPOINTS       20000.0	// weight points for a very low battery
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
 

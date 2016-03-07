@@ -4849,1976 +4849,1976 @@ ADJUST		0x7b62	265	1
 ADJUST		0x7b66	265	1
 ADJUST		0x7b72	265	1
 CALL		0x7ba6	278	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x7baa	280	1
-ADJUST		0x7bac	280	1
-ADJUST		0x7bb0	280	1
-ADJUST		0x7bba	280	-1
-ADJUST		0x7bbc	280	-1
-ADJUST		0x7bd2	281	1
-ADJUST		0x7bfa	287	1
-ADJUST		0x7c10	293	1
-ADJUST		0x7c12	293	1
-ADJUST		0x7c14	293	1
-CALL		0x7c26	293	"mulFP.O"	"__mulFP"	0
-ADJUST		0x7c2e	294	1
-ADJUST		0x7c30	294	1
-ADJUST		0x7c32	294	1
-ADJUST		0x7c36	294	1
-ADJUST		0x7c46	295	1
-ADJUST		0x7c4a	295	1
-CALL		0x7c5e	295	"mul16.O"	"__mul16"	0
-ADJUST		0x7c6a	296	1
-ADJUST		0x7c6c	296	1
-ADJUST		0x7c70	296	1
-ADJUST		0x7c8c	298	1
-ADJUST		0x7c8e	298	1
-ADJUST		0x7c92	298	1
-ADJUST		0x7c96	298	1
-ADJUST		0x7caa	299	1
-ADJUST		0x7cac	299	1
-ADJUST		0x7cae	299	1
-ADJUST		0x7ce4	305	1
-ADJUST		0x7cee	306	1
-ADJUST		0x7d2e	310	1
-ADJUST		0x7d30	310	1
-ADJUST		0x7d34	310	1
-ADJUST		0x7d38	310	1
-ADJUST		0x7d40	310	1
-ADJUST		0x7d44	311	1
-ADJUST		0x7d4e	312	1
-ADJUST		0x7d58	313	1
-ADJUST		0x7d5c	313	1
-ADJUST		0x7d7c	315	1
-ADJUST		0x7d80	315	1
-ADJUST		0x7d84	315	1
-CALL		0x7d86	315	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0x7d8a	315	-3
-ADJUST		0x7db0	322	1
-ADJUST		0x7dbc	324	1
-ADJUST		0x7dbe	324	1
-ADJUST		0x7dcc	333	1
-ADJUST		0x7dd0	333	1
-ADJUST		0x7dd4	333	1
-ADJUST		0x7dd6	333	1
-ADJUST		0x7de2	337	1
-ADJUST		0x7e14	340	1
-ADJUST		0x7e1e	341	1
-ADJUST		0x7e34	343	1
-ADJUST		0x7e36	343	1
-ADJUST		0x7e3e	343	1
-CALL		0x7e42	343	"addFP.O"	"__addFP"	0
-ADJUST		0x7e4e	343	1
-ADJUST		0x7e54	343	1
-ADJUST		0x7e58	343	1
-ADJUST		0x7ea4	350	1
-ADJUST		0x7eb0	352	1
-ADJUST		0x7eb2	352	1
-ADJUST		0x7eba	357	1
-ADJUST		0x7ebe	357	1
-ADJUST		0x7ec2	357	1
-ADJUST		0x7ec4	357	1
-CALL		0x7ec6	363	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x7ee2	369	1
-ADJUST		0x7ee6	369	1
-ADJUST		0x7eea	369	1
-ADJUST		0x7eec	369	1
-CALL		0x7ef0	369	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-ADJUST		0x7ef4	369	-4
-ADJUST		0x7ef8	370	1
-ADJUST		0x7efa	370	1
-ADJUST		0x7f00	370	1
-ADJUST		0x7f02	370	1
-CALL		0x7f04	370	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"battalarm"	0
-ADJUST		0x7f08	370	-6
-ADJUST		0x7f10	374	1
-ADJUST		0x7f12	375	1
-ADJUST		0x7f16	375	1
-ADJUST		0x7f1a	375	1
-ADJUST		0x7f1e	375	1
-CALL		0x7f38	379	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x7fb0	394	1
-CALL		0x802e	408	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x8050	411	1
-ADJUST		0x8054	411	1
-ADJUST		0x8058	411	1
-ADJUST		0x805a	411	1
-ADJUST		0x805e	412	1
-ADJUST		0x8062	412	1
-ADJUST		0x806a	414	1
-ADJUST		0x806e	414	1
-ADJUST		0x8072	414	1
-ADJUST		0x8074	414	1
-ADJUST		0x8078	415	1
-ADJUST		0x807c	415	1
-ADJUST		0x8080	415	1
-ADJUST		0x8082	415	1
-ADJUST		0x808a	415	1
-CALL		0x808e	415	"mul32.O"	"__mul32"	0
-ADJUST		0x8098	418	1
-ADJUST		0x809c	418	1
-ADJUST		0x80a0	418	1
-ADJUST		0x80a4	418	1
-ADJUST		0x80ae	418	1
-ADJUST		0x80ba	418	1
-ADJUST		0x80bc	418	1
-ADJUST		0x80c0	418	1
-ADJUST		0x80c4	418	1
-ADJUST		0x80c8	418	1
-ADJUST		0x80cc	418	-15
-ADJUST		0x80d0	419	1
-ADJUST		0x80d2	419	1
-ADJUST		0x80d6	419	1
-CALL		0x80d8	419	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x80f6	420	1
-ADJUST		0x80fa	420	1
-ADJUST		0x80fe	420	1
-ADJUST		0x8102	420	-13
-ADJUST		0x8106	421	1
-ADJUST		0x8108	421	1
-ADJUST		0x8114	422	1
-CALL		0x8118	422	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-CALL		0x812a	423	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-ADJUST		0x812e	423	-6
-ADJUST		0x8132	424	1
-ADJUST		0x813c	424	1
-ADJUST		0x814e	425	1
-ADJUST		0x8154	426	1
-ADJUST		0x8158	426	1
-ADJUST		0x815c	426	1
-ADJUST		0x8160	426	1
-ADJUST		0x8164	426	1
-ADJUST		0x8168	426	1
-ADJUST		0x816c	426	1
-ADJUST		0x8170	426	-13
-ADJUST		0x8174	427	1
-ADJUST		0x8178	427	1
-ADJUST		0x817c	428	1
-ADJUST		0x8180	428	1
-ADJUST		0x8184	428	1
-ADJUST		0x8188	428	1
-CALL		0x818c	428	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-ADJUST		0x81c0	430	1
-ADJUST		0x81c4	430	1
-ADJUST		0x81c8	430	1
-ADJUST		0x81cc	430	1
-CALL		0x81d0	430	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-ADJUST		0x81d6	431	1
-ADJUST		0x81da	431	1
-ADJUST		0x81de	431	1
-ADJUST		0x81e2	431	-11
-ADJUST		0x81e6	432	1
-ADJUST		0x81e8	432	1
-ADJUST		0x81ec	432	1
-CALL		0x81ee	432	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x81f2	433	1
-ADJUST		0x81f4	433	1
-ADJUST		0x81f8	433	1
-ADJUST		0x81fc	433	1
-ADJUST		0x8200	433	1
-CALL		0x8204	433	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-ADJUST		0x8238	435	1
-ADJUST		0x823c	435	1
-ADJUST		0x8240	435	1
-ADJUST		0x8244	435	1
-CALL		0x8248	435	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
-ADJUST		0x824e	436	1
-ADJUST		0x8252	436	1
-ADJUST		0x8256	436	1
-ADJUST		0x825a	436	-11
-ADJUST		0x825e	437	1
-ADJUST		0x8260	437	1
-ADJUST		0x8264	437	1
-CALL		0x8266	437	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x82a0	438	1
-ADJUST		0x82a4	438	1
-ADJUST		0x82a8	438	1
-ADJUST		0x82ac	438	-15
-ADJUST		0x82b0	439	1
-ADJUST		0x82b4	439	1
-ADJUST		0x82b8	439	1
-CALL		0x82ba	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x82fa	441	1
-ADJUST		0x82fe	441	1
-ADJUST		0x8302	441	1
-ADJUST		0x8306	441	-15
-ADJUST		0x830c	443	1
-ADJUST		0x8310	443	1
-ADJUST		0x8314	443	1
-ADJUST		0x8318	443	-5
-ADJUST		0x832e	449	1
-ADJUST		0x8332	449	1
-CALL		0x8334	449	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x8338	451	1
-ADJUST		0x833c	451	1
-ADJUST		0x8340	451	1
-ADJUST		0x8342	451	1
-CALL		0x8346	451	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-ADJUST		0x834a	451	-4
-ADJUST		0x834e	453	1
-ADJUST		0x8350	453	1
-CALL		0x8354	453	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
-ADJUST		0x8358	453	-6
-ADJUST		0x83ca	464	1
-ADJUST		0x83d0	464	1
-ADJUST		0x83d4	464	1
-ADJUST		0x83d8	464	1
-ADJUST		0x83fe	469	1
-ADJUST		0x8400	469	1
-ADJUST		0x8404	469	1
-ADJUST		0x8406	469	1
-ADJUST		0x840a	471	1
-ADJUST		0x8410	471	1
-ADJUST		0x8412	471	1
-CALL		0x8414	471	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
-ADJUST		0x8418	471	-3
-ADJUST		0x8424	477	1
-ADJUST		0x842a	477	1
-ADJUST		0x842e	477	1
-ADJUST		0x8432	477	1
-ADJUST		0x8446	481	1
-ADJUST		0x8456	481	1
-ADJUST		0x845a	481	1
-CALL		0x845c	481	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
-ADJUST		0x8460	481	-3
-ADJUST		0x846a	486	-1
-FN_END		0x846c	486	
-FN_START	0x846e	494	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"noload_soc"	"external"	
-ADJUST		0x8470	494	1
-ADJUST		0x8474	494	1
-ADJUST		0x8496	494	1
-CALL		0x849e	494	"mulFP.O"	"__mulFP"	0
-ADJUST		0x84a6	494	-1
-ADJUST		0x84a8	494	-1
-ADJUST		0x84ea	497	1
-ADJUST		0x84ec	498	1
-ADJUST		0x84ee	498	1
-ADJUST		0x84f0	498	1
-ADJUST		0x84f4	498	1
-ADJUST		0x84fc	498	1
-ADJUST		0x84fe	498	1
-CALL		0x8500	498	"addFP.O"	"__addFP"	0
-CALL		0x8504	498	"divFP.O"	"__divFP"	0
-ADJUST		0x8508	498	-1
-ADJUST		0x850a	498	-1
-ADJUST		0x850e	498	-1
-ADJUST		0x8512	498	-1
-ADJUST		0x851a	499	1
-ADJUST		0x851e	499	1
-ADJUST		0x8522	499	1
-ADJUST		0x8526	499	1
-ADJUST		0x8588	506	1
-ADJUST		0x858c	506	1
-ADJUST		0x8590	506	1
-ADJUST		0x8594	506	1
-ADJUST		0x8598	506	1
-CALL		0x859c	506	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Volts_to_SOC"	0
-ADJUST		0x85a0	506	-5
-ADJUST		0x85aa	511	1
-ADJUST		0x85c4	518	1
-ADJUST		0x85c6	518	1
-ADJUST		0x85d6	519	1
-ADJUST		0x85dc	519	1
-ADJUST		0x85fe	521	1
-ADJUST		0x8600	521	1
-ADJUST		0x860a	524	1
-ADJUST		0x860c	524	1
-ADJUST		0x860e	524	1
-ADJUST		0x8610	524	1
-ADJUST		0x8612	524	1
-ADJUST		0x8616	524	1
-ADJUST		0x8618	524	1
-ADJUST		0x8622	524	1
-CALL		0x8626	524	"div32s.O"	"__div32s"	0
-CALL		0x862a	524	"mul32.O"	"__mul32"	0
-CALL		0x862e	524	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
-ADJUST		0x8632	524	-6
-ADJUST		0x8636	525	1
-ADJUST		0x863c	525	1
-ADJUST		0x863e	525	1
-ADJUST		0x8642	525	1
-ADJUST		0x8646	525	1
-ADJUST		0x864a	525	1
-ADJUST		0x864e	525	-9
-ADJUST		0x8652	526	1
-ADJUST		0x8658	526	1
-ADJUST		0x865a	526	1
-CALL		0x865c	526	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x8660	526	-3
-ADJUST		0x8664	527	1
-ADJUST		0x8666	527	1
-ADJUST		0x8668	529	1
-ADJUST		0x866a	529	1
-ADJUST		0x866c	529	1
-ADJUST		0x866e	529	1
-ADJUST		0x867e	532	1
-ADJUST		0x8684	533	1
-CALL		0x8690	536	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x8698	537	1
-ADJUST		0x86c6	537	1
-ADJUST		0x86c8	537	1
-ADJUST		0x86cc	537	1
-ADJUST		0x86d0	537	1
-ADJUST		0x86d4	537	1
-ADJUST		0x86d8	537	-23
-ADJUST		0x86dc	538	1
-ADJUST		0x8700	542	1
-ADJUST		0x8704	542	1
-ADJUST		0x870c	543	1
-ADJUST		0x8710	543	1
-ADJUST		0x8712	543	1
-CALL		0x8716	543	"ltFP.O"	"__ltFP"	0
-ADJUST		0x873a	544	-1
-ADJUST		0x873c	544	-1
-ADJUST		0x873e	545	1
-ADJUST		0x8740	545	1
-ADJUST		0x8744	545	1
-ADJUST		0x8748	545	1
-ADJUST		0x874a	545	1
-ADJUST		0x8758	547	1
-ADJUST		0x8760	547	-1
-ADJUST		0x8764	547	1
-ADJUST		0x8782	548	1
-ADJUST		0x87c8	550	1
-ADJUST		0x87d2	556	1
-ADJUST		0x87d4	556	1
-ADJUST		0x8800	557	1
-ADJUST		0x8806	557	1
-ADJUST		0x8828	559	1
-ADJUST		0x882a	559	1
-ADJUST		0x8838	563	1
-ADJUST		0x8848	565	1
-ADJUST		0x884e	568	1
-ADJUST		0x8852	568	1
-CALL		0x8856	568	"ltFP.O"	"__ltFP"	0
-ADJUST		0x885e	568	1
-ADJUST		0x8860	568	1
-ADJUST		0x8864	568	1
-ADJUST		0x8868	568	1
-ADJUST		0x886a	568	1
-ADJUST		0x886e	568	1
-CALL		0x8872	568	"addFP.O"	"__subFP"	0
-CALL		0x8876	568	"gtFP.O"	"__gtFP"	0
-ADJUST		0x8880	569	1
-ADJUST		0x889a	573	1
-ADJUST		0x88b0	576	1
-ADJUST		0x8942	600	1
-ADJUST		0x8946	600	1
-ADJUST		0x8948	600	1
-ADJUST		0x894c	600	1
-CALL		0x8950	600	"mulFP.O"	"__mulFP"	0
-ADJUST		0x8956	602	1
-ADJUST		0x8958	602	1
-ADJUST		0x895a	602	1
-ADJUST		0x895e	602	1
-CALL		0x8962	602	"divFP.O"	"__divFP"	0
-FN_END		0x897c	606	
-FN_START	0x897e	608	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ChargeBatt"	"external"	
-ADJUST		0x897e	608	1
-ADJUST		0x8988	608	1
-CALL		0x89a4	620	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x89aa	621	1
-ADJUST		0x89ac	621	1
-ADJUST		0x89b0	621	1
-ADJUST		0x89b4	621	1
-ADJUST		0x89b8	621	1
-ADJUST		0x89bc	621	1
-ADJUST		0x89c0	621	1
-CALL		0x89c2	621	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x89c6	621	-7
-ADJUST		0x89ca	622	1
-ADJUST		0x89ce	622	1
-CALL		0x89d0	622	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x89d4	622	-2
-ADJUST		0x89d8	623	1
-ADJUST		0x89dc	623	1
-ADJUST		0x89e0	623	1
-CALL		0x89e2	623	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0x89e6	623	-3
-CALL		0x89e8	624	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
-ADJUST		0x8a00	627	1
-ADJUST		0x8a02	627	1
-ADJUST		0x8a06	627	1
-ADJUST		0x8a08	627	1
-ADJUST		0x8a0a	627	1
-ADJUST		0x8a0c	627	1
-ADJUST		0x8a10	627	1
-ADJUST		0x8a14	627	1
-CALL		0x8a16	627	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
-ADJUST		0x8a1a	627	-8
-ADJUST		0x8a2c	627	1
-ADJUST		0x8a30	627	1
-ADJUST		0x8a34	627	1
-ADJUST		0x8a38	627	1
-ADJUST		0x8a40	627	-1
-ADJUST		0x8a42	627	-1
-ADJUST		0x8ae6	636	1
-CALL		0x8ae8	636	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0x8aec	636	-1
-CALL		0x8b90	639	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-CALL		0x8b94	640	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x8b98	641	1
-ADJUST		0x8b9c	641	1
-ADJUST		0x8ba0	641	1
-ADJUST		0x8ba4	641	1
-ADJUST		0x8baa	641	1
-ADJUST		0x8bae	641	1
-ADJUST		0x8bb2	641	1
-ADJUST		0x8bb6	641	1
-ADJUST		0x8bba	641	1
-CALL		0x8bbc	641	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x8bc0	641	-9
-ADJUST		0x8bc4	642	1
-ADJUST		0x8bc8	642	1
-CALL		0x8bca	642	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x8bce	642	-2
-CALL		0x8bd6	645	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x8bdc	647	1
-CALL		0x8bde	647	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0x8be2	647	-1
-CALL		0x8c10	649	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x8c26	653	1
-ADJUST		0x8c28	653	1
-ADJUST		0x8c2e	653	1
-ADJUST		0x8c30	653	1
-ADJUST		0x8c36	653	1
-ADJUST		0x8c38	653	1
-ADJUST		0x8c3c	653	1
-ADJUST		0x8c3e	653	1
-ADJUST		0x8c42	653	1
-ADJUST		0x8c46	653	1
-ADJUST		0x8c4a	653	1
-ADJUST		0x8c4e	653	1
-ADJUST		0x8c52	653	1
-CALL		0x8c54	653	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x8c58	653	-13
-ADJUST		0x8c5c	654	1
-ADJUST		0x8c60	654	1
-CALL		0x8c62	654	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x8c66	654	-2
-CALL		0x8c6e	657	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
-ADJUST		0x8c72	658	1
-ADJUST		0x8c74	658	1
-ADJUST		0x8c76	658	1
-CALL		0x8c7a	658	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	0
-ADJUST		0x8c7e	658	-3
-ADJUST		0x8c88	661	1
-ADJUST		0x8c8a	661	1
-ADJUST		0x8c8e	661	1
-ADJUST		0x8c92	661	1
-ADJUST		0x8c96	661	1
-ADJUST		0x8c9a	661	1
-ADJUST		0x8c9e	661	1
-CALL		0x8ca0	661	"sncpyp2r.O"	"strncpypgm2ram"	0
-ADJUST		0x8ca4	661	-7
-ADJUST		0x8ca6	662	1
-ADJUST		0x8ca8	662	1
-ADJUST		0x8caa	662	1
-CALL		0x8cae	662	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x8cb2	662	-3
-ADJUST		0x8cbc	666	1
-ADJUST		0x8cbe	666	1
-CALL		0x8cc2	666	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOn"	0
-ADJUST		0x8cc6	666	-2
-ADJUST		0x8cca	667	1
-ADJUST		0x8ccc	667	1
-ADJUST		0x8cce	667	1
-ADJUST		0x8cd0	667	1
-CALL		0x8cd2	667	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x8cd6	667	-4
-ADJUST		0x8cda	669	1
-CALL		0x8cdc	669	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0x8ce0	669	-1
-CALL		0x8cf2	671	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0x8d10	672	1
-ADJUST		0x8da4	672	1
-ADJUST		0x8da6	672	1
-ADJUST		0x8dbc	673	1
-ADJUST		0x8dc0	673	1
-ADJUST		0x8de0	673	1
-ADJUST		0x8de4	673	1
-ADJUST		0x8dea	673	1
-ADJUST		0x8dec	673	1
-ADJUST		0x8df0	673	1
-ADJUST		0x8df4	673	1
-ADJUST		0x8df8	673	1
-ADJUST		0x8dfc	673	1
-ADJUST		0x8e00	673	1
-CALL		0x8e02	673	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x8e06	673	-11
-ADJUST		0x8e0a	674	1
-ADJUST		0x8e0c	674	1
-ADJUST		0x8e0e	674	1
-CALL		0x8e10	674	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x8e14	674	-3
-CALL		0x8e16	675	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x8e1c	676	1
-ADJUST		0x8e20	676	1
-ADJUST		0x8e24	676	1
-CALL		0x8e26	676	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0x8e2a	676	-3
-ADJUST		0x8e30	679	1
-ADJUST		0x8e32	679	1
-ADJUST		0x8e34	679	1
-ADJUST		0x8e36	679	1
-CALL		0x8e38	679	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x8e3c	679	-4
-ADJUST		0x8e42	681	1
-ADJUST		0x8e44	681	1
-ADJUST		0x8e46	681	1
-ADJUST		0x8e48	681	1
-CALL		0x8e4a	681	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x8e4e	681	-4
-CALL		0x8e50	682	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-ADJUST		0x8fa8	691	1
-ADJUST		0x8faa	691	1
-ADJUST		0x8fac	691	1
-ADJUST		0x8fae	691	1
-CALL		0x8fb0	691	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x8fb4	691	-4
-ADJUST		0x8fbe	692	1
-ADJUST		0x8fc0	692	1
-ADJUST		0x8fc2	692	1
-ADJUST		0x8fc4	692	1
-CALL		0x8fc6	692	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x8fca	692	-4
-CALL		0x8fcc	693	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-ADJUST		0x9148	703	1
-ADJUST		0x914c	704	1
-ADJUST		0x914e	704	1
-ADJUST		0x9150	704	1
-ADJUST		0x9152	704	1
-ADJUST		0x9170	704	1
-ADJUST		0x9174	704	1
-ADJUST		0x9178	704	1
-ADJUST		0x917c	704	1
-CALL		0x9180	704	"div32s.O"	"__div32s"	0
-ADJUST		0x9184	704	-1
-ADJUST		0x9186	704	-1
-ADJUST		0x918a	704	-1
-ADJUST		0x918e	704	-1
-ADJUST		0x920a	706	1
-ADJUST		0x920e	706	1
-ADJUST		0x9212	706	1
-ADJUST		0x9214	706	1
-ADJUST		0x9218	706	1
-ADJUST		0x921a	706	1
-ADJUST		0x921c	706	1
-ADJUST		0x921e	706	1
-ADJUST		0x9290	706	1
-ADJUST		0x9294	706	1
-ADJUST		0x9298	706	1
-ADJUST		0x929c	706	1
-CALL		0x92a0	706	"mul32.O"	"__mul32"	0
-CALL		0x92a4	706	"div32s.O"	"__div32s"	0
-ADJUST		0x92a8	706	-1
-ADJUST		0x92aa	706	-1
-ADJUST		0x92ae	706	-1
-ADJUST		0x92b2	706	-1
-CALL		0x9314	714	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-CALL		0x9318	715	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x9338	716	1
-ADJUST		0x933c	716	1
-ADJUST		0x9340	716	1
-ADJUST		0x9344	716	1
-ADJUST		0x9364	716	1
-ADJUST		0x9368	716	1
-ADJUST		0x936c	716	1
-ADJUST		0x9370	716	1
-ADJUST		0x9388	716	1
-ADJUST		0x938c	716	1
-ADJUST		0x9390	716	1
-ADJUST		0x9394	716	1
-ADJUST		0x93b4	716	1
-ADJUST		0x93b8	716	1
-ADJUST		0x93bc	716	1
-ADJUST		0x93c0	716	1
-ADJUST		0x93c6	716	1
-ADJUST		0x93c8	716	1
-ADJUST		0x93cc	716	1
-ADJUST		0x93d0	716	1
-ADJUST		0x93d4	716	1
-ADJUST		0x93d8	716	1
-ADJUST		0x93dc	716	1
-CALL		0x93de	716	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x93e2	716	-23
-ADJUST		0x93e6	717	1
-ADJUST		0x93ea	717	1
-CALL		0x93ec	717	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x93f0	717	-2
-ADJUST		0x93f6	719	1
-ADJUST		0x93f8	719	1
-ADJUST		0x93fa	719	1
-ADJUST		0x93fc	719	1
-CALL		0x93fe	719	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x9402	719	-4
-CALL		0x9404	720	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-CALL		0x9444	726	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x9448	727	1
-ADJUST		0x944c	727	1
-ADJUST		0x9450	727	1
-ADJUST		0x9454	727	1
-ADJUST		0x945a	727	1
-ADJUST		0x945c	727	1
-ADJUST		0x9460	727	1
-ADJUST		0x9464	727	1
-ADJUST		0x9468	727	1
-ADJUST		0x946c	727	1
-ADJUST		0x9470	727	1
-CALL		0x9472	727	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x9476	727	-11
-ADJUST		0x947a	728	1
-ADJUST		0x947e	728	1
-CALL		0x9480	728	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x9484	728	-2
-ADJUST		0x9488	729	1
-ADJUST		0x948a	729	1
-ADJUST		0x948c	729	1
-ADJUST		0x948e	729	1
-CALL		0x9490	729	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x9494	729	-4
-ADJUST		0x949a	730	1
-ADJUST		0x949e	730	1
-ADJUST		0x94a0	730	1
-ADJUST		0x94a2	730	1
-ADJUST		0x94a4	730	1
-CALL		0x94a6	730	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0x94aa	730	-4
-CALL		0x94ac	731	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-CALL		0x94b6	732	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0x94ba	733	1
-ADJUST		0x94bc	733	1
-ADJUST		0x94be	733	1
-ADJUST		0x94c0	733	1
-ADJUST		0x94d6	733	1
-ADJUST		0x94da	733	1
-ADJUST		0x94de	733	1
-ADJUST		0x94e2	733	1
-CALL		0x94e6	733	"div32u.O"	"__div32u"	0
-ADJUST		0x94ea	733	-1
-ADJUST		0x94ec	733	-1
-ADJUST		0x94f0	733	-1
-ADJUST		0x94f4	733	-1
-ADJUST		0x951c	734	1
-ADJUST		0x9520	734	1
-ADJUST		0x9524	734	1
-ADJUST		0x9526	734	1
-ADJUST		0x952a	734	1
-ADJUST		0x952c	734	1
-ADJUST		0x952e	734	1
-ADJUST		0x9530	734	1
-ADJUST		0x959a	734	1
-ADJUST		0x959e	734	1
-ADJUST		0x95a2	734	1
-ADJUST		0x95a6	734	1
-CALL		0x95aa	734	"mul32.O"	"__mul32"	0
-CALL		0x95ae	734	"div32u.O"	"__div32u"	0
-ADJUST		0x95b2	734	-1
-ADJUST		0x95b4	734	-1
-ADJUST		0x95b8	734	-1
-ADJUST		0x95bc	734	-1
-ADJUST		0x95ec	736	1
-ADJUST		0x95ee	736	1
-ADJUST		0x95f0	736	1
-ADJUST		0x95f2	736	1
-ADJUST		0x95f4	736	1
-ADJUST		0x95f8	736	1
-ADJUST		0x95fc	736	1
-ADJUST		0x9600	736	1
-CALL		0x9604	736	"div32u.O"	"__div32u"	0
-ADJUST		0x9608	736	-1
-ADJUST		0x960a	736	-1
-ADJUST		0x960e	736	-1
-ADJUST		0x9612	736	-1
-ADJUST		0x963a	737	1
-ADJUST		0x963e	737	1
-ADJUST		0x9642	737	1
-ADJUST		0x9644	737	1
-ADJUST		0x9648	737	1
-ADJUST		0x964a	737	1
-ADJUST		0x964c	737	1
-ADJUST		0x964e	737	1
-ADJUST		0x9694	737	1
-ADJUST		0x9698	737	1
-ADJUST		0x969c	737	1
-ADJUST		0x96a0	737	1
-CALL		0x96a4	737	"mul32.O"	"__mul32"	0
-CALL		0x96a8	737	"div32u.O"	"__div32u"	0
-ADJUST		0x96ac	737	-1
-ADJUST		0x96ae	737	-1
-ADJUST		0x96b2	737	-1
-ADJUST		0x96b6	737	-1
-ADJUST		0x9860	743	1
-ADJUST		0x9864	743	1
-ADJUST		0x9868	743	1
-ADJUST		0x986c	743	1
-ADJUST		0x98dc	743	1
-ADJUST		0x98e0	743	1
-ADJUST		0x98e4	743	1
-ADJUST		0x98e8	743	1
-CALL		0x98f0	743	"divFP.O"	"__divFP"	0
-ADJUST		0x98f4	743	-1
-ADJUST		0x98f6	743	-1
-ADJUST		0x98fa	743	-1
-ADJUST		0x98fe	743	-1
-CALL		0x9906	744	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-CALL		0x990a	745	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x990e	746	1
-ADJUST		0x9910	746	1
-ADJUST		0x9914	746	1
-ADJUST		0x9918	746	1
-ADJUST		0x991a	746	1
-ADJUST		0x991e	746	1
-ADJUST		0x9922	746	1
-ADJUST		0x9926	746	1
-CALL		0x992a	746	"mulFP.O"	"__mulFP"	0
-ADJUST		0x994e	746	1
-ADJUST		0x9952	746	1
-ADJUST		0x9956	746	1
-ADJUST		0x995a	746	1
-ADJUST		0x995e	746	1
-ADJUST		0x9962	746	1
-ADJUST		0x99a2	746	1
-ADJUST		0x99a6	746	1
-ADJUST		0x99aa	746	1
-ADJUST		0x99ae	746	1
-ADJUST		0x99b2	746	1
-ADJUST		0x99b6	746	1
-ADJUST		0x99ba	746	1
-ADJUST		0x99be	746	1
-ADJUST		0x99d6	746	1
-ADJUST		0x99da	746	1
-ADJUST		0x99de	746	1
-ADJUST		0x99e2	746	1
-ADJUST		0x9a02	746	1
-ADJUST		0x9a06	746	1
-ADJUST		0x9a0a	746	1
-ADJUST		0x9a0e	746	1
-ADJUST		0x9a14	746	1
-ADJUST		0x9a16	746	1
-ADJUST		0x9a1a	746	1
-ADJUST		0x9a1e	746	1
-ADJUST		0x9a22	746	1
-ADJUST		0x9a26	746	1
-ADJUST		0x9a2a	746	1
-CALL		0x9a2c	746	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x9a30	746	-33
-ADJUST		0x9a34	747	1
-ADJUST		0x9a38	747	1
-CALL		0x9a3a	747	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x9a3e	747	-2
-ADJUST		0x9a44	749	1
-ADJUST		0x9a46	749	1
-ADJUST		0x9a48	749	1
-ADJUST		0x9a4a	749	1
-ADJUST		0x9a68	749	1
-ADJUST		0x9a6c	749	1
-ADJUST		0x9a70	749	1
-ADJUST		0x9a74	749	1
-CALL		0x9a78	749	"div32s.O"	"__div32s"	0
-ADJUST		0x9a7c	749	-1
-ADJUST		0x9a7e	749	-1
-ADJUST		0x9a82	749	-1
-ADJUST		0x9a86	749	-1
-ADJUST		0x9b02	751	1
-ADJUST		0x9b06	751	1
-ADJUST		0x9b0a	751	1
-ADJUST		0x9b0c	751	1
-ADJUST		0x9b10	751	1
-ADJUST		0x9b12	751	1
-ADJUST		0x9b14	751	1
-ADJUST		0x9b16	751	1
-ADJUST		0x9b88	751	1
-ADJUST		0x9b8c	751	1
-ADJUST		0x9b90	751	1
-ADJUST		0x9b94	751	1
-CALL		0x9b98	751	"mul32.O"	"__mul32"	0
-CALL		0x9b9c	751	"div32s.O"	"__div32s"	0
-ADJUST		0x9ba0	751	-1
-ADJUST		0x9ba2	751	-1
-ADJUST		0x9ba6	751	-1
-ADJUST		0x9baa	751	-1
-CALL		0x9d22	759	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x9d42	760	1
-ADJUST		0x9d46	760	1
-ADJUST		0x9d66	760	1
-ADJUST		0x9d6a	760	1
-ADJUST		0x9d6e	760	1
-ADJUST		0x9d72	760	1
-ADJUST		0x9d92	760	1
-ADJUST		0x9d96	760	1
-ADJUST		0x9d9a	760	1
-ADJUST		0x9d9e	760	1
-ADJUST		0x9da4	760	1
-ADJUST		0x9da6	760	1
-ADJUST		0x9daa	760	1
-ADJUST		0x9dae	760	1
-ADJUST		0x9db2	760	1
-ADJUST		0x9db6	760	1
-ADJUST		0x9dba	760	1
-CALL		0x9dbc	760	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0x9dc0	760	-17
-ADJUST		0x9dc4	761	1
-ADJUST		0x9dc8	761	1
-CALL		0x9dca	761	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0x9dce	761	-2
-ADJUST		0x9dd8	764	1
-CALL		0x9dda	765	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
-ADJUST		0x9ede	772	1
-ADJUST		0x9ee0	772	1
-ADJUST		0x9ee4	772	1
-ADJUST		0x9ee8	772	1
-ADJUST		0x9f06	772	1
-ADJUST		0x9f0a	772	1
-ADJUST		0x9f0e	772	1
-ADJUST		0x9f12	772	1
-CALL		0x9f1a	772	"addFP.O"	"__subFP"	0
-ADJUST		0x9f1e	772	1
-ADJUST		0x9f22	772	1
-ADJUST		0x9f26	772	1
-ADJUST		0x9f2a	772	1
-CALL		0x9f2c	772	"divFP.O"	"__divFP"	0
-ADJUST		0x9f30	772	1
-ADJUST		0x9f32	772	1
-ADJUST		0x9f36	772	1
-ADJUST		0x9f3a	772	1
-CALL		0x9f3c	772	"mulFP.O"	"__mulFP"	0
-ADJUST		0x9f44	772	-1
-ADJUST		0x9f46	772	-1
-CALL		0x9fc2	774	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0x9fe2	775	1
-ADJUST		0x9fe6	775	1
-ADJUST		0xa006	775	1
-ADJUST		0xa00a	775	1
-ADJUST		0xa00e	775	1
-ADJUST		0xa012	775	1
-ADJUST		0xa032	775	1
-ADJUST		0xa036	775	1
-ADJUST		0xa03a	775	1
-ADJUST		0xa03e	775	1
-ADJUST		0xa044	775	1
-ADJUST		0xa046	775	1
-ADJUST		0xa04a	775	1
-ADJUST		0xa04e	775	1
-ADJUST		0xa052	775	1
-ADJUST		0xa056	775	1
-ADJUST		0xa05a	775	1
-CALL		0xa05c	775	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xa060	775	-17
-ADJUST		0xa064	776	1
-ADJUST		0xa068	776	1
-CALL		0xa06a	776	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0xa06e	776	-2
-CALL		0xa070	778	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xa076	779	1
-ADJUST		0xa07a	779	1
-ADJUST		0xa07e	779	1
-CALL		0xa080	779	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xa084	779	-3
-ADJUST		0xa088	781	1
-CALL		0xa08a	781	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xa08e	781	-1
-CALL		0xa090	782	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xa096	783	1
-ADJUST		0xa09a	783	1
-ADJUST		0xa09e	783	1
-CALL		0xa0a0	783	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xa0a4	783	-3
-CALL		0xa6ba	809	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0xa6c4	813	1
-ADJUST		0xa6c6	813	1
-ADJUST		0xa6c8	813	1
-ADJUST		0xa6ca	813	1
-CALL		0xa6cc	813	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xa6d0	813	-4
-ADJUST		0xa6d6	815	1
-ADJUST		0xa6d8	815	1
-ADJUST		0xa6da	815	1
-ADJUST		0xa6dc	815	1
-CALL		0xa6de	815	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xa6e2	815	-4
-ADJUST		0xa6e8	817	1
-ADJUST		0xa6ea	817	1
-ADJUST		0xa6ec	817	1
-ADJUST		0xa6ee	817	1
-CALL		0xa6f0	817	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xa6f4	817	-4
-ADJUST		0xa77c	824	1
-CALL		0xa77e	824	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xa782	824	-1
-CALL		0xa788	826	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0xa79e	828	1
-ADJUST		0xa7a0	828	1
-ADJUST		0xa7a6	828	1
-ADJUST		0xa7a8	828	1
-ADJUST		0xa7ac	828	1
-ADJUST		0xa7ae	828	1
-ADJUST		0xa7b2	828	1
-ADJUST		0xa7b6	828	1
-ADJUST		0xa7ba	828	1
-ADJUST		0xa7be	828	1
-ADJUST		0xa7c2	828	1
-CALL		0xa7c4	828	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xa7c8	828	-11
-ADJUST		0xa7cc	829	1
-ADJUST		0xa7d0	829	1
-CALL		0xa7d2	829	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0xa7d6	829	-2
-ADJUST		0xa7e0	834	1
-CALL		0xa7e2	834	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xa7e6	834	-1
-ADJUST		0xa834	839	1
-ADJUST		0xa838	839	1
-ADJUST		0xa83c	839	1
-ADJUST		0xa840	839	1
-ADJUST		0xa856	839	1
-ADJUST		0xa85a	839	1
-CALL		0xa862	839	"mulFP.O"	"__mulFP"	0
-ADJUST		0xa86a	839	-1
-ADJUST		0xa86c	839	-1
-ADJUST		0xa870	839	-1
-ADJUST		0xa874	839	-1
-ADJUST		0xa89c	840	1
-ADJUST		0xa8a0	840	1
-ADJUST		0xa8a4	840	1
-ADJUST		0xa8a8	840	1
-ADJUST		0xa8be	840	1
-ADJUST		0xa8c2	840	1
-CALL		0xa8ca	840	"mulFP.O"	"__mulFP"	0
-ADJUST		0xa8d2	840	-1
-ADJUST		0xa8d4	840	-1
-ADJUST		0xa8d8	840	-1
-ADJUST		0xa8dc	840	-1
-ADJUST		0xa904	841	1
-ADJUST		0xa908	841	1
-ADJUST		0xa90c	841	1
-ADJUST		0xa910	841	1
-ADJUST		0xa926	841	1
-ADJUST		0xa92a	841	1
-CALL		0xa932	841	"mulFP.O"	"__mulFP"	0
-ADJUST		0xa93a	841	-1
-ADJUST		0xa93c	841	-1
-ADJUST		0xa940	841	-1
-ADJUST		0xa944	841	-1
-CALL		0xa9c8	845	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-CALL		0xaa1e	850	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xaa24	851	1
-ADJUST		0xaa28	851	1
-ADJUST		0xaa2c	851	1
-CALL		0xaa2e	851	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xaa32	851	-3
-ADJUST		0xaa34	853	1
-ADJUST		0xaa38	853	1
-ADJUST		0xaa3c	853	1
-ADJUST		0xaa40	853	1
-ADJUST		0xaa48	853	-1
-ADJUST		0xaa4a	853	-1
-ADJUST		0xaa4e	853	-1
-ADJUST		0xaa52	853	-1
-CALL		0xaa5a	856	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
-ADJUST		0xaa60	857	1
-CALL		0xaa62	857	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xaa66	857	-1
-CALL		0xaa78	859	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-CALL		0xaa82	861	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xaa88	862	1
-ADJUST		0xaa8c	862	1
-ADJUST		0xaa90	862	1
-CALL		0xaa92	862	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xaa96	862	-3
-CALL		0xaaa4	867	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xaaaa	868	1
-ADJUST		0xaaae	868	1
-ADJUST		0xaab2	868	1
-CALL		0xaab4	868	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xaab8	868	-3
-CALL		0xaac0	871	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"mkbsstring"	0
-ADJUST		0xaae4	873	1
-ADJUST		0xab02	873	-1
-ADJUST		0xab3a	878	1
-ADJUST		0xab3c	878	1
-CALL		0xab40	878	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOff"	0
-ADJUST		0xab44	878	-2
-ADJUST		0xab48	879	1
-ADJUST		0xab4a	879	1
-ADJUST		0xab4c	879	1
-ADJUST		0xab4e	879	1
-CALL		0xab50	879	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xab54	879	-4
-ADJUST		0xab6a	882	1
-ADJUST		0xab6e	882	1
-ADJUST		0xab8e	882	1
-ADJUST		0xab92	882	1
-ADJUST		0xab98	881	1
-ADJUST		0xab9a	881	1
-ADJUST		0xab9e	881	1
-ADJUST		0xaba2	881	1
-ADJUST		0xaba6	881	1
-ADJUST		0xabaa	881	1
-ADJUST		0xabae	881	1
-CALL		0xabb0	882	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xabb4	882	-11
-ADJUST		0xabb8	883	1
-ADJUST		0xabba	883	1
-ADJUST		0xabbc	883	1
-CALL		0xabbe	883	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xabc2	883	-3
-ADJUST		0xabc6	885	1
-ADJUST		0xabca	885	1
-ADJUST		0xabe8	885	1
-ADJUST		0xabec	885	1
-ADJUST		0xabf0	885	1
-ADJUST		0xabf4	885	1
-CALL		0xabf8	885	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xabfc	885	-6
-ADJUST		0xac00	886	1
-ADJUST		0xac04	886	1
-ADJUST		0xac22	886	1
-ADJUST		0xac26	886	1
-ADJUST		0xac2a	886	1
-ADJUST		0xac2e	886	1
-CALL		0xac32	886	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xac36	886	-6
-ADJUST		0xac3a	887	1
-ADJUST		0xac3e	887	1
-ADJUST		0xac42	887	1
-ADJUST		0xac46	887	1
-ADJUST		0xac4a	887	1
-ADJUST		0xac4c	887	1
-ADJUST		0xac50	887	1
-ADJUST		0xac54	887	1
-ADJUST		0xac58	887	1
-ADJUST		0xac5c	887	1
-ADJUST		0xac60	887	1
-CALL		0xac62	887	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xac66	887	-11
-ADJUST		0xac6a	888	1
-ADJUST		0xac6e	888	1
-ADJUST		0xac70	888	1
-CALL		0xac72	888	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xac76	888	-3
-ADJUST		0xac7a	890	1
-ADJUST		0xac7c	890	1
-ADJUST		0xac7e	890	1
-ADJUST		0xac80	890	1
-CALL		0xac82	890	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xac86	890	-4
-CALL		0xacaa	893	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xacb0	894	1
-ADJUST		0xacb4	894	1
-ADJUST		0xacb8	894	1
-CALL		0xacba	894	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xacbe	894	-3
-CALL		0xacc0	896	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xacc6	897	1
-ADJUST		0xacca	897	1
-ADJUST		0xacce	897	1
-CALL		0xacd0	897	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xacd4	897	-3
-ADJUST		0xacdc	900	1
-ADJUST		0xacde	900	1
-CALL		0xace0	900	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pick_batt"	0
-ADJUST		0xace4	900	-2
-CALL		0xace6	901	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_hist"	0
-ADJUST		0xacea	902	1
-ADJUST		0xacec	902	1
-CALL		0xacf0	902	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_cef"	0
-ADJUST		0xacf4	902	-2
-ADJUST		0xad62	906	1
-ADJUST		0xad64	906	1
-ADJUST		0xad68	906	1
-ADJUST		0xad6a	906	1
-ADJUST		0xad6c	906	1
-ADJUST		0xad70	906	1
-ADJUST		0xad74	906	1
-ADJUST		0xad78	906	1
-CALL		0xad80	906	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
-ADJUST		0xad84	906	-8
-ADJUST		0xad96	906	1
-ADJUST		0xad9a	906	1
-ADJUST		0xad9e	906	1
-ADJUST		0xada2	906	1
-ADJUST		0xadaa	906	-1
-ADJUST		0xadac	906	-1
-ADJUST		0xadb0	906	-1
-ADJUST		0xadb4	906	-1
-CALL		0xae64	912	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xae6a	913	1
-ADJUST		0xae6e	913	1
-ADJUST		0xae72	913	1
-CALL		0xae74	913	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xae78	913	-3
-ADJUST		0xae80	917	1
-ADJUST		0xae82	917	1
-ADJUST		0xae86	917	1
-ADJUST		0xae88	917	1
-ADJUST		0xae8a	917	1
-ADJUST		0xae8e	917	1
-ADJUST		0xae92	917	1
-ADJUST		0xae96	917	1
-CALL		0xae9e	917	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
-ADJUST		0xaea2	917	-8
-ADJUST		0xaeb4	917	1
-ADJUST		0xaeb8	917	1
-ADJUST		0xaebc	917	1
-ADJUST		0xaec0	917	1
-ADJUST		0xaec8	917	-1
-ADJUST		0xaeca	917	-1
-ADJUST		0xaece	917	-1
-ADJUST		0xaed2	917	-1
-CALL		0xaf7e	921	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xaf84	922	1
-ADJUST		0xaf88	922	1
-ADJUST		0xaf8c	922	1
-CALL		0xaf8e	922	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xaf92	922	-3
-CALL		0xaf94	923	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xaf9a	924	1
-ADJUST		0xaf9e	924	1
-ADJUST		0xafa2	924	1
-CALL		0xafa4	924	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xafa8	924	-3
-ADJUST		0xafb0	929	1
-ADJUST		0xafb2	929	1
-ADJUST		0xafb6	929	1
-ADJUST		0xafb8	929	1
-ADJUST		0xafba	929	1
-ADJUST		0xafbe	929	1
-ADJUST		0xafc2	929	1
-ADJUST		0xafc6	929	1
-CALL		0xafce	929	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
-ADJUST		0xafd2	929	-8
-ADJUST		0xafe4	929	1
-ADJUST		0xafe8	929	1
-ADJUST		0xafec	929	1
-ADJUST		0xaff0	929	1
-ADJUST		0xaff8	929	-1
-ADJUST		0xaffa	929	-1
-ADJUST		0xaffe	929	-1
-ADJUST		0xb002	929	-1
-CALL		0xb0e4	936	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb0ea	937	1
-ADJUST		0xb0ee	937	1
-ADJUST		0xb0f2	937	1
-CALL		0xb0f4	937	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb0f8	937	-3
-CALL		0xb198	946	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb19e	947	1
-ADJUST		0xb1a2	947	1
-ADJUST		0xb1a6	947	1
-CALL		0xb1a8	947	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb1ac	947	-3
-CALL		0xb2f4	960	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb2fa	961	1
-ADJUST		0xb2fe	961	1
-ADJUST		0xb302	961	1
-CALL		0xb304	961	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb308	961	-3
-CALL		0xb30a	962	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb310	963	1
-ADJUST		0xb314	963	1
-ADJUST		0xb318	963	1
-CALL		0xb31a	963	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb31e	963	-3
-CALL		0xb34c	970	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb352	971	1
-ADJUST		0xb356	971	1
-ADJUST		0xb35a	971	1
-CALL		0xb35c	971	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb360	971	-3
-CALL		0xb3d2	977	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb3d8	978	1
-ADJUST		0xb3dc	978	1
-ADJUST		0xb3e0	978	1
-CALL		0xb3e2	978	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb3e6	978	-3
-CALL		0xb454	988	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb45a	989	1
-ADJUST		0xb45e	989	1
-ADJUST		0xb462	989	1
-CALL		0xb464	989	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb468	989	-3
-ADJUST		0xb46c	992	1
-CALL		0xb46e	992	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xb472	992	-1
-CALL		0xb478	994	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0xb496	997	1
-ADJUST		0xb498	997	1
-ADJUST		0xb49e	997	1
-ADJUST		0xb4a0	997	1
-ADJUST		0xb4a4	997	1
-ADJUST		0xb4a6	997	1
-ADJUST		0xb4aa	997	1
-ADJUST		0xb4ae	997	1
-ADJUST		0xb4b2	997	1
-ADJUST		0xb4b6	997	1
-ADJUST		0xb4ba	997	1
-CALL		0xb4bc	997	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xb4c0	997	-11
-ADJUST		0xb4c4	998	1
-ADJUST		0xb4c8	998	1
-CALL		0xb4ca	998	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0xb4ce	998	-2
-ADJUST		0xb4ee	1000	1
-ADJUST		0xb4f2	1000	1
-ADJUST		0xb4f6	1000	1
-ADJUST		0xb4fa	1000	1
-ADJUST		0xb520	1000	1
-ADJUST		0xb524	1000	1
-ADJUST		0xb528	1000	1
-ADJUST		0xb52c	1000	1
-ADJUST		0xb550	1000	1
-ADJUST		0xb554	1000	1
-ADJUST		0xb558	1000	1
-ADJUST		0xb55c	1000	1
-ADJUST		0xb566	999	1
-ADJUST		0xb56a	999	1
-ADJUST		0xb56e	999	1
-ADJUST		0xb572	999	1
-ADJUST		0xb576	999	1
-CALL		0xb578	1000	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xb57c	1000	-17
-ADJUST		0xb580	1001	1
-ADJUST		0xb584	1001	1
-CALL		0xb586	1001	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
-ADJUST		0xb58a	1001	-2
-ADJUST		0xb58e	1002	1
-CALL		0xb590	1002	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xb594	1002	-1
-CALL		0xb59a	1004	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-CALL		0xb62e	1007	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xb634	1008	1
-ADJUST		0xb638	1008	1
-ADJUST		0xb63c	1008	1
-CALL		0xb63e	1008	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xb642	1008	-3
-ADJUST		0xb646	1009	1
-ADJUST		0xb6c6	1013	1
-ADJUST		0xb6ca	1013	1
-ADJUST		0xb6ce	1013	1
-ADJUST		0xb6d2	1013	1
-ADJUST		0xb6dc	1013	1
-ADJUST		0xb6e0	1013	1
-ADJUST		0xb6e4	1013	1
-ADJUST		0xb6e8	1013	1
-CALL		0xb6ea	1013	"mulFP.O"	"__mulFP"	0
-ADJUST		0xb732	1013	1
-ADJUST		0xb736	1013	1
-ADJUST		0xb73a	1013	1
-ADJUST		0xb73e	1013	1
-ADJUST		0xb746	1013	1
-ADJUST		0xb748	1013	1
-ADJUST		0xb74c	1013	1
-ADJUST		0xb750	1013	1
-ADJUST		0xb752	1013	1
-ADJUST		0xb756	1013	1
-CALL		0xb75e	1013	"mulFP.O"	"__mulFP"	0
-CALL		0xb762	1013	"addFP.O"	"__addFP"	0
-CALL		0xb766	1013	"divFP.O"	"__divFP"	0
-ADJUST		0xb76a	1013	-1
-ADJUST		0xb76c	1013	-1
-ADJUST		0xb770	1013	-1
-ADJUST		0xb774	1013	-1
-ADJUST		0xb7c4	1014	1
-ADJUST		0xb7c8	1014	1
-ADJUST		0xb7cc	1014	1
-ADJUST		0xb7d0	1014	1
-ADJUST		0xb7d8	1014	-1
-ADJUST		0xb7da	1014	-1
-ADJUST		0xb7e2	1015	1
-ADJUST		0xb7e4	1015	1
-ADJUST		0xb7e6	1015	1
-ADJUST		0xb7e8	1015	1
-ADJUST		0xb806	1015	1
-ADJUST		0xb80a	1015	1
-ADJUST		0xb80e	1015	1
-ADJUST		0xb812	1015	1
-CALL		0xb816	1015	"ltFP.O"	"__ltFP"	0
-ADJUST		0xb81e	1015	1
-ADJUST		0xb820	1015	1
-ADJUST		0xb824	1015	1
-ADJUST		0xb828	1015	1
-ADJUST		0xb846	1015	1
-ADJUST		0xb84a	1015	1
-ADJUST		0xb84e	1015	1
-ADJUST		0xb852	1015	1
-CALL		0xb856	1015	"mulFP.O"	"__mulFP"	0
-ADJUST		0xb85a	1015	-1
-ADJUST		0xb85c	1015	-1
-ADJUST		0xb860	1015	-1
-ADJUST		0xb864	1015	-1
-ADJUST		0xb89a	1016	1
-ADJUST		0xb89e	1016	1
-ADJUST		0xb8a2	1016	1
-ADJUST		0xb8a6	1016	1
-ADJUST		0xb8c4	1016	1
-ADJUST		0xb8c8	1016	1
-ADJUST		0xb8cc	1016	1
-ADJUST		0xb8d0	1016	1
-CALL		0xb8d4	1016	"gtFP.O"	"__gtFP"	0
-ADJUST		0xb90a	1017	1
-ADJUST		0xb90e	1017	1
-ADJUST		0xb912	1017	1
-ADJUST		0xb916	1017	1
-ADJUST		0xb934	1017	1
-ADJUST		0xb938	1017	1
-ADJUST		0xb93c	1017	1
-ADJUST		0xb940	1017	1
-CALL		0xb944	1017	"gtFP.O"	"__gtFP"	0
-ADJUST		0xb97a	1018	1
-ADJUST		0xb97e	1018	1
-ADJUST		0xb982	1018	1
-ADJUST		0xb986	1018	1
-ADJUST		0xb9a4	1018	1
-ADJUST		0xb9a8	1018	1
-ADJUST		0xb9ac	1018	1
-ADJUST		0xb9b0	1018	1
-CALL		0xb9b4	1018	"ltFP.O"	"__ltFP"	0
-ADJUST		0xba30	1023	1
-ADJUST		0xba34	1023	1
-ADJUST		0xba38	1023	1
-ADJUST		0xba3c	1023	1
-CALL		0xba40	1023	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ABSL"	0
-ADJUST		0xba44	1023	-4
-CALL		0xbac4	1025	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xbaca	1026	1
-ADJUST		0xbace	1026	1
-ADJUST		0xbad2	1026	1
-CALL		0xbad4	1026	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xbad8	1026	-3
-ADJUST		0xbae2	1027	1
-ADJUST		0xbae6	1027	1
-ADJUST		0xbae8	1027	1
-CALL		0xbaec	1027	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	0
-ADJUST		0xbaf0	1027	-3
-CALL		0xbaf2	1028	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
-ADJUST		0xbbf8	1040	1
-CALL		0xbc10	1044	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xbc1e	1045	1
-ADJUST		0xbc22	1045	1
-ADJUST		0xbc26	1045	1
-CALL		0xbc28	1045	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xbc2c	1045	-3
-ADJUST		0xbc38	1046	1
-ADJUST		0xbc3c	1046	1
-ADJUST		0xbc40	1046	1
-CALL		0xbc42	1046	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xbc46	1046	-3
-ADJUST		0xbc4a	1047	1
-ADJUST		0xbc4c	1047	1
-ADJUST		0xbc4e	1047	1
-ADJUST		0xbc50	1047	1
-CALL		0xbc52	1047	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xbc56	1047	-4
-ADJUST		0xbcd6	1054	1
-CALL		0xbcd8	1054	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xbcdc	1054	-1
-ADJUST		0xbd86	1057	1
-ADJUST		0xbd8a	1057	1
-ADJUST		0xbd8e	1057	1
-ADJUST		0xbd92	1057	1
-ADJUST		0xbd9c	1057	1
-ADJUST		0xbda0	1057	1
-ADJUST		0xbda4	1057	1
-ADJUST		0xbda8	1057	1
-CALL		0xbdaa	1057	"mulFP.O"	"__mulFP"	0
-ADJUST		0xbdf2	1057	1
-ADJUST		0xbdf6	1057	1
-ADJUST		0xbdfa	1057	1
-ADJUST		0xbdfe	1057	1
-ADJUST		0xbe06	1057	1
-ADJUST		0xbe08	1057	1
-ADJUST		0xbe0c	1057	1
-ADJUST		0xbe10	1057	1
-ADJUST		0xbe12	1057	1
-ADJUST		0xbe16	1057	1
-CALL		0xbe1e	1057	"mulFP.O"	"__mulFP"	0
-CALL		0xbe22	1057	"addFP.O"	"__addFP"	0
-CALL		0xbe26	1057	"divFP.O"	"__divFP"	0
-ADJUST		0xbe2a	1057	-1
-ADJUST		0xbe2c	1057	-1
-ADJUST		0xbe30	1057	-1
-ADJUST		0xbe34	1057	-1
-ADJUST		0xbe84	1058	1
-ADJUST		0xbe88	1058	1
-ADJUST		0xbe8c	1058	1
-ADJUST		0xbe90	1058	1
-ADJUST		0xbe98	1058	-1
-ADJUST		0xbe9a	1058	-1
-ADJUST		0xbea2	1059	1
-ADJUST		0xbea4	1059	1
-ADJUST		0xbea6	1059	1
-ADJUST		0xbea8	1059	1
-ADJUST		0xbec6	1059	1
-ADJUST		0xbeca	1059	1
-ADJUST		0xbece	1059	1
-ADJUST		0xbed2	1059	1
-CALL		0xbed6	1059	"ltFP.O"	"__ltFP"	0
-ADJUST		0xbede	1059	1
-ADJUST		0xbee0	1059	1
-ADJUST		0xbee4	1059	1
-ADJUST		0xbee8	1059	1
-ADJUST		0xbf06	1059	1
-ADJUST		0xbf0a	1059	1
-ADJUST		0xbf0e	1059	1
-ADJUST		0xbf12	1059	1
-CALL		0xbf16	1059	"mulFP.O"	"__mulFP"	0
-ADJUST		0xbf1a	1059	-1
-ADJUST		0xbf1c	1059	-1
-ADJUST		0xbf20	1059	-1
-ADJUST		0xbf24	1059	-1
-ADJUST		0xbf5a	1060	1
-ADJUST		0xbf5e	1060	1
-ADJUST		0xbf62	1060	1
-ADJUST		0xbf66	1060	1
-ADJUST		0xbf84	1060	1
-ADJUST		0xbf88	1060	1
-ADJUST		0xbf8c	1060	1
-ADJUST		0xbf90	1060	1
-CALL		0xbf94	1060	"gtFP.O"	"__gtFP"	0
-ADJUST		0xbfca	1061	1
-ADJUST		0xbfce	1061	1
-ADJUST		0xbfd2	1061	1
-ADJUST		0xbfd6	1061	1
-ADJUST		0xbff4	1061	1
-ADJUST		0xbff8	1061	1
-ADJUST		0xbffc	1061	1
-ADJUST		0xc000	1061	1
-CALL		0xc004	1061	"gtFP.O"	"__gtFP"	0
-ADJUST		0xc03a	1062	1
-ADJUST		0xc03e	1062	1
-ADJUST		0xc042	1062	1
-ADJUST		0xc046	1062	1
-ADJUST		0xc064	1062	1
-ADJUST		0xc068	1062	1
-ADJUST		0xc06c	1062	1
-ADJUST		0xc070	1062	1
-CALL		0xc074	1062	"ltFP.O"	"__ltFP"	0
-ADJUST		0xc428	1089	1
-ADJUST		0xc42c	1089	1
-CALL		0xc42e	1089	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
-ADJUST		0xc432	1089	-2
-ADJUST		0xc474	1093	1
-ADJUST		0xc478	1093	1
-ADJUST		0xc47c	1093	1
-ADJUST		0xc47e	1093	1
-CALL		0xc482	1093	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-ADJUST		0xc486	1093	-4
-CALL		0xc48a	1095	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xc490	1096	1
-ADJUST		0xc494	1096	1
-ADJUST		0xc498	1096	1
-CALL		0xc49a	1096	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xc49e	1096	-3
-CALL		0xc4a0	1099	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-CALL		0xc4ac	1102	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xc4b2	1103	1
-ADJUST		0xc4b6	1103	1
-ADJUST		0xc4ba	1103	1
-CALL		0xc4bc	1103	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xc4c0	1103	-3
-ADJUST		0xc4c2	1104	1
-ADJUST		0xc4c6	1104	1
-ADJUST		0xc4ca	1104	1
-CALL		0xc4cc	1104	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
-ADJUST		0xc4d0	1104	-3
-CALL		0xc50c	1109	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xc512	1110	1
-ADJUST		0xc516	1110	1
-ADJUST		0xc51a	1110	1
-CALL		0xc51c	1110	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xc520	1110	-3
-CALL		0xc522	1111	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xc528	1112	1
-ADJUST		0xc52c	1112	1
-ADJUST		0xc530	1112	1
-CALL		0xc532	1112	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xc536	1112	-3
-ADJUST		0xc53c	1117	1
-CALL		0xc53e	1117	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xc542	1117	-1
-CALL		0xc554	1119	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0xc5a0	1126	1
-ADJUST		0xc5a2	1127	1
-ADJUST		0xc5a6	1127	1
-ADJUST		0xc5aa	1127	1
-ADJUST		0xc5ae	1127	1
-ADJUST		0xc5b4	1127	1
-ADJUST		0xc5b6	1127	1
-ADJUST		0xc5b8	1127	1
-ADJUST		0xc5ba	1127	1
-ADJUST		0xc5bc	1127	1
-ADJUST		0xc5c0	1127	1
-ADJUST		0xc5c4	1127	1
-ADJUST		0xc5c8	1127	1
-CALL		0xc5cc	1127	"mul32.O"	"__mul32"	0
-CALL		0xc5d0	1127	"div32u.O"	"__div32u"	0
-ADJUST		0xc5d4	1127	-1
-ADJUST		0xc5d6	1127	-1
-ADJUST		0xc5da	1127	-1
-ADJUST		0xc5de	1127	-1
-ADJUST		0xc5f0	1128	1
-ADJUST		0xc5f2	1128	1
-ADJUST		0xc5f6	1128	1
-ADJUST		0xc5f8	1128	1
-ADJUST		0xc5fa	1128	1
-ADJUST		0xc5fe	1128	1
-CALL		0xc606	1128	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
-ADJUST		0xc60a	1128	-8
-ADJUST		0xc61c	1128	1
-ADJUST		0xc620	1128	1
-ADJUST		0xc624	1128	1
-ADJUST		0xc628	1128	1
-ADJUST		0xc630	1128	-1
-ADJUST		0xc632	1128	-1
-ADJUST		0xc65e	1135	1
-ADJUST		0xc660	1135	1
-ADJUST		0xc662	1135	1
-ADJUST		0xc664	1135	1
-CALL		0xc666	1135	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_calc"	0
-ADJUST		0xc66a	1135	-4
-ADJUST		0xc780	1137	1
-ADJUST		0xc784	1137	1
-ADJUST		0xc788	1137	1
-ADJUST		0xc78c	1137	1
-CALL		0xc790	1137	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"hms"	0
-ADJUST		0xc794	1137	-4
-ADJUST		0xc796	1137	1
-ADJUST		0xc79a	1137	1
-ADJUST		0xc7a0	1137	1
-ADJUST		0xc7a2	1137	1
-ADJUST		0xc7a4	1137	1
-ADJUST		0xc7a8	1137	1
-ADJUST		0xc7b8	1137	1
-ADJUST		0xc7bc	1137	1
-ADJUST		0xc7c2	1137	1
-ADJUST		0xc7c6	1137	1
-ADJUST		0xc7ca	1137	1
-ADJUST		0xc7ce	1137	1
-ADJUST		0xc7d2	1137	1
-CALL		0xc7d4	1137	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xc7d8	1137	-13
-ADJUST		0xc7dc	1138	1
-ADJUST		0xc7de	1138	1
-ADJUST		0xc7e0	1138	1
-CALL		0xc7e2	1138	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xc7e6	1138	-3
-ADJUST		0xc7fa	1142	1
-ADJUST		0xc7fe	1142	1
-ADJUST		0xc81c	1142	1
-ADJUST		0xc820	1142	1
-ADJUST		0xc824	1142	1
-ADJUST		0xc828	1142	1
-CALL		0xc82c	1142	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xc830	1142	-6
-ADJUST		0xc834	1143	1
-ADJUST		0xc838	1143	1
-ADJUST		0xc856	1143	1
-ADJUST		0xc85a	1143	1
-ADJUST		0xc85e	1143	1
-ADJUST		0xc862	1143	1
-CALL		0xc866	1143	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xc86a	1143	-6
-ADJUST		0xc8f4	1145	1
-ADJUST		0xc8f8	1145	1
-ADJUST		0xc8fc	1145	1
-ADJUST		0xc900	1145	1
-CALL		0xc904	1145	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"hms"	0
-ADJUST		0xc908	1145	-4
-ADJUST		0xc90a	1145	1
-ADJUST		0xc90e	1145	1
-ADJUST		0xc914	1145	1
-ADJUST		0xc918	1145	1
-ADJUST		0xc91c	1145	1
-ADJUST		0xc920	1145	1
-ADJUST		0xc924	1145	1
-ADJUST		0xc926	1145	1
-ADJUST		0xc92a	1145	1
-ADJUST		0xc92e	1145	1
-ADJUST		0xc932	1145	1
-ADJUST		0xc936	1145	1
-ADJUST		0xc93a	1145	1
-CALL		0xc93c	1145	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xc940	1145	-13
-ADJUST		0xc944	1146	1
-ADJUST		0xc946	1146	1
-ADJUST		0xc948	1146	1
-CALL		0xc94a	1146	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xc94e	1146	-3
-ADJUST		0xc952	1148	1
-ADJUST		0xc956	1148	1
-ADJUST		0xc958	1148	1
-ADJUST		0xc95c	1148	1
-ADJUST		0xc960	1148	1
-ADJUST		0xc964	1148	1
-CALL		0xc968	1148	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xc96c	1148	-6
-ADJUST		0xc970	1149	1
-ADJUST		0xc974	1149	1
-ADJUST		0xc976	1149	1
-ADJUST		0xc97a	1149	1
-ADJUST		0xc97e	1149	1
-ADJUST		0xc982	1149	1
-CALL		0xc986	1149	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xc98a	1149	-6
-ADJUST		0xc98e	1150	1
-ADJUST		0xc992	1150	1
-ADJUST		0xc994	1150	1
-ADJUST		0xc998	1150	1
-ADJUST		0xc99c	1150	1
-ADJUST		0xc9a0	1150	1
-CALL		0xc9a4	1150	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
-ADJUST		0xc9a8	1150	-6
-ADJUST		0xc9ac	1151	1
-ADJUST		0xc9b0	1151	1
-ADJUST		0xc9b4	1151	1
-ADJUST		0xc9b8	1151	1
-ADJUST		0xc9bc	1151	1
-ADJUST		0xc9c0	1151	1
-ADJUST		0xc9c4	1151	1
-ADJUST		0xc9c8	1151	1
-ADJUST		0xc9cc	1151	1
-ADJUST		0xc9d0	1151	1
-ADJUST		0xc9d4	1151	1
-CALL		0xc9d6	1151	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xc9da	1151	-11
-ADJUST		0xc9de	1152	1
-ADJUST		0xc9e2	1152	1
-ADJUST		0xc9e4	1152	1
-CALL		0xc9e6	1152	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xc9ea	1152	-3
-ADJUST		0xc9ee	1153	1
-ADJUST		0xc9f0	1153	1
-ADJUST		0xc9f2	1153	1
-ADJUST		0xc9f4	1153	1
-CALL		0xc9f6	1153	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xc9fa	1153	-4
-CALL		0xc9fc	1154	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
-ADJUST		0xcaf2	1156	1
-CALL		0xcb18	1159	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
-CALL		0xcb26	1161	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xcb2c	1162	1
-ADJUST		0xcb30	1162	1
-ADJUST		0xcb34	1162	1
-CALL		0xcb36	1162	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
-ADJUST		0xcb3a	1162	-3
-ADJUST		0xcb40	1164	1
-ADJUST		0xcb44	1164	1
-ADJUST		0xcb46	1164	1
-ADJUST		0xcb4a	1164	1
-ADJUST		0xcb4e	1164	1
-ADJUST		0xcb52	1164	1
-CALL		0xcb56	1164	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
-ADJUST		0xcb5a	1164	-6
-ADJUST		0xcb5e	1165	1
-ADJUST		0xcb62	1165	1
-ADJUST		0xcb66	1165	1
-ADJUST		0xcb68	1165	1
-ADJUST		0xcb6c	1165	1
-ADJUST		0xcb70	1165	1
-ADJUST		0xcb74	1165	1
-ADJUST		0xcb78	1165	1
-ADJUST		0xcb7c	1165	1
-CALL		0xcb7e	1165	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xcb82	1165	-9
-ADJUST		0xcb86	1166	1
-ADJUST		0xcb88	1166	1
-ADJUST		0xcb8a	1166	1
-CALL		0xcb8c	1166	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
-ADJUST		0xcb90	1166	-3
-ADJUST		0xcb94	1167	1
-ADJUST		0xcb96	1167	1
-CALL		0xcb9a	1167	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOff"	0
-ADJUST		0xcb9e	1167	-2
-ADJUST		0xcba2	1168	1
-ADJUST		0xcba4	1168	1
-ADJUST		0xcba6	1168	1
-ADJUST		0xcba8	1168	1
-CALL		0xcbaa	1168	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-ADJUST		0xcbae	1168	-4
-ADJUST		0xcbb2	1169	1
-CALL		0xcbb4	1169	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
-ADJUST		0xcbb8	1169	-1
-CALL		0xcbde	1171	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
-ADJUST		0xcbe2	1172	1
-ADJUST		0xcbe6	1172	1
-ADJUST		0xcbe8	1172	1
-CALL		0xcbec	1172	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Get_RestSOC"	0
-ADJUST		0xcbf0	1172	-3
-ADJUST		0xcbf2	1173	1
-ADJUST		0xcbf4	1173	1
-CALL		0xcbf6	1173	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pick_batt"	0
-ADJUST		0xcbfa	1173	-2
-CALL		0xcbfc	1174	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_hist"	0
-ADJUST		0xcc04	1176	-2
-FN_END		0xcc0a	1176	
-FN_START	0xcc0c	1181	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	"external"	
-ADJUST		0xcc0c	1181	1
-CALL		0xcc0c	1181	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_40"	0
-ADJUST		0xcc10	1181	1
-CALL		0xcc12	1185	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
-ADJUST		0xcc20	1188	1
-ADJUST		0xcc22	1188	1
-ADJUST		0xcc26	1188	1
-ADJUST		0xcc28	1188	1
-ADJUST		0xcc2c	1188	1
-ADJUST		0xcc30	1188	1
-ADJUST		0xcc34	1188	1
-CALL		0xcc34	1188	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
-ADJUST		0xcc36	1188	-9
-CALL		0xcc38	1189	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_45"	0
-ADJUST		0xcc3e	1191	1
-CALL		0xcc3e	1191	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
-CALL		0xcc42	1194	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-ADJUST		0xcc50	1196	1
-ADJUST		0xcc54	1196	1
-ADJUST		0xcc58	1196	1
-ADJUST		0xcc60	1199	1
-ADJUST		0xcc64	1199	1
-ADJUST		0xcc68	1199	1
-ADJUST		0xcc6c	1199	1
-CALL		0xcc70	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0xcc72	1199	1
-CALL		0xcc72	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-CALL		0xcc78	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	0
-CALL		0xcc78	1199	"mulFP.O"	"__mulFP"	0
-ADJUST		0xcc7a	1199	1
-ADJUST		0xcc7e	1199	1
-ADJUST		0xcc82	1199	1
-ADJUST		0xcc86	1199	1
-CALL		0xcc8a	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ABSL"	0
-ADJUST		0xcc8e	1199	-4
-CALL		0xcc90	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_34"	0
-ADJUST		0xcc94	1199	1
-ADJUST		0xcc96	1199	1
-ADJUST		0xcc9a	1198	1
-ADJUST		0xcc9e	1198	1
-ADJUST		0xcca2	1198	1
-CALL		0xcca2	1198	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
-ADJUST		0xcca4	1199	-15
-CALL		0xcca6	1201	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_45"	0
-ADJUST		0xccac	1203	1
-CALL		0xccac	1203	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
-ADJUST		0xccb2	1205	1
-CALL		0xccb2	1205	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
-ADJUST		0xccb8	1207	1
-CALL		0xccb8	1207	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
-CALL		0xccbe	1209	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
-ADJUST		0xccc4	1210	1
-CALL		0xccc4	1210	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
-ADJUST		0xccce	1215	1
-CALL		0xccce	1215	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
-ADJUST		0xccda	1219	1
-CALL		0xccda	1219	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
-ADJUST		0xccdc	1222	-2
-FN_END		0xcce2	1222	
-FN_START	0xcce4	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_0"	"static"	
-FN_END		0xccf2	1199	
-FN_START	0xccf4	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_1"	"static"	
-FN_END		0xcd02	390	
-FN_START	0xcd04	559	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_2"	"static"	
-CALL		0xcd04	559	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcd08	559	
-FN_START	0xcd0a	366	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_3"	"static"	
-FN_END		0xcd1c	366	
-FN_START	0xcd1e	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_4"	"static"	
-CALL		0xcd1e	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcd30	597	
-FN_START	0xcd32	559	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_5"	"static"	
-FN_END		0xcd44	559	
-FN_START	0xcd46	1198	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_6"	"static"	
-FN_END		0xcd52	1199	
-FN_START	0xcd54	572	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_7"	"static"	
-CALL		0xcd54	572	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcd58	572	
-FN_START	0xcd5a	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_8"	"static"	
-CALL		0xcd5c	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
-CALL		0xcd5e	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_96"	0
-CALL		0xcd60	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	0
-CALL		0xcd66	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
-CALL		0xcd8e	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	0
-FN_END		0xcd96	530	
-FN_START	0xcd98	596	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_9"	"static"	
-CALL		0xcd98	596	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcd9c	596	
-FN_START	0xcd9e	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_10"	"static"	
-CALL		0xcd9e	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-CALL		0xcda0	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_93"	0
-CALL		0xcda2	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	0
-CALL		0xcda4	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
-CALL		0xcdaa	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
-FN_END		0xcdb6	515	
-FN_START	0xcdb8	310	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_11"	"static"	
-FN_END		0xcdca	310	
-FN_START	0xcdcc	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_12"	"static"	
-CALL		0xcdcc	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_104"	0
-FN_END		0xcdd0	415	
-FN_START	0xcdd2	1220	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_13"	"static"	
-CALL		0xcdd2	1220	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	0
-FN_END		0xcdda	1220	
-FN_START	0xcddc	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_14"	"static"	
-CALL		0xcdde	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_89"	0
-FN_END		0xcde2	577	
-FN_START	0xcde4	602	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_15"	"static"	
-FN_END		0xcdf2	602	
-FN_START	0xcdf4	357	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_16"	"static"	
-FN_END		0xce00	357	
-FN_START	0xce02	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_17"	"static"	
-FN_END		0xce12	576	
-FN_START	0xce14	375	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_18"	"static"	
-CALL		0xce14	375	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-FN_END		0xce1c	375	
-FN_START	0xce1e	394	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_19"	"static"	
-FN_END		0xce28	394	
-FN_START	0xce2a	532	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_20"	"static"	
-CALL		0xce2a	532	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_98"	0
-FN_END		0xce4a	532	
-FN_START	0xce4c	552	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_21"	"static"	
-FN_END		0xce5e	552	
-FN_START	0xce60	343	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_22"	"static"	
-CALL		0xce60	343	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-FN_END		0xce68	343	
-FN_START	0xce6a	435	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_23"	"static"	
-ADJUST		0xce6c	435	1
-ADJUST		0xce70	436	1
-ADJUST		0xce76	436	1
-ADJUST		0xce78	436	1
-FN_END		0xce78	436	
-FN_START	0xce7a	525	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_24"	"static"	
-ADJUST		0xce7e	525	1
-FN_END		0xce82	525	
-FN_START	0xce84	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_25"	"static"	
-ADJUST		0xce86	600	1
-CALL		0xce86	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-ADJUST		0xce88	600	1
-CALL		0xce88	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_158"	0
-ADJUST		0xce8c	600	1
-ADJUST		0xce90	600	1
-ADJUST		0xce96	600	1
-ADJUST		0xce9a	600	1
-ADJUST		0xcea0	600	1
-FN_END		0xcea0	600	
-FN_START	0xcea2	572	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_26"	"static"	
-ADJUST		0xcea2	572	1
-ADJUST		0xcea8	572	1
-ADJUST		0xceac	572	1
-FN_END		0xceac	572	
-FN_START	0xceae	595	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_27"	"static"	
-ADJUST		0xceae	595	1
-CALL		0xceb0	595	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-ADJUST		0xceb4	595	1
-FN_END		0xceb4	595	
-FN_START	0xceb6	558	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_28"	"static"	
-ADJUST		0xceb6	558	1
-ADJUST		0xcebc	558	1
-FN_END		0xcec0	558	
-FN_START	0xcec2	367	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_29"	"static"	
-ADJUST		0xcec6	368	1
-FN_END		0xceca	368	
-FN_START	0xcecc	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_30"	"static"	
-ADJUST		0xcece	371	1
-ADJUST		0xced4	371	1
-ADJUST		0xced8	371	1
-FN_END		0xced8	371	
-FN_START	0xceda	548	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_31"	"static"	
-CALL		0xceda	548	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcede	548	
-FN_START	0xcee0	299	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_32"	"static"	
-ADJUST		0xcee0	299	1
-ADJUST		0xcee6	299	1
-ADJUST		0xcee8	299	1
-FN_END		0xcee8	299	
-FN_START	0xceea	478	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_33"	"static"	
-ADJUST		0xceec	478	1
-FN_END		0xcef2	478	
+ADJUST		0x7baa	282	1
+ADJUST		0x7bac	282	1
+ADJUST		0x7bb0	282	1
+ADJUST		0x7bba	282	-1
+ADJUST		0x7bbc	282	-1
+ADJUST		0x7bd2	283	1
+ADJUST		0x7bfa	289	1
+ADJUST		0x7c10	295	1
+ADJUST		0x7c12	295	1
+ADJUST		0x7c14	295	1
+CALL		0x7c26	295	"mulFP.O"	"__mulFP"	0
+ADJUST		0x7c2e	296	1
+ADJUST		0x7c30	296	1
+ADJUST		0x7c32	296	1
+ADJUST		0x7c36	296	1
+ADJUST		0x7c46	297	1
+ADJUST		0x7c4a	297	1
+CALL		0x7c5e	297	"mul16.O"	"__mul16"	0
+ADJUST		0x7c6a	298	1
+ADJUST		0x7c6c	298	1
+ADJUST		0x7c70	298	1
+ADJUST		0x7c8c	300	1
+ADJUST		0x7c8e	300	1
+ADJUST		0x7c92	300	1
+ADJUST		0x7c96	300	1
+ADJUST		0x7caa	301	1
+ADJUST		0x7cac	301	1
+ADJUST		0x7cae	301	1
+ADJUST		0x7ce4	307	1
+ADJUST		0x7cee	308	1
+ADJUST		0x7d2e	312	1
+ADJUST		0x7d30	312	1
+ADJUST		0x7d34	312	1
+ADJUST		0x7d38	312	1
+ADJUST		0x7d40	312	1
+ADJUST		0x7d44	313	1
+ADJUST		0x7d4e	314	1
+ADJUST		0x7d58	315	1
+ADJUST		0x7d5c	315	1
+ADJUST		0x7d7c	317	1
+ADJUST		0x7d80	317	1
+ADJUST		0x7d84	317	1
+CALL		0x7d86	317	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0x7d8a	317	-3
+ADJUST		0x7db0	324	1
+ADJUST		0x7dbc	326	1
+ADJUST		0x7dbe	326	1
+ADJUST		0x7dcc	335	1
+ADJUST		0x7dd0	335	1
+ADJUST		0x7dd4	335	1
+ADJUST		0x7dd6	335	1
+ADJUST		0x7de2	339	1
+ADJUST		0x7e14	341	1
+ADJUST		0x7e1e	342	1
+ADJUST		0x7e34	344	1
+ADJUST		0x7e36	344	1
+ADJUST		0x7e3e	344	1
+CALL		0x7e42	344	"addFP.O"	"__addFP"	0
+ADJUST		0x7e4e	344	1
+ADJUST		0x7e54	344	1
+ADJUST		0x7e58	344	1
+ADJUST		0x7ea4	351	1
+ADJUST		0x7eb0	353	1
+ADJUST		0x7eb2	353	1
+ADJUST		0x7eba	358	1
+ADJUST		0x7ebe	358	1
+ADJUST		0x7ec2	358	1
+ADJUST		0x7ec4	358	1
+CALL		0x7ec6	364	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x7ee2	370	1
+ADJUST		0x7ee6	370	1
+ADJUST		0x7eea	370	1
+ADJUST		0x7eec	370	1
+CALL		0x7ef0	370	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+ADJUST		0x7ef4	370	-4
+ADJUST		0x7ef8	371	1
+ADJUST		0x7efa	371	1
+ADJUST		0x7f00	371	1
+ADJUST		0x7f02	371	1
+CALL		0x7f04	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"battalarm"	0
+ADJUST		0x7f08	371	-6
+ADJUST		0x7f10	375	1
+ADJUST		0x7f12	376	1
+ADJUST		0x7f16	376	1
+ADJUST		0x7f1a	376	1
+ADJUST		0x7f1e	376	1
+CALL		0x7f38	380	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x7fb0	395	1
+CALL		0x802e	409	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x8050	412	1
+ADJUST		0x8054	412	1
+ADJUST		0x8058	412	1
+ADJUST		0x805a	412	1
+ADJUST		0x805e	413	1
+ADJUST		0x8062	413	1
+ADJUST		0x806a	415	1
+ADJUST		0x806e	415	1
+ADJUST		0x8072	415	1
+ADJUST		0x8074	415	1
+ADJUST		0x8078	416	1
+ADJUST		0x807c	416	1
+ADJUST		0x8080	416	1
+ADJUST		0x8082	416	1
+ADJUST		0x808a	416	1
+CALL		0x808e	416	"mul32.O"	"__mul32"	0
+ADJUST		0x8098	419	1
+ADJUST		0x809c	419	1
+ADJUST		0x80a0	419	1
+ADJUST		0x80a4	419	1
+ADJUST		0x80ae	419	1
+ADJUST		0x80ba	419	1
+ADJUST		0x80bc	419	1
+ADJUST		0x80c0	419	1
+ADJUST		0x80c4	419	1
+ADJUST		0x80c8	419	1
+ADJUST		0x80cc	419	-15
+ADJUST		0x80d0	420	1
+ADJUST		0x80d2	420	1
+ADJUST		0x80d6	420	1
+CALL		0x80d8	420	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x80f6	421	1
+ADJUST		0x80fa	421	1
+ADJUST		0x80fe	421	1
+ADJUST		0x8102	421	-13
+ADJUST		0x8106	422	1
+ADJUST		0x8108	422	1
+ADJUST		0x8114	423	1
+CALL		0x8118	423	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+CALL		0x812a	424	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+ADJUST		0x812e	424	-6
+ADJUST		0x8132	425	1
+ADJUST		0x813c	425	1
+ADJUST		0x814e	426	1
+ADJUST		0x8154	427	1
+ADJUST		0x8158	427	1
+ADJUST		0x815c	427	1
+ADJUST		0x8160	427	1
+ADJUST		0x8164	427	1
+ADJUST		0x8168	427	1
+ADJUST		0x816c	427	1
+ADJUST		0x8170	427	-13
+ADJUST		0x8174	428	1
+ADJUST		0x8178	428	1
+ADJUST		0x817c	429	1
+ADJUST		0x8180	429	1
+ADJUST		0x8184	429	1
+ADJUST		0x8188	429	1
+CALL		0x818c	429	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+ADJUST		0x81c0	431	1
+ADJUST		0x81c4	431	1
+ADJUST		0x81c8	431	1
+ADJUST		0x81cc	431	1
+CALL		0x81d0	431	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+ADJUST		0x81d6	432	1
+ADJUST		0x81da	432	1
+ADJUST		0x81de	432	1
+ADJUST		0x81e2	432	-11
+ADJUST		0x81e6	433	1
+ADJUST		0x81e8	433	1
+ADJUST		0x81ec	433	1
+CALL		0x81ee	433	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x81f2	434	1
+ADJUST		0x81f4	434	1
+ADJUST		0x81f8	434	1
+ADJUST		0x81fc	434	1
+ADJUST		0x8200	434	1
+CALL		0x8204	434	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+ADJUST		0x8238	436	1
+ADJUST		0x823c	436	1
+ADJUST		0x8240	436	1
+ADJUST		0x8244	436	1
+CALL		0x8248	436	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfpi"	0
+ADJUST		0x824e	437	1
+ADJUST		0x8252	437	1
+ADJUST		0x8256	437	1
+ADJUST		0x825a	437	-11
+ADJUST		0x825e	438	1
+ADJUST		0x8260	438	1
+ADJUST		0x8264	438	1
+CALL		0x8266	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x82a0	439	1
+ADJUST		0x82a4	439	1
+ADJUST		0x82a8	439	1
+ADJUST		0x82ac	439	-15
+ADJUST		0x82b0	440	1
+ADJUST		0x82b4	440	1
+ADJUST		0x82b8	440	1
+CALL		0x82ba	440	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x82fa	442	1
+ADJUST		0x82fe	442	1
+ADJUST		0x8302	442	1
+ADJUST		0x8306	442	-15
+ADJUST		0x830c	444	1
+ADJUST		0x8310	444	1
+ADJUST		0x8314	444	1
+ADJUST		0x8318	444	-5
+ADJUST		0x832e	450	1
+ADJUST		0x8332	450	1
+CALL		0x8334	450	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x8338	452	1
+ADJUST		0x833c	452	1
+ADJUST		0x8340	452	1
+ADJUST		0x8342	452	1
+CALL		0x8346	452	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+ADJUST		0x834a	452	-4
+ADJUST		0x834e	454	1
+ADJUST		0x8350	454	1
+CALL		0x8354	454	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
+ADJUST		0x8358	454	-6
+ADJUST		0x83ca	465	1
+ADJUST		0x83d0	465	1
+ADJUST		0x83d4	465	1
+ADJUST		0x83d8	465	1
+ADJUST		0x83fe	470	1
+ADJUST		0x8400	470	1
+ADJUST		0x8404	470	1
+ADJUST		0x8406	470	1
+ADJUST		0x840a	472	1
+ADJUST		0x8410	472	1
+ADJUST		0x8412	472	1
+CALL		0x8414	472	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
+ADJUST		0x8418	472	-3
+ADJUST		0x8424	478	1
+ADJUST		0x842a	478	1
+ADJUST		0x842e	478	1
+ADJUST		0x8432	478	1
+ADJUST		0x8446	482	1
+ADJUST		0x8456	482	1
+ADJUST		0x845a	482	1
+CALL		0x845c	482	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
+ADJUST		0x8460	482	-3
+ADJUST		0x846a	487	-1
+FN_END		0x846c	487	
+FN_START	0x846e	495	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"noload_soc"	"external"	
+ADJUST		0x8470	495	1
+ADJUST		0x8474	495	1
+ADJUST		0x8496	495	1
+CALL		0x849e	495	"mulFP.O"	"__mulFP"	0
+ADJUST		0x84a6	495	-1
+ADJUST		0x84a8	495	-1
+ADJUST		0x84ea	498	1
+ADJUST		0x84ec	499	1
+ADJUST		0x84ee	499	1
+ADJUST		0x84f0	499	1
+ADJUST		0x84f4	499	1
+ADJUST		0x84fc	499	1
+ADJUST		0x84fe	499	1
+CALL		0x8500	499	"addFP.O"	"__addFP"	0
+CALL		0x8504	499	"divFP.O"	"__divFP"	0
+ADJUST		0x8508	499	-1
+ADJUST		0x850a	499	-1
+ADJUST		0x850e	499	-1
+ADJUST		0x8512	499	-1
+ADJUST		0x851a	500	1
+ADJUST		0x851e	500	1
+ADJUST		0x8522	500	1
+ADJUST		0x8526	500	1
+ADJUST		0x8588	507	1
+ADJUST		0x858c	507	1
+ADJUST		0x8590	507	1
+ADJUST		0x8594	507	1
+ADJUST		0x8598	507	1
+CALL		0x859c	507	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Volts_to_SOC"	0
+ADJUST		0x85a0	507	-5
+ADJUST		0x85aa	512	1
+ADJUST		0x85c4	519	1
+ADJUST		0x85c6	519	1
+ADJUST		0x85d6	520	1
+ADJUST		0x85dc	520	1
+ADJUST		0x85fe	522	1
+ADJUST		0x8600	522	1
+ADJUST		0x860a	525	1
+ADJUST		0x860c	525	1
+ADJUST		0x860e	525	1
+ADJUST		0x8610	525	1
+ADJUST		0x8612	525	1
+ADJUST		0x8616	525	1
+ADJUST		0x8618	525	1
+ADJUST		0x8622	525	1
+CALL		0x8626	525	"div32s.O"	"__div32s"	0
+CALL		0x862a	525	"mul32.O"	"__mul32"	0
+CALL		0x862e	525	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
+ADJUST		0x8632	525	-6
+ADJUST		0x8636	526	1
+ADJUST		0x863c	526	1
+ADJUST		0x863e	526	1
+ADJUST		0x8642	526	1
+ADJUST		0x8646	526	1
+ADJUST		0x864a	526	1
+ADJUST		0x864e	526	-9
+ADJUST		0x8652	527	1
+ADJUST		0x8658	527	1
+ADJUST		0x865a	527	1
+CALL		0x865c	527	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x8660	527	-3
+ADJUST		0x8664	528	1
+ADJUST		0x8666	528	1
+ADJUST		0x8668	530	1
+ADJUST		0x866a	530	1
+ADJUST		0x866c	530	1
+ADJUST		0x866e	530	1
+ADJUST		0x867e	533	1
+ADJUST		0x8684	534	1
+CALL		0x8690	537	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x8698	538	1
+ADJUST		0x86c6	538	1
+ADJUST		0x86c8	538	1
+ADJUST		0x86cc	538	1
+ADJUST		0x86d0	538	1
+ADJUST		0x86d4	538	1
+ADJUST		0x86d8	538	-23
+ADJUST		0x86dc	539	1
+ADJUST		0x8700	543	1
+ADJUST		0x8704	543	1
+ADJUST		0x870c	544	1
+ADJUST		0x8710	544	1
+ADJUST		0x8712	544	1
+CALL		0x8716	544	"ltFP.O"	"__ltFP"	0
+ADJUST		0x873a	545	-1
+ADJUST		0x873c	545	-1
+ADJUST		0x873e	546	1
+ADJUST		0x8740	546	1
+ADJUST		0x8744	546	1
+ADJUST		0x8748	546	1
+ADJUST		0x874a	546	1
+ADJUST		0x8758	548	1
+ADJUST		0x8760	548	-1
+ADJUST		0x8764	548	1
+ADJUST		0x8782	549	1
+ADJUST		0x87c8	551	1
+ADJUST		0x87d2	557	1
+ADJUST		0x87d4	557	1
+ADJUST		0x8800	558	1
+ADJUST		0x8806	558	1
+ADJUST		0x8828	560	1
+ADJUST		0x882a	560	1
+ADJUST		0x8838	564	1
+ADJUST		0x8848	566	1
+ADJUST		0x884e	569	1
+ADJUST		0x8852	569	1
+CALL		0x8856	569	"ltFP.O"	"__ltFP"	0
+ADJUST		0x885e	569	1
+ADJUST		0x8860	569	1
+ADJUST		0x8864	569	1
+ADJUST		0x8868	569	1
+ADJUST		0x886a	569	1
+ADJUST		0x886e	569	1
+CALL		0x8872	569	"addFP.O"	"__subFP"	0
+CALL		0x8876	569	"gtFP.O"	"__gtFP"	0
+ADJUST		0x8880	570	1
+ADJUST		0x889a	574	1
+ADJUST		0x88b0	577	1
+ADJUST		0x8942	601	1
+ADJUST		0x8946	601	1
+ADJUST		0x8948	601	1
+ADJUST		0x894c	601	1
+CALL		0x8950	601	"mulFP.O"	"__mulFP"	0
+ADJUST		0x8956	603	1
+ADJUST		0x8958	603	1
+ADJUST		0x895a	603	1
+ADJUST		0x895e	603	1
+CALL		0x8962	603	"divFP.O"	"__divFP"	0
+FN_END		0x897c	607	
+FN_START	0x897e	609	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ChargeBatt"	"external"	
+ADJUST		0x897e	609	1
+ADJUST		0x8988	609	1
+CALL		0x89a4	621	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x89aa	622	1
+ADJUST		0x89ac	622	1
+ADJUST		0x89b0	622	1
+ADJUST		0x89b4	622	1
+ADJUST		0x89b8	622	1
+ADJUST		0x89bc	622	1
+ADJUST		0x89c0	622	1
+CALL		0x89c2	622	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x89c6	622	-7
+ADJUST		0x89ca	623	1
+ADJUST		0x89ce	623	1
+CALL		0x89d0	623	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x89d4	623	-2
+ADJUST		0x89d8	624	1
+ADJUST		0x89dc	624	1
+ADJUST		0x89e0	624	1
+CALL		0x89e2	624	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0x89e6	624	-3
+CALL		0x89e8	625	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
+ADJUST		0x8a00	628	1
+ADJUST		0x8a02	628	1
+ADJUST		0x8a06	628	1
+ADJUST		0x8a08	628	1
+ADJUST		0x8a0a	628	1
+ADJUST		0x8a0c	628	1
+ADJUST		0x8a10	628	1
+ADJUST		0x8a14	628	1
+CALL		0x8a16	628	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
+ADJUST		0x8a1a	628	-8
+ADJUST		0x8a2c	628	1
+ADJUST		0x8a30	628	1
+ADJUST		0x8a34	628	1
+ADJUST		0x8a38	628	1
+ADJUST		0x8a40	628	-1
+ADJUST		0x8a42	628	-1
+ADJUST		0x8ae6	637	1
+CALL		0x8ae8	637	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0x8aec	637	-1
+CALL		0x8b90	640	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+CALL		0x8b94	641	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x8b98	642	1
+ADJUST		0x8b9c	642	1
+ADJUST		0x8ba0	642	1
+ADJUST		0x8ba4	642	1
+ADJUST		0x8baa	642	1
+ADJUST		0x8bae	642	1
+ADJUST		0x8bb2	642	1
+ADJUST		0x8bb6	642	1
+ADJUST		0x8bba	642	1
+CALL		0x8bbc	642	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x8bc0	642	-9
+ADJUST		0x8bc4	643	1
+ADJUST		0x8bc8	643	1
+CALL		0x8bca	643	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x8bce	643	-2
+CALL		0x8bd6	646	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x8bdc	648	1
+CALL		0x8bde	648	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0x8be2	648	-1
+CALL		0x8c10	650	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x8c26	654	1
+ADJUST		0x8c28	654	1
+ADJUST		0x8c2e	654	1
+ADJUST		0x8c30	654	1
+ADJUST		0x8c36	654	1
+ADJUST		0x8c38	654	1
+ADJUST		0x8c3c	654	1
+ADJUST		0x8c3e	654	1
+ADJUST		0x8c42	654	1
+ADJUST		0x8c46	654	1
+ADJUST		0x8c4a	654	1
+ADJUST		0x8c4e	654	1
+ADJUST		0x8c52	654	1
+CALL		0x8c54	654	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x8c58	654	-13
+ADJUST		0x8c5c	655	1
+ADJUST		0x8c60	655	1
+CALL		0x8c62	655	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x8c66	655	-2
+CALL		0x8c6e	658	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
+ADJUST		0x8c72	659	1
+ADJUST		0x8c74	659	1
+ADJUST		0x8c76	659	1
+CALL		0x8c7a	659	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	0
+ADJUST		0x8c7e	659	-3
+ADJUST		0x8c88	662	1
+ADJUST		0x8c8a	662	1
+ADJUST		0x8c8e	662	1
+ADJUST		0x8c92	662	1
+ADJUST		0x8c96	662	1
+ADJUST		0x8c9a	662	1
+ADJUST		0x8c9e	662	1
+CALL		0x8ca0	662	"sncpyp2r.O"	"strncpypgm2ram"	0
+ADJUST		0x8ca4	662	-7
+ADJUST		0x8ca6	663	1
+ADJUST		0x8ca8	663	1
+ADJUST		0x8caa	663	1
+CALL		0x8cae	663	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x8cb2	663	-3
+ADJUST		0x8cbc	667	1
+ADJUST		0x8cbe	667	1
+CALL		0x8cc2	667	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOn"	0
+ADJUST		0x8cc6	667	-2
+ADJUST		0x8cca	668	1
+ADJUST		0x8ccc	668	1
+ADJUST		0x8cce	668	1
+ADJUST		0x8cd0	668	1
+CALL		0x8cd2	668	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x8cd6	668	-4
+ADJUST		0x8cda	670	1
+CALL		0x8cdc	670	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0x8ce0	670	-1
+CALL		0x8cf2	672	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0x8d10	673	1
+ADJUST		0x8da4	673	1
+ADJUST		0x8da6	673	1
+ADJUST		0x8dbc	674	1
+ADJUST		0x8dc0	674	1
+ADJUST		0x8de0	674	1
+ADJUST		0x8de4	674	1
+ADJUST		0x8dea	674	1
+ADJUST		0x8dec	674	1
+ADJUST		0x8df0	674	1
+ADJUST		0x8df4	674	1
+ADJUST		0x8df8	674	1
+ADJUST		0x8dfc	674	1
+ADJUST		0x8e00	674	1
+CALL		0x8e02	674	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x8e06	674	-11
+ADJUST		0x8e0a	675	1
+ADJUST		0x8e0c	675	1
+ADJUST		0x8e0e	675	1
+CALL		0x8e10	675	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x8e14	675	-3
+CALL		0x8e16	676	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x8e1c	677	1
+ADJUST		0x8e20	677	1
+ADJUST		0x8e24	677	1
+CALL		0x8e26	677	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0x8e2a	677	-3
+ADJUST		0x8e30	680	1
+ADJUST		0x8e32	680	1
+ADJUST		0x8e34	680	1
+ADJUST		0x8e36	680	1
+CALL		0x8e38	680	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x8e3c	680	-4
+ADJUST		0x8e42	682	1
+ADJUST		0x8e44	682	1
+ADJUST		0x8e46	682	1
+ADJUST		0x8e48	682	1
+CALL		0x8e4a	682	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x8e4e	682	-4
+CALL		0x8e50	683	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+ADJUST		0x8fa8	692	1
+ADJUST		0x8faa	692	1
+ADJUST		0x8fac	692	1
+ADJUST		0x8fae	692	1
+CALL		0x8fb0	692	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x8fb4	692	-4
+ADJUST		0x8fbe	693	1
+ADJUST		0x8fc0	693	1
+ADJUST		0x8fc2	693	1
+ADJUST		0x8fc4	693	1
+CALL		0x8fc6	693	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x8fca	693	-4
+CALL		0x8fcc	694	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+ADJUST		0x9148	704	1
+ADJUST		0x914c	705	1
+ADJUST		0x914e	705	1
+ADJUST		0x9150	705	1
+ADJUST		0x9152	705	1
+ADJUST		0x9170	705	1
+ADJUST		0x9174	705	1
+ADJUST		0x9178	705	1
+ADJUST		0x917c	705	1
+CALL		0x9180	705	"div32s.O"	"__div32s"	0
+ADJUST		0x9184	705	-1
+ADJUST		0x9186	705	-1
+ADJUST		0x918a	705	-1
+ADJUST		0x918e	705	-1
+ADJUST		0x920a	707	1
+ADJUST		0x920e	707	1
+ADJUST		0x9212	707	1
+ADJUST		0x9214	707	1
+ADJUST		0x9218	707	1
+ADJUST		0x921a	707	1
+ADJUST		0x921c	707	1
+ADJUST		0x921e	707	1
+ADJUST		0x9290	707	1
+ADJUST		0x9294	707	1
+ADJUST		0x9298	707	1
+ADJUST		0x929c	707	1
+CALL		0x92a0	707	"mul32.O"	"__mul32"	0
+CALL		0x92a4	707	"div32s.O"	"__div32s"	0
+ADJUST		0x92a8	707	-1
+ADJUST		0x92aa	707	-1
+ADJUST		0x92ae	707	-1
+ADJUST		0x92b2	707	-1
+CALL		0x9314	715	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+CALL		0x9318	716	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x9338	717	1
+ADJUST		0x933c	717	1
+ADJUST		0x9340	717	1
+ADJUST		0x9344	717	1
+ADJUST		0x9364	717	1
+ADJUST		0x9368	717	1
+ADJUST		0x936c	717	1
+ADJUST		0x9370	717	1
+ADJUST		0x9388	717	1
+ADJUST		0x938c	717	1
+ADJUST		0x9390	717	1
+ADJUST		0x9394	717	1
+ADJUST		0x93b4	717	1
+ADJUST		0x93b8	717	1
+ADJUST		0x93bc	717	1
+ADJUST		0x93c0	717	1
+ADJUST		0x93c6	717	1
+ADJUST		0x93c8	717	1
+ADJUST		0x93cc	717	1
+ADJUST		0x93d0	717	1
+ADJUST		0x93d4	717	1
+ADJUST		0x93d8	717	1
+ADJUST		0x93dc	717	1
+CALL		0x93de	717	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x93e2	717	-23
+ADJUST		0x93e6	718	1
+ADJUST		0x93ea	718	1
+CALL		0x93ec	718	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x93f0	718	-2
+ADJUST		0x93f6	720	1
+ADJUST		0x93f8	720	1
+ADJUST		0x93fa	720	1
+ADJUST		0x93fc	720	1
+CALL		0x93fe	720	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x9402	720	-4
+CALL		0x9404	721	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+CALL		0x9444	727	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x9448	728	1
+ADJUST		0x944c	728	1
+ADJUST		0x9450	728	1
+ADJUST		0x9454	728	1
+ADJUST		0x945a	728	1
+ADJUST		0x945c	728	1
+ADJUST		0x9460	728	1
+ADJUST		0x9464	728	1
+ADJUST		0x9468	728	1
+ADJUST		0x946c	728	1
+ADJUST		0x9470	728	1
+CALL		0x9472	728	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x9476	728	-11
+ADJUST		0x947a	729	1
+ADJUST		0x947e	729	1
+CALL		0x9480	729	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x9484	729	-2
+ADJUST		0x9488	730	1
+ADJUST		0x948a	730	1
+ADJUST		0x948c	730	1
+ADJUST		0x948e	730	1
+CALL		0x9490	730	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x9494	730	-4
+ADJUST		0x949a	731	1
+ADJUST		0x949e	731	1
+ADJUST		0x94a0	731	1
+ADJUST		0x94a2	731	1
+ADJUST		0x94a4	731	1
+CALL		0x94a6	731	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0x94aa	731	-4
+CALL		0x94ac	732	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+CALL		0x94b6	733	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0x94ba	734	1
+ADJUST		0x94bc	734	1
+ADJUST		0x94be	734	1
+ADJUST		0x94c0	734	1
+ADJUST		0x94d6	734	1
+ADJUST		0x94da	734	1
+ADJUST		0x94de	734	1
+ADJUST		0x94e2	734	1
+CALL		0x94e6	734	"div32u.O"	"__div32u"	0
+ADJUST		0x94ea	734	-1
+ADJUST		0x94ec	734	-1
+ADJUST		0x94f0	734	-1
+ADJUST		0x94f4	734	-1
+ADJUST		0x951c	735	1
+ADJUST		0x9520	735	1
+ADJUST		0x9524	735	1
+ADJUST		0x9526	735	1
+ADJUST		0x952a	735	1
+ADJUST		0x952c	735	1
+ADJUST		0x952e	735	1
+ADJUST		0x9530	735	1
+ADJUST		0x959a	735	1
+ADJUST		0x959e	735	1
+ADJUST		0x95a2	735	1
+ADJUST		0x95a6	735	1
+CALL		0x95aa	735	"mul32.O"	"__mul32"	0
+CALL		0x95ae	735	"div32u.O"	"__div32u"	0
+ADJUST		0x95b2	735	-1
+ADJUST		0x95b4	735	-1
+ADJUST		0x95b8	735	-1
+ADJUST		0x95bc	735	-1
+ADJUST		0x95ec	737	1
+ADJUST		0x95ee	737	1
+ADJUST		0x95f0	737	1
+ADJUST		0x95f2	737	1
+ADJUST		0x95f4	737	1
+ADJUST		0x95f8	737	1
+ADJUST		0x95fc	737	1
+ADJUST		0x9600	737	1
+CALL		0x9604	737	"div32u.O"	"__div32u"	0
+ADJUST		0x9608	737	-1
+ADJUST		0x960a	737	-1
+ADJUST		0x960e	737	-1
+ADJUST		0x9612	737	-1
+ADJUST		0x963a	738	1
+ADJUST		0x963e	738	1
+ADJUST		0x9642	738	1
+ADJUST		0x9644	738	1
+ADJUST		0x9648	738	1
+ADJUST		0x964a	738	1
+ADJUST		0x964c	738	1
+ADJUST		0x964e	738	1
+ADJUST		0x9694	738	1
+ADJUST		0x9698	738	1
+ADJUST		0x969c	738	1
+ADJUST		0x96a0	738	1
+CALL		0x96a4	738	"mul32.O"	"__mul32"	0
+CALL		0x96a8	738	"div32u.O"	"__div32u"	0
+ADJUST		0x96ac	738	-1
+ADJUST		0x96ae	738	-1
+ADJUST		0x96b2	738	-1
+ADJUST		0x96b6	738	-1
+ADJUST		0x9860	744	1
+ADJUST		0x9864	744	1
+ADJUST		0x9868	744	1
+ADJUST		0x986c	744	1
+ADJUST		0x98dc	744	1
+ADJUST		0x98e0	744	1
+ADJUST		0x98e4	744	1
+ADJUST		0x98e8	744	1
+CALL		0x98f0	744	"divFP.O"	"__divFP"	0
+ADJUST		0x98f4	744	-1
+ADJUST		0x98f6	744	-1
+ADJUST		0x98fa	744	-1
+ADJUST		0x98fe	744	-1
+CALL		0x9906	745	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+CALL		0x990a	746	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x990e	747	1
+ADJUST		0x9910	747	1
+ADJUST		0x9914	747	1
+ADJUST		0x9918	747	1
+ADJUST		0x991a	747	1
+ADJUST		0x991e	747	1
+ADJUST		0x9922	747	1
+ADJUST		0x9926	747	1
+CALL		0x992a	747	"mulFP.O"	"__mulFP"	0
+ADJUST		0x994e	747	1
+ADJUST		0x9952	747	1
+ADJUST		0x9956	747	1
+ADJUST		0x995a	747	1
+ADJUST		0x995e	747	1
+ADJUST		0x9962	747	1
+ADJUST		0x99a2	747	1
+ADJUST		0x99a6	747	1
+ADJUST		0x99aa	747	1
+ADJUST		0x99ae	747	1
+ADJUST		0x99b2	747	1
+ADJUST		0x99b6	747	1
+ADJUST		0x99ba	747	1
+ADJUST		0x99be	747	1
+ADJUST		0x99d6	747	1
+ADJUST		0x99da	747	1
+ADJUST		0x99de	747	1
+ADJUST		0x99e2	747	1
+ADJUST		0x9a02	747	1
+ADJUST		0x9a06	747	1
+ADJUST		0x9a0a	747	1
+ADJUST		0x9a0e	747	1
+ADJUST		0x9a14	747	1
+ADJUST		0x9a16	747	1
+ADJUST		0x9a1a	747	1
+ADJUST		0x9a1e	747	1
+ADJUST		0x9a22	747	1
+ADJUST		0x9a26	747	1
+ADJUST		0x9a2a	747	1
+CALL		0x9a2c	747	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x9a30	747	-33
+ADJUST		0x9a34	748	1
+ADJUST		0x9a38	748	1
+CALL		0x9a3a	748	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x9a3e	748	-2
+ADJUST		0x9a44	750	1
+ADJUST		0x9a46	750	1
+ADJUST		0x9a48	750	1
+ADJUST		0x9a4a	750	1
+ADJUST		0x9a68	750	1
+ADJUST		0x9a6c	750	1
+ADJUST		0x9a70	750	1
+ADJUST		0x9a74	750	1
+CALL		0x9a78	750	"div32s.O"	"__div32s"	0
+ADJUST		0x9a7c	750	-1
+ADJUST		0x9a7e	750	-1
+ADJUST		0x9a82	750	-1
+ADJUST		0x9a86	750	-1
+ADJUST		0x9b02	752	1
+ADJUST		0x9b06	752	1
+ADJUST		0x9b0a	752	1
+ADJUST		0x9b0c	752	1
+ADJUST		0x9b10	752	1
+ADJUST		0x9b12	752	1
+ADJUST		0x9b14	752	1
+ADJUST		0x9b16	752	1
+ADJUST		0x9b88	752	1
+ADJUST		0x9b8c	752	1
+ADJUST		0x9b90	752	1
+ADJUST		0x9b94	752	1
+CALL		0x9b98	752	"mul32.O"	"__mul32"	0
+CALL		0x9b9c	752	"div32s.O"	"__div32s"	0
+ADJUST		0x9ba0	752	-1
+ADJUST		0x9ba2	752	-1
+ADJUST		0x9ba6	752	-1
+ADJUST		0x9baa	752	-1
+CALL		0x9d22	760	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x9d42	761	1
+ADJUST		0x9d46	761	1
+ADJUST		0x9d66	761	1
+ADJUST		0x9d6a	761	1
+ADJUST		0x9d6e	761	1
+ADJUST		0x9d72	761	1
+ADJUST		0x9d92	761	1
+ADJUST		0x9d96	761	1
+ADJUST		0x9d9a	761	1
+ADJUST		0x9d9e	761	1
+ADJUST		0x9da4	761	1
+ADJUST		0x9da6	761	1
+ADJUST		0x9daa	761	1
+ADJUST		0x9dae	761	1
+ADJUST		0x9db2	761	1
+ADJUST		0x9db6	761	1
+ADJUST		0x9dba	761	1
+CALL		0x9dbc	761	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0x9dc0	761	-17
+ADJUST		0x9dc4	762	1
+ADJUST		0x9dc8	762	1
+CALL		0x9dca	762	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0x9dce	762	-2
+ADJUST		0x9dd8	765	1
+CALL		0x9dda	766	"/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c"	"ADC_read"	0
+ADJUST		0x9ede	773	1
+ADJUST		0x9ee0	773	1
+ADJUST		0x9ee4	773	1
+ADJUST		0x9ee8	773	1
+ADJUST		0x9f06	773	1
+ADJUST		0x9f0a	773	1
+ADJUST		0x9f0e	773	1
+ADJUST		0x9f12	773	1
+CALL		0x9f1a	773	"addFP.O"	"__subFP"	0
+ADJUST		0x9f1e	773	1
+ADJUST		0x9f22	773	1
+ADJUST		0x9f26	773	1
+ADJUST		0x9f2a	773	1
+CALL		0x9f2c	773	"divFP.O"	"__divFP"	0
+ADJUST		0x9f30	773	1
+ADJUST		0x9f32	773	1
+ADJUST		0x9f36	773	1
+ADJUST		0x9f3a	773	1
+CALL		0x9f3c	773	"mulFP.O"	"__mulFP"	0
+ADJUST		0x9f44	773	-1
+ADJUST		0x9f46	773	-1
+CALL		0x9fc2	775	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0x9fe2	776	1
+ADJUST		0x9fe6	776	1
+ADJUST		0xa006	776	1
+ADJUST		0xa00a	776	1
+ADJUST		0xa00e	776	1
+ADJUST		0xa012	776	1
+ADJUST		0xa032	776	1
+ADJUST		0xa036	776	1
+ADJUST		0xa03a	776	1
+ADJUST		0xa03e	776	1
+ADJUST		0xa044	776	1
+ADJUST		0xa046	776	1
+ADJUST		0xa04a	776	1
+ADJUST		0xa04e	776	1
+ADJUST		0xa052	776	1
+ADJUST		0xa056	776	1
+ADJUST		0xa05a	776	1
+CALL		0xa05c	776	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xa060	776	-17
+ADJUST		0xa064	777	1
+ADJUST		0xa068	777	1
+CALL		0xa06a	777	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0xa06e	777	-2
+CALL		0xa070	779	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xa076	780	1
+ADJUST		0xa07a	780	1
+ADJUST		0xa07e	780	1
+CALL		0xa080	780	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xa084	780	-3
+ADJUST		0xa088	782	1
+CALL		0xa08a	782	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xa08e	782	-1
+CALL		0xa090	783	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xa096	784	1
+ADJUST		0xa09a	784	1
+ADJUST		0xa09e	784	1
+CALL		0xa0a0	784	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xa0a4	784	-3
+CALL		0xa6ba	810	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0xa6c4	814	1
+ADJUST		0xa6c6	814	1
+ADJUST		0xa6c8	814	1
+ADJUST		0xa6ca	814	1
+CALL		0xa6cc	814	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xa6d0	814	-4
+ADJUST		0xa6d6	816	1
+ADJUST		0xa6d8	816	1
+ADJUST		0xa6da	816	1
+ADJUST		0xa6dc	816	1
+CALL		0xa6de	816	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xa6e2	816	-4
+ADJUST		0xa6e8	818	1
+ADJUST		0xa6ea	818	1
+ADJUST		0xa6ec	818	1
+ADJUST		0xa6ee	818	1
+CALL		0xa6f0	818	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xa6f4	818	-4
+ADJUST		0xa77c	825	1
+CALL		0xa77e	825	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xa782	825	-1
+CALL		0xa788	827	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0xa79e	829	1
+ADJUST		0xa7a0	829	1
+ADJUST		0xa7a6	829	1
+ADJUST		0xa7a8	829	1
+ADJUST		0xa7ac	829	1
+ADJUST		0xa7ae	829	1
+ADJUST		0xa7b2	829	1
+ADJUST		0xa7b6	829	1
+ADJUST		0xa7ba	829	1
+ADJUST		0xa7be	829	1
+ADJUST		0xa7c2	829	1
+CALL		0xa7c4	829	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xa7c8	829	-11
+ADJUST		0xa7cc	830	1
+ADJUST		0xa7d0	830	1
+CALL		0xa7d2	830	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0xa7d6	830	-2
+ADJUST		0xa7e0	835	1
+CALL		0xa7e2	835	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xa7e6	835	-1
+ADJUST		0xa834	840	1
+ADJUST		0xa838	840	1
+ADJUST		0xa83c	840	1
+ADJUST		0xa840	840	1
+ADJUST		0xa856	840	1
+ADJUST		0xa85a	840	1
+CALL		0xa862	840	"mulFP.O"	"__mulFP"	0
+ADJUST		0xa86a	840	-1
+ADJUST		0xa86c	840	-1
+ADJUST		0xa870	840	-1
+ADJUST		0xa874	840	-1
+ADJUST		0xa89c	841	1
+ADJUST		0xa8a0	841	1
+ADJUST		0xa8a4	841	1
+ADJUST		0xa8a8	841	1
+ADJUST		0xa8be	841	1
+ADJUST		0xa8c2	841	1
+CALL		0xa8ca	841	"mulFP.O"	"__mulFP"	0
+ADJUST		0xa8d2	841	-1
+ADJUST		0xa8d4	841	-1
+ADJUST		0xa8d8	841	-1
+ADJUST		0xa8dc	841	-1
+ADJUST		0xa904	842	1
+ADJUST		0xa908	842	1
+ADJUST		0xa90c	842	1
+ADJUST		0xa910	842	1
+ADJUST		0xa926	842	1
+ADJUST		0xa92a	842	1
+CALL		0xa932	842	"mulFP.O"	"__mulFP"	0
+ADJUST		0xa93a	842	-1
+ADJUST		0xa93c	842	-1
+ADJUST		0xa940	842	-1
+ADJUST		0xa944	842	-1
+CALL		0xa9c8	846	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+CALL		0xaa1e	851	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xaa24	852	1
+ADJUST		0xaa28	852	1
+ADJUST		0xaa2c	852	1
+CALL		0xaa2e	852	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xaa32	852	-3
+ADJUST		0xaa34	854	1
+ADJUST		0xaa38	854	1
+ADJUST		0xaa3c	854	1
+ADJUST		0xaa40	854	1
+ADJUST		0xaa48	854	-1
+ADJUST		0xaa4a	854	-1
+ADJUST		0xaa4e	854	-1
+ADJUST		0xaa52	854	-1
+CALL		0xaa5a	857	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
+ADJUST		0xaa60	858	1
+CALL		0xaa62	858	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xaa66	858	-1
+CALL		0xaa78	860	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+CALL		0xaa82	862	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xaa88	863	1
+ADJUST		0xaa8c	863	1
+ADJUST		0xaa90	863	1
+CALL		0xaa92	863	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xaa96	863	-3
+CALL		0xaaa4	868	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xaaaa	869	1
+ADJUST		0xaaae	869	1
+ADJUST		0xaab2	869	1
+CALL		0xaab4	869	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xaab8	869	-3
+CALL		0xaac0	872	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"mkbsstring"	0
+ADJUST		0xaae4	874	1
+ADJUST		0xab02	874	-1
+ADJUST		0xab3a	879	1
+ADJUST		0xab3c	879	1
+CALL		0xab40	879	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOff"	0
+ADJUST		0xab44	879	-2
+ADJUST		0xab48	880	1
+ADJUST		0xab4a	880	1
+ADJUST		0xab4c	880	1
+ADJUST		0xab4e	880	1
+CALL		0xab50	880	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xab54	880	-4
+ADJUST		0xab6a	883	1
+ADJUST		0xab6e	883	1
+ADJUST		0xab8e	883	1
+ADJUST		0xab92	883	1
+ADJUST		0xab98	882	1
+ADJUST		0xab9a	882	1
+ADJUST		0xab9e	882	1
+ADJUST		0xaba2	882	1
+ADJUST		0xaba6	882	1
+ADJUST		0xabaa	882	1
+ADJUST		0xabae	882	1
+CALL		0xabb0	883	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xabb4	883	-11
+ADJUST		0xabb8	884	1
+ADJUST		0xabba	884	1
+ADJUST		0xabbc	884	1
+CALL		0xabbe	884	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xabc2	884	-3
+ADJUST		0xabc6	886	1
+ADJUST		0xabca	886	1
+ADJUST		0xabe8	886	1
+ADJUST		0xabec	886	1
+ADJUST		0xabf0	886	1
+ADJUST		0xabf4	886	1
+CALL		0xabf8	886	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xabfc	886	-6
+ADJUST		0xac00	887	1
+ADJUST		0xac04	887	1
+ADJUST		0xac22	887	1
+ADJUST		0xac26	887	1
+ADJUST		0xac2a	887	1
+ADJUST		0xac2e	887	1
+CALL		0xac32	887	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xac36	887	-6
+ADJUST		0xac3a	888	1
+ADJUST		0xac3e	888	1
+ADJUST		0xac42	888	1
+ADJUST		0xac46	888	1
+ADJUST		0xac4a	888	1
+ADJUST		0xac4c	888	1
+ADJUST		0xac50	888	1
+ADJUST		0xac54	888	1
+ADJUST		0xac58	888	1
+ADJUST		0xac5c	888	1
+ADJUST		0xac60	888	1
+CALL		0xac62	888	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xac66	888	-11
+ADJUST		0xac6a	889	1
+ADJUST		0xac6e	889	1
+ADJUST		0xac70	889	1
+CALL		0xac72	889	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xac76	889	-3
+ADJUST		0xac7a	891	1
+ADJUST		0xac7c	891	1
+ADJUST		0xac7e	891	1
+ADJUST		0xac80	891	1
+CALL		0xac82	891	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xac86	891	-4
+CALL		0xacaa	894	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xacb0	895	1
+ADJUST		0xacb4	895	1
+ADJUST		0xacb8	895	1
+CALL		0xacba	895	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xacbe	895	-3
+CALL		0xacc0	897	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xacc6	898	1
+ADJUST		0xacca	898	1
+ADJUST		0xacce	898	1
+CALL		0xacd0	898	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xacd4	898	-3
+ADJUST		0xacdc	901	1
+ADJUST		0xacde	901	1
+CALL		0xace0	901	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pick_batt"	0
+ADJUST		0xace4	901	-2
+CALL		0xace6	902	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_hist"	0
+ADJUST		0xacea	903	1
+ADJUST		0xacec	903	1
+CALL		0xacf0	903	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_cef"	0
+ADJUST		0xacf4	903	-2
+ADJUST		0xad62	907	1
+ADJUST		0xad64	907	1
+ADJUST		0xad68	907	1
+ADJUST		0xad6a	907	1
+ADJUST		0xad6c	907	1
+ADJUST		0xad70	907	1
+ADJUST		0xad74	907	1
+ADJUST		0xad78	907	1
+CALL		0xad80	907	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
+ADJUST		0xad84	907	-8
+ADJUST		0xad96	907	1
+ADJUST		0xad9a	907	1
+ADJUST		0xad9e	907	1
+ADJUST		0xada2	907	1
+ADJUST		0xadaa	907	-1
+ADJUST		0xadac	907	-1
+ADJUST		0xadb0	907	-1
+ADJUST		0xadb4	907	-1
+CALL		0xae64	913	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xae6a	914	1
+ADJUST		0xae6e	914	1
+ADJUST		0xae72	914	1
+CALL		0xae74	914	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xae78	914	-3
+ADJUST		0xae80	918	1
+ADJUST		0xae82	918	1
+ADJUST		0xae86	918	1
+ADJUST		0xae88	918	1
+ADJUST		0xae8a	918	1
+ADJUST		0xae8e	918	1
+ADJUST		0xae92	918	1
+ADJUST		0xae96	918	1
+CALL		0xae9e	918	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
+ADJUST		0xaea2	918	-8
+ADJUST		0xaeb4	918	1
+ADJUST		0xaeb8	918	1
+ADJUST		0xaebc	918	1
+ADJUST		0xaec0	918	1
+ADJUST		0xaec8	918	-1
+ADJUST		0xaeca	918	-1
+ADJUST		0xaece	918	-1
+ADJUST		0xaed2	918	-1
+CALL		0xaf7e	922	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xaf84	923	1
+ADJUST		0xaf88	923	1
+ADJUST		0xaf8c	923	1
+CALL		0xaf8e	923	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xaf92	923	-3
+CALL		0xaf94	924	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xaf9a	925	1
+ADJUST		0xaf9e	925	1
+ADJUST		0xafa2	925	1
+CALL		0xafa4	925	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xafa8	925	-3
+ADJUST		0xafb0	930	1
+ADJUST		0xafb2	930	1
+ADJUST		0xafb6	930	1
+ADJUST		0xafb8	930	1
+ADJUST		0xafba	930	1
+ADJUST		0xafbe	930	1
+ADJUST		0xafc2	930	1
+ADJUST		0xafc6	930	1
+CALL		0xafce	930	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
+ADJUST		0xafd2	930	-8
+ADJUST		0xafe4	930	1
+ADJUST		0xafe8	930	1
+ADJUST		0xafec	930	1
+ADJUST		0xaff0	930	1
+ADJUST		0xaff8	930	-1
+ADJUST		0xaffa	930	-1
+ADJUST		0xaffe	930	-1
+ADJUST		0xb002	930	-1
+CALL		0xb0e4	937	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb0ea	938	1
+ADJUST		0xb0ee	938	1
+ADJUST		0xb0f2	938	1
+CALL		0xb0f4	938	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb0f8	938	-3
+CALL		0xb198	947	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb19e	948	1
+ADJUST		0xb1a2	948	1
+ADJUST		0xb1a6	948	1
+CALL		0xb1a8	948	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb1ac	948	-3
+CALL		0xb2f4	961	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb2fa	962	1
+ADJUST		0xb2fe	962	1
+ADJUST		0xb302	962	1
+CALL		0xb304	962	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb308	962	-3
+CALL		0xb30a	963	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb310	964	1
+ADJUST		0xb314	964	1
+ADJUST		0xb318	964	1
+CALL		0xb31a	964	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb31e	964	-3
+CALL		0xb34c	971	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb352	972	1
+ADJUST		0xb356	972	1
+ADJUST		0xb35a	972	1
+CALL		0xb35c	972	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb360	972	-3
+CALL		0xb3d2	978	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb3d8	979	1
+ADJUST		0xb3dc	979	1
+ADJUST		0xb3e0	979	1
+CALL		0xb3e2	979	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb3e6	979	-3
+CALL		0xb454	989	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb45a	990	1
+ADJUST		0xb45e	990	1
+ADJUST		0xb462	990	1
+CALL		0xb464	990	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb468	990	-3
+ADJUST		0xb46c	993	1
+CALL		0xb46e	993	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xb472	993	-1
+CALL		0xb478	995	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0xb496	998	1
+ADJUST		0xb498	998	1
+ADJUST		0xb49e	998	1
+ADJUST		0xb4a0	998	1
+ADJUST		0xb4a4	998	1
+ADJUST		0xb4a6	998	1
+ADJUST		0xb4aa	998	1
+ADJUST		0xb4ae	998	1
+ADJUST		0xb4b2	998	1
+ADJUST		0xb4b6	998	1
+ADJUST		0xb4ba	998	1
+CALL		0xb4bc	998	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xb4c0	998	-11
+ADJUST		0xb4c4	999	1
+ADJUST		0xb4c8	999	1
+CALL		0xb4ca	999	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0xb4ce	999	-2
+ADJUST		0xb4ee	1001	1
+ADJUST		0xb4f2	1001	1
+ADJUST		0xb4f6	1001	1
+ADJUST		0xb4fa	1001	1
+ADJUST		0xb520	1001	1
+ADJUST		0xb524	1001	1
+ADJUST		0xb528	1001	1
+ADJUST		0xb52c	1001	1
+ADJUST		0xb550	1001	1
+ADJUST		0xb554	1001	1
+ADJUST		0xb558	1001	1
+ADJUST		0xb55c	1001	1
+ADJUST		0xb566	1000	1
+ADJUST		0xb56a	1000	1
+ADJUST		0xb56e	1000	1
+ADJUST		0xb572	1000	1
+ADJUST		0xb576	1000	1
+CALL		0xb578	1001	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xb57c	1001	-17
+ADJUST		0xb580	1002	1
+ADJUST		0xb584	1002	1
+CALL		0xb586	1002	"C:\MCC18\v3_39\src\pmc_common\USART\u2puts.c"	"puts2USART"	0
+ADJUST		0xb58a	1002	-2
+ADJUST		0xb58e	1003	1
+CALL		0xb590	1003	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xb594	1003	-1
+CALL		0xb59a	1005	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+CALL		0xb62e	1008	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xb634	1009	1
+ADJUST		0xb638	1009	1
+ADJUST		0xb63c	1009	1
+CALL		0xb63e	1009	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xb642	1009	-3
+ADJUST		0xb646	1010	1
+ADJUST		0xb6c6	1014	1
+ADJUST		0xb6ca	1014	1
+ADJUST		0xb6ce	1014	1
+ADJUST		0xb6d2	1014	1
+ADJUST		0xb6dc	1014	1
+ADJUST		0xb6e0	1014	1
+ADJUST		0xb6e4	1014	1
+ADJUST		0xb6e8	1014	1
+CALL		0xb6ea	1014	"mulFP.O"	"__mulFP"	0
+ADJUST		0xb732	1014	1
+ADJUST		0xb736	1014	1
+ADJUST		0xb73a	1014	1
+ADJUST		0xb73e	1014	1
+ADJUST		0xb746	1014	1
+ADJUST		0xb748	1014	1
+ADJUST		0xb74c	1014	1
+ADJUST		0xb750	1014	1
+ADJUST		0xb752	1014	1
+ADJUST		0xb756	1014	1
+CALL		0xb75e	1014	"mulFP.O"	"__mulFP"	0
+CALL		0xb762	1014	"addFP.O"	"__addFP"	0
+CALL		0xb766	1014	"divFP.O"	"__divFP"	0
+ADJUST		0xb76a	1014	-1
+ADJUST		0xb76c	1014	-1
+ADJUST		0xb770	1014	-1
+ADJUST		0xb774	1014	-1
+ADJUST		0xb7c4	1015	1
+ADJUST		0xb7c8	1015	1
+ADJUST		0xb7cc	1015	1
+ADJUST		0xb7d0	1015	1
+ADJUST		0xb7d8	1015	-1
+ADJUST		0xb7da	1015	-1
+ADJUST		0xb7e2	1016	1
+ADJUST		0xb7e4	1016	1
+ADJUST		0xb7e6	1016	1
+ADJUST		0xb7e8	1016	1
+ADJUST		0xb806	1016	1
+ADJUST		0xb80a	1016	1
+ADJUST		0xb80e	1016	1
+ADJUST		0xb812	1016	1
+CALL		0xb816	1016	"ltFP.O"	"__ltFP"	0
+ADJUST		0xb81e	1016	1
+ADJUST		0xb820	1016	1
+ADJUST		0xb824	1016	1
+ADJUST		0xb828	1016	1
+ADJUST		0xb846	1016	1
+ADJUST		0xb84a	1016	1
+ADJUST		0xb84e	1016	1
+ADJUST		0xb852	1016	1
+CALL		0xb856	1016	"mulFP.O"	"__mulFP"	0
+ADJUST		0xb85a	1016	-1
+ADJUST		0xb85c	1016	-1
+ADJUST		0xb860	1016	-1
+ADJUST		0xb864	1016	-1
+ADJUST		0xb89a	1017	1
+ADJUST		0xb89e	1017	1
+ADJUST		0xb8a2	1017	1
+ADJUST		0xb8a6	1017	1
+ADJUST		0xb8c4	1017	1
+ADJUST		0xb8c8	1017	1
+ADJUST		0xb8cc	1017	1
+ADJUST		0xb8d0	1017	1
+CALL		0xb8d4	1017	"gtFP.O"	"__gtFP"	0
+ADJUST		0xb90a	1018	1
+ADJUST		0xb90e	1018	1
+ADJUST		0xb912	1018	1
+ADJUST		0xb916	1018	1
+ADJUST		0xb934	1018	1
+ADJUST		0xb938	1018	1
+ADJUST		0xb93c	1018	1
+ADJUST		0xb940	1018	1
+CALL		0xb944	1018	"gtFP.O"	"__gtFP"	0
+ADJUST		0xb97a	1019	1
+ADJUST		0xb97e	1019	1
+ADJUST		0xb982	1019	1
+ADJUST		0xb986	1019	1
+ADJUST		0xb9a4	1019	1
+ADJUST		0xb9a8	1019	1
+ADJUST		0xb9ac	1019	1
+ADJUST		0xb9b0	1019	1
+CALL		0xb9b4	1019	"ltFP.O"	"__ltFP"	0
+ADJUST		0xba30	1024	1
+ADJUST		0xba34	1024	1
+ADJUST		0xba38	1024	1
+ADJUST		0xba3c	1024	1
+CALL		0xba40	1024	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ABSL"	0
+ADJUST		0xba44	1024	-4
+CALL		0xbac4	1026	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xbaca	1027	1
+ADJUST		0xbace	1027	1
+ADJUST		0xbad2	1027	1
+CALL		0xbad4	1027	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xbad8	1027	-3
+ADJUST		0xbae2	1028	1
+ADJUST		0xbae6	1028	1
+ADJUST		0xbae8	1028	1
+CALL		0xbaec	1028	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	0
+ADJUST		0xbaf0	1028	-3
+CALL		0xbaf2	1029	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
+ADJUST		0xbbf8	1041	1
+CALL		0xbc10	1045	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xbc1e	1046	1
+ADJUST		0xbc22	1046	1
+ADJUST		0xbc26	1046	1
+CALL		0xbc28	1046	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xbc2c	1046	-3
+ADJUST		0xbc38	1047	1
+ADJUST		0xbc3c	1047	1
+ADJUST		0xbc40	1047	1
+CALL		0xbc42	1047	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xbc46	1047	-3
+ADJUST		0xbc4a	1048	1
+ADJUST		0xbc4c	1048	1
+ADJUST		0xbc4e	1048	1
+ADJUST		0xbc50	1048	1
+CALL		0xbc52	1048	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xbc56	1048	-4
+ADJUST		0xbcd6	1055	1
+CALL		0xbcd8	1055	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xbcdc	1055	-1
+ADJUST		0xbd86	1058	1
+ADJUST		0xbd8a	1058	1
+ADJUST		0xbd8e	1058	1
+ADJUST		0xbd92	1058	1
+ADJUST		0xbd9c	1058	1
+ADJUST		0xbda0	1058	1
+ADJUST		0xbda4	1058	1
+ADJUST		0xbda8	1058	1
+CALL		0xbdaa	1058	"mulFP.O"	"__mulFP"	0
+ADJUST		0xbdf2	1058	1
+ADJUST		0xbdf6	1058	1
+ADJUST		0xbdfa	1058	1
+ADJUST		0xbdfe	1058	1
+ADJUST		0xbe06	1058	1
+ADJUST		0xbe08	1058	1
+ADJUST		0xbe0c	1058	1
+ADJUST		0xbe10	1058	1
+ADJUST		0xbe12	1058	1
+ADJUST		0xbe16	1058	1
+CALL		0xbe1e	1058	"mulFP.O"	"__mulFP"	0
+CALL		0xbe22	1058	"addFP.O"	"__addFP"	0
+CALL		0xbe26	1058	"divFP.O"	"__divFP"	0
+ADJUST		0xbe2a	1058	-1
+ADJUST		0xbe2c	1058	-1
+ADJUST		0xbe30	1058	-1
+ADJUST		0xbe34	1058	-1
+ADJUST		0xbe84	1059	1
+ADJUST		0xbe88	1059	1
+ADJUST		0xbe8c	1059	1
+ADJUST		0xbe90	1059	1
+ADJUST		0xbe98	1059	-1
+ADJUST		0xbe9a	1059	-1
+ADJUST		0xbea2	1060	1
+ADJUST		0xbea4	1060	1
+ADJUST		0xbea6	1060	1
+ADJUST		0xbea8	1060	1
+ADJUST		0xbec6	1060	1
+ADJUST		0xbeca	1060	1
+ADJUST		0xbece	1060	1
+ADJUST		0xbed2	1060	1
+CALL		0xbed6	1060	"ltFP.O"	"__ltFP"	0
+ADJUST		0xbede	1060	1
+ADJUST		0xbee0	1060	1
+ADJUST		0xbee4	1060	1
+ADJUST		0xbee8	1060	1
+ADJUST		0xbf06	1060	1
+ADJUST		0xbf0a	1060	1
+ADJUST		0xbf0e	1060	1
+ADJUST		0xbf12	1060	1
+CALL		0xbf16	1060	"mulFP.O"	"__mulFP"	0
+ADJUST		0xbf1a	1060	-1
+ADJUST		0xbf1c	1060	-1
+ADJUST		0xbf20	1060	-1
+ADJUST		0xbf24	1060	-1
+ADJUST		0xbf5a	1061	1
+ADJUST		0xbf5e	1061	1
+ADJUST		0xbf62	1061	1
+ADJUST		0xbf66	1061	1
+ADJUST		0xbf84	1061	1
+ADJUST		0xbf88	1061	1
+ADJUST		0xbf8c	1061	1
+ADJUST		0xbf90	1061	1
+CALL		0xbf94	1061	"gtFP.O"	"__gtFP"	0
+ADJUST		0xbfca	1062	1
+ADJUST		0xbfce	1062	1
+ADJUST		0xbfd2	1062	1
+ADJUST		0xbfd6	1062	1
+ADJUST		0xbff4	1062	1
+ADJUST		0xbff8	1062	1
+ADJUST		0xbffc	1062	1
+ADJUST		0xc000	1062	1
+CALL		0xc004	1062	"gtFP.O"	"__gtFP"	0
+ADJUST		0xc03a	1063	1
+ADJUST		0xc03e	1063	1
+ADJUST		0xc042	1063	1
+ADJUST		0xc046	1063	1
+ADJUST		0xc064	1063	1
+ADJUST		0xc068	1063	1
+ADJUST		0xc06c	1063	1
+ADJUST		0xc070	1063	1
+CALL		0xc074	1063	"ltFP.O"	"__ltFP"	0
+ADJUST		0xc428	1090	1
+ADJUST		0xc42c	1090	1
+CALL		0xc42e	1090	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
+ADJUST		0xc432	1090	-2
+ADJUST		0xc474	1094	1
+ADJUST		0xc478	1094	1
+ADJUST		0xc47c	1094	1
+ADJUST		0xc47e	1094	1
+CALL		0xc482	1094	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+ADJUST		0xc486	1094	-4
+CALL		0xc48a	1096	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xc490	1097	1
+ADJUST		0xc494	1097	1
+ADJUST		0xc498	1097	1
+CALL		0xc49a	1097	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xc49e	1097	-3
+CALL		0xc4a0	1100	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+CALL		0xc4ac	1103	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xc4b2	1104	1
+ADJUST		0xc4b6	1104	1
+ADJUST		0xc4ba	1104	1
+CALL		0xc4bc	1104	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xc4c0	1104	-3
+ADJUST		0xc4c2	1105	1
+ADJUST		0xc4c6	1105	1
+ADJUST		0xc4ca	1105	1
+CALL		0xc4cc	1105	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"divert_power"	0
+ADJUST		0xc4d0	1105	-3
+CALL		0xc50c	1110	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xc512	1111	1
+ADJUST		0xc516	1111	1
+ADJUST		0xc51a	1111	1
+CALL		0xc51c	1111	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xc520	1111	-3
+CALL		0xc522	1112	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xc528	1113	1
+ADJUST		0xc52c	1113	1
+ADJUST		0xc530	1113	1
+CALL		0xc532	1113	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xc536	1113	-3
+ADJUST		0xc53c	1118	1
+CALL		0xc53e	1118	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xc542	1118	-1
+CALL		0xc554	1120	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0xc5a0	1127	1
+ADJUST		0xc5a2	1128	1
+ADJUST		0xc5a6	1128	1
+ADJUST		0xc5aa	1128	1
+ADJUST		0xc5ae	1128	1
+ADJUST		0xc5b4	1128	1
+ADJUST		0xc5b6	1128	1
+ADJUST		0xc5b8	1128	1
+ADJUST		0xc5ba	1128	1
+ADJUST		0xc5bc	1128	1
+ADJUST		0xc5c0	1128	1
+ADJUST		0xc5c4	1128	1
+ADJUST		0xc5c8	1128	1
+CALL		0xc5cc	1128	"mul32.O"	"__mul32"	0
+CALL		0xc5d0	1128	"div32u.O"	"__div32u"	0
+ADJUST		0xc5d4	1128	-1
+ADJUST		0xc5d6	1128	-1
+ADJUST		0xc5da	1128	-1
+ADJUST		0xc5de	1128	-1
+ADJUST		0xc5f0	1129	1
+ADJUST		0xc5f2	1129	1
+ADJUST		0xc5f6	1129	1
+ADJUST		0xc5f8	1129	1
+ADJUST		0xc5fa	1129	1
+ADJUST		0xc5fe	1129	1
+CALL		0xc606	1129	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"lp_filter"	0
+ADJUST		0xc60a	1129	-8
+ADJUST		0xc61c	1129	1
+ADJUST		0xc620	1129	1
+ADJUST		0xc624	1129	1
+ADJUST		0xc628	1129	1
+ADJUST		0xc630	1129	-1
+ADJUST		0xc632	1129	-1
+ADJUST		0xc65e	1136	1
+ADJUST		0xc660	1136	1
+ADJUST		0xc662	1136	1
+ADJUST		0xc664	1136	1
+CALL		0xc666	1136	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_calc"	0
+ADJUST		0xc66a	1136	-4
+ADJUST		0xc780	1138	1
+ADJUST		0xc784	1138	1
+ADJUST		0xc788	1138	1
+ADJUST		0xc78c	1138	1
+CALL		0xc790	1138	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"hms"	0
+ADJUST		0xc794	1138	-4
+ADJUST		0xc796	1138	1
+ADJUST		0xc79a	1138	1
+ADJUST		0xc7a0	1138	1
+ADJUST		0xc7a2	1138	1
+ADJUST		0xc7a4	1138	1
+ADJUST		0xc7a8	1138	1
+ADJUST		0xc7b8	1138	1
+ADJUST		0xc7bc	1138	1
+ADJUST		0xc7c2	1138	1
+ADJUST		0xc7c6	1138	1
+ADJUST		0xc7ca	1138	1
+ADJUST		0xc7ce	1138	1
+ADJUST		0xc7d2	1138	1
+CALL		0xc7d4	1138	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xc7d8	1138	-13
+ADJUST		0xc7dc	1139	1
+ADJUST		0xc7de	1139	1
+ADJUST		0xc7e0	1139	1
+CALL		0xc7e2	1139	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xc7e6	1139	-3
+ADJUST		0xc7fa	1143	1
+ADJUST		0xc7fe	1143	1
+ADJUST		0xc81c	1143	1
+ADJUST		0xc820	1143	1
+ADJUST		0xc824	1143	1
+ADJUST		0xc828	1143	1
+CALL		0xc82c	1143	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xc830	1143	-6
+ADJUST		0xc834	1144	1
+ADJUST		0xc838	1144	1
+ADJUST		0xc856	1144	1
+ADJUST		0xc85a	1144	1
+ADJUST		0xc85e	1144	1
+ADJUST		0xc862	1144	1
+CALL		0xc866	1144	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xc86a	1144	-6
+ADJUST		0xc8f4	1146	1
+ADJUST		0xc8f8	1146	1
+ADJUST		0xc8fc	1146	1
+ADJUST		0xc900	1146	1
+CALL		0xc904	1146	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"hms"	0
+ADJUST		0xc908	1146	-4
+ADJUST		0xc90a	1146	1
+ADJUST		0xc90e	1146	1
+ADJUST		0xc914	1146	1
+ADJUST		0xc918	1146	1
+ADJUST		0xc91c	1146	1
+ADJUST		0xc920	1146	1
+ADJUST		0xc924	1146	1
+ADJUST		0xc926	1146	1
+ADJUST		0xc92a	1146	1
+ADJUST		0xc92e	1146	1
+ADJUST		0xc932	1146	1
+ADJUST		0xc936	1146	1
+ADJUST		0xc93a	1146	1
+CALL		0xc93c	1146	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xc940	1146	-13
+ADJUST		0xc944	1147	1
+ADJUST		0xc946	1147	1
+ADJUST		0xc948	1147	1
+CALL		0xc94a	1147	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xc94e	1147	-3
+ADJUST		0xc952	1149	1
+ADJUST		0xc956	1149	1
+ADJUST		0xc958	1149	1
+ADJUST		0xc95c	1149	1
+ADJUST		0xc960	1149	1
+ADJUST		0xc964	1149	1
+CALL		0xc968	1149	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xc96c	1149	-6
+ADJUST		0xc970	1150	1
+ADJUST		0xc974	1150	1
+ADJUST		0xc976	1150	1
+ADJUST		0xc97a	1150	1
+ADJUST		0xc97e	1150	1
+ADJUST		0xc982	1150	1
+CALL		0xc986	1150	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xc98a	1150	-6
+ADJUST		0xc98e	1151	1
+ADJUST		0xc992	1151	1
+ADJUST		0xc994	1151	1
+ADJUST		0xc998	1151	1
+ADJUST		0xc99c	1151	1
+ADJUST		0xc9a0	1151	1
+CALL		0xc9a4	1151	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ahfp"	0
+ADJUST		0xc9a8	1151	-6
+ADJUST		0xc9ac	1152	1
+ADJUST		0xc9b0	1152	1
+ADJUST		0xc9b4	1152	1
+ADJUST		0xc9b8	1152	1
+ADJUST		0xc9bc	1152	1
+ADJUST		0xc9c0	1152	1
+ADJUST		0xc9c4	1152	1
+ADJUST		0xc9c8	1152	1
+ADJUST		0xc9cc	1152	1
+ADJUST		0xc9d0	1152	1
+ADJUST		0xc9d4	1152	1
+CALL		0xc9d6	1152	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xc9da	1152	-11
+ADJUST		0xc9de	1153	1
+ADJUST		0xc9e2	1153	1
+ADJUST		0xc9e4	1153	1
+CALL		0xc9e6	1153	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xc9ea	1153	-3
+ADJUST		0xc9ee	1154	1
+ADJUST		0xc9f0	1154	1
+ADJUST		0xc9f2	1154	1
+ADJUST		0xc9f4	1154	1
+CALL		0xc9f6	1154	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xc9fa	1154	-4
+CALL		0xc9fc	1155	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"idle_loop"	0
+ADJUST		0xcaf2	1157	1
+CALL		0xcb18	1160	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
+CALL		0xcb26	1162	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xcb2c	1163	1
+ADJUST		0xcb30	1163	1
+ADJUST		0xcb34	1163	1
+CALL		0xcb36	1163	"C:\MCC18\v3_39\src\pmc_common\USART\u2putrs.c"	"putrs2USART"	0
+ADJUST		0xcb3a	1163	-3
+ADJUST		0xcb40	1165	1
+ADJUST		0xcb44	1165	1
+ADJUST		0xcb46	1165	1
+ADJUST		0xcb4a	1165	1
+ADJUST		0xcb4e	1165	1
+ADJUST		0xcb52	1165	1
+CALL		0xcb56	1165	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"voltfp"	0
+ADJUST		0xcb5a	1165	-6
+ADJUST		0xcb5e	1166	1
+ADJUST		0xcb62	1166	1
+ADJUST		0xcb66	1166	1
+ADJUST		0xcb68	1166	1
+ADJUST		0xcb6c	1166	1
+ADJUST		0xcb70	1166	1
+ADJUST		0xcb74	1166	1
+ADJUST		0xcb78	1166	1
+ADJUST		0xcb7c	1166	1
+CALL		0xcb7e	1166	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xcb82	1166	-9
+ADJUST		0xcb86	1167	1
+ADJUST		0xcb88	1167	1
+ADJUST		0xcb8a	1167	1
+CALL		0xcb8c	1167	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"LCD_VC_puts"	0
+ADJUST		0xcb90	1167	-3
+ADJUST		0xcb94	1168	1
+ADJUST		0xcb96	1168	1
+CALL		0xcb9a	1168	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ChargeRelayOff"	0
+ADJUST		0xcb9e	1168	-2
+ADJUST		0xcba2	1169	1
+ADJUST		0xcba4	1169	1
+ADJUST		0xcba6	1169	1
+ADJUST		0xcba8	1169	1
+CALL		0xcbaa	1169	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+ADJUST		0xcbae	1169	-4
+ADJUST		0xcbb2	1170	1
+CALL		0xcbb4	1170	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"s_crit"	0
+ADJUST		0xcbb8	1170	-1
+CALL		0xcbde	1172	"/audio/solarpic_rewrite/swm8722/solar18f8722/crit.c"	"e_crit"	0
+ADJUST		0xcbe2	1173	1
+ADJUST		0xcbe6	1173	1
+ADJUST		0xcbe8	1173	1
+CALL		0xcbec	1173	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Get_RestSOC"	0
+ADJUST		0xcbf0	1173	-3
+ADJUST		0xcbf2	1174	1
+ADJUST		0xcbf4	1174	1
+CALL		0xcbf6	1174	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pick_batt"	0
+ADJUST		0xcbfa	1174	-2
+CALL		0xcbfc	1175	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"update_hist"	0
+ADJUST		0xcc04	1177	-2
+FN_END		0xcc0a	1177	
+FN_START	0xcc0c	1182	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"ResetC40"	"external"	
+ADJUST		0xcc0c	1182	1
+CALL		0xcc0c	1182	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_40"	0
+ADJUST		0xcc10	1182	1
+CALL		0xcc12	1186	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"term_time"	0
+ADJUST		0xcc20	1189	1
+ADJUST		0xcc22	1189	1
+ADJUST		0xcc26	1189	1
+ADJUST		0xcc28	1189	1
+ADJUST		0xcc2c	1189	1
+ADJUST		0xcc30	1189	1
+ADJUST		0xcc34	1189	1
+CALL		0xcc34	1189	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
+ADJUST		0xcc36	1189	-9
+CALL		0xcc38	1190	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_45"	0
+ADJUST		0xcc3e	1192	1
+CALL		0xcc3e	1192	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
+CALL		0xcc42	1195	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+ADJUST		0xcc50	1197	1
+ADJUST		0xcc54	1197	1
+ADJUST		0xcc58	1197	1
+ADJUST		0xcc60	1200	1
+ADJUST		0xcc64	1200	1
+ADJUST		0xcc68	1200	1
+ADJUST		0xcc6c	1200	1
+CALL		0xcc70	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0xcc72	1200	1
+CALL		0xcc72	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+CALL		0xcc78	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	0
+CALL		0xcc78	1200	"mulFP.O"	"__mulFP"	0
+ADJUST		0xcc7a	1200	1
+ADJUST		0xcc7e	1200	1
+ADJUST		0xcc82	1200	1
+ADJUST		0xcc86	1200	1
+CALL		0xcc8a	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"ABSL"	0
+ADJUST		0xcc8e	1200	-4
+CALL		0xcc90	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_34"	0
+ADJUST		0xcc94	1200	1
+ADJUST		0xcc96	1200	1
+ADJUST		0xcc9a	1199	1
+ADJUST		0xcc9e	1199	1
+ADJUST		0xcca2	1199	1
+CALL		0xcca2	1199	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
+ADJUST		0xcca4	1200	-15
+CALL		0xcca6	1202	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_45"	0
+ADJUST		0xccac	1204	1
+CALL		0xccac	1204	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
+ADJUST		0xccb2	1206	1
+CALL		0xccb2	1206	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
+ADJUST		0xccb8	1208	1
+CALL		0xccb8	1208	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
+CALL		0xccbe	1210	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"pv_pwm_shutdown"	0
+ADJUST		0xccc4	1211	1
+CALL		0xccc4	1211	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
+ADJUST		0xccce	1216	1
+CALL		0xccce	1216	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
+ADJUST		0xccda	1220	1
+CALL		0xccda	1220	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	0
+ADJUST		0xccdc	1223	-2
+FN_END		0xcce2	1223	
+FN_START	0xcce4	1200	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_0"	"static"	
+FN_END		0xccf2	1200	
+FN_START	0xccf4	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_1"	"static"	
+FN_END		0xcd02	391	
+FN_START	0xcd04	560	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_2"	"static"	
+CALL		0xcd04	560	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcd08	560	
+FN_START	0xcd0a	367	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_3"	"static"	
+FN_END		0xcd1c	367	
+FN_START	0xcd1e	598	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_4"	"static"	
+CALL		0xcd1e	598	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcd30	598	
+FN_START	0xcd32	560	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_5"	"static"	
+FN_END		0xcd44	560	
+FN_START	0xcd46	1199	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_6"	"static"	
+FN_END		0xcd52	1200	
+FN_START	0xcd54	573	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_7"	"static"	
+CALL		0xcd54	573	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcd58	573	
+FN_START	0xcd5a	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_8"	"static"	
+CALL		0xcd5c	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
+CALL		0xcd5e	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_96"	0
+CALL		0xcd60	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	0
+CALL		0xcd66	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
+CALL		0xcd8e	531	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	0
+FN_END		0xcd96	531	
+FN_START	0xcd98	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_9"	"static"	
+CALL		0xcd98	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcd9c	597	
+FN_START	0xcd9e	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_10"	"static"	
+CALL		0xcd9e	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+CALL		0xcda0	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_93"	0
+CALL		0xcda2	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	0
+CALL		0xcda4	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
+CALL		0xcdaa	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	0
+FN_END		0xcdb6	516	
+FN_START	0xcdb8	312	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_11"	"static"	
+FN_END		0xcdca	312	
+FN_START	0xcdcc	416	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_12"	"static"	
+CALL		0xcdcc	416	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_104"	0
+FN_END		0xcdd0	416	
+FN_START	0xcdd2	1221	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_13"	"static"	
+CALL		0xcdd2	1221	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	0
+FN_END		0xcdda	1221	
+FN_START	0xcddc	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_14"	"static"	
+CALL		0xcdde	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_89"	0
+FN_END		0xcde2	578	
+FN_START	0xcde4	603	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_15"	"static"	
+FN_END		0xcdf2	603	
+FN_START	0xcdf4	358	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_16"	"static"	
+FN_END		0xce00	358	
+FN_START	0xce02	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_17"	"static"	
+FN_END		0xce12	577	
+FN_START	0xce14	376	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_18"	"static"	
+CALL		0xce14	376	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+FN_END		0xce1c	376	
+FN_START	0xce1e	395	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_19"	"static"	
+FN_END		0xce28	395	
+FN_START	0xce2a	533	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_20"	"static"	
+CALL		0xce2a	533	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_98"	0
+FN_END		0xce4a	533	
+FN_START	0xce4c	553	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_21"	"static"	
+FN_END		0xce5e	553	
+FN_START	0xce60	344	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_22"	"static"	
+CALL		0xce60	344	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+FN_END		0xce68	344	
+FN_START	0xce6a	436	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_23"	"static"	
+ADJUST		0xce6c	436	1
+ADJUST		0xce70	437	1
+ADJUST		0xce76	437	1
+ADJUST		0xce78	437	1
+FN_END		0xce78	437	
+FN_START	0xce7a	526	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_24"	"static"	
+ADJUST		0xce7e	526	1
+FN_END		0xce82	526	
+FN_START	0xce84	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_25"	"static"	
+ADJUST		0xce86	601	1
+CALL		0xce86	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+ADJUST		0xce88	601	1
+CALL		0xce88	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_158"	0
+ADJUST		0xce8c	601	1
+ADJUST		0xce90	601	1
+ADJUST		0xce96	601	1
+ADJUST		0xce9a	601	1
+ADJUST		0xcea0	601	1
+FN_END		0xcea0	601	
+FN_START	0xcea2	573	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_26"	"static"	
+ADJUST		0xcea2	573	1
+ADJUST		0xcea8	573	1
+ADJUST		0xceac	573	1
+FN_END		0xceac	573	
+FN_START	0xceae	596	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_27"	"static"	
+ADJUST		0xceae	596	1
+CALL		0xceb0	596	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+ADJUST		0xceb4	596	1
+FN_END		0xceb4	596	
+FN_START	0xceb6	559	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_28"	"static"	
+ADJUST		0xceb6	559	1
+ADJUST		0xcebc	559	1
+FN_END		0xcec0	559	
+FN_START	0xcec2	368	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_29"	"static"	
+ADJUST		0xcec6	369	1
+FN_END		0xceca	369	
+FN_START	0xcecc	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_30"	"static"	
+ADJUST		0xcece	372	1
+ADJUST		0xced4	372	1
+ADJUST		0xced8	372	1
+FN_END		0xced8	372	
+FN_START	0xceda	549	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_31"	"static"	
+CALL		0xceda	549	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcede	549	
+FN_START	0xcee0	301	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_32"	"static"	
+ADJUST		0xcee0	301	1
+ADJUST		0xcee6	301	1
+ADJUST		0xcee8	301	1
+FN_END		0xcee8	301	
+FN_START	0xceea	479	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_33"	"static"	
+ADJUST		0xceec	479	1
+FN_END		0xcef2	479	
 FN_START	0xcef4	176	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_34"	"static"	
 FN_END		0xcf06	176	
-FN_START	0xcf08	581	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_35"	"static"	
-CALL		0xcf0a	581	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcf14	581	
-FN_START	0xcf16	434	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_36"	"static"	
-FN_END		0xcf26	434	
-FN_START	0xcf28	557	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_37"	"static"	
-FN_END		0xcf34	557	
-FN_START	0xcf36	467	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_38"	"static"	
-FN_END		0xcf40	467	
-FN_START	0xcf42	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_39"	"static"	
-FN_END		0xcf4c	576	
+FN_START	0xcf08	582	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_35"	"static"	
+CALL		0xcf0a	582	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcf14	582	
+FN_START	0xcf16	435	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_36"	"static"	
+FN_END		0xcf26	435	
+FN_START	0xcf28	558	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_37"	"static"	
+FN_END		0xcf34	558	
+FN_START	0xcf36	468	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_38"	"static"	
+FN_END		0xcf40	468	
+FN_START	0xcf42	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_39"	"static"	
+FN_END		0xcf4c	577	
 FN_START	0xcf4e	200	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_40"	"static"	
 FN_END		0xcf56	200	
-FN_START	0xcf58	296	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_41"	"static"	
-FN_END		0xcf5e	296	
-FN_START	0xcf60	377	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_42"	"static"	
-CALL		0xcf62	377	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xcf74	377	
+FN_START	0xcf58	298	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_41"	"static"	
+FN_END		0xcf5e	298	
+FN_START	0xcf60	378	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_42"	"static"	
+CALL		0xcf62	378	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xcf74	378	
 FN_START	0xcf76	277	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_43"	"static"	
 CALL		0xcf78	277	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
 FN_END		0xcf80	277	
-FN_START	0xcf82	414	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_44"	"static"	
-FN_END		0xcf8a	414	
-FN_START	0xcf8c	1201	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_45"	"static"	
-FN_END		0xcf9a	1201	
-FN_START	0xcf9c	436	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_46"	"static"	
-FN_END		0xcfa4	436	
-FN_START	0xcfa6	322	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_47"	"static"	
-FN_END		0xcfbc	323	
-FN_START	0xcfbe	424	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_48"	"static"	
-CALL		0xcfbe	424	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-ADJUST		0xcfc6	425	-1
-ADJUST		0xcfca	425	-1
-FN_END		0xcfce	425	
-FN_START	0xcfd0	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_49"	"static"	
-ADJUST		0xcfd0	519	-1
-CALL		0xcfd0	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	0
-ADJUST		0xcfd2	519	-1
-ADJUST		0xcfd6	519	-1
-FN_END		0xcfe0	519	
+FN_START	0xcf82	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_44"	"static"	
+FN_END		0xcf8a	415	
+FN_START	0xcf8c	1202	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_45"	"static"	
+FN_END		0xcf9a	1202	
+FN_START	0xcf9c	437	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_46"	"static"	
+FN_END		0xcfa4	437	
+FN_START	0xcfa6	324	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_47"	"static"	
+FN_END		0xcfbc	325	
+FN_START	0xcfbe	425	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_48"	"static"	
+CALL		0xcfbe	425	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+ADJUST		0xcfc6	426	-1
+ADJUST		0xcfca	426	-1
+FN_END		0xcfce	426	
+FN_START	0xcfd0	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_49"	"static"	
+ADJUST		0xcfd0	520	-1
+CALL		0xcfd0	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	0
+ADJUST		0xcfd2	520	-1
+ADJUST		0xcfd6	520	-1
+FN_END		0xcfe0	520	
 FN_START	0xcfe2	112	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_50"	"static"	
 ADJUST		0xcfe8	112	-1
 ADJUST		0xcfec	112	-1
 FN_END		0xcff6	112	
-FN_START	0xcff8	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_51"	"static"	
-ADJUST		0xcffe	341	-1
-ADJUST		0xd002	341	-1
-FN_END		0xd004	341	
-FN_START	0xd006	498	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_52"	"static"	
-CALL		0xd006	498	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xd00a	498	1
-ADJUST		0xd00e	498	1
-CALL		0xd010	498	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-FN_END		0xd012	498	
-FN_START	0xd014	486	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_53"	"static"	
-ADJUST		0xd016	486	1
-CALL		0xd018	486	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-FN_END		0xd01a	486	
-FN_START	0xd01c	323	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_54"	"static"	
-ADJUST		0xd01c	323	1
-ADJUST		0xd020	323	1
-CALL		0xd022	323	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xd026	323	1
-ADJUST		0xd02a	323	1
-CALL		0xd02c	323	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-FN_END		0xd02c	323	
-FN_START	0xd02e	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_55"	"static"	
-ADJUST		0xd02e	415	1
-ADJUST		0xd032	415	1
-CALL		0xd034	415	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-ADJUST		0xd038	415	1
-ADJUST		0xd03c	415	1
-CALL		0xd03e	415	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-FN_END		0xd03e	415	
-FN_START	0xd040	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_56"	"static"	
-ADJUST		0xd040	519	1
-CALL		0xd042	519	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
-FN_END		0xd050	519	
-FN_START	0xd052	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_57"	"static"	
-CALL		0xd052	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	0
-FN_END		0xd05c	520	
-FN_START	0xd05e	370	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_58"	"static"	
-FN_END		0xd068	370	
+FN_START	0xcff8	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_51"	"static"	
+ADJUST		0xcffe	342	-1
+ADJUST		0xd002	342	-1
+FN_END		0xd004	342	
+FN_START	0xd006	499	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_52"	"static"	
+CALL		0xd006	499	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xd00a	499	1
+ADJUST		0xd00e	499	1
+CALL		0xd010	499	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+FN_END		0xd012	499	
+FN_START	0xd014	487	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_53"	"static"	
+ADJUST		0xd016	487	1
+CALL		0xd018	487	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+FN_END		0xd01a	487	
+FN_START	0xd01c	325	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_54"	"static"	
+ADJUST		0xd01c	325	1
+ADJUST		0xd020	325	1
+CALL		0xd022	325	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xd026	325	1
+ADJUST		0xd02a	325	1
+CALL		0xd02c	325	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+FN_END		0xd02c	325	
+FN_START	0xd02e	416	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_55"	"static"	
+ADJUST		0xd02e	416	1
+ADJUST		0xd032	416	1
+CALL		0xd034	416	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+ADJUST		0xd038	416	1
+ADJUST		0xd03c	416	1
+CALL		0xd03e	416	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+FN_END		0xd03e	416	
+FN_START	0xd040	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_56"	"static"	
+ADJUST		0xd040	520	1
+CALL		0xd042	520	"C:\MCC18\v3_39\src\extended\stdclib\sprintf.c"	"sprintf"	0
+FN_END		0xd050	520	
+FN_START	0xd052	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_57"	"static"	
+CALL		0xd052	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	0
+FN_END		0xd05c	521	
+FN_START	0xd05e	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_58"	"static"	
+FN_END		0xd068	371	
 FN_START	0xd06a	139	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_59"	"static"	
 FN_END		0xd072	139	
-FN_START	0xd074	594	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_60"	"static"	
-FN_END		0xd07c	594	
+FN_START	0xd074	595	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_60"	"static"	
+FN_END		0xd07c	595	
 FN_START	0xd07e	174	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_61"	"static"	
 ADJUST		0xd080	174	1
 ADJUST		0xd082	174	1
@@ -6830,100 +6830,100 @@ ADJUST		0xd08e	265	1
 ADJUST		0xd092	265	1
 CALL		0xd096	265	"addFP.O"	"__addFP"	0
 FN_END		0xd096	265	
-FN_START	0xd098	281	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_63"	"static"	
-CALL		0xd098	281	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-FN_END		0xd09c	281	
-FN_START	0xd09e	324	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_64"	"static"	
-ADJUST		0xd09e	324	1
-ADJUST		0xd0a2	324	1
-CALL		0xd0a6	324	"gtFP.O"	"__gtFP"	0
-FN_END		0xd0aa	325	
-FN_START	0xd0ac	478	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_65"	"static"	
-ADJUST		0xd0ac	478	1
-ADJUST		0xd0b0	478	1
-ADJUST		0xd0b4	478	1
-FN_END		0xd0b4	478	
-FN_START	0xd0b6	556	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	"static"	
-ADJUST		0xd0b6	556	1
-ADJUST		0xd0ba	556	1
-FN_END		0xd0bc	556	
-FN_START	0xd0be	398	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_67"	"static"	
-ADJUST		0xd0be	398	-1
-ADJUST		0xd0c4	398	1
-FN_END		0xd0c4	398	
-FN_START	0xd0c6	398	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_68"	"static"	
-FN_END		0xd0cc	398	
-FN_START	0xd0ce	398	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_69"	"static"	
-FN_END		0xd0d4	398	
+FN_START	0xd098	283	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_63"	"static"	
+CALL		0xd098	283	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+FN_END		0xd09c	283	
+FN_START	0xd09e	326	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_64"	"static"	
+ADJUST		0xd09e	326	1
+ADJUST		0xd0a2	326	1
+CALL		0xd0a6	326	"gtFP.O"	"__gtFP"	0
+FN_END		0xd0aa	327	
+FN_START	0xd0ac	479	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_65"	"static"	
+ADJUST		0xd0ac	479	1
+ADJUST		0xd0b0	479	1
+ADJUST		0xd0b4	479	1
+FN_END		0xd0b4	479	
+FN_START	0xd0b6	557	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	"static"	
+ADJUST		0xd0b6	557	1
+ADJUST		0xd0ba	557	1
+FN_END		0xd0bc	557	
+FN_START	0xd0be	399	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_67"	"static"	
+ADJUST		0xd0be	399	-1
+ADJUST		0xd0c4	399	1
+FN_END		0xd0c4	399	
+FN_START	0xd0c6	399	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_68"	"static"	
+FN_END		0xd0cc	399	
+FN_START	0xd0ce	399	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_69"	"static"	
+FN_END		0xd0d4	399	
 FN_START	0xd0d6	52	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_70"	"static"	
 FN_END		0xd0dc	52	
-FN_START	0xd0de	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_71"	"static"	
-ADJUST		0xd0e2	576	1
-FN_END		0xd0e4	576	
-FN_START	0xd0e6	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_72"	"static"	
-ADJUST		0xd0e6	576	-1
-CALL		0xd0e6	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_71"	0
-ADJUST		0xd0ee	576	-1
-CALL		0xd0ee	576	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_17"	0
-ADJUST		0xd0f0	576	-1
-CALL		0xd0f4	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_39"	0
-ADJUST		0xd0f6	576	1
-CALL		0xd0fa	576	"gtFP.O"	"__gtFP"	0
-CALL		0xd0fa	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	0
-ADJUST		0xd0fc	576	1
-CALL		0xd100	576	"gtFP.O"	"__gtFP"	0
-CALL		0xd104	576	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_15"	0
-CALL		0xd106	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
-ADJUST		0xd108	576	1
-FN_END		0xd10a	576	
-FN_START	0xd10c	310	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	"static"	
-CALL		0xd10c	310	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-ADJUST		0xd10e	310	-6
-ADJUST		0xd112	310	1
-FN_END		0xd112	310	
-FN_START	0xd114	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	"static"	
-ADJUST		0xd114	514	1
-ADJUST		0xd118	514	1
-FN_END		0xd11c	514	
+FN_START	0xd0de	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_71"	"static"	
+ADJUST		0xd0e2	577	1
+FN_END		0xd0e4	577	
+FN_START	0xd0e6	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_72"	"static"	
+ADJUST		0xd0e6	577	-1
+CALL		0xd0e6	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_71"	0
+ADJUST		0xd0ee	577	-1
+CALL		0xd0ee	577	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_17"	0
+ADJUST		0xd0f0	577	-1
+CALL		0xd0f4	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_39"	0
+ADJUST		0xd0f6	577	1
+CALL		0xd0fa	577	"gtFP.O"	"__gtFP"	0
+CALL		0xd0fa	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	0
+ADJUST		0xd0fc	577	1
+CALL		0xd100	577	"gtFP.O"	"__gtFP"	0
+CALL		0xd104	577	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_15"	0
+CALL		0xd106	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
+ADJUST		0xd108	577	1
+FN_END		0xd10a	577	
+FN_START	0xd10c	312	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	"static"	
+CALL		0xd10c	312	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+ADJUST		0xd10e	312	-6
+ADJUST		0xd112	312	1
+FN_END		0xd112	312	
+FN_START	0xd114	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	"static"	
+ADJUST		0xd114	515	1
+ADJUST		0xd118	515	1
+FN_END		0xd11c	515	
 FN_START	0xd11e	268	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_75"	"static"	
 CALL		0xd11e	268	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_144"	0
 FN_END		0xd122	269	
-FN_START	0xd124	441	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_76"	"static"	
-CALL		0xd124	441	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-FN_END		0xd12a	441	
-FN_START	0xd12c	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	"static"	
-CALL		0xd12c	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_138"	0
-FN_END		0xd132	371	
-FN_START	0xd134	512	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_78"	"static"	
-CALL		0xd134	512	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-CALL		0xd136	512	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	0
-ADJUST		0xd13c	512	1
-CALL		0xd13c	512	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_21"	0
-ADJUST		0xd13e	513	1
-ADJUST		0xd142	513	1
-CALL		0xd142	513	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	0
-ADJUST		0xd144	513	1
-CALL		0xd148	513	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_21"	0
-CALL		0xd14a	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
-ADJUST		0xd14e	514	-3
-FN_END		0xd14e	514	
+FN_START	0xd124	442	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_76"	"static"	
+CALL		0xd124	442	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+FN_END		0xd12a	442	
+FN_START	0xd12c	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	"static"	
+CALL		0xd12c	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_138"	0
+FN_END		0xd132	372	
+FN_START	0xd134	513	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_78"	"static"	
+CALL		0xd134	513	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+CALL		0xd136	513	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	0
+ADJUST		0xd13c	513	1
+CALL		0xd13c	513	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_21"	0
+ADJUST		0xd13e	514	1
+ADJUST		0xd142	514	1
+CALL		0xd142	514	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	0
+ADJUST		0xd144	514	1
+CALL		0xd148	514	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_21"	0
+CALL		0xd14a	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
+ADJUST		0xd14e	515	-3
+FN_END		0xd14e	515	
 FN_START	0xd150	276	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_79"	"static"	
 ADJUST		0xd150	276	-3
 CALL		0xd150	276	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_9"	0
 FN_END		0xd156	277	
-FN_START	0xd158	411	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_80"	"static"	
-CALL		0xd158	411	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_44"	0
-ADJUST		0xd178	411	1
-CALL		0xd17a	411	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_140"	0
-ADJUST		0xd17e	411	1
-FN_END		0xd180	411	
-FN_START	0xd182	557	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_81"	"static"	
-ADJUST		0xd182	557	1
-ADJUST		0xd184	557	1
-CALL		0xd186	557	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
-ADJUST		0xd188	557	1
-ADJUST		0xd18a	557	1
-FN_END		0xd18a	557	
+FN_START	0xd158	412	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_80"	"static"	
+CALL		0xd158	412	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_44"	0
+ADJUST		0xd178	412	1
+CALL		0xd17a	412	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_140"	0
+ADJUST		0xd17e	412	1
+FN_END		0xd180	412	
+FN_START	0xd182	558	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_81"	"static"	
+ADJUST		0xd182	558	1
+ADJUST		0xd184	558	1
+CALL		0xd186	558	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
+ADJUST		0xd188	558	1
+ADJUST		0xd18a	558	1
+FN_END		0xd18a	558	
 FN_START	0xd18c	139	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_82"	"static"	
 ADJUST		0xd18e	139	1
 ADJUST		0xd190	139	1
@@ -6932,8 +6932,8 @@ ADJUST		0xd196	139	1
 ADJUST		0xd19a	139	1
 CALL		0xd19a	139	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_3"	0
 FN_END		0xd19e	139	
-FN_START	0xd1a0	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	"static"	
-FN_END		0xd1b0	515	
+FN_START	0xd1a0	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_83"	"static"	
+FN_END		0xd1b0	516	
 FN_START	0xd1b2	76	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_84"	"static"	
 CALL		0xd1b6	76	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_3"	0
 FN_END		0xd1ba	76	
@@ -6942,76 +6942,76 @@ ADJUST		0xd1bc	27	1
 ADJUST		0xd1c0	27	1
 ADJUST		0xd1c2	27	1
 FN_END		0xd1c2	27	
-FN_START	0xd1c4	518	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_86"	"static"	
-ADJUST		0xd1c4	518	1
-ADJUST		0xd1c8	518	1
-ADJUST		0xd1cc	518	1
-CALL		0xd1ce	518	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	0
-CALL		0xd1d0	518	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	0
-CALL		0xd1d2	518	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
-ADJUST		0xd1d4	518	1
-ADJUST		0xd1d6	518	1
-FN_END		0xd1d6	518	
-FN_START	0xd1d8	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_87"	"static"	
-ADJUST		0xd1d8	597	-6
-CALL		0xd1d8	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-ADJUST		0xd1dc	597	1
-CALL		0xd1dc	597	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_7"	0
-CALL		0xd1de	597	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-ADJUST		0xd1e0	597	-6
-ADJUST		0xd1e4	597	1
-FN_END		0xd1e4	597	
-FN_START	0xd1e6	310	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_88"	"static"	
-CALL		0xd1e6	310	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_32"	0
-FN_END		0xd1ee	310	
-FN_START	0xd1f0	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_89"	"static"	
-CALL		0xd1f0	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
-FN_END		0xd1fa	576	
-FN_START	0xd1fc	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_90"	"static"	
-ADJUST		0xd1fe	521	1
-CALL		0xd1fe	521	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_4"	0
-CALL		0xd200	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-CALL		0xd204	522	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_7"	0
-CALL		0xd206	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-FN_END		0xd20c	522	
-FN_START	0xd20e	499	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_91"	"static"	
-CALL		0xd20e	499	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
-FN_END		0xd212	499	
-FN_START	0xd214	299	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_92"	"static"	
-CALL		0xd214	299	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_32"	0
-FN_END		0xd21c	299	
-FN_START	0xd21e	542	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_93"	"static"	
-ADJUST		0xd21e	542	1
-ADJUST		0xd222	542	1
-ADJUST		0xd224	542	1
-ADJUST		0xd228	542	1
-ADJUST		0xd22a	542	1
-FN_END		0xd238	543	
-FN_START	0xd23a	414	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	"static"	
-ADJUST		0xd240	414	1
-FN_END		0xd242	414	
-FN_START	0xd244	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_95"	"static"	
-CALL		0xd244	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0xd244	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
-ADJUST		0xd246	390	-2
-CALL		0xd24a	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
-FN_END		0xd24a	390	
-FN_START	0xd24c	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_96"	"static"	
-FN_END		0xd256	529	
-FN_START	0xd258	594	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_97"	"static"	
-CALL		0xd258	594	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-ADJUST		0xd25a	594	1
-ADJUST		0xd25c	594	1
-FN_END		0xd25c	594	
-FN_START	0xd25e	550	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_98"	"static"	
-ADJUST		0xd260	550	1
-ADJUST		0xd268	550	1
-ADJUST		0xd26a	550	1
-ADJUST		0xd26c	550	1
-ADJUST		0xd26e	550	1
-ADJUST		0xd270	550	1
-ADJUST		0xd272	550	1
-FN_END		0xd272	550	
+FN_START	0xd1c4	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_86"	"static"	
+ADJUST		0xd1c4	519	1
+ADJUST		0xd1c8	519	1
+ADJUST		0xd1cc	519	1
+CALL		0xd1ce	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	0
+CALL		0xd1d0	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_66"	0
+CALL		0xd1d2	519	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
+ADJUST		0xd1d4	519	1
+ADJUST		0xd1d6	519	1
+FN_END		0xd1d6	519	
+FN_START	0xd1d8	598	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_87"	"static"	
+ADJUST		0xd1d8	598	-6
+CALL		0xd1d8	598	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+ADJUST		0xd1dc	598	1
+CALL		0xd1dc	598	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_7"	0
+CALL		0xd1de	598	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+ADJUST		0xd1e0	598	-6
+ADJUST		0xd1e4	598	1
+FN_END		0xd1e4	598	
+FN_START	0xd1e6	312	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_88"	"static"	
+CALL		0xd1e6	312	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_32"	0
+FN_END		0xd1ee	312	
+FN_START	0xd1f0	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_89"	"static"	
+CALL		0xd1f0	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	0
+FN_END		0xd1fa	577	
+FN_START	0xd1fc	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_90"	"static"	
+ADJUST		0xd1fe	522	1
+CALL		0xd1fe	522	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_4"	0
+CALL		0xd200	523	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+CALL		0xd204	523	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_7"	0
+CALL		0xd206	523	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+FN_END		0xd20c	523	
+FN_START	0xd20e	500	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_91"	"static"	
+CALL		0xd20e	500	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
+FN_END		0xd212	500	
+FN_START	0xd214	301	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_92"	"static"	
+CALL		0xd214	301	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_32"	0
+FN_END		0xd21c	301	
+FN_START	0xd21e	543	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_93"	"static"	
+ADJUST		0xd21e	543	1
+ADJUST		0xd222	543	1
+ADJUST		0xd224	543	1
+ADJUST		0xd228	543	1
+ADJUST		0xd22a	543	1
+FN_END		0xd238	544	
+FN_START	0xd23a	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	"static"	
+ADJUST		0xd240	415	1
+FN_END		0xd242	415	
+FN_START	0xd244	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_95"	"static"	
+CALL		0xd244	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0xd244	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
+ADJUST		0xd246	391	-2
+CALL		0xd24a	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"charger_power"	0
+FN_END		0xd24a	391	
+FN_START	0xd24c	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_96"	"static"	
+FN_END		0xd256	530	
+FN_START	0xd258	595	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_97"	"static"	
+CALL		0xd258	595	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+ADJUST		0xd25a	595	1
+ADJUST		0xd25c	595	1
+FN_END		0xd25c	595	
+FN_START	0xd25e	551	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_98"	"static"	
+ADJUST		0xd260	551	1
+ADJUST		0xd268	551	1
+ADJUST		0xd26a	551	1
+ADJUST		0xd26c	551	1
+ADJUST		0xd26e	551	1
+ADJUST		0xd270	551	1
+ADJUST		0xd272	551	1
+FN_END		0xd272	551	
 FN_START	0xd274	231	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_99"	"static"	
 ADJUST		0xd274	231	1
 CALL		0xd274	231	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
@@ -7019,23 +7019,23 @@ CALL		0xd278	231	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_7"	0
 ADJUST		0xd280	231	-1
 ADJUST		0xd282	231	-1
 FN_END		0xd282	231	
-FN_START	0xd284	429	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_100"	"static"	
-ADJUST		0xd288	429	1
-CALL		0xd288	429	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_36"	0
-ADJUST		0xd28e	429	1
-ADJUST		0xd290	430	1
-FN_END		0xd292	430	
-FN_START	0xd294	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_101"	"static"	
-ADJUST		0xd294	520	1
-CALL		0xd294	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-ADJUST		0xd298	520	-1
-ADJUST		0xd29a	520	-1
-FN_END		0xd29a	520	
-FN_START	0xd29c	544	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_102"	"static"	
-ADJUST		0xd29e	544	-1
-ADJUST		0xd2a8	544	-1
-ADJUST		0xd2ae	544	-1
-FN_END		0xd2ae	544	
+FN_START	0xd284	430	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_100"	"static"	
+ADJUST		0xd288	430	1
+CALL		0xd288	430	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_36"	0
+ADJUST		0xd28e	430	1
+ADJUST		0xd290	431	1
+FN_END		0xd292	431	
+FN_START	0xd294	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_101"	"static"	
+ADJUST		0xd294	521	1
+CALL		0xd294	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+ADJUST		0xd298	521	-1
+ADJUST		0xd29a	521	-1
+FN_END		0xd29a	521	
+FN_START	0xd29c	545	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_102"	"static"	
+ADJUST		0xd29e	545	-1
+ADJUST		0xd2a8	545	-1
+ADJUST		0xd2ae	545	-1
+FN_END		0xd2ae	545	
 FN_START	0xd2b0	174	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_103"	"static"	
 ADJUST		0xd2b4	174	-1
 ADJUST		0xd2ba	174	-1
@@ -7047,39 +7047,39 @@ FN_START	0xd2ce	245	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa
 CALL		0xd2ce	245	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_27"	0
 CALL		0xd2d4	246	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_139"	0
 FN_END		0xd2d8	246	
-FN_START	0xd2da	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_106"	"static"	
-ADJUST		0xd2da	391	1
-FN_END		0xd2e4	391	
-FN_START	0xd2e6	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_107"	"static"	
-CALL		0xd2e6	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	0
-FN_END		0xd2f2	438	
-FN_START	0xd2f4	464	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_108"	"static"	
-CALL		0xd2f4	464	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
-CALL		0xd2f8	465	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_65"	0
-ADJUST		0xd2fa	465	1
-CALL		0xd2fe	465	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
-FN_END		0xd2fe	465	
-FN_START	0xd300	480	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_109"	"static"	
-CALL		0xd302	480	"/audio/solarpic_rewrite/swm8722/solar18f8722/model.c"	"__pa_12"	0
-ADJUST		0xd308	480	-1
-FN_END		0xd30c	480	
-FN_START	0xd30e	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_110"	"static"	
-ADJUST		0xd30e	390	1
-CALL		0xd30e	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-CALL		0xd310	390	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-ADJUST		0xd312	390	-1
-FN_END		0xd314	390	
-FN_START	0xd316	524	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_111"	"static"	
-CALL		0xd316	524	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0xd318	524	-4
-ADJUST		0xd31a	524	1
-FN_END		0xd31c	524	
-FN_START	0xd31e	1219	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	"static"	
-ADJUST		0xd31e	1219	1
-CALL		0xd31e	1219	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
-ADJUST		0xd320	1220	1
-CALL		0xd324	1220	"mulFP.O"	"__mulFP"	0
-FN_END		0xd324	1220	
+FN_START	0xd2da	392	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_106"	"static"	
+ADJUST		0xd2da	392	1
+FN_END		0xd2e4	392	
+FN_START	0xd2e6	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_107"	"static"	
+CALL		0xd2e6	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	0
+FN_END		0xd2f2	439	
+FN_START	0xd2f4	465	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_108"	"static"	
+CALL		0xd2f4	465	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_6"	0
+CALL		0xd2f8	466	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_65"	0
+ADJUST		0xd2fa	466	1
+CALL		0xd2fe	466	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"wdttime"	0
+FN_END		0xd2fe	466	
+FN_START	0xd300	481	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_109"	"static"	
+CALL		0xd302	481	"/audio/solarpic_rewrite/swm8722/solar18f8722/model.c"	"__pa_12"	0
+ADJUST		0xd308	481	-1
+FN_END		0xd30c	481	
+FN_START	0xd30e	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_110"	"static"	
+ADJUST		0xd30e	391	1
+CALL		0xd30e	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+CALL		0xd310	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+ADJUST		0xd312	391	-1
+FN_END		0xd314	391	
+FN_START	0xd316	525	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_111"	"static"	
+CALL		0xd316	525	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0xd318	525	-4
+ADJUST		0xd31a	525	1
+FN_END		0xd31c	525	
+FN_START	0xd31e	1220	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_112"	"static"	
+ADJUST		0xd31e	1220	1
+CALL		0xd31e	1220	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_13"	0
+ADJUST		0xd320	1221	1
+CALL		0xd324	1221	"mulFP.O"	"__mulFP"	0
+FN_END		0xd324	1221	
 FN_START	0xd326	24	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_113"	"static"	
 ADJUST		0xd326	24	1
 CALL		0xd326	24	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_70"	0
@@ -7090,133 +7090,133 @@ FN_START	0xd332	110	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa
 CALL		0xd332	110	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_70"	0
 CALL		0xd336	110	"addFP.O"	"__addFP"	0
 FN_END		0xd33c	110	
-FN_START	0xd33e	280	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_115"	"static"	
-CALL		0xd33e	280	"mulFP.O"	"__mulFP"	0
-ADJUST		0xd344	280	1
-FN_END		0xd344	280	
-FN_START	0xd346	313	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_116"	"static"	
-FN_END		0xd352	313	
-FN_START	0xd354	421	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_117"	"static"	
-ADJUST		0xd354	421	1
-ADJUST		0xd358	421	1
-CALL		0xd358	421	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_33"	0
-ADJUST		0xd35c	422	1
-FN_END		0xd35c	422	
-FN_START	0xd35e	430	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_118"	"static"	
-CALL		0xd35e	430	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_23"	0
-CALL		0xd360	431	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_24"	0
-FN_END		0xd364	431	
-FN_START	0xd366	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_119"	"static"	
-CALL		0xd368	438	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
-CALL		0xd36e	438	"ltFP.O"	"__ltFP"	0
-ADJUST		0xd370	438	1
-FN_END		0xd370	438	
-FN_START	0xd372	464	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_120"	"static"	
-FN_END		0xd37c	464	
-FN_START	0xd37e	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_121"	"static"	
-CALL		0xd37e	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
-FN_END		0xd382	520	
-FN_START	0xd384	547	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_122"	"static"	
-CALL		0xd386	547	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_38"	0
-FN_END		0xd38e	547	
-FN_START	0xd390	561	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_123"	"static"	
-FN_END		0xd39c	561	
-FN_START	0xd39e	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_124"	"static"	
-CALL		0xd3a0	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-FN_END		0xd3a4	600	
-FN_START	0xd3a6	572	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_125"	"static"	
-FN_END		0xd3ac	572	
+FN_START	0xd33e	282	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_115"	"static"	
+CALL		0xd33e	282	"mulFP.O"	"__mulFP"	0
+ADJUST		0xd344	282	1
+FN_END		0xd344	282	
+FN_START	0xd346	315	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_116"	"static"	
+FN_END		0xd352	315	
+FN_START	0xd354	422	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_117"	"static"	
+ADJUST		0xd354	422	1
+ADJUST		0xd358	422	1
+CALL		0xd358	422	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_33"	0
+ADJUST		0xd35c	423	1
+FN_END		0xd35c	423	
+FN_START	0xd35e	431	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_118"	"static"	
+CALL		0xd35e	431	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_23"	0
+CALL		0xd360	432	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_24"	0
+FN_END		0xd364	432	
+FN_START	0xd366	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_119"	"static"	
+CALL		0xd368	439	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
+CALL		0xd36e	439	"ltFP.O"	"__ltFP"	0
+ADJUST		0xd370	439	1
+FN_END		0xd370	439	
+FN_START	0xd372	465	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_120"	"static"	
+FN_END		0xd37c	465	
+FN_START	0xd37e	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_121"	"static"	
+CALL		0xd37e	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	0
+FN_END		0xd382	521	
+FN_START	0xd384	548	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_122"	"static"	
+CALL		0xd386	548	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_38"	0
+FN_END		0xd38e	548	
+FN_START	0xd390	562	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_123"	"static"	
+FN_END		0xd39c	562	
+FN_START	0xd39e	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_124"	"static"	
+CALL		0xd3a0	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+FN_END		0xd3a4	601	
+FN_START	0xd3a6	573	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_125"	"static"	
+FN_END		0xd3ac	573	
 FN_START	0xd3ae	261	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_126"	"static"	
 CALL		0xd3ae	261	"C:\MCC18\v3_39\src\extended\stdclib\pow.c"	"__pa_19"	0
 ADJUST		0xd3b4	262	1
 FN_END		0xd3b4	262	
-FN_START	0xd3b6	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	"static"	
-ADJUST		0xd3b8	520	1
-FN_END		0xd3ba	520	
-FN_START	0xd3bc	581	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_128"	"static"	
-ADJUST		0xd3bc	581	1
-CALL		0xd3bc	581	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
-ADJUST		0xd3be	581	1
-FN_END		0xd3c0	581	
-FN_START	0xd3c2	501	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_129"	"static"	
-CALL		0xd3c2	501	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
-ADJUST		0xd3c4	501	-4
-CALL		0xd3c6	501	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-FN_END		0xd3c6	501	
-FN_START	0xd3c8	600	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	"static"	
-ADJUST		0xd3ca	600	-1
-ADJUST		0xd3cc	600	-1
-FN_END		0xd3cc	600	
-FN_START	0xd3ce	576	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	"static"	
-ADJUST		0xd3d2	576	1
-ADJUST		0xd3d6	576	1
-ADJUST		0xd3da	576	1
-ADJUST		0xd3de	576	1
-FN_END		0xd3de	576	
-FN_START	0xd3e0	340	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_132"	"static"	
-ADJUST		0xd3e0	340	-1
-CALL		0xd3ec	340	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
-ADJUST		0xd3ee	340	1
-CALL		0xd3ee	340	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
-ADJUST		0xd3f0	340	1
-FN_END		0xd3f2	340	
-FN_START	0xd3f4	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_133"	"static"	
-CALL		0xd3f6	341	"mul32.O"	"__mul32"	0
-CALL		0xd3fa	341	"div32u.O"	"__div32u"	0
-ADJUST		0xd3fe	341	-1
-ADJUST		0xd400	341	-1
-CALL		0xd400	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
-FN_END		0xd404	341	
-FN_START	0xd406	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	"static"	
-ADJUST		0xd406	520	-1
-ADJUST		0xd408	520	-1
-ADJUST		0xd40c	520	-1
-FN_END		0xd40c	520	
-FN_START	0xd40e	559	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_135"	"static"	
-CALL		0xd40e	559	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
-FN_END		0xd412	559	
-FN_START	0xd414	295	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_136"	"static"	
-CALL		0xd418	295	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
-FN_END		0xd41c	295	
-FN_START	0xd41e	557	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_137"	"static"	
-CALL		0xd41e	557	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-FN_END		0xd426	557	
-FN_START	0xd428	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_138"	"static"	
-FN_END		0xd42c	371	
+FN_START	0xd3b6	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_127"	"static"	
+ADJUST		0xd3b8	521	1
+FN_END		0xd3ba	521	
+FN_START	0xd3bc	582	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_128"	"static"	
+ADJUST		0xd3bc	582	1
+CALL		0xd3bc	582	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
+ADJUST		0xd3be	582	1
+FN_END		0xd3c0	582	
+FN_START	0xd3c2	502	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_129"	"static"	
+CALL		0xd3c2	502	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/openxlcd.c"	"__pa_1"	0
+ADJUST		0xd3c4	502	-4
+CALL		0xd3c6	502	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+FN_END		0xd3c6	502	
+FN_START	0xd3c8	601	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	"static"	
+ADJUST		0xd3ca	601	-1
+ADJUST		0xd3cc	601	-1
+FN_END		0xd3cc	601	
+FN_START	0xd3ce	577	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_131"	"static"	
+ADJUST		0xd3d2	577	1
+ADJUST		0xd3d6	577	1
+ADJUST		0xd3da	577	1
+ADJUST		0xd3de	577	1
+FN_END		0xd3de	577	
+FN_START	0xd3e0	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_132"	"static"	
+ADJUST		0xd3e0	341	-1
+CALL		0xd3ec	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
+ADJUST		0xd3ee	341	1
+CALL		0xd3ee	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
+ADJUST		0xd3f0	341	1
+FN_END		0xd3f2	341	
+FN_START	0xd3f4	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_133"	"static"	
+CALL		0xd3f6	342	"mul32.O"	"__mul32"	0
+CALL		0xd3fa	342	"div32u.O"	"__div32u"	0
+ADJUST		0xd3fe	342	-1
+ADJUST		0xd400	342	-1
+CALL		0xd400	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
+FN_END		0xd404	342	
+FN_START	0xd406	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_134"	"static"	
+ADJUST		0xd406	521	-1
+ADJUST		0xd408	521	-1
+ADJUST		0xd40c	521	-1
+FN_END		0xd40c	521	
+FN_START	0xd40e	560	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_135"	"static"	
+CALL		0xd40e	560	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_2"	0
+FN_END		0xd412	560	
+FN_START	0xd414	297	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_136"	"static"	
+CALL		0xd418	297	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
+FN_END		0xd41c	297	
+FN_START	0xd41e	558	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_137"	"static"	
+CALL		0xd41e	558	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+FN_END		0xd426	558	
+FN_START	0xd428	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_138"	"static"	
+FN_END		0xd42c	372	
 FN_START	0xd42e	246	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_139"	"static"	
 FN_END		0xd432	246	
-FN_START	0xd434	415	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_140"	"static"	
-ADJUST		0xd43c	415	1
-ADJUST		0xd43e	415	1
-CALL		0xd440	415	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
-CALL		0xd442	415	"mulFP.O"	"__mulFP"	0
-ADJUST		0xd444	415	-1
-FN_END		0xd448	415	
-FN_START	0xd44a	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	"static"	
-CALL		0xd44e	515	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
-ADJUST		0xd450	515	-1
-ADJUST		0xd454	515	-1
-FN_END		0xd462	515	
+FN_START	0xd434	416	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_140"	"static"	
+ADJUST		0xd43c	416	1
+ADJUST		0xd43e	416	1
+CALL		0xd440	416	"C:\MCC18\v3_39\src\extended\stdclib\PackMath.c"	"__pa_5"	0
+CALL		0xd442	416	"mulFP.O"	"__mulFP"	0
+ADJUST		0xd444	416	-1
+FN_END		0xd448	416	
+FN_START	0xd44a	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_141"	"static"	
+CALL		0xd44e	516	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"check_alarm"	0
+ADJUST		0xd450	516	-1
+ADJUST		0xd454	516	-1
+FN_END		0xd462	516	
 FN_START	0xd464	246	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_142"	"static"	
 CALL		0xd464	246	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_75"	0
 CALL		0xd468	247	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_75"	0
 CALL		0xd46c	248	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_75"	0
 FN_END		0xd472	249	
-FN_START	0xd474	299	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_143"	"static"	
-CALL		0xd474	299	"addFP.O"	"__subFP"	0
-CALL		0xd476	299	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
-ADJUST		0xd478	299	-1
-CALL		0xd47a	299	"addFP.O"	"__subFP"	0
-FN_END		0xd47a	299	
-FN_START	0xd47c	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_144"	"static"	
-CALL		0xd47c	520	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_9"	0
-FN_END		0xd484	520	
-FN_START	0xd486	327	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_145"	"static"	
-CALL		0xd486	327	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_165"	0
-FN_END		0xd490	329	
-FN_START	0xd492	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_146"	"static"	
-CALL		0xd492	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	0
-FN_END		0xd496	371	
+FN_START	0xd474	301	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_143"	"static"	
+CALL		0xd474	301	"addFP.O"	"__subFP"	0
+CALL		0xd476	301	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
+ADJUST		0xd478	301	-1
+CALL		0xd47a	301	"addFP.O"	"__subFP"	0
+FN_END		0xd47a	301	
+FN_START	0xd47c	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_144"	"static"	
+CALL		0xd47c	521	"C:\MCC18\v3_39\src\extended\stdclib\log.c"	"__pa_9"	0
+FN_END		0xd484	521	
+FN_START	0xd486	329	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_145"	"static"	
+CALL		0xd486	329	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_165"	0
+FN_END		0xd490	331	
+FN_START	0xd492	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_146"	"static"	
+CALL		0xd492	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	0
+FN_END		0xd496	372	
 FN_START	0xd498	12	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_147"	"static"	
 CALL		0xd498	12	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_84"	0
 CALL		0xd49a	12	"mulFP.O"	"__mulFP"	0
@@ -7239,78 +7239,78 @@ CALL		0xd4b4	243	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_12
 CALL		0xd4b6	244	"/audio/solarpic_rewrite/swm8722/solar18f8722/xlcd/busyxlcd.c"	"__pa_0"	0
 CALL		0xd4ba	244	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_79"	0
 FN_END		0xd4be	245	
-FN_START	0xd4c0	529	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	"static"	
-ADJUST		0xd4c0	529	1
-ADJUST		0xd4c2	529	1
-ADJUST		0xd4c4	529	1
-ADJUST		0xd4c6	529	1
-ADJUST		0xd4c8	529	1
-ADJUST		0xd4ca	529	1
-FN_END		0xd4d2	529	
+FN_START	0xd4c0	530	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_150"	"static"	
+ADJUST		0xd4c0	530	1
+ADJUST		0xd4c2	530	1
+ADJUST		0xd4c4	530	1
+ADJUST		0xd4c6	530	1
+ADJUST		0xd4c8	530	1
+ADJUST		0xd4ca	530	1
+FN_END		0xd4d2	530	
 FN_START	0xd4d4	250	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_151"	"static"	
 CALL		0xd4d6	250	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_79"	0
 CALL		0xd4da	251	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_79"	0
 FN_END		0xd4de	252	
-FN_START	0xd4e0	289	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_152"	"static"	
-CALL		0xd4e0	289	"/audio/solarpic_rewrite/swm8722/solar18f8722/model.c"	"__pa_12"	0
-CALL		0xd4e2	289	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
-ADJUST		0xd4e4	289	1
-ADJUST		0xd4e6	289	1
-CALL		0xd4ea	289	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Get_RestSOC"	0
-ADJUST		0xd4ec	289	-3
-FN_END		0xd4ec	289	
+FN_START	0xd4e0	291	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_152"	"static"	
+CALL		0xd4e0	291	"/audio/solarpic_rewrite/swm8722/solar18f8722/model.c"	"__pa_12"	0
+CALL		0xd4e2	291	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_74"	0
+ADJUST		0xd4e4	291	1
+ADJUST		0xd4e6	291	1
+CALL		0xd4ea	291	"/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c"	"Get_RestSOC"	0
+ADJUST		0xd4ec	291	-3
+FN_END		0xd4ec	291	
 FN_START	0xd4ee	130	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_153"	"static"	
 CALL		0xd4ee	130	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_82"	0
 CALL		0xd4f0	131	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_85"	0
 FN_END		0xd4f6	132	
-FN_START	0xd4f8	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_154"	"static"	
-CALL		0xd4f8	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_76"	0
-ADJUST		0xd4fc	438	-6
-ADJUST		0xd500	438	1
-ADJUST		0xd502	438	1
-FN_END		0xd502	438	
-FN_START	0xd504	499	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_155"	"static"	
-FN_END		0xd50a	499	
-FN_START	0xd50c	280	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_156"	"static"	
-ADJUST		0xd50c	280	-1
-CALL		0xd50c	280	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
-FN_END		0xd510	280	
-FN_START	0xd512	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_157"	"static"	
-CALL		0xd512	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	0
-FN_END		0xd516	341	
-FN_START	0xd518	391	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_158"	"static"	
-FN_END		0xd520	391	
+FN_START	0xd4f8	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_154"	"static"	
+CALL		0xd4f8	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_76"	0
+ADJUST		0xd4fc	439	-6
+ADJUST		0xd500	439	1
+ADJUST		0xd502	439	1
+FN_END		0xd502	439	
+FN_START	0xd504	500	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_155"	"static"	
+FN_END		0xd50a	500	
+FN_START	0xd50c	282	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_156"	"static"	
+ADJUST		0xd50c	282	-1
+CALL		0xd50c	282	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_41"	0
+FN_END		0xd510	282	
+FN_START	0xd512	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_157"	"static"	
+CALL		0xd512	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_77"	0
+FN_END		0xd516	342	
+FN_START	0xd518	392	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_158"	"static"	
+FN_END		0xd520	392	
 FN_START	0xd522	235	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_159"	"static"	
 FN_END		0xd52a	235	
-FN_START	0xd52c	438	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	"static"	
-ADJUST		0xd530	438	1
-FN_END		0xd530	438	
-FN_START	0xd532	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	"static"	
-FN_END		0xd536	520	
-FN_START	0xd538	518	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_162"	"static"	
-CALL		0xd53e	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_37"	0
-CALL		0xd540	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-CALL		0xd542	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_137"	0
-FN_END		0xd546	519	
-FN_START	0xd548	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_163"	"static"	
-CALL		0xd548	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	0
-ADJUST		0xd54a	521	1
-CALL		0xd54a	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
-ADJUST		0xd54c	521	-4
-ADJUST		0xd54e	521	1
-CALL		0xd54e	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_135"	0
-ADJUST		0xd550	521	-4
-CALL		0xd550	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_81"	0
-ADJUST		0xd554	521	-4
-FN_END		0xd554	521	
-FN_START	0xd556	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_164"	"static"	
-CALL		0xd556	341	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
-FN_END		0xd55a	341	
-FN_START	0xd55c	366	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_165"	"static"	
-CALL		0xd55c	366	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_84"	0
-FN_END		0xd564	367	
-FN_START	0xd566	371	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_166"	"static"	
-FN_END		0xd56a	371	
+FN_START	0xd52c	439	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_160"	"static"	
+ADJUST		0xd530	439	1
+FN_END		0xd530	439	
+FN_START	0xd532	521	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_161"	"static"	
+FN_END		0xd536	521	
+FN_START	0xd538	519	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_162"	"static"	
+CALL		0xd53e	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c"	"__pa_37"	0
+CALL		0xd540	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+CALL		0xd542	520	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_137"	0
+FN_END		0xd546	520	
+FN_START	0xd548	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_163"	"static"	
+CALL		0xd548	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_94"	0
+ADJUST		0xd54a	522	1
+CALL		0xd54a	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_130"	0
+ADJUST		0xd54c	522	-4
+ADJUST		0xd54e	522	1
+CALL		0xd54e	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_135"	0
+ADJUST		0xd550	522	-4
+CALL		0xd550	522	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_81"	0
+ADJUST		0xd554	522	-4
+FN_END		0xd554	522	
+FN_START	0xd556	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_164"	"static"	
+CALL		0xd556	342	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_73"	0
+FN_END		0xd55a	342	
+FN_START	0xd55c	367	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_165"	"static"	
+CALL		0xd55c	367	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_84"	0
+FN_END		0xd564	368	
+FN_START	0xd566	372	"/audio/solarpic_rewrite/swm8722/solar18f8722/power.c"	"__pa_166"	"static"	
+FN_END		0xd56a	372	
 FILE		0x0	0	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"
 FN_START	0xd56c	7	"/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c"	"tick_handler"	"external"	
 ADJUST		0xd5b4	7	19
