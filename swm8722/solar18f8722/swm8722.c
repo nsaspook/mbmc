@@ -1025,6 +1025,7 @@ void system_help(void) // display system help on terminal
 {
 	putrs2USART(keycmds0);
 	putrs2USART(keycmds1);
+	putrs2USART(keycmds2);
 }
 
 void sync_battsoc(void) // set battery SOC to 100% when C40 is in float
