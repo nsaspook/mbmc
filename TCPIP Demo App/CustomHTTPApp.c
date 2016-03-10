@@ -70,6 +70,7 @@ extern struct mbmcchart chart[4];
 extern volatile struct remote_daq_data remote_daq;
 extern union Alarm alarms;
 extern float dvdt_roc(int, int);
+extern void water_alarm_warn(int);
 
 #if defined(STACK_USE_HTTP2_SERVER)
 
@@ -2555,7 +2556,7 @@ void HTTPPrint_mbmcdata(WORD num)
 {
 	time_t ltime;
 	static long solar_volts, load_volts, cube_power, load_power, solar_power;
-	static int mycolor, cube_panels = FALSE;
+	static int mycolor, cube_panels = FALSE, water_alarm=FALSE;
 
 	// Determine what mbmc status data to return
 	switch (num) {
@@ -2797,6 +2798,14 @@ void HTTPPrint_mbmcdata(WORD num)
 	case 203: // Display alarm status
 		if (alarms.mbmc_alarm.absorp) {
 			TCPPutROMString(sktHTTP, (ROM BYTE*) "<li><b> Time to check battery water</b></li>");
+			if (!water_alarm) {
+				water_alarm_warn(TRUE);
+				water_alarm=TRUE; // once per alarm flag
+			}
+		} else {
+			if (water_alarm)
+				water_alarm_warn(FALSE);
+			water_alarm=FALSE;
 		}
 		break;
 	case 204: // Display alarm status

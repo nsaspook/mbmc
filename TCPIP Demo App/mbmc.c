@@ -42,6 +42,7 @@ float dvdt_roc(int, int);
 float lp_filter_diff(float, int, int);
 void put_mbmc_serial_buf(char);
 void init_mbmc_serial_buf(void);
+void water_alarm_warn(int);
 
 
 int TIi = 0, MIi = 0, HRi = 0;
@@ -84,6 +85,8 @@ int MBMCApp(void)
 		mPORTDSetPinsDigitalOut(BIT_1); // Make RD1 as output.
 		mPORTDClearBits(BIT_0); // Turn off RD0 on startup.
 		mPORTDSetPinsDigitalOut(BIT_0); // Make RD0 as output.
+		mPORTEClearBits(BIT_0); // Turn off RE0 on startup.
+		mPORTESetPinsDigitalOut(BIT_0); // Make RE0 as output.
 
 		UARTConfigure(UART1, UART_ENABLE_PINS_TX_RX_ONLY);
 		UARTSetFifoMode(UART1, UART_INTERRUPT_ON_TX_NOT_FULL | UART_INTERRUPT_ON_RX_NOT_EMPTY);
@@ -516,3 +519,11 @@ float dvdt_roc(int p_data, int d_index)
 	return lp_filter_diff(dvdt, d_index, 0);
 }
 
+void water_alarm_warn(int alert)
+{
+	if (alert) {
+		mPORTESetBits(BIT_0); // Turn on RE0
+	} else {
+		mPORTEClearBits(BIT_0); // Turn off RE0
+	}
+}
