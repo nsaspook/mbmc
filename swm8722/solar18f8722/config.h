@@ -101,8 +101,8 @@
 #define	CHARGER_MIN	20ll		// current from PV must be less that this to turn on utility battery charger
 // Battery absorption time parameters
 #define MIN_ABSORP      10800ul         // time in seconds for absorption phase.
-#define CC_RESET_MAX	3				// Max amount of times to reset the Charge controller after float to rebulk
+#define CC_RESET_MAX	3		// Max amount of times to reset the Charge controller after float to rebulk
 // PWM gain feedback control
-#define PWM_EXP			1.65			// CCEFF_DIFF -> x^y <- PWM_EXP
+#define PWM_EXP			1.65	// CCEFF_DIFF -> x^y <- PWM_EXP
 /* End user parameters */
 #endif /* CONFIG_H_INCLUDED */

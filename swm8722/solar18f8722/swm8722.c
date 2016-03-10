@@ -948,11 +948,12 @@ void system_data(void) // display system data on terminal
 		q2 = (hist[B2].kwo * 100) / hist[B2].kwi;
 	}
 	sprintf(bootstr2,
-		"\r\n Battery Status:\r\n Battery 1 Voltage %lumV, Current %li00mA, Power %liW, Quality %li : Battery 2 Voltage %lumV, Current %li00mA, Power %liW, Quality %li, Water %s\r\n",
+		"\r\n Battery Status:\r\n Battery 1 Voltage %lumV, Current %li00mA, Power %liW, Quality %li : Battery 2 Voltage %lumV, Current %li00mA, Power %liW, Quality %li, Water %s,",
 		R.primarypower[B1], cell[B1].current, ((int32_t) R.primarypower[B1] * (int32_t) cell[B1].current) / 10000l, q1,
 		R.primarypower[B2], cell[B2].current, ((int32_t) R.primarypower[B2] * (int32_t) cell[B2].current) / 10000l, q2,
 		hm(B.watercounter - B.watercounter_prev));
 	puts2USART(bootstr2);
+	putrs2USART(BATTERY_CHANGE);
 	ClrWdt(); // reset the WDT timer
 
 	for (z = 1; z <= battnum; z++) { // create

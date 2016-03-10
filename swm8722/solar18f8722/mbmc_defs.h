@@ -6,6 +6,7 @@
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
+#define BATTERY_CHANGE	" Battery Date: Mar 9, 2016\r\n"
 #define	PIC_8722	8722
 #define	CHECK_DATE	1305123894ul
 #define CHECKMARK	0x57					// EEPROM checkmark
