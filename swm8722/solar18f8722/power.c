@@ -559,7 +559,7 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 				if (hist[z].aho < 0) hist[z].aho = hist[z].ahi;
 				hist[z].kwo = (hist[z].aho * 120l);
 				hist[z].ahop = hist[z].aho; // set peuket to real
-				soc_method[z] = 'C';
+				soc_method[z] = 'R';
 			} else { //FIXME need to recal amp usage values
 				r_soc = (float) Get_RestSOC(z, P.STATIC_SOC, MILD_BLEND);
 				if (z != CCS.boc) {
@@ -572,7 +572,7 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 					} else {
 						if (cell[z].current <= BVSOC_CURRENT) {
 							hist[z].bsoc = (uint16_t) result; // use only current counting for SOC when close to and charging
-							soc_method[z] = 'R';
+							soc_method[z] = 'C';
 						} else { // blend when load exceeds PV current setpoint while charging.
 							hist[z].bsoc = (uint16_t) ((result * BVSOC_RATIO_C)+(r_soc * BVSOC_RATIO_V)); // Blend SOC methods
 							soc_method[z] = 'L';
