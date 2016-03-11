@@ -337,8 +337,8 @@
 #define END_RATIO_SM	0.60    // End amps from battery capacity, value scaled to result in mA for end-amps for S batteries
 
 #define	DCURRENT	0.0     // default discharge current 0.1A units "3.6 is the lowest possible value = .36A", use AH_DAY_OFF
-#define	AH_DAY_LOSS1	2000l	// Ah lost in 24 hours from natural discharge or controller usage BATT1.
-#define	AH_DAY_LOSS2	2000l	// Ah lost in 24 hours from natural discharge or controller usage BATT2.
+#define	AH_DAY_LOSS1	2000l	// mAh lost in 24 hours from natural discharge or controller usage BATT1.
+#define	AH_DAY_LOSS2	2000l	// mAh lost in 24 hours from natural discharge or controller usage BATT2.
 #define	SS_RATE		9.00	// STATIC SOC RATE Ah factor for static voltage cal to SOC and Aho
 #define SOCFULL		85u	// this is as good a full charge after a full C40 cycle timeout or float
 
