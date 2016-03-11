@@ -126,7 +126,7 @@ void tick_handler(void) // This is the high priority ISR routine
 		if ((V.timerint_count - dayclockup) > DAYDELAY) P.FORCEDAY = TRUE; // Force the End of Day after 24 hours of operation (Charger or external power source)
 
 		if (SDC0.DAYCLOCK && P.MORNING_HELP && P.SYSTEM_STABLE) { // turn off charger after morning boost
-			if (((V.timerint_count - dayclockup) > HELP_TIME) && (hist[CCS.boi].bsoc >= HELP_SOC)) {
+			if (((V.timerint_count - dayclockup) > HELP_TIME) && (hist[CCS.boi].bsoc >= HELP_SOC_END)) {
 				c_off = V.timerint_count;
 				CHARGERL = R_OFF;
 				P.MORNING_HELP = FALSE;

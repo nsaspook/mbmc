@@ -96,13 +96,14 @@
 #define	WCHARGER	20000.0 	// turn on charger if battery weight on inverter is below this point
 #define ALERTLOW	11000ul		// set alert flag in pick_batt at this level
 #define ALERTCHRG	12000ul		// turn on external charger at this level during a battery alert
-#define BSOCLOW		20			// when battery SOC less that this, really start making it next on the charge list
-#define	HELP_SOC	30u      	// state of charge to begin charger help in morning
+#define BSOCLOW		40		// when battery SOC less that this, really start making it next on the charge list
+#define	HELP_SOC	51u      	// state of charge to begin charger help in morning
+#define HELP_SOC_END	80u		// state of charge to end charger help in morning
 #define	CHARGER_MIN	20ll		// current from PV must be less that this to turn on utility battery charger
 // Battery absorption time parameters
 #define MIN_ABSORP      10800ul         // time in seconds for absorption phase.
 #define CC_RESET_MAX	3		// Max amount of times to reset the Charge controller after float to rebulk
 // PWM gain feedback control
-#define PWM_EXP			1.65	// CCEFF_DIFF -> x^y <- PWM_EXP
+#define PWM_EXP		1.65		// CCEFF_DIFF -> x^y <- PWM_EXP
 /* End user parameters */
 #endif /* CONFIG_H_INCLUDED */
