@@ -8,6 +8,11 @@
             <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc.c</file>
             <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc_defs.h</file>
         </group>
-        <group name="MBMC"/>
+        <group name="MBMC">
+            <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc.h</file>
+            <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/Alternative%20Configurations/HardwareProfile%20PIC32_ENET_SK_DM320004_INTERNAL_ETHERNET.h</file>
+            <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc.c</file>
+            <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/CustomHTTPApp.c</file>
+        </group>
     </open-files>
 </project-private>
