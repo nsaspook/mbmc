@@ -314,6 +314,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
 			if ((cell[z].weight < WCHARGER) && P.SYSTEM_STABLE) {
 				if ((CHARGERL) == R_ON && !C_MSG_STOP) {
+					term_time();
 					putrs2USART(charger1); // alert of relay went from off to on
 					C_MSG_STOP = TRUE;
 					cell[z].critical = TRUE;
@@ -386,8 +387,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		}
 	}
 
-	if (cell[B1].online) boi = B1;
-	if (cell[B2].online) boi = B2;
+	if (cell[B1].online) 
+		boi = B1;
+	if (cell[B2].online) 
+		boi = B2;
 	if (cell[boi].online && ((!cell[boi].cconline) || (!DIVERSION))) { // update real battery voltage if loaded and not charging
 		cell[boi].voltage = R.primarypower[boi];
 	}
@@ -455,10 +458,14 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 
 	// the set of conditions to start diverting power
 	B.d_code = 0;
-	if (R.inputvoltage > SOLARUP) B.d_code = 1;
-	if (B.r_soc[boi] >= DSOC_L) B.d_code += 2;
-	if (R.primarypower[boi] > DVOLTAGE) B.d_code += 4;
-	if (B.diversion <= PW_DIVERSION) B.d_code += 8;
+	if (R.inputvoltage > SOLARUP) 
+		B.d_code = 1;
+	if (B.r_soc[boi] >= DSOC_L) 
+		B.d_code += 2;
+	if (R.primarypower[boi] > DVOLTAGE) 
+		B.d_code += 4;
+	if (B.diversion <= PW_DIVERSION) 
+		B.d_code += 8;
 
 	if (B.d_code == 15) {
 		D_OFF = LOW;
@@ -493,8 +500,10 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 	static uint32_t voltage = 0;
 
 	C.temp_drate = (int16_t) ((float) (R.thermo_batt - Temp_ZERO) * Temp_ADJ_FL); // Make a AH temp comp factor from the value of Temp_ZERO (in tenths of C)
-	if (C.temp_drate > 2500) C.temp_drate = NULL0;
-	if (C.temp_drate < -2500) C.temp_drate = NULL0;
+	if (C.temp_drate > 2500) 
+		C.temp_drate = NULL0;
+	if (C.temp_drate < -2500) 
+		C.temp_drate = NULL0;
 	for (z = 1; z <= battnum; z++) {
 		C.t_comp = (1000.0 + (float) C.temp_drate) / 1000.0; // loss/gain factor off 1.0 for 20C
 		hist[z].rate = (uint16_t) (((float) hist[z].ah * DF) * C.t_comp); // derate battery by (Discharge Floor/Temp) factors
@@ -517,8 +526,10 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 				hist[z].ahi = 0;
 				hist[z].ahir = 0;
 				hist[z].aho = (int32_t) (usage * SS_RATE); // approx a usage from static voltage SOC, mAh
-				if (hist[z].aho > ((int32_t) hist[z].rate * (int32_t) 1000)) hist[z].aho = (int32_t) hist[z].rate * (int32_t) 1000; // mAh
-				if (hist[z].aho < 0) hist[z].aho = 0;
+				if (hist[z].aho > ((int32_t) hist[z].rate * (int32_t) 1000)) 
+					hist[z].aho = (int32_t) hist[z].rate * (int32_t) 1000; // mAh
+				if (hist[z].aho < 0) 
+					hist[z].aho = 0;
 				hist[z].kwo = (hist[z].aho * KW_VOLTS);
 				hist[z].ahop = hist[z].aho; // set peuket to real
 				if (P.STATIC_SOC) {
@@ -686,8 +697,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		} else {
 			cell[bn].noload = R.ccvoltage; // set unloaded battery voltage
 		}
-		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].noload += GELL_R_COMP;
-		if (bn > HISTBATTNUM & cell[bn].id == 'M') cell[bn].noload += AGM_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'S') 
+			cell[bn].noload += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'M') 
+			cell[bn].noload += AGM_R_COMP;
 		BATLOAD = R_ON; // battery load relay/on
 		wdttime(BATTEST); // drain the battery
 		if (!P.SYSTEM_STABLE) wdttime(BATTEST); // drain the battery MORE
@@ -728,7 +741,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			sprintf(bootstr2, " Battery%i Slope Voltage %limV.\r\n", bn, voltage_slope);
 			puts2USART(bootstr2);
 			wdttime(BATTEST); // drain the battery
-			if (!P.SYSTEM_STABLE) wdttime(BATTEST); // drain the battery MORE
+			if (!P.SYSTEM_STABLE) 
+				wdttime(BATTEST); // drain the battery MORE
 			ADC_read(); // read loaded battery voltage from charge line.
 			if (bn <= HISTBATTNUM) {
 				load_i2 = R.primarypower[bn] / ((BLOAD1 * BLOAD2) / (BLOAD1 + BLOAD2)); // find current 0.1 A units
@@ -740,7 +754,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if ((hist[bn].esr > 1000) || (hist[bn].esr <= 0)) { // check for sane values
 				hist[bn].esr = 1957;
 			}
-			if (hist[bn].esr < hist[bn].h[10]) hist[bn].h[10] = hist[bn].esr; // check for lowest esr
+			if (hist[bn].esr < hist[bn].h[10]) 
+				hist[bn].h[10] = hist[bn].esr; // check for lowest esr
 			esr_delta = ((float) ((int32_t) t_esr - (int32_t) hist[bn].esr)) / ((float) ((int32_t) t_esr + (int32_t) hist[bn].esr)); // the change in esr with resistance
 			ADC_read(); // read  battery voltages.
 			term_time();
