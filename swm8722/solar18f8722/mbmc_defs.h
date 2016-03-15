@@ -183,7 +183,7 @@
 #define BATTFRESH	13200ul   	// float voltage after charge
 #define	BATTADJ		11800ul		// >15%	At this point under load start adjusting the Ah used by a static amount
 #define BATTFLAT	11400ul		// Close to full discharged (flat but usable)
-#define BATTCRIT	11200ul   	// Fully discharged
+#define BATTCRIT	11000ul   	// Fully discharged
 #define BATTSYS		9000ul		// controller system voltage critical level
 #define BATTSYSLOW	10500ul		// controller system voltage low
 #define BATTLOW		10000ul		// unuseable (damaged) battery
