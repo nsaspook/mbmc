@@ -104,11 +104,12 @@ typedef struct __attribute__((aligned(1))) celltype
 volatile celltype;
 
 /*		hist[x].h[x]
- *		h0  Peukert Factor adjusted Ah usage this cycle, MUST BE INTERGER variable type!
+ *		h0	Peukert Factor adjusted Ah usage this cycle, MUST BE INTERGER variable type!
  *		h1	Lowest discharge ever,
- *		h2  current lowest discharge,
- *		h3  avg discharge
- *		h4	Number of full charge cycles, h5  Number of full discharge cycles
+ *		h2	current lowest discharge,
+ *		h3	avg discharge
+ *		h4	Number of full charge cycles, 
+ *		h5	Number of full discharge cycles
  *		h6	Real Ah usage this cycle, 	MUST BE INTERGER variable type!
  *		h7	Min Batt Voltage
  *		h8	Max Batt Voltage

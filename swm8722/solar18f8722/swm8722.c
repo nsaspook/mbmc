@@ -1019,6 +1019,7 @@ void system_data(void) // display system data on terminal
 		ClrWdt(); // reset the WDT timer
 	}
 	putrs2USART(battheader1);
+	putrs2USART(battheader2);
 }
 
 void system_help(void) // display system help on terminal
