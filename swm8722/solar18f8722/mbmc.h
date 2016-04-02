@@ -115,6 +115,8 @@ volatile celltype;
  *		h8	Max Batt Voltage
  *		h9	Lowest ESR Pre
  *		h10	Lowest ESR Post
+ *		h11	Total charge cycles
+ *		h12	Total kWH in
  */
 
 #if defined(__18CXX)

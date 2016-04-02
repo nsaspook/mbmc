@@ -2596,13 +2596,13 @@ void main(void) // Lets Party
 							term_time();
 							putrs2USART(runcode4);
 							bn = z; // set battery #
+							hist[bn].h[4]++; // full discharge cycles, will also update B2 when ganged
 							if ((z == B2) && B_GANGED) {
 								term_time();
 								sprintf(bootstr2, " Battery %2i,  \x1b[7mGANGED to B1\x1b[0m \n\r", z);
 								puts2USART(bootstr2);
 								bn = B1;
 							}
-							hist[bn].h[4]++; // full discharge cycles
 							noload_soc();
 							ChargeBatt(bn, FALSE, TRUE);
 							noload_soc();

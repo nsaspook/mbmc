@@ -169,13 +169,15 @@ void pv_pwm_calc(float slope) // calc a duty-cycle from the PV power excess supp
 		pv_pwm_shutdown();
 		CCEFF_DIFF_tmp = 0;
 	}
-	if (CCEFF_DIFF_tmp > PWM_LIMIT) CCEFF_DIFF_tmp = PWM_LIMIT;
+	if (CCEFF_DIFF_tmp > PWM_LIMIT)
+		CCEFF_DIFF_tmp = PWM_LIMIT;
 	if (CCEFF_DIFF_tmp > PWM_SLOPE) {
 		CCEFF_DIFF = (int16_t) lp_filter(pow((float) CCEFF_DIFF_tmp, power_exp), LP_PWM, TRUE); // control power
 	} else {
 		CCEFF_DIFF = (int16_t) lp_filter((float) CCEFF_DIFF_tmp, LP_PWM, TRUE); // control power
 	}
-	if (CCEFF_DIFF > 100) CCEFF_DIFF = 100; // limit max value to 100% power
+	if (CCEFF_DIFF > 100)
+		CCEFF_DIFF = 100; // limit max value to 100% power
 
 }
 
@@ -277,7 +279,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			hist[z].rest_factor = RFACTOR; // Efficency factor of battery recovery
 			e_crit();
 		}
-		
+
 		/* start calculation of battery selection weight for each power battery */
 		cell[z].weight = (float) hist[z].bsoc * W_BASE_F; // battery selection weigth factor base
 		cell[z].weight += (float) (cell[z].noload);
@@ -297,15 +299,19 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		cell[z].weight -= (float) ((hist[z].ah * hist[z].esr) * W_IR_F); // internal resistance factor
 		cell[z].weight -= (float) hist[z].udod * W_DOD_F; // user depth of discharge factor
 
-		if (cell[z].id == 'S') cell[z].weight += SMALLCOMP; // Small Gell Cell  comp factor
-		if (cell[z].id == 'M') cell[z].weight += MIDCOMP; // Small AGM Cell  comp factor
+		if (cell[z].id == 'S')
+			cell[z].weight += SMALLCOMP; // Small Gell Cell  comp factor
+		if (cell[z].id == 'M')
+			cell[z].weight += MIDCOMP; // Small AGM Cell  comp factor
 		if (z == B1) cell[z].weight -= PRIPOINTS; // points off  for primary battery
 		if (z == B2) {
 			if (B_GANGED || (DIPSW3 == HIGH)) cell[z].weight = MAXWEIGHT;
 		}
 
-		if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit values
-		if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
+		if (cell[z].weight > MAXWEIGHT)
+			cell[z].weight = MAXWEIGHT; // limit values
+		if (cell[z].weight < MINWEIGHT)
+			cell[z].weight = MINWEIGHT; // limit values
 
 		if (cell[z].online == TRUE) {
 			if (R.primarypower[z] < INV_VOLT_LOW) cell[z].weight = LOWPOINTS;
@@ -320,7 +326,8 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 					cell[z].critical = TRUE;
 					CCS.boc = z;
 				}
-				if (CHARGERL == R_OFF) C_MSG_STOP = FALSE;
+				if (CHARGERL == R_OFF)
+					C_MSG_STOP = FALSE;
 				if (DIPSW4 == HIGH) {
 					divert_power(OFF, YES, 0);
 					if (R.currentin < CHARGER_MIN) {
@@ -339,15 +346,18 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		if (z <= HISTBATTNUM) {
 			s_crit(HL);
 			if (((R.primarypower[z] < ALERTLOW) || (hist[z].bsoc < BSOCLOW)) || ((CCS.bn == z) && (CCS.alert))) {
-				if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
-				if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
+				if (cell[z].weight > MAXWEIGHT)
+					cell[z].weight = MAXWEIGHT; // limit value
+				if (cell[z].weight < MINWEIGHT)
+					cell[z].weight = MINWEIGHT; // limit values
 				CCS.bn = z; // set to battery we wish to possibly charge next
 				if ((CCS.boc != CCS.bn) && (cell[CCS.boc].weight > (cell[CCS.bn].weight + PLUSWEIGHT)) && (cell[CCS.bn].weight < LOWPOINTS)) {
 					if (B_GANGED && (CCS.bn == B2)) { // stop bogus B2 alarms during ganged operation
 						CCS.bn = B1; // force to only B1 during ganged
 					} else {
 						CCS.alert = TRUE; // force system to recheck battery status if in charge routine
-						if (alert_pick == 0) alert_pick = CCS.bn; // keep battery ID LOCKED for alert until alert is cleared
+						if (alert_pick == 0)
+							alert_pick = CCS.bn; // keep battery ID LOCKED for alert until alert is cleared
 						if ((R.inputvoltage < ALERTCHRG) && (DIPSW4 == HIGH)) {
 							divert_power(OFF, YES, 0);
 							if (R.currentin < CHARGER_MIN) {
@@ -387,9 +397,9 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		}
 	}
 
-	if (cell[B1].online) 
+	if (cell[B1].online)
 		boi = B1;
-	if (cell[B2].online) 
+	if (cell[B2].online)
 		boi = B2;
 	if (cell[boi].online && ((!cell[boi].cconline) || (!DIVERSION))) { // update real battery voltage if loaded and not charging
 		cell[boi].voltage = R.primarypower[boi];
@@ -458,13 +468,13 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 
 	// the set of conditions to start diverting power
 	B.d_code = 0;
-	if (R.inputvoltage > SOLARUP) 
+	if (R.inputvoltage > SOLARUP)
 		B.d_code = 1;
-	if (B.r_soc[boi] >= DSOC_L) 
+	if (B.r_soc[boi] >= DSOC_L)
 		B.d_code += 2;
-	if (R.primarypower[boi] > DVOLTAGE) 
+	if (R.primarypower[boi] > DVOLTAGE)
 		B.d_code += 4;
-	if (B.diversion <= PW_DIVERSION) 
+	if (B.diversion <= PW_DIVERSION)
 		B.d_code += 8;
 
 	if (B.d_code == 15) {
@@ -500,9 +510,9 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 	static uint32_t voltage = 0;
 
 	C.temp_drate = (int16_t) ((float) (R.thermo_batt - Temp_ZERO) * Temp_ADJ_FL); // Make a AH temp comp factor from the value of Temp_ZERO (in tenths of C)
-	if (C.temp_drate > 2500) 
+	if (C.temp_drate > 2500)
 		C.temp_drate = NULL0;
-	if (C.temp_drate < -2500) 
+	if (C.temp_drate < -2500)
 		C.temp_drate = NULL0;
 	for (z = 1; z <= battnum; z++) {
 		C.t_comp = (1000.0 + (float) C.temp_drate) / 1000.0; // loss/gain factor off 1.0 for 20C
@@ -526,9 +536,9 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 				hist[z].ahi = 0;
 				hist[z].ahir = 0;
 				hist[z].aho = (int32_t) (usage * SS_RATE); // approx a usage from static voltage SOC, mAh
-				if (hist[z].aho > ((int32_t) hist[z].rate * (int32_t) 1000)) 
+				if (hist[z].aho > ((int32_t) hist[z].rate * (int32_t) 1000))
 					hist[z].aho = (int32_t) hist[z].rate * (int32_t) 1000; // mAh
-				if (hist[z].aho < 0) 
+				if (hist[z].aho < 0)
 					hist[z].aho = 0;
 				hist[z].kwo = (hist[z].aho * KW_VOLTS);
 				hist[z].ahop = hist[z].aho; // set peuket to real
@@ -539,7 +549,8 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 					wdttime(BATRUNF * 2);
 				}
 				result = ((rate + (usage / 10.0)) / rate) * 10.0; //FIXME needs a sanity check, compute SOC from usage rates
-				if (result <= 0.0) result = 0.0; // don't go less than zero
+				if (result <= 0.0)
+					result = 0.0; // don't go less than zero
 
 				r_soc = (float) Get_RestSOC(z, P.STATIC_SOC, CLEAR_BLEND);
 				hist[z].bsoc = (uint16_t) ((result * BVSOC_RATIO_C)+(r_soc * BVSOC_RATIO_V)); // Blend SOC methods
@@ -552,12 +563,15 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 			}
 		} else { // code for calculated SOC of derated battery
 			rate = (float) (hist[z].rate - hist[z].drate); // derated battery cap in 1.0A unita
-			if (rate < 1.0) rate = 1.0;
+			if (rate < 1.0)
+				rate = 1.0;
 			usage = (float) hist[z].h[0]; // usage/gain in 0.1A units/ USE Peukert adjusted amps
 			result = ((rate + (usage / 10.0)) / rate) * 100.0; //FIXME needs a sanity check, compute SOC from usage rates
-			if (result <= 0.0) result = 0.0; // don't go less than zero
+			if (result <= 0.0)
+				result = 0.0; // don't go less than zero
 			B.r_soc[z] = (uint8_t) result; // Ah counting results
-			if (B.r_soc[z] > 101) B.r_soc[z] = hist[z].bsoc; //FIXME a sanity check
+			if (B.r_soc[z] > 101)
+				B.r_soc[z] = hist[z].bsoc; //FIXME a sanity check
 			if ((z != CCS.boi) && (z != CCS.boc) && (z <= HISTBATTNUM) && (R.primarypower[z] < SOC_VCOMP) && (hist[z].bsoc > BVSOC_MINC)) { // use rest voltage when possible
 				Get_RestSOC(z, P.STATIC_SOC, DO_BLEND); // use rest voltage table for SOC, sets hist[z].bsoc in Get_RestSOC
 				//hist[z].bsoc = hist[z].bsoc - (hist[z].esr - hist[z].h[10]); // use ESR history to bring down the SOC if they differ
@@ -615,6 +629,18 @@ void noload_soc(void) // create a SOC factor for just voltage on startup and cal
 		}
 	}
 	P.STATIC_SOC = FALSE; // use SOC routine next
+}
+
+void Cycle_Update(uint16_t t_soc, uint8_t bn)
+{
+	if (t_soc < SOC_DF)
+		hist[bn].h[5]++; // full discharge cycles
+	if (hist[bn].bsoc >= SOC_FF)
+		hist[bn].h[4]++; // inc full charge hist data
+	if ((bn == B1) && B_GANGED) {
+		hist[B2].h[4]++; // inc full charge hist data
+		hist[B2].h[5]++; // full discharge cycles
+	}
 }
 
 uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
@@ -697,9 +723,9 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		} else {
 			cell[bn].noload = R.ccvoltage; // set unloaded battery voltage
 		}
-		if (bn > HISTBATTNUM & cell[bn].id == 'S') 
+		if (bn > HISTBATTNUM & cell[bn].id == 'S')
 			cell[bn].noload += GELL_R_COMP;
-		if (bn > HISTBATTNUM & cell[bn].id == 'M') 
+		if (bn > HISTBATTNUM & cell[bn].id == 'M')
 			cell[bn].noload += AGM_R_COMP;
 		BATLOAD = R_ON; // battery load relay/on
 		wdttime(BATTEST); // drain the battery
@@ -710,8 +736,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		} else {
 			cell[bn].voltage = R.ccvoltage; // set first loaded battery voltage
 		}
-		if (bn > HISTBATTNUM & cell[bn].id == 'S') cell[bn].voltage += GELL_R_COMP;
-		if (bn > HISTBATTNUM & cell[bn].id == 'M') cell[bn].voltage += AGM_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'S')
+			cell[bn].voltage += GELL_R_COMP;
+		if (bn > HISTBATTNUM & cell[bn].id == 'M')
+			cell[bn].voltage += AGM_R_COMP;
 
 		hist[bn].esr = NULL0;
 		if (use_dual_load) {
@@ -741,7 +769,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			sprintf(bootstr2, " Battery%i Slope Voltage %limV.\r\n", bn, voltage_slope);
 			puts2USART(bootstr2);
 			wdttime(BATTEST); // drain the battery
-			if (!P.SYSTEM_STABLE) 
+			if (!P.SYSTEM_STABLE)
 				wdttime(BATTEST); // drain the battery MORE
 			ADC_read(); // read loaded battery voltage from charge line.
 			if (bn <= HISTBATTNUM) {
@@ -754,7 +782,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if ((hist[bn].esr > 1000) || (hist[bn].esr <= 0)) { // check for sane values
 				hist[bn].esr = 1957;
 			}
-			if (hist[bn].esr < hist[bn].h[10]) 
+			if (hist[bn].esr < hist[bn].h[10])
 				hist[bn].h[10] = hist[bn].esr; // check for lowest esr
 			esr_delta = ((float) ((int32_t) t_esr - (int32_t) hist[bn].esr)) / ((float) ((int32_t) t_esr + (int32_t) hist[bn].esr)); // the change in esr with resistance
 			ADC_read(); // read  battery voltages.
@@ -771,7 +799,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if ((hist[bn].esr > 1000) || (hist[bn].esr <= 0)) { // check for sane values
 				hist[bn].esr = 999;
 			}
-			if (hist[bn].esr < hist[bn].h[10]) hist[bn].h[10] = hist[bn].esr; // check for lowest esr
+			if (hist[bn].esr < hist[bn].h[10])
+				hist[bn].h[10] = hist[bn].esr; // check for lowest esr
 			term_time();
 			sprintf(bootstr2, " Battery%i V%limV, V%limV ESR  R%i.\r\n", bn, cell[bn].noload, cell[bn].voltage, hist[bn].esr);
 			puts2USART(bootstr2);
@@ -799,7 +828,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	putrs2USART(chrgcode7);
 	cell[bn].date = V.timerint_count; // load timer count at start of charging time
 
-	if (!cell[bn].critical && CHARGERL == R_OFF) cell[bn].critical = FALSE; // reset battery flags
+	if (!cell[bn].critical && CHARGERL == R_OFF)
+		cell[bn].critical = FALSE; // reset battery flags
 	cell[bn].discharged = FALSE;
 	cell[bn].dead = FALSE;
 
@@ -807,10 +837,14 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		cell[B2] = cell[B1]; // clone the cell data
 	}
 
-	if (cell[bn].voltage < BATTCRIT) cell[bn].critical = TRUE; // set battery flags
-	if (cell[bn].voltage < BATTFLAT) cell[bn].discharged = TRUE;
-	if (cell[bn].voltage < BATTLOW) cell[bn].dead = TRUE;
-	if ((cell[bn].noload > cell[bn].voltage) && (cell[bn].noload - cell[bn].voltage) > BATTDROP) cell[bn].dead = TRUE; // max voltage drop
+	if (cell[bn].voltage < BATTCRIT)
+		cell[bn].critical = TRUE; // set battery flags
+	if (cell[bn].voltage < BATTFLAT)
+		cell[bn].discharged = TRUE;
+	if (cell[bn].voltage < BATTLOW)
+		cell[bn].dead = TRUE;
+	if ((cell[bn].noload > cell[bn].voltage) && (cell[bn].noload - cell[bn].voltage) > BATTDROP)
+		cell[bn].dead = TRUE; // max voltage drop
 
 	if (cell[bn].voltage < hist[bn].h[7]) { // check current voltage is lower
 		if (cell[bn].voltage > BATTLOW) { // check greater than dead
@@ -833,9 +867,12 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	wdttime(BATRUNF);
 	/*              end battery test        */
 
-	if (cell[bn].id == 'L') BATCHARGE = BATCHARGE_L; // set timer per battery type
-	if (cell[bn].id == 'M') BATCHARGE = BATCHARGE_M;
-	if (cell[bn].id == 'S') BATCHARGE = BATCHARGE_S;
+	if (cell[bn].id == 'L')
+		BATCHARGE = BATCHARGE_L; // set timer per battery type
+	if (cell[bn].id == 'M')
+		BATCHARGE = BATCHARGE_M;
+	if (cell[bn].id == 'S')
+		BATCHARGE = BATCHARGE_S;
 
 	s_crit(HL);
 	CCS.boc = bn; // [1..4]
@@ -853,8 +890,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	B.absorp_time = 0; // reset absorption timer
 	absorp_current = 0; // zero out end-amps data
 	end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO); // make a End-Amps from the adjusted battery rate
-	if (cell[bn].id == 'M') end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_MED);
-	if (cell[bn].id == 'S') end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_SM);
+	if (cell[bn].id == 'M')
+		end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_MED);
+	if (cell[bn].id == 'S')
+		end_amps = (int32_t) ((float) hist[bn].rate * END_RATIO_SM);
 	B.start_aho = hist[bn].ahop; // use the adjusted load current
 	B.start_ahu = hist[bn].h[0]; // the current balance of current in/out for the battery ,h[0] is in tenth amp units
 	cycles_tmp = cell[bn].cycles;
@@ -863,6 +902,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	if (!FCHECK) {
 		t_soc = hist[bn].bsoc;
 		hist[bn].h[11]++; // charge cycles
+		if (B_GANGED && (bn == B1))
+			hist[B2].h[11]++; // charge cycles
 		term_time();
 		putrs2USART(chrgcode12);
 	}
@@ -923,8 +964,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 
 			if (chrg_v > BATTHIGH) { // check for charge controller over-voltage
 				ALARMOUT = R_ON;
-				if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-				if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+				Cycle_Update(t_soc, bn);
 				term_time();
 				putrs2USART(chrgcode0);
 				break;
@@ -932,8 +972,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 
 			chrg_v = (uint32_t) lp_filter((float) R.inputvoltage, LP_PVVOLTAGE, TRUE); // use digital filter
 			if (chrg_v < SOLARLOW) { // input is too low to charge (normal)
-				if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-				if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+				Cycle_Update(t_soc, bn);
 				term_time();
 				putrs2USART(" LOW VOLTS loop \r\n");
 				term_time();
@@ -947,8 +986,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 
 		if (cell[bn].critical) {
 			if (chrg_v < SOLARLOW) { // input is too low to charge (critical)
-				if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-				if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+				Cycle_Update(t_soc, bn);
 				term_time();
 				putrs2USART(chrgcode4);
 				break;
@@ -957,8 +995,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 
 		if (P.FORCEOUT) { // Received FOURCEOUT from host, so exit
 			P.FORCEOUT = FALSE;
-			if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-			if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+			Cycle_Update(t_soc, bn);
 			term_time();
 			putrs2USART(chrgcode2);
 			// init store model data for battery
@@ -971,8 +1008,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			break;
 		}
 		if (chrg_v < SOLARLOW) { // input is too low to charge (normal)
-			if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-			if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+			Cycle_Update(t_soc, bn);
 			term_time();
 			putrs2USART(" MAIN loop \r\n");
 			term_time();
@@ -1018,8 +1054,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			s_crit(HL);
 			CCS.bn = B0; // set to null battery
 			e_crit();
-			if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
-			if (hist[bn].bsoc >= SOC_FF) hist[bn].h[4]++; // inc full charge hist data
+			Cycle_Update(t_soc, bn);
 			term_time();
 			putrs2USART(runcode7);
 			break;
@@ -1028,15 +1063,21 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		if ((hist[bn].ahir > B.start_ahi) && !CC_DONE) {
 			hist[bn].cef_calc = (float) (((float) ((float) B.start_ahu * 100.0)+(hist[bn].ahop - B.start_aho)) / (float) (CEF_DERATE * (float) (hist[bn].ahir - B.start_ahi))); // used Ah/charging Ah
 			B.cef_raw = (int16_t) hist[bn].cef_calc;
-			if (hist[bn].cef_calc < 0.0) hist[bn].cef_calc = -hist[bn].cef_calc; // make this positive
-			if (hist[bn].cef_calc > CEF_OVER) hist[bn].cef_calc = CEF_MSOC;
-			if (hist[bn].cef_calc > CEF_MAX) hist[bn].cef_calc = CEF_MAX;
-			if (hist[bn].cef_calc < CEF_MIN) hist[bn].cef_calc = CEF_MIN;
-			if (CCMODE == ABSORP_M) hist[bn].cef_calc = CEF_HSOC;
+			if (hist[bn].cef_calc < 0.0)
+				hist[bn].cef_calc = -hist[bn].cef_calc; // make this positive
+			if (hist[bn].cef_calc > CEF_OVER)
+				hist[bn].cef_calc = CEF_MSOC;
+			if (hist[bn].cef_calc > CEF_MAX)
+				hist[bn].cef_calc = CEF_MAX;
+			if (hist[bn].cef_calc < CEF_MIN)
+				hist[bn].cef_calc = CEF_MIN;
+			if (CCMODE == ABSORP_M)
+				hist[bn].cef_calc = CEF_HSOC;
 		}
 
 		if ((CCMODE == FLOAT_M) || (CCMODE == FLOAT_W)) { // in float charge signal from C40 controller
-			if (ABSL(absorp_current) <= end_amps) ccreset = 0; // Don't reset CC if the battery is charged at 100% by end-amp value
+			if (ABSL(absorp_current) <= end_amps)
+				ccreset = 0; // Don't reset CC if the battery is charged at 100% by end-amp value
 			if ((cell[bn].id != 'S') && (B.absorp_time < MIN_ABSORP) && ccreset) {
 				term_time();
 				putrs2USART(chrgcode5);
@@ -1058,8 +1099,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				CC_DONE = TRUE;
 				PVLOAD = R_OFF;
 				term_time();
-				if (CCMODE == FLOAT_M) putrs2USART(runcode6);
-				if (CCMODE == FLOAT_W) putrs2USART(runcode8);
+				if (CCMODE == FLOAT_M)
+					putrs2USART(runcode6);
+				if (CCMODE == FLOAT_W)
+					putrs2USART(runcode8);
 				wdttime(CHRGTIME); // sound alarm for a while
 				ALARMOUT = R_OFF; // turn off relay
 				cell[bn].fresh = TRUE;
@@ -1076,10 +1119,18 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 						if (hist[bn].cef_calc > CEF_OVER) hist[bn].cef_calc = CEF_MSOC;
 						if (hist[bn].cef_calc > CEF_MAX) hist[bn].cef_calc = CEF_MAX;
 						if (hist[bn].cef_calc < CEF_MIN) hist[bn].cef_calc = CEF_MIN;
-						if (CCMODE == ABSORP_M) hist[bn].cef_calc = CEF_HSOC;
+						if (CCMODE == ABSORP_M)
+							hist[bn].cef_calc = CEF_HSOC;
 					}
 					hist[bn].h[4]++; // inc full charge hist data
-					if (t_soc < SOC_DF) hist[bn].h[5]++; // full discharge cycles
+					if ((bn == B1) && B_GANGED)
+						hist[B2].h[4]++; // inc full charge hist data
+					if (t_soc < SOC_DF) {
+						hist[bn].h[5]++; // full discharge cycles
+						if ((bn == B1) && B_GANGED)
+							hist[B2].h[5]++; // full discharge cycles
+					}
+
 					hist[bn].h[6] = 0; // reset Ah hist on full charge.
 					hist[bn].h[0] = 0; // reset pAh hist on full charge.
 					hist[bn].h[2] = 0; // reset this cycle discharge hist
@@ -1135,9 +1186,12 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		e_crit();
 
 		CCM = 'B'; // default charge controller mode is Bulk
-		if (CCMODE == ABSORP_M) CCM = 'A'; // Absorp
-		if ((CCMODE == FLOAT_W) || (CCMODE == FLOAT_M)) CCM = 'F'; // Float
-		if (R.ccvoltage < SOLARLOW) CCM = 'O'; // Off
+		if (CCMODE == ABSORP_M)
+			CCM = 'A'; // Absorp
+		if ((CCMODE == FLOAT_W) || (CCMODE == FLOAT_M))
+			CCM = 'F'; // Float
+		if (R.ccvoltage < SOLARLOW)
+			CCM = 'O'; // Off
 
 		if (TIMED) { // this 'TIMED' should be the default with most calls
 			CCEFF_tmp = (int16_t) ((R.ccvoltage * 100l) / R.inputvoltage);
