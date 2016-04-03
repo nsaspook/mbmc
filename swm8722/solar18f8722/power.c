@@ -650,7 +650,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	static int16_t CCEFF_tmp = 0;
 	static uint8_t ccs_t = 0, use_dual_load = DUALLOAD, z = 0, CC_DONE = FALSE;
 	static uint16_t t_esr = 0, load_i1 = 0, load_i2 = 0, t_soc = 0;
-	uint8_t ccreset;
+	uint8_t ccreset, cv_set = FALSE;
 
 	CC_DONE = FALSE; // reset the done flag
 	esr_delta = 1957.0; // set the old data flag value
@@ -1016,7 +1016,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			break;
 		}
 
-		if (B_GANGED && (chrg_v < GANGEDHIGH)) { // allow B2 to power the controller unless voltage is too high
+		if (B_GANGED && (chrg_v < GANGEDHIGH)) { // allow B2 to power the controller unless the voltage is too high
 			if ((bn <= HISTBATTNUM) && (BAT2 == R_ON)) {
 				BAT2 = R_OFF; // battery #2 relay/off, supply controller V
 				term_time();
@@ -1028,6 +1028,28 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 					BAT2 = R_ON; // battery #2 relay/on, no controller V
 					term_time();
 					putrs2USART(" Battery 2 disconnected from controller voltage bus\r\n");
+				}
+			}
+		}
+
+		/*
+		 * Dual controller battery charging
+		 */
+		if ((bn == B3) && ((chrg_v < DUAL_CV_LOW) || (R.systemvoltage < BATTCRIT))) {
+			if (BAT4 == R_ON) {
+				BAT4 = R_OFF; // battery #4 relay/off
+				CHRG4 = R_OFF;
+				term_time();
+				putrs2USART(" Battery 4 disconnected from charger bus\r\n");
+			}
+		} else {
+			if ((bn == B3) && (chrg_v > DUAL_CV_HIGH) && (hist[bn].bsoc < DUAL_CV_BSOC)) { // try to charge both to save time
+				if (BAT4 == R_OFF) {
+					BAT4 = R_ON; // battery #4 relay/on
+					CHRG4 = R_ON;
+					cv_set = TRUE;
+					term_time();
+					putrs2USART(" Battery 4 connected to charger bus\r\n");
 				}
 			}
 		}
@@ -1225,6 +1247,12 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		cell[bn].cycles = cycles_tmp + (newdate - cell[bn].date); // update charge time data
 	} while (timetemp < (cell[bn].date + BATCHARGE));
 
+	if (cv_set && (BAT4 == R_ON)) {
+		BAT4 = R_OFF; // battery #4 relay/off
+		CHRG4 = R_OFF;
+		term_time();
+		putrs2USART(" Battery 4 disconnected from charger bus\r\n");
+	}
 	hist[bn].btest = NULL0;
 	pv_pwm_shutdown(); // kill power to PV PWM system
 	B.charge_time_left = NULL0;

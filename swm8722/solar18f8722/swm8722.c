@@ -337,6 +337,7 @@
 //  30.4    Fix accounting bug on battery 3
 //  40.0    New developement branch
 //  40.1    Lots of global variables but embedded C is one trick monkey
+//  40.2    Dual charging of controller batteries and ganged fixes
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags

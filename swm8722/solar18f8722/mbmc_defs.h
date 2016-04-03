@@ -173,6 +173,9 @@
 #define DVOLTAGE        12100ul         // lowest voltage while running diversion.
 #define GANGEDHIGH      13800ul         // voltage limit to supply controller voltage while ganged
 #define GANGEDHYST      14500ul         // upper limit to disconnect from supplying power
+#define DUAL_CV_HIGH	18500ul		// controller battery dual charge params, start voltage
+#define DUAL_CV_LOW	15500ul		// stop voltage
+#define DUAL_CV_BSOC	70		// SOC discharge level for dual charging
 
 /* battery condition defines */
 #define	LOAD_CHECK	100l		// 10A load
