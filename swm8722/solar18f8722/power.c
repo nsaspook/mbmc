@@ -208,14 +208,14 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 	static float weight = 1.0;
 
 	/*      look at cell and history data for next battery to charge or if all are good float on primary battery
-	 *      choice is 0 for normal logic or 1-4 for battery to switch float to
+	 *      choice is 0 for normal logic or 1-4 for battery to switch float to, 5 verbose
 	 *      bn      = battery c40 is currently connected to, or 0
 	 *      0       = float charge on primary if all charged
 	 *      1-4     = battery to run full C40 charge sequence on
 	 *      return  codes -1 = error, 0 = float, 1-4 charge this battery
 	 */
 
-	if ((bn > battnum) || (choice > battnum)) {
+	if ((bn > battnum) || (choice > battnum + 1)) {
 		alarm_buffer[almctr].bn = choice;
 		alarm_buffer[almctr++].alm_num = 23;
 		alarm_codes.alm_flag = TRUE;
@@ -395,6 +395,21 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			pick = B1;
 			weight = cell[B1].weight; // clone B1
 		}
+
+		if (choice == battnum + 1) {
+			if (z == 1) {
+				term_time();
+				sprintf(bootstr2, " Pick Battery:");
+				puts2USART(bootstr2);
+			}
+			sprintf(bootstr2, " Bat #%u, P%i, W%li, Cell W%li:", z, pick, (int32_t) weight, (int32_t) cell[z].weight); // display weight factors
+			puts2USART(bootstr2);
+		}
+	}
+
+	if (choice == battnum + 1) {
+		sprintf(bootstr2, "\r\n"); // display lowest weight factor
+		puts2USART(bootstr2);
 	}
 
 	if (cell[B1].online)

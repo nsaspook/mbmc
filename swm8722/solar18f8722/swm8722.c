@@ -2631,11 +2631,11 @@ void main(void) // Lets Party
 					update_hist();
 					bn = pick_batt(NO, NULL0);
 					noload_soc();
-					bn = pick_batt(NO, NULL0); // again to recheck for valid data
+					bn = pick_batt(battnum + 1, NULL0); // again to recheck for valid data
 					boi = 0;
 					if (cell[B1].online) boi = B1;
 					if (cell[B2].online) boi = B2;
-					if (bn != pick_batt(NO, NULL0)) bn = pick_batt(NO, NULL0); // double check
+					if (bn != pick_batt(NO, NULL0)) bn = pick_batt(battnum + 1, NULL0); // double check
 
 					if ((bn == B0) && (CCMODE == FLOAT_M)) {
 						sprintf(bootstr2, "Battery #1 Float charge          ", bn);
