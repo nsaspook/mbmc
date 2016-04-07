@@ -180,7 +180,7 @@
 /* battery condition defines */
 #define	LOAD_CHECK	100l		// 10A load
 #define	AHADJ		0.33		// dyn Ah adjustment factor for very low SOC, reduce the actual rate by this amount
-#define	CHRG_HIGH	18000ul   	// max voltage while in a charge cycle to have charger on.
+#define	CHRG_HIGH	17200ul   	// max voltage while in a charge cycle to have charger on.
 #define BATTHIGH	16500ul   	// over-voltage point from charge controller
 #define BATTABSORP	14000ul		// absorption voltage min
 #define BATTFRESH	13200ul   	// float voltage after charge
