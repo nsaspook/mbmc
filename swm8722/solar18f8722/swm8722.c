@@ -2045,6 +2045,12 @@ int16_t initsd(void)
 		term_time();
 		putrs2USART(sddump2);
 		SDC0.DAYCLOCK = TRUE; // set dayclock after SD data load
+		if (SDC0.sdpos > SDEND) {
+			SDC0.sdpos = SDSTART;
+			SDC0.sdnext = SDSTART;
+			term_time();
+			putrs2USART(sddump4);
+		}
 	} else {
 		sprintf(bootstr2, "INIT new SD Card.       ");
 		LCD_VC_puts(VC0, DS1, YES);

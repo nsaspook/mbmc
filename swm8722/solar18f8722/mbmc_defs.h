@@ -299,7 +299,7 @@
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
 
 /* Battery charge/discharge adjustment factors */
-#define Perk_ADJ_FL	1.00	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
+#define Perk_ADJ_FL	1.10	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
 #define Perk_ADJ_FH	5.00	// If the peukert_adj is above this, adjust the Ah out by this Ah adjustment factor
 #define Temp_ADJ_FL	1.20	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
 #define Temp_ZERO	267l	// Temperature for base battery rate capacity in tenths of C
@@ -417,6 +417,7 @@
 //	RC3,RC4,RC5     SPI port1 lines
 #define SDINFO		0		// SD card data info block
 #define SDSTART		1		// SD card first data block
+#define SDEND		100000UL	// Save data, restart logging
 #define	SDC0EEP		510             // start address of SD mirror block data in EEPROM
 
 #endif /* MBMC_DEFS_H_INCLUDED */

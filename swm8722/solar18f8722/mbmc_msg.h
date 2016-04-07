@@ -45,6 +45,7 @@ lowbatt0[] = "\n\r Reducing battey Ah rating due to possible discharged battery.
 	sddump1[] = " #### \x1b[7mWrong Type SDCARD Found, Goodbye\x1b[0m ####\r\n",
 	sddump2[] = " Update EEP/SD data.\r\n",
 	sddump3[] = " Update EEP/SD data, New SDCARD Installed.\r\n",
+	sddump4[] = " SD data dumped, New log started.\r\n",
 	divert0[] = " D0  AC Power diversion is ON\r\n",
 	divert1[] = " D1  AC Power diversion is OFF, Bits 4-7: PVV,SOC,DIV,DIW \r\n",
 	divert99[] = "";
