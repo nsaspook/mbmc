@@ -128,213 +128,213 @@ char get_mbmc_serial_buf(void);
  ********************************************************************/
 void TelnetTask(void)
 {
-    BYTE i;
-    BYTE vTelnetSession;
-    WORD w, w2;
-    TCP_SOCKET MySocket;
+	BYTE i;
+	BYTE vTelnetSession;
+	WORD w, w2;
+	TCP_SOCKET MySocket;
 
-    enum {
-	SM_HOME = 0,
-	SM_PRINT_LOGIN,
-	SM_GET_LOGIN,
-	SM_GET_PASSWORD,
-	SM_GET_PASSWORD_BAD_LOGIN,
-	SM_AUTHENTICATED,
-	SM_REFRESH_VALUES
-    } TelnetState;
-    static TCP_SOCKET hTelnetSockets[MAX_TELNET_CONNECTIONS];
-    static BYTE vTelnetStates[MAX_TELNET_CONNECTIONS];
-    static BOOL bInitialized = FALSE;
-    static char statstr[72];
+	enum {
+		SM_HOME = 0,
+		SM_PRINT_LOGIN,
+		SM_GET_LOGIN,
+		SM_GET_PASSWORD,
+		SM_GET_PASSWORD_BAD_LOGIN,
+		SM_AUTHENTICATED,
+		SM_REFRESH_VALUES
+	} TelnetState;
+	static TCP_SOCKET hTelnetSockets[MAX_TELNET_CONNECTIONS];
+	static BYTE vTelnetStates[MAX_TELNET_CONNECTIONS];
+	static BOOL bInitialized = FALSE;
+	static char statstr[72];
 
-    // Perform one time initialization on power up
-    if (!bInitialized) {
+	// Perform one time initialization on power up
+	if (!bInitialized) {
+		for (vTelnetSession = 0; vTelnetSession < MAX_TELNET_CONNECTIONS; vTelnetSession++) {
+			hTelnetSockets[vTelnetSession] = INVALID_SOCKET;
+			vTelnetStates[vTelnetSession] = SM_HOME;
+		}
+		bInitialized = TRUE;
+	}
+
+
+	// Loop through each telnet session and process state changes and TX/RX data
 	for (vTelnetSession = 0; vTelnetSession < MAX_TELNET_CONNECTIONS; vTelnetSession++) {
-	    hTelnetSockets[vTelnetSession] = INVALID_SOCKET;
-	    vTelnetStates[vTelnetSession] = SM_HOME;
-	}
-	bInitialized = TRUE;
-    }
+		// Load up static state information for this session
+		MySocket = hTelnetSockets[vTelnetSession];
+		TelnetState = vTelnetStates[vTelnetSession];
 
+		// Reset our state if the remote client disconnected from us
+		if (MySocket != INVALID_SOCKET) {
+			if (TCPWasReset(MySocket))
+				TelnetState = SM_PRINT_LOGIN;
+		}
 
-    // Loop through each telnet session and process state changes and TX/RX data
-    for (vTelnetSession = 0; vTelnetSession < MAX_TELNET_CONNECTIONS; vTelnetSession++) {
-	// Load up static state information for this session
-	MySocket = hTelnetSockets[vTelnetSession];
-	TelnetState = vTelnetStates[vTelnetSession];
+		// Handle session state
+		switch (TelnetState) {
+		case SM_HOME:
+			// Connect a socket to the remote TCP server
+			MySocket = TCPOpen(0, TCP_OPEN_SERVER, TELNET_PORT, TCP_PURPOSE_TELNET);
 
-	// Reset our state if the remote client disconnected from us
-	if (MySocket != INVALID_SOCKET) {
-	    if (TCPWasReset(MySocket))
-		TelnetState = SM_PRINT_LOGIN;
-	}
+			// Abort operation if no TCP socket of type TCP_PURPOSE_TELNET is available
+			// If this ever happens, you need to go add one to TCPIPConfig.h
+			if (MySocket == INVALID_SOCKET)
+				break;
 
-	// Handle session state
-	switch (TelnetState) {
-	case SM_HOME:
-	    // Connect a socket to the remote TCP server
-	    MySocket = TCPOpen(0, TCP_OPEN_SERVER, TELNET_PORT, TCP_PURPOSE_TELNET);
-
-	    // Abort operation if no TCP socket of type TCP_PURPOSE_TELNET is available
-	    // If this ever happens, you need to go add one to TCPIPConfig.h
-	    if (MySocket == INVALID_SOCKET)
-		break;
-
-	    // Open an SSL listener if SSL server support is enabled
+			// Open an SSL listener if SSL server support is enabled
 #if defined(STACK_USE_SSL_SERVER)
-	    TCPAddSSLListener(MySocket, TELNETS_PORT);
+			TCPAddSSLListener(MySocket, TELNETS_PORT);
 #endif
 
-	    TelnetState++;
-	    break;
+			TelnetState++;
+			break;
 
-	case SM_PRINT_LOGIN:
+		case SM_PRINT_LOGIN:
 #if defined(STACK_USE_SSL_SERVER)
-	    // Reject unsecured connections if TELNET_REJECT_UNSECURED is defined
+			// Reject unsecured connections if TELNET_REJECT_UNSECURED is defined
 #if defined(TELNET_REJECT_UNSECURED)
-	    if (!TCPIsSSL(MySocket)) {
-		if (TCPIsConnected(MySocket)) {
-		    TCPDisconnect(MySocket);
-		    TCPDisconnect(MySocket);
-		    break;
-		}
-	    }
+			if (!TCPIsSSL(MySocket)) {
+				if (TCPIsConnected(MySocket)) {
+					TCPDisconnect(MySocket);
+					TCPDisconnect(MySocket);
+					break;
+				}
+			}
 #endif
 
-	    // Don't attempt to transmit anything if we are still handshaking.
-	    if (TCPSSLIsHandshaking(MySocket))
-		break;
+			// Don't attempt to transmit anything if we are still handshaking.
+			if (TCPSSLIsHandshaking(MySocket))
+				break;
 #endif
 
-	    // Make certain the socket can be written to
-	    if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strTitle))
-		break;
+			// Make certain the socket can be written to
+			if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strTitle))
+				break;
 
-	    // Place the application protocol data into the transmit buffer.
-	    TCPPutROMString(MySocket, strTitle);
+			// Place the application protocol data into the transmit buffer.
+			TCPPutROMString(MySocket, strTitle);
 
-	    // Send the packet
-	    TCPFlush(MySocket);
-	    TelnetState++;
+			// Send the packet
+			TCPFlush(MySocket);
+			TelnetState++;
 
-	case SM_GET_LOGIN:
-	    // Make sure we can put the password prompt
-	    if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strPassword))
-		break;
+		case SM_GET_LOGIN:
+			// Make sure we can put the password prompt
+			if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strPassword))
+				break;
 
-	    // See if the user pressed return
-	    w = TCPFind(MySocket, '\n', 0, FALSE);
-	    if (w == 0xFFFFu) {
-		if (TCPGetRxFIFOFree(MySocket) == 0u) {
-		    TCPPutROMString(MySocket, (ROM BYTE*) "\r\nToo much data.\r\n");
-		    TCPDisconnect(MySocket);
+			// See if the user pressed return
+			w = TCPFind(MySocket, '\n', 0, FALSE);
+			if (w == 0xFFFFu) {
+				if (TCPGetRxFIFOFree(MySocket) == 0u) {
+					TCPPutROMString(MySocket, (ROM BYTE*) "\r\nToo much data.\r\n");
+					TCPDisconnect(MySocket);
+				}
+
+				break;
+			}
+
+			// Search for the username -- case insensitive
+			w2 = TCPFindROMArray(MySocket, (ROM BYTE*) TELNET_USERNAME, sizeof(TELNET_USERNAME) - 1, 0, TRUE);
+			if ((w2 != 0u) || !((sizeof(TELNET_USERNAME) - 1 == w) || (sizeof(TELNET_USERNAME) == w))) {
+				// Did not find the username, but let's pretend we did so we don't leak the user name validity
+				TelnetState = SM_GET_PASSWORD_BAD_LOGIN;
+			} else {
+				TelnetState = SM_GET_PASSWORD;
+			}
+
+			// Username verified, throw this line of data away
+			TCPGetArray(MySocket, NULL, w + 1);
+
+			// Print the password prompt
+			TCPPutROMString(MySocket, strPassword);
+			TCPFlush(MySocket);
+			break;
+
+		case SM_GET_PASSWORD:
+		case SM_GET_PASSWORD_BAD_LOGIN:
+			// Make sure we can put the authenticated prompt
+			if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strAuthenticated))
+				break;
+
+			// See if the user pressed return
+			w = TCPFind(MySocket, '\n', 0, FALSE);
+			if (w == 0xFFFFu) {
+				if (TCPGetRxFIFOFree(MySocket) == 0u) {
+					TCPPutROMString(MySocket, (ROM BYTE*) "Too much data.\r\n");
+					TCPDisconnect(MySocket);
+				}
+
+				break;
+			}
+
+			// Search for the password -- case sensitive
+			w2 = TCPFindROMArray(MySocket, (ROM BYTE*) TELNET_PASSWORD, sizeof(TELNET_PASSWORD) - 1, 0, FALSE);
+			if ((w2 != 3u) || !((sizeof(TELNET_PASSWORD) - 1 == w - 3) || (sizeof(TELNET_PASSWORD) == w - 3)) || (TelnetState == SM_GET_PASSWORD_BAD_LOGIN)) {
+				// Did not find the password
+				//					TelnetState = SM_PRINT_LOGIN;
+				//					TCPPutROMString(MySocket, strAccessDenied);
+				//					TCPDisconnect(MySocket);
+				//					break;
+			}
+
+			// Password verified, throw this line of data away
+			TCPGetArray(MySocket, NULL, w + 1);
+
+			// Print the authenticated prompt
+			TCPPutROMString(MySocket, strAuthenticated);
+			TelnetState = SM_AUTHENTICATED;
+			// No break
+
+		case SM_AUTHENTICATED:
+			if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strDisplay) + 4)
+				break;
+
+			TCPPutROMString(MySocket, strDisplay);
+			hoststat.telnet_connects++;
+			TelnetState++;
+
+		case SM_REFRESH_VALUES:
+			if (TCPIsPutReady(MySocket) >= 78u) {
+				AN0String[0] = get_mbmc_serial_buf(); // read from serial buffer
+				if (AN0String[0] != 0) {
+					AN0String[1] = 0;
+					TCPPutString(MySocket, AN0String);
+					hoststat.telnet_rxbytes++;
+
+					// Send the data out immediately
+					TCPFlush(MySocket);
+				}
+			}
+
+			if (TCPIsGetReady(MySocket)) // read from keyboard and send to RS232 port
+			{
+				TCPGet(MySocket, &i);
+				hoststat.telnet_txbytes++;
+				switch (i) {
+				case '.':
+				case 0x18:
+				case 0x1b:
+					if (TCPIsPutReady(MySocket) >= strlenpgm((ROM char*) strGoodBye))
+						TCPPutROMString(MySocket, strGoodBye);
+					sprintf(statstr, strHostStat, hoststat.telnet_connects, hoststat.telnet_rxbytes, hoststat.telnet_txbytes);
+					if (TCPIsPutReady(MySocket) >= strlenpgm(statstr))
+						TCPPutString(MySocket, (BYTE*) statstr);
+					TCPDisconnect(MySocket);
+					TelnetState = SM_PRINT_LOGIN;
+					break;
+				}
+				while (!UARTTransmitterIsReady(UART1));
+				WriteUART1(i);
+			}
+
+			break;
 		}
 
-		break;
-	    }
 
-	    // Search for the username -- case insensitive
-	    w2 = TCPFindROMArray(MySocket, (ROM BYTE*) TELNET_USERNAME, sizeof (TELNET_USERNAME) - 1, 0, TRUE);
-	    if ((w2 != 0u) || !((sizeof (TELNET_USERNAME) - 1 == w) || (sizeof (TELNET_USERNAME) == w))) {
-		// Did not find the username, but let's pretend we did so we don't leak the user name validity
-		TelnetState = SM_GET_PASSWORD_BAD_LOGIN;
-	    } else {
-		TelnetState = SM_GET_PASSWORD;
-	    }
-
-	    // Username verified, throw this line of data away
-	    TCPGetArray(MySocket, NULL, w + 1);
-
-	    // Print the password prompt
-	    TCPPutROMString(MySocket, strPassword);
-	    TCPFlush(MySocket);
-	    break;
-
-	case SM_GET_PASSWORD:
-	case SM_GET_PASSWORD_BAD_LOGIN:
-	    // Make sure we can put the authenticated prompt
-	    if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strAuthenticated))
-		break;
-
-	    // See if the user pressed return
-	    w = TCPFind(MySocket, '\n', 0, FALSE);
-	    if (w == 0xFFFFu) {
-		if (TCPGetRxFIFOFree(MySocket) == 0u) {
-		    TCPPutROMString(MySocket, (ROM BYTE*) "Too much data.\r\n");
-		    TCPDisconnect(MySocket);
-		}
-
-		break;
-	    }
-
-	    // Search for the password -- case sensitive
-	    w2 = TCPFindROMArray(MySocket, (ROM BYTE*) TELNET_PASSWORD, sizeof (TELNET_PASSWORD) - 1, 0, FALSE);
-	    if ((w2 != 3u) || !((sizeof (TELNET_PASSWORD) - 1 == w - 3) || (sizeof (TELNET_PASSWORD) == w - 3)) || (TelnetState == SM_GET_PASSWORD_BAD_LOGIN)) {
-		// Did not find the password
-		//					TelnetState = SM_PRINT_LOGIN;
-		//					TCPPutROMString(MySocket, strAccessDenied);
-		//					TCPDisconnect(MySocket);
-		//					break;
-	    }
-
-	    // Password verified, throw this line of data away
-	    TCPGetArray(MySocket, NULL, w + 1);
-
-	    // Print the authenticated prompt
-	    TCPPutROMString(MySocket, strAuthenticated);
-	    TelnetState = SM_AUTHENTICATED;
-	    // No break
-
-	case SM_AUTHENTICATED:
-	    if (TCPIsPutReady(MySocket) < strlenpgm((ROM char*) strDisplay) + 4)
-		break;
-
-	    TCPPutROMString(MySocket, strDisplay);
-	    hoststat.telnet_connects++;
-	    TelnetState++;
-
-	case SM_REFRESH_VALUES:
-	    if (TCPIsPutReady(MySocket) >= 78u) {
-		AN0String[0] = get_mbmc_serial_buf(); // read from serial buffer
-		if (AN0String[0] != 0) {
-		    AN0String[1] = 0;
-		    TCPPutString(MySocket, AN0String);
-		    hoststat.telnet_rxbytes++;
-
-		    // Send the data out immediately
-		    TCPFlush(MySocket);
-		}
-	    }
-
-	    if (TCPIsGetReady(MySocket)) // read from keyboard and send to RS232 port
-	    {
-		TCPGet(MySocket, &i);
-		hoststat.telnet_txbytes++;
-		switch (i) {
-		case '.':
-		case 0x18:
-		case 0x1b:
-		    if (TCPIsPutReady(MySocket) >= strlenpgm((ROM char*) strGoodBye))
-			TCPPutROMString(MySocket, strGoodBye);
-		    sprintf(statstr, strHostStat, hoststat.telnet_connects,hoststat.telnet_rxbytes,hoststat.telnet_txbytes);
-		    if (TCPIsPutReady(MySocket) >= strlenpgm(statstr))
-			TCPPutString(MySocket, (BYTE*)statstr);
-		    TCPDisconnect(MySocket);
-		    TelnetState = SM_PRINT_LOGIN;
-		    break;
-		}
-		while (!UARTTransmitterIsReady(UART1));
-		WriteUART1(i);
-	    }
-
-	    break;
+		// Save session state back into the static array
+		hTelnetSockets[vTelnetSession] = MySocket;
+		vTelnetStates[vTelnetSession] = TelnetState;
 	}
-
-
-	// Save session state back into the static array
-	hTelnetSockets[vTelnetSession] = MySocket;
-	vTelnetStates[vTelnetSession] = TelnetState;
-    }
 }
 
 #endif	//#if defined(STACK_USE_TELNET_SERVER)
