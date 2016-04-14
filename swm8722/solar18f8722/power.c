@@ -407,11 +407,6 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		}
 	}
 
-	if (choice == battnum + 1) {
-		sprintf(bootstr2, "\r\n"); // display lowest weight factor
-		puts2USART(bootstr2);
-	}
-
 	if (cell[B1].online)
 		boi = B1;
 	if (cell[B2].online)
@@ -423,12 +418,17 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 	s_crit(HL);
 	/* try to stop extra alerts with a delay timer */
 	if (CCS.alert || (alert_clock != 0)) {
-		if (alert_clock == 0) alert_clock = V.timerint_count; // start the alert timer
+		if (alert_clock == 0)
+			alert_clock = V.timerint_count; // start the alert timer
 		if (V.timerint_count - alert_clock > ALERT_TIME) { // alert timer done
 			alert_clock = 0; // use normal picks again
 		} else {
 			pick = alert_pick; // LOCK pick and bn
 			CCS.bn = pick;
+			if (choice == battnum + 1) {
+				sprintf(bootstr2, " \x1b[7mALERT\x1b[0m ", pick); // display lowest weight factor
+				puts2USART(bootstr2);
+			}
 		}
 	} else {
 		alert_pick = 0; // UNLOCK the alert battery
@@ -514,6 +514,11 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			divert_power(OFF, (R.primarypower[boi] < DVOLTAGE), B.d_code); // Turn off extra loads
 			D_OFF = LOW;
 		}
+	}
+
+	if (choice == battnum + 1) {
+		sprintf(bootstr2, " : Picked %i\r\n", pick); // display lowest weight factor
+		puts2USART(bootstr2);
 	}
 	return pick; // battery to charge
 }
