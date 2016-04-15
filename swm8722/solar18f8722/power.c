@@ -477,6 +477,11 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 	}
 	LCD_VC_puts(VC2, DS3, YES);
 
+	if (choice == battnum + 1) {
+		sprintf(bootstr2, " : Picked %i\r\n", pick); // display lowest weight factor
+		puts2USART(bootstr2);
+	}
+
 	check_alarm(pick, " pick_batt4 "); // send alarm codes to terminal if alm_flag is set
 
 	ahfp(C.currentload, f3);
@@ -516,10 +521,6 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		}
 	}
 
-	if (choice == battnum + 1) {
-		sprintf(bootstr2, " : Picked %i\r\n", pick); // display lowest weight factor
-		puts2USART(bootstr2);
-	}
 	return pick; // battery to charge
 }
 
