@@ -926,10 +926,10 @@ void system_data(void) // display system data on terminal
 	if (B_GANGED) putrs2USART(" \x1b[7mStrings 1&2 are GANGED\x1b[0m,");
 	if (!DIPSW7) putrs2USART(" Power Diversion enabled: DIPSW7,");
 	if (DIVERSION) {
-		sprintf(bootstr2, " Diversion Status %i: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) DIVERSION, (int16_t) MBMC.diversion.power,
+		sprintf(bootstr2, " Diversion Status Off: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) MBMC.diversion.power,
 			(int16_t) B.today, (int16_t) B.yesterday);
 	} else {
-		sprintf(bootstr2, " \x1b[7mDiversion Status\x1b[0m %i: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) DIVERSION, (int16_t) MBMC.diversion.power,
+		sprintf(bootstr2, " \x1b[7mDiversion Status On\x1b[0m: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) MBMC.diversion.power,
 			(int16_t) B.today, (int16_t) B.yesterday);
 	}
 	puts2USART(bootstr2);
