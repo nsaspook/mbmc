@@ -1318,17 +1318,19 @@ void mkbsstring(void) // generate status report string
 				s_crit(HL);
 				sprintf(block_buffer, sd_data_layout1,
 					utctime, P.PRIPOWEROK, DIPSW, SDC0.DAYCLOCK, SDC0.sdpos, SDC0.timekeep, SDC0.time,
-					SDC0.harvest.energy, SDC0.harvest.usage, SDC0.harvest.prev_energy, SDC0.harvest.prev_usage, SDC0.harvest.e_total, SDC0.harvest.u_total,
-					SDC0.harvest.count, SDC0.harvest.charger, SDC0.harvest.c_total, SDC0.harvest.prev_charger, SDC0.harvest.diversion);
+					SDC0.harvest.energy, SDC0.harvest.usage, SDC0.harvest.prev_energy, SDC0.harvest.prev_usage,
+					SDC0.harvest.e_total, SDC0.harvest.u_total, SDC0.harvest.count, SDC0.harvest.charger,
+					SDC0.harvest.c_total, SDC0.harvest.prev_charger, SDC0.harvest.diversion);
 				sprintf(block_buffer + strlen(block_buffer), sd_data_layout2,
 					CHARGERL, DIVERSION, (int16_t) B_GANGED,
-					R.systemvoltage / 100, R.inputvoltage / 100, R.ccvoltage / 100, R.primarypower[B1] / 100, R.primarypower[B2] / 100, R.currentin, R.current, C.currentload,
-					cell[B1].cconline, cell[B1].online, cell[B1].cycles, cell[B2].cconline, cell[B2].online, cell[B2].cycles,
-					cell[B1].id, cell[B2].id, cell[B3].id, cell[B4].id,
+					R.systemvoltage / 100, R.inputvoltage / 100, R.ccvoltage / 100, R.primarypower[B1] / 100,
+					R.primarypower[B2] / 100, R.currentin, R.current, C.currentload,
+					cell[B1].cconline, cell[B1].online, cell[B1].cycles, cell[B2].cconline, cell[B2].online,
+					cell[B2].cycles, cell[B1].id, cell[B2].id, cell[B3].id, cell[B4].id,
 					R.thermo_batt, (uint32_t) (hist[CCS.boc].cef * 100), (int16_t) MBMC.diversion.power);
 				sprintf(block_buffer + strlen(block_buffer), sd_data_layout3,
-					C.temp_drate, B.start_ahu, B.cef_raw, B.start_ahi, B.start_aho, B.absorp_ahi, B.absorp_time, B.charge_time_left,
-					(int16_t) B.yesterday, (int16_t) B.today);
+					C.temp_drate, B.start_ahu, B.cef_raw, B.start_ahi, B.start_aho, B.absorp_ahi, B.absorp_time,
+					B.charge_time_left, (int16_t) B.yesterday, (int16_t) B.today);
 				if (!PIE1bits.TX1IE) {
 					mbmc_update(); // push new data into the MBMC structure
 				}
