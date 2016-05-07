@@ -316,6 +316,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		if (cell[z].online == TRUE) {
 			if (R.primarypower[z] < INV_VOLT_LOW) cell[z].weight = LOWPOINTS;
 			cell[z].weight -= INVPOINTS; // points off  for inverter battery
+			if ((R.current > INV_LOADED) &&(CCS.boc != CCS.boi)) { // at large loads jump to the inverter battery
+				cell[CCS.boi].weight = MINWEIGHT;
+				cell[CCS.boi].critical = TRUE;
+			}
 			if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 			if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
 			if ((cell[z].weight < WCHARGER) && P.SYSTEM_STABLE) {

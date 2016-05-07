@@ -297,6 +297,7 @@
 #define	INVPOINTS	2000.0	// weight points for battery on inverter
 #define	LOWPOINTS       20000.0	// weight points for a very low battery
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
+#define INV_LOADED	300	// amps to switch charge to inverter battery quickly
 
 /* Battery charge/discharge adjustment factors */
 #define Perk_ADJ_FL	1.10	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
