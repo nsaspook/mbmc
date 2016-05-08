@@ -319,6 +319,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			if ((R.current > INV_LOADED) &&(CCS.boc != CCS.boi)) { // at large loads jump to the inverter battery
 				cell[CCS.boi].weight = MINWEIGHT;
 				cell[CCS.boi].critical = TRUE;
+				CCS.alert=TRUE;
+				cell[B0B].weight = MAXWEIGHT;
+				cell[B0B].critical = FALSE;
+				CCS.bn=CCS.boi;
 			}
 			if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 			if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values

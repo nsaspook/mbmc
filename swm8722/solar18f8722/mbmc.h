@@ -255,7 +255,7 @@ typedef struct mbmclinktype {
 } volatile mbmclinktype;
 
 typedef struct R_data { // set only in adc_read
-	int32_t current, currentin, currentcharger, thermo_batt;
+	int32_t current, currentin, currentcharger, thermo_batt, cin_fast;
 	uint32_t systemvoltage, ccvoltage, inputvoltage, primarypower[POWER_SLOTS];
 } R_data;
 

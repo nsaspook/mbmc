@@ -166,7 +166,7 @@ void tick_handler(void) // This is the high priority ISR routine
 		}
 
 		// check for charger on with high input voltage on array or too much current when on
-		if ((R.currentin > MAX_SAFEAMPS) || (P.SYSTEM_STABLE && (!CHARGERL) && (R.inputvoltage > CHRG_HIGH) && (!cell[CCS.boc].critical) && (CCS.boc != B0))) {
+		if ((R.cin_fast > MAX_CHARGEAMPS) || (P.SYSTEM_STABLE && (!CHARGERL) && (R.inputvoltage > CHRG_HIGH) && (!cell[CCS.boc].critical) && (CCS.boc != B0))) {
 			c_off = V.timerint_count;
 			CHARGERL = R_OFF; // save grid power because PV is online and providing excess power
 			solarup_delay = NULL0;
@@ -174,6 +174,15 @@ void tick_handler(void) // This is the high priority ISR routine
 			alarm_buffer[almctr++].alm_num = 7;
 			alarm_codes.alm_flag = TRUE;
 		}
+
+		/*
+		 * at max safe input current, we have an input fuse
+		 * but maybe we can include some active protection
+		 */
+		if (R.currentin > MAX_SAFEAMPS) {
+			//SOLAROFF=R_OFF;
+		}
+
 
 		/* cycled LCD display screens */
 		if (worker_timer-- <= 1) { // check worker thread go flag

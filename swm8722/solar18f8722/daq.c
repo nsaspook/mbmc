@@ -85,6 +85,7 @@ void ADC_read(void) // update all voltage/current readings and set load current 
 		currentin_t = 0; // zero bit noise
 	currentin_t = (int32_t) ((float) currentin_t / (float) 10.0); // tenths of an amp
 	currentin_t = (int32_t) ((float) currentin_t / (float) AMP50_SEN);
+	R.cin_fast = currentin_t; // before the filter for quick response
 	currentin_t = (int32_t) lp_filter((float) currentin_t, LP_CURRENTIN, TRUE); // use digital filter for current
 	if (a50 == NULL0) currentin_t = 0; // if sensor disconnected read zero
 
@@ -167,11 +168,11 @@ void do_sim(void) // create baseline test data, call in a critical section to pr
 	R.inputvoltage = 0ul;
 	R.primarypower[B0] = 0; // NULL0 battery
 	R.primarypower[B1] = 13200ul;
-//	rawp2 = 13200ul;
+	//	rawp2 = 13200ul;
 	cell[B1].voltage = 13200l;
 	cell[B1].noload = 13400l;
 	R.primarypower[B2] = 13200ul;
-//	rawp3 = 13200ul;
+	//	rawp3 = 13200ul;
 	cell[B2].voltage = 13200l;
 	cell[B2].noload = 13400l;
 	P.POWER_UNSTABLE = FALSE;
@@ -185,7 +186,7 @@ void do_sim(void) // create baseline test data, call in a critical section to pr
 		R.systemvoltage = 12000ul;
 		R.ccvoltage = 13400ul;
 		R.inputvoltage = 15500ul;
-//		rawp1 = R.inputvoltage;
+		//		rawp1 = R.inputvoltage;
 	}
 	if (SIM_FLAG & 0b00000010) {
 		R.current = 0l;
@@ -196,7 +197,7 @@ void do_sim(void) // create baseline test data, call in a critical section to pr
 		R.systemvoltage = 12000ul;
 		R.ccvoltage = 0ul;
 		R.inputvoltage = 0ul;
-//		rawp1 = R.inputvoltage;
+		//		rawp1 = R.inputvoltage;
 	}
 	if (SIM_FLAG & 0b00000100);
 	if (SIM_FLAG & 0b00001000);
