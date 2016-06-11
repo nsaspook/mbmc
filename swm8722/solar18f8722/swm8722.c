@@ -338,6 +338,7 @@
 //  40.0    New developement branch
 //  40.1    Lots of global variables but embedded C is one trick monkey
 //  40.2    Dual charging of controller batteries and ganged fixes
+//  40.3    get local time, equilization function and full charge count fixes
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
@@ -483,7 +484,7 @@ union Timers hirez_0 = 0, hirez_1 = 0;
 volatile uint32_t display_count = 0,
 	status_count = 0, cctimer = CCLEDTIME,
 	dayclockup = 0, dayclockdown = 0, worker_count = 0, critc_count = 0, d_on = 0, d_off = 0,
-	c_on = 0, c_off = 0;
+	c_on = 0, c_off = 0, dayclocklocal=0;
 
 #pragma idata gpr3
 volatile uint8_t HOST_BUSY = FALSE, HOST_COMM = FALSE;

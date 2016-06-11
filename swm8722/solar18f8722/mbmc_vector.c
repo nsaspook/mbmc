@@ -13,6 +13,7 @@ void tick_handler(void) // This is the high priority ISR routine
 	static union Timers timer;
 
 	_asm nop _endasm // asm code to disable compiler optimizations
+	TIMESIG = HIGH;
 	V.highint_count++; // high int counter
 	hirez_tmp0 = (uint16_t) TMR0L;
 	hirez_tmp0 += (uint16_t) (TMR0H << SHIFT8); // load high byte in tmp counter
@@ -83,6 +84,7 @@ void tick_handler(void) // This is the high priority ISR routine
 		/* daily housekeeping routines */
 		if (((!SDC0.DAYCLOCK) && (R.inputvoltage > SOLARUP)) && P.SYSTEM_STABLE && (solarup_delay++ >= SUPDELAY) && CHARGERL) { // store sun up time
 			dayclockup = V.timerint_count;
+			dayclocklocal = localtime; // set real local time from UTC offset clock
 			solarup_delay = NULL0;
 			SDC0.DAYCLOCK = TRUE;
 			glitch_count = NULL0;
@@ -146,6 +148,7 @@ void tick_handler(void) // This is the high priority ISR routine
 					if (P.FORCEDAY) {
 						P.FORCEDAY = FALSE;
 						dayclockup = V.timerint_count;
+						dayclocklocal = localtime;
 					}
 					solarup_delay = NULL0;
 					P.SAVE_DAILY = TRUE; // Flag to save data outside of the ISR daily
@@ -189,7 +192,6 @@ void tick_handler(void) // This is the high priority ISR routine
 		/* cycled LCD display screens */
 		if (worker_timer-- <= 1) { // check worker thread go flag
 			P.WORKERFLAG = TRUE;
-			TIMESIG = !TIMESIG;
 			worker_timer = WORKSEC;
 
 			if (DISPLAY_MODE) {
@@ -317,6 +319,14 @@ void tick_handler(void) // This is the high priority ISR routine
 				P.PRIPOWEROK = TRUE;
 			}
 		}
+
+
+		if ((alarms.mbmc_alarm.absorp || alarms.mbmc_alarm.equal) && (!(V.timerint_count % ALARM_TIMEOUT))) {
+			ALARMOUT = R_ON;
+		}
+
+		if ((V.timerint_count % ALARM_TIMEOUT) == 1)
+			ALARMOUT = R_OFF;
 
 	}
 
@@ -689,6 +699,7 @@ void tick_handler(void) // This is the high priority ISR routine
 	hirez_tmp1 = (uint16_t) TMR0L;
 	hirez_tmp1 += (uint16_t) (TMR0H << SHIFT8); // load high byte in tmp counter
 	hirez_count[2] += (hirez_tmp1 - hirez_tmp0); // how many counts we were in routines
+	TIMESIG = LOW;
 }
 #pragma	tmpdata
 

@@ -50,7 +50,7 @@ extern volatile enum mbmode_t {
 } BMMODE;
 extern volatile struct battbufftype battbuffer, batttype;
 extern volatile struct mbmcflagtype mbmcflag, mbmc_dumpflag;
-extern volatile uint32_t utctime, localtime;
+extern volatile uint32_t utctime, localtime, dayclocklocal;
 
 extern volatile union {
 	uint32_t netdword;

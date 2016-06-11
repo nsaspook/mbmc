@@ -213,6 +213,7 @@
 #define MINRUNTIME	0.05
 #define	VENTENABLE	HIGH
 #define	LOGGERTIME	30
+#define ALARM_TIMEOUT	10800ul
 
 /* ADC scaling defines */
 #define AMP300_OF	521ul		// dc offset for amploc amp300 sensor raw bit count
