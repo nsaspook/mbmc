@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.2 FB  "                  // version text header
-#define	MAGIC		0x0402  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.3 FB  "                  // version text header
+#define	MAGIC		0x0403  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -12,6 +12,7 @@
 #define CHECKMARK	0x57					// EEPROM checkmark
 #define CHECKMARK_CRC	0x57575757ul				// 32 bit crc checkmark
 #define MAXSECONDS      31557600ul*10ul				// 10 years
+#define LOCALTIME_OFFSET	60ul*60ul*(-8ul)
 #define EEPROM_BAT	0
 #define EEPROM_ADC	8
 #define EEPROM_HIS	32

@@ -503,7 +503,7 @@ const rom int8_t *build_date = __DATE__, *build_time = __TIME__;
 VOLUME_INFO_TYPE MMC_volume_Info = {0}, *vinf = 0;
 volatile uint16_t solarup_delay = 0;
 uint16_t zero_ref = 0, max_eeprom_data = 1024;
-volatile uint32_t utctime = 0;
+volatile uint32_t utctime = 0, localtime=0;
 
 volatile union {
 	uint32_t netdword;
@@ -1268,7 +1268,7 @@ void mbmc_update(void)
 
 	MBMC.PRIPOWEROK = P.PRIPOWEROK;
 	MBMC.DIPSW = DIPSW;
-	MBMC.UTC = utctime;
+	MBMC.UTC = localtime; // change to localtime
 
 	MBMC.pick = CCS.pick;
 	MBMC.boi = CCS.boi;
@@ -2165,6 +2165,7 @@ void main(void) // Lets Party
 	SDC0.DAYCLOCK = FALSE;
 	B.yesterday = 0;
 	B.today = 0;
+	B.equal=0;
 	C.t_comp = 1.0; // 1.0 is the default
 	dsi = VC0; // set display index to 0 for monitor strings
 	battbuffer.busy = FALSE;
@@ -2605,7 +2606,7 @@ void main(void) // Lets Party
 							term_time();
 							putrs2USART(runcode4);
 							bn = z; // set battery #
-							hist[bn].h[4]++; // full discharge cycles, will also update B2 when ganged
+							hist[bn].h[5]++; // full discharge cycles, will also update B2 when ganged
 							if ((z == B2) && B_GANGED) {
 								term_time();
 								sprintf(bootstr2, " Battery %2i,  \x1b[7mGANGED to B1\x1b[0m \n\r", z);

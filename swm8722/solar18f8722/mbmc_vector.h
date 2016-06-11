@@ -42,19 +42,19 @@ extern volatile struct P_data P;
 extern volatile union Alarm alarms;
 
 extern volatile enum ccmode_t {
-    IDLE_M, BULK_M, FLOAT_M, TEST_M, ABSORP_M, FLOAT_W
+	IDLE_M, BULK_M, FLOAT_M, TEST_M, ABSORP_M, FLOAT_W
 } CCMODE;
 
 extern volatile enum mbmode_t {
-    IDLE_M, CHARGE_M, FLOAT_M, TEST_M
+	IDLE_M, CHARGE_M, FLOAT_M, TEST_M
 } BMMODE;
 extern volatile struct battbufftype battbuffer, batttype;
 extern volatile struct mbmcflagtype mbmcflag, mbmc_dumpflag;
-extern volatile uint32_t utctime;
+extern volatile uint32_t utctime, localtime;
 
 extern volatile union {
-    uint32_t netdword;
-    uint8_t netdbyte[4];
+	uint32_t netdword;
+	uint8_t netdbyte[4];
 } netd;
 extern volatile int32_t time_skew_base, time_skew, absorp_current;
 extern volatile uint8_t netdword_pos;
@@ -62,7 +62,7 @@ extern volatile uint8_t UTC_flag, UTC_ok;
 extern volatile uint8_t HOST_BUSY;
 
 extern volatile enum answer_t {
-    WAIT_M, YES_M, NO_M
+	WAIT_M, YES_M, NO_M
 } YNKEY;
 /* END HIGH ISR */
 

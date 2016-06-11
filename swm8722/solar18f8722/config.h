@@ -61,6 +61,8 @@
 /* Charge Controller limit in 0.1A units */
 #define MAX_SAFEAMPS    425             // Max safe current for the C40 controller +6%
 #define MAX_CHARGEAMPS	350		// don't overcharge battery with PV and charger on 
+#define CHARGER_AMPS	250		// max current from the utility charger.
+#define CHARGER_EQUAL	20		// number of full cycles before an equalization charge is flagged
 
 /* Battery Ah caps	in 1.0A units */
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4

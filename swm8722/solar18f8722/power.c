@@ -664,8 +664,11 @@ void Cycle_Update(uint16_t t_soc, uint8_t bn)
 {
 	if (t_soc < SOC_DF)
 		hist[bn].h[5]++; // full discharge cycles
-	if (hist[bn].bsoc >= SOC_FF)
+	if (hist[bn].bsoc >= SOC_FF) {
 		hist[bn].h[4]++; // inc full charge hist data
+		B.equal++;
+	}
+	
 	if ((bn == B1) && B_GANGED) {
 		hist[B2].h[4]++; // inc full charge hist data
 		hist[B2].h[5]++; // full discharge cycles
@@ -1174,6 +1177,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 							hist[bn].cef_calc = CEF_HSOC;
 					}
 					hist[bn].h[4]++; // inc full charge hist data
+					B.equal++;
 					if ((bn == B1) && B_GANGED)
 						hist[B2].h[4]++; // inc full charge hist data
 					if (t_soc < SOC_DF) {

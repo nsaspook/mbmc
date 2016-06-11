@@ -155,8 +155,10 @@ void tick_handler(void) // This is the high priority ISR routine
 					hist[B1].ahop += AH_DAY_LOSS1; // default daily Ah discharge batt1
 					hist[B2].ahop += AH_DAY_LOSS2; // default daily Ah discharge batt2
 					B.watercounter = cell[B1].cycles + cell[B2].cycles + cell[B3].cycles + cell[B4].cycles;
-					if ((B.watercounter - B.watercounter_prev) >= BATTWATER) { //check for the next step in charge time
+					if ((B.watercounter - B.watercounter_prev) >= BATTWATER || B.equal >= CHARGER_EQUAL) { //check for the next step in charge time
 						alarms.mbmc_alarm.absorp = 1;
+						if (B.equal >= CHARGER_EQUAL)
+							alarms.mbmc_alarm.equal = 1;
 					}
 					alarm_buffer[almctr].bn = CCS.boc;
 					alarm_buffer[almctr++].alm_num = 8;
@@ -358,6 +360,7 @@ void tick_handler(void) // This is the high priority ISR routine
 				if ((netdword_pos >= NTP_SIZE) && UTC_flag) { // check for all 4 bytes
 					if (netd.netdword > CHECK_DATE) { // check if it's a good date
 						utctime = netd.netdword; // set local controller UTC to NTP
+						localtime = utctime + LOCALTIME_OFFSET;
 						if (UTC_ok) {
 							time_skew = time_skew_base - (utctime - V.timerint_count); // find the diff (with network latency)
 						} else {
@@ -598,8 +601,10 @@ void tick_handler(void) // This is the high priority ISR routine
 			break;
 		case 'w': // clear watering counter flag
 			alarms.mbmc_alarm.absorp = 0;
+			alarms.mbmc_alarm.equal = 0;
 			B.watercounter_prev = cell[B1].cycles + cell[B2].cycles + cell[B3].cycles + cell[B4].cycles; // need a new starting point
 			B.watercounter = B.watercounter_prev;
+			B.equal = 0; // also clear the equalization flag
 			break;
 		case 'W': // set watering counter flag
 			alarms.mbmc_alarm.absorp = 1;

@@ -276,7 +276,7 @@ typedef struct B_data {
 	uint8_t yesterday, today, r_soc[DATA_SLOTS]; // Harvest quality for the whole day, 0..100, uses time of harvest (seconds) -> input power (watts) -> max power (watts).
 	int32_t diversion;
 	int32_t watercounter, watercounter_prev;
-	uint8_t d_code;
+	uint8_t d_code, equal;
 } volatile B_data; // of each measurement during that period.
 
 struct battbufftype {
@@ -329,7 +329,7 @@ struct alarmtype {
 	uint8_t inverter : 1;
 	uint8_t cpu : 1;
 	uint8_t sdcard : 1;
-	uint8_t misc1 : 1;
+	uint8_t equal : 1;
 	uint8_t misc2 : 1;
 	uint8_t misc3 : 1;
 };
