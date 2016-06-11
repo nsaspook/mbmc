@@ -8,6 +8,8 @@
             <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc.c</file>
             <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc_defs.h</file>
         </group>
-        <group name="MBMC"/>
+        <group name="MBMC">
+            <file>file:/audio/solarpic_rewrite/TCPIP%20Demo%20App/mbmc.c</file>
+        </group>
     </open-files>
 </project-private>

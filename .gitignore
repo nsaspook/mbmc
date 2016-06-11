@@ -38,3 +38,5 @@ Module.symvers
 !.mailmap
 /swm8722/solar18f8722/swm8722.X/build/default/
 /swm8722/solar18f8722/swm8722.X/dist/default/
+/TCPIP Demo App/TCPIP Demo App - C32 - PIC32_ENET_SK_DM320004_INTERNAL_ETHERNET.X/build/default/
+/TCPIP Demo App/TCPIP Demo App - C32 - PIC32_ENET_SK_DM320004_INTERNAL_ETHERNET.X/dist/default/
