@@ -2,8 +2,8 @@
 #define MBMC_DEFS_H_INCLUDED
 
 /* Program operation parameters for MBMC HOST */
-#define MBMC_VERSION 	"    MBMC  40.2 FB  "                  // version text header
-#define	MAGIC		0x0402  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.3 FB  "                  // version text header
+#define	MAGIC		0x0403  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
 #define	PIC_8722	8722
