@@ -2556,7 +2556,7 @@ void HTTPPrint_mbmcdata(WORD num)
 {
 	time_t ltime;
 	static long solar_volts, load_volts, cube_power, load_power, solar_power;
-	static int mycolor, cube_panels = FALSE, water_alarm=FALSE;
+	static int mycolor, cube_panels = FALSE, water_alarm = FALSE;
 
 	// Determine what mbmc status data to return
 	switch (num) {
@@ -2796,16 +2796,20 @@ void HTTPPrint_mbmcdata(WORD num)
 		}
 		break;
 	case 203: // Display alarm status
-		if (alarms.mbmc_alarm.absorp) {
-			TCPPutROMString(sktHTTP, (ROM BYTE*) "<li><b> Time to check battery water</b></li>");
+		if (alarms.mbmc_alarm.absorp || alarms.mbmc_alarm.equal) {
+			if (alarms.mbmc_alarm.equal)
+				TCPPutROMString(sktHTTP, (ROM BYTE*) "<li><b> Time to equal and check battery water</b></li>");
+			else
+				TCPPutROMString(sktHTTP, (ROM BYTE*) "<li><b> Time to check battery water</b></li>");
+
 			if (!water_alarm) {
 				water_alarm_warn(TRUE);
-				water_alarm=TRUE; // once per alarm flag
+				water_alarm = TRUE; // once per alarm flag
 			}
 		} else {
 			if (water_alarm)
 				water_alarm_warn(FALSE);
-			water_alarm=FALSE;
+			water_alarm = FALSE;
 		}
 		break;
 	case 204: // Display alarm status

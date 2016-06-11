@@ -270,7 +270,7 @@ struct alarmtype {
     BYTE inverter : 1;
     BYTE cpu : 1;
     BYTE sdcard : 1;
-    BYTE misc1 : 1;
+    BYTE equal : 1;
     BYTE misc2 : 1;
     BYTE misc3 : 1;
 };
