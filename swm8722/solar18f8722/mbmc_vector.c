@@ -13,7 +13,7 @@ void tick_handler(void) // This is the high priority ISR routine
 	static union Timers timer;
 
 	_asm nop _endasm // asm code to disable compiler optimizations
-	TIMESIG = HIGH;
+
 	V.highint_count++; // high int counter
 	hirez_tmp0 = (uint16_t) TMR0L;
 	hirez_tmp0 += (uint16_t) (TMR0H << SHIFT8); // load high byte in tmp counter
@@ -31,8 +31,10 @@ void tick_handler(void) // This is the high priority ISR routine
 	}
 
 	if (INTCONbits.TMR0IF) { // check timer0 irq 1 second timer int handler
+		TIMESIG = HIGH;
 		//check for TMR0 overflow
 		INTCONbits.TMR0IF = LOW; //clear interrupt flag
+		TIMESIG = LOW;
 		/*	reset the profile counts */
 		hirez_count[0] = hirez_count[2]; // copy high int counts into save var
 		hirez_count[2] = NULL0; // zero high int counts
@@ -699,7 +701,7 @@ void tick_handler(void) // This is the high priority ISR routine
 	hirez_tmp1 = (uint16_t) TMR0L;
 	hirez_tmp1 += (uint16_t) (TMR0H << SHIFT8); // load high byte in tmp counter
 	hirez_count[2] += (hirez_tmp1 - hirez_tmp0); // how many counts we were in routines
-	TIMESIG = LOW;
+
 }
 #pragma	tmpdata
 

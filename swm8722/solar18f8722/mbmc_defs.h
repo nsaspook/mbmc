@@ -17,7 +17,7 @@
 #define EEPROM_ADC	8
 #define EEPROM_HIS	32
 
-#define	TIMEROFFSET	26474           // timer0 16bit counter value for 1 second to overflow
+#define	TIMEROFFSET	26473           // timer0 16bit counter value for 1 second to overflow
 #define	TIMER3REG	3048            // timer3 value for 20Hz clock
 #define BUF_SIZE 	128
 #define LOW		(uint8_t)0              // digital output state levels, sink
