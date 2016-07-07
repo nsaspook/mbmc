@@ -7,6 +7,10 @@
             <file>file:/fred/mbmc/swm8722/solar18f8722/config.h</file>
             <file>file:/fred/mbmc/swm8722/solar18f8722/swm8722.c</file>
         </group>
-        <group name="MBMC"/>
+        <group name="MBMC">
+            <file>file:/audio/solarpic_rewrite/swm8722/solar18f8722/power.c</file>
+            <file>file:/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_defs.h</file>
+            <file>file:/audio/solarpic_rewrite/swm8722/solar18f8722/config.h</file>
+        </group>
     </open-files>
 </project-private>
