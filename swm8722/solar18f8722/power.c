@@ -319,10 +319,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			if ((R.current > INV_LOADED) &&(CCS.boc != CCS.boi)) { // at large loads jump to the inverter battery
 				cell[CCS.boi].weight = MINWEIGHT;
 				cell[CCS.boi].critical = TRUE;
-				CCS.alert=TRUE;
+				CCS.alert = TRUE;
 				cell[B0B].weight = MAXWEIGHT;
 				cell[B0B].critical = FALSE;
-				CCS.bn=CCS.boi;
+				CCS.bn = CCS.boi;
 			}
 			if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 			if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
@@ -668,7 +668,7 @@ void Cycle_Update(uint16_t t_soc, uint8_t bn)
 		hist[bn].h[4]++; // inc full charge hist data
 		B.equal++;
 	}
-	
+
 	if ((bn == B1) && B_GANGED) {
 		hist[B2].h[4]++; // inc full charge hist data
 		hist[B2].h[5]++; // full discharge cycles
@@ -680,7 +680,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	static uint32_t BATCHARGE = 3600, timetemp = 0, newdate = 0, cycles_tmp = 0;
 	static int32_t voltage_slope = 0;
 	static int16_t CCEFF_tmp = 0;
-	static uint8_t ccs_t = 0, use_dual_load = DUALLOAD, z = 0, CC_DONE = FALSE;
+	static uint8_t ccs_t = 0, use_dual_load = DUALLOAD, z = 0, CC_DONE = FALSE, dual_cv_slow = 16;
 	static uint16_t t_esr = 0, load_i1 = 0, load_i2 = 0, t_soc = 0;
 	uint8_t ccreset, cv_set = FALSE;
 
@@ -1073,15 +1073,19 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				CHRG4 = R_OFF;
 				term_time();
 				putrs2USART(" Battery 4 disconnected from charger bus\r\n");
+				dual_cv_slow = 16;
 			}
 		} else {
 			if ((bn == B3) && (chrg_v > DUAL_CV_HIGH) && (hist[bn].bsoc < DUAL_CV_BSOC)) { // try to charge both to save time
-				if (BAT4 == R_OFF) {
-					BAT4 = R_ON; // battery #4 relay/on
-					CHRG4 = R_ON;
-					cv_set = TRUE;
-					term_time();
-					putrs2USART(" Battery 4 connected to charger bus\r\n");
+				if (!(--dual_cv_slow)) {
+					dual_cv_slow = 2;
+					if (BAT4 == R_OFF) {
+						BAT4 = R_ON; // battery #4 relay/on
+						CHRG4 = R_ON;
+						cv_set = TRUE;
+						term_time();
+						putrs2USART(" Battery 4 connected to charger bus\r\n");
+					}
 				}
 			}
 		}
