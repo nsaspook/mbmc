@@ -461,7 +461,7 @@ struct battmodeltype bmt[HISTBATTNUM] = {0};
 #pragma idata gpr13
 far int8_t hms_string[16] = {0};
 volatile int16_t venttimer = VENTTIME, loggertime = LOGGERTIME;
-int16_t a50 = 0, a300 = 0, a50c = 0, therm = 0, worktick = 0, cef = 0, cef_calc = 0, cef_save = 0;
+int16_t a50 = 0, a300 = 0, a50c = 0, therm = 0, worktick = 0, cef = 0, cef_calc = 0, cef_save = 0, sdret = 0;
 
 volatile struct P_data P = {TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE,
 	FALSE, FALSE, FALSE, FALSE, FALSE, FALSE};
@@ -484,7 +484,7 @@ union Timers hirez_0 = 0, hirez_1 = 0;
 volatile uint32_t display_count = 0,
 	status_count = 0, cctimer = CCLEDTIME,
 	dayclockup = 0, dayclockdown = 0, worker_count = 0, critc_count = 0, d_on = 0, d_off = 0,
-	c_on = 0, c_off = 0, dayclocklocal=0;
+	c_on = 0, c_off = 0, dayclocklocal = 0;
 
 #pragma idata gpr3
 volatile uint8_t HOST_BUSY = FALSE, HOST_COMM = FALSE;
@@ -504,7 +504,7 @@ const rom int8_t *build_date = __DATE__, *build_time = __TIME__;
 VOLUME_INFO_TYPE MMC_volume_Info = {0}, *vinf = 0;
 volatile uint16_t solarup_delay = 0;
 uint16_t zero_ref = 0, max_eeprom_data = 1024;
-volatile uint32_t utctime = 0, localtime=0;
+volatile uint32_t utctime = 0, localtime = 0;
 
 volatile union {
 	uint32_t netdword;
@@ -900,8 +900,8 @@ void system_data(void) // display system data on terminal
 	asctime(&local_tm, bootstr2, 0);
 	puts2USART(bootstr2);
 	sprintf(bootstr2,
-		"GMT, Boot Code %i\r\n Controller Status:\r\n SD time %lu, SD records %lu, Power status 1=OK %u, Config DIPSW %u%u%u%u%u%u%u%u lsb, Temp Raw %i, Temp Sensor %lu, Temp Offset %li, Ah Temp Comp %i",
-		(int16_t) BOOT_STATUS, SDC0.timekeep, SDC0.sdpos, P.PRIPOWEROK, DIPSW8, DIPSW7, DIPSW6, DIPSW5, DIPSW4, DIPSW3, DIPSW2, DIPSW1, therm, R.thermo_batt, R.thermo_batt - Temp_ZERO, C.temp_drate);
+		"GMT, Boot Code %i\r\n Controller Status:\r\n SD time %lu, SD records %lu, SD status %d, Power status 1=OK %u, Config DIPSW %u%u%u%u%u%u%u%u lsb, Temp Raw %i, Temp Sensor %lu, Temp Offset %li, Ah Temp Comp %i",
+		(int16_t) BOOT_STATUS, SDC0.timekeep, SDC0.sdpos, sdret, P.PRIPOWEROK, DIPSW8, DIPSW7, DIPSW6, DIPSW5, DIPSW4, DIPSW3, DIPSW2, DIPSW1, therm, R.thermo_batt, R.thermo_batt - Temp_ZERO, C.temp_drate);
 	puts2USART(bootstr2);
 	sprintf(bootstr2,
 		"\r\n UTC counter %lu, Time Skew %li, Highint %lu, Lowint %lu, Timerint %lu, Workerint %lu, \r\n Com1rx INT %lu, Com1tx INT %lu, Com2int %lu, Bint %lu, PWMint %lu, Eint %lu, Aint %lu, Lowclocks %lu, Lowruns/S %lu,\r\n",
@@ -1357,7 +1357,7 @@ void mkbsstring(void) // generate status report string
 				battbuffer.good = TRUE; // buffer is ready to copy
 			}
 
-			mmc_write_block(SDC0.sdpos++); // write data log buffer block
+			sdret = mmc_write_block(SDC0.sdpos++); // write data log buffer block
 			SDC0.sdnext = SDC0.sdpos; // update last block position
 			s_crit(HL);
 			SDC0.time = V.timerint_count; // update current time clock
@@ -1377,7 +1377,7 @@ void mkbsstring(void) // generate status report string
 				check_alarm(CCS.boc, " mkbstring2 SD card info block size too large");
 			}
 			memcpy((void *) &block_buffer[0], (void *) &SDC0, sizeof( SDC0));
-			mmc_write_block(SDINFO); // write SD info block
+			sdret = (SDINFO); // write SD info block
 			battbuffer.copy = FALSE; // data block in on SD card
 		}
 	}
@@ -1975,7 +1975,7 @@ int16_t W_SDC0_EEP(uint16_t address) // write SDCO to eep starting at address
 
 int16_t initsd(void)
 {
-	static uint8_t ret = 0, j = 0, k = 0;
+	static uint8_t j = 0, k = 0;
 	static uint16_t i = 0;
 
 	SDSAFE = S_OFF;
@@ -2021,9 +2021,9 @@ int16_t initsd(void)
 		return ERR1;
 	}
 
-	ret = mmc_read_block(SDINFO); // dummy read
-	ret = mmc_read_block(SDINFO); // read info block
-	if (ret) return ERR1; // error reading info block
+	i = mmc_read_block(SDINFO); // dummy read
+	i = mmc_read_block(SDINFO); // read info block
+	if (i) return ERR1; // error reading info block
 
 	memcpy((void *) &sdc0b1, (void *) &block_buffer[0], sizeof( sdc0b1)); //
 	if ((sdc0b1.magic == MAGIC) && !DIPSW1) {
@@ -2067,7 +2067,7 @@ int16_t initsd(void)
 		// other data has already been set earlier
 		wipe_sdbuffer();
 		memcpy((void *) &block_buffer[0], (void *) &SDC0, sizeof( SDC0));
-		mmc_write_block(SDINFO); // init new card block
+		sdret = (SDINFO); // init new card block
 		W_SDC0_EEP(SDC0EEP); // mirror SDC0 data to eep at address
 		sprintf(bootstr2, "Update EEP/SD data.        ");
 		LCD_VC_puts(VC0, DS3, YES);
@@ -2166,7 +2166,7 @@ void main(void) // Lets Party
 	SDC0.DAYCLOCK = FALSE;
 	B.yesterday = 0;
 	B.today = 0;
-	B.equal=0;
+	B.equal = 0;
 	C.t_comp = 1.0; // 1.0 is the default
 	dsi = VC0; // set display index to 0 for monitor strings
 	battbuffer.busy = FALSE;
