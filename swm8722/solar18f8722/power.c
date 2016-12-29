@@ -847,7 +847,8 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			}
 			cell[bn].voltage = cell[bn].noload; // set loaded battery voltage
 			hist[bn].esr = (uint16_t) ((float) 150.0 * (4600.0 / (float) (cell[bn].voltage - 8000.0))); // set static esr
-			hist[bn].h[10] = hist[bn].esr;
+			if (hist[bn].esr < hist[bn].h[10])
+				hist[bn].h[10] = hist[bn].esr; // check for lowest esr
 			term_time();
 			sprintf(bootstr2, " Untested Battery %i V%limV, V%limV ESR  R%i.\r\n", bn, cell[bn].noload, cell[bn].voltage, hist[bn].esr);
 			puts2USART(bootstr2);
@@ -1073,6 +1074,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				CHRG4 = R_OFF;
 				term_time();
 				putrs2USART(" Battery 4 disconnected from charger bus\r\n");
+				cell[BAT4].cconline = FALSE;
 				dual_cv_slow = 16;
 			}
 		} else {
@@ -1085,6 +1087,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 						cv_set = TRUE;
 						term_time();
 						putrs2USART(" Battery 4 connected to charger bus\r\n");
+						cell[BAT4].cconline = TRUE;
 					}
 				}
 			}
@@ -1289,6 +1292,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		CHRG4 = R_OFF;
 		term_time();
 		putrs2USART(" Battery 4 disconnected from charger bus\r\n");
+		cell[BAT4].cconline = FALSE;
 	}
 	hist[bn].btest = NULL0;
 	pv_pwm_shutdown(); // kill power to PV PWM system

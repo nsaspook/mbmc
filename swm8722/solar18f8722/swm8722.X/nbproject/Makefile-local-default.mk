@@ -14,23 +14,23 @@
 # You can invoke make with the values of the macros:
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
-PATH_TO_IDE_BIN=/opt/microchip/mplabx/v3.35/mplab_ide/mplab_ide/modules/../../bin/
+PATH_TO_IDE_BIN=/sdd/opt/microchip/mplabx/v3.50/mplab_ide/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
-PATH:=/opt/microchip/mplabx/v3.35/mplab_ide/mplab_ide/modules/../../bin/:$(PATH)
+PATH:=/sdd/opt/microchip/mplabx/v3.50/mplab_ide/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
-MP_JAVA_PATH="/opt/microchip/mplabx/v3.35/sys/java/jre1.8.0_91/bin/"
+MP_JAVA_PATH="/sdd/opt/microchip/mplabx/v3.50/sys/java/jre1.8.0_91/bin/"
 OS_CURRENT="$(shell uname -s)"
-MP_CC="/opt/microchip/mplabc18/v3.40/bin/mcc18"
+MP_CC="/sdd/junk/mplabc18/v3.40/bin/mcc18"
 # MP_CPPC is not defined
 # MP_BC is not defined
-MP_AS="/opt/microchip/mplabc18/v3.40/bin/../mpasm/MPASMWIN"
-MP_LD="/opt/microchip/mplabc18/v3.40/bin/mplink"
-MP_AR="/opt/microchip/mplabc18/v3.40/bin/mplib"
-DEP_GEN=${MP_JAVA_PATH}java -jar "/opt/microchip/mplabx/v3.35/mplab_ide/mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="/opt/microchip/mplabc18/v3.40/bin"
+MP_AS="/sdd/junk/mplabc18/v3.40/bin/../mpasm/MPASMWIN"
+MP_LD="/sdd/junk/mplabc18/v3.40/bin/mplink"
+MP_AR="/sdd/junk/mplabc18/v3.40/bin/mplib"
+DEP_GEN=${MP_JAVA_PATH}java -jar "/sdd/opt/microchip/mplabx/v3.50/mplab_ide/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="/sdd/junk/mplabc18/v3.40/bin"
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined
-MP_AS_DIR="/opt/microchip/mplabc18/v3.40/bin/../mpasm"
-MP_LD_DIR="/opt/microchip/mplabc18/v3.40/bin"
-MP_AR_DIR="/opt/microchip/mplabc18/v3.40/bin"
+MP_AS_DIR="/sdd/junk/mplabc18/v3.40/bin/../mpasm"
+MP_LD_DIR="/sdd/junk/mplabc18/v3.40/bin"
+MP_AR_DIR="/sdd/junk/mplabc18/v3.40/bin"
 # MP_BC_DIR is not defined
