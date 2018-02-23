@@ -328,14 +328,14 @@
 //  25.7    Change the data logging format to make it easier to track variables.
 //  25.8-9  Add more bad battery detection
 //  26.0    Software fixes and cleanups
-//  26.1    Fixups for gellcell curent limiters, add GELL_R_COMP and GELL_ESR_COMP defines
+//  26.1    Fixups for gellcell current limiters, add GELL_R_COMP and GELL_ESR_COMP defines
 //  26.2    Start moving all the flags into structures.
 //  26.3    Add fresh data flag for remote data monitor and increase update rate while in charging modes
 //  26.4    Fix B_GANGED bug in daq.c
 //  30.0    New fixes branch
 //  30.1    Use AGM cells for controller power so change 'S' to 'M'
 //  30.4    Fix accounting bug on battery 3
-//  40.0    New developement branch
+//  40.0    New development branch
 //  40.1    Lots of global variables but embedded C is one trick monkey
 //  40.2    Dual charging of controller batteries and ganged fixes
 //  40.3    get local time, equilization function and full charge count fixes
