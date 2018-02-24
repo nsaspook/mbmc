@@ -2,6 +2,10 @@
 #include "sdspi.h"
 #include <string.h>
 
+void P2wait(void);
+uint8_t xmit_spi(uint8_t);
+
+//#define SDEBUG
 #ifdef SDEBUG
 #include <usart.h>
 #define SDEBUGM(msg)  P2wait(); TXREG2 = msg
@@ -17,6 +21,7 @@ void sd_select(void)
 void sd_deselect(void)
 {
 	DESELECT();
+	xmit_spi(0xff);
 }
 
 /*
@@ -227,22 +232,27 @@ int16_t disk_initialize()
 	SELECT();
 	SDC0.sdtype = 0;
 	send_cmd(CMD0, 0);
+	SDEBUGM('d');
 
 	if (send_cmd(CMD0, 0) == (uint8_t) HIGH) { /* Enter Idle state */
-
+		SDEBUGM('i');
 		if (send_cmd(CMD8, 0x1AA) == (uint8_t) HIGH) { /* SDC Ver2+ */
+			SDEBUGM('2');
 			for (n = 0; n < (uint8_t) 4; n++)
 				ocr[n] = rcvr_spi(); /* Get trailng data of R7 resp */
 			if ((ocr[2] == (uint8_t) 0x01) && (ocr[3] == (uint8_t) 0xAA)) { /* The card can work at vdd range of 2.7-3.6V */
+				SDEBUGM('v');
 				send_cmd(CRC_ON_OFF, 0); // no checking CRC, redundant
 				while (send_cmd(ACMD41, 1UL << SHIFT30)); /* ACMD41 with HCS bit */
 
 				wdttime(SDTIME); // wait for card to init
 				SSP1CON1 = SSP1CON1 & 0xf0; // set to full speed FOSC_4
 				if (send_cmd(CMD58, 0) == (uint8_t) NULL) { /* Check CCS bit in the OCR */
+					SDEBUGM('6');
 					for (n = 0; n < (uint8_t) 4; n++)
 						ocr[n] = rcvr_spi();
 					SDC0.sdtype = (ocr[0] & 0x40) ? SDT6 : SDT2;
+					SDEBUGM('0'+SDC0.sdtype);
 				}
 			}
 		} else { /* SDC Ver1 or MMC */
@@ -274,9 +284,11 @@ int16_t disk_initialize()
 		}
 		send_dummys(); /* 80 dummy clocks */
 	} else {
+		SDEBUGM('e');
 		return ERR1; //      no card
 	}
 	if (SDC0.sdtype != SDT6) {
+		SDEBUGM('t');
 		return ERR2; //      wrong type card
 	}
 	SDC0.sdinit = TRUE;
