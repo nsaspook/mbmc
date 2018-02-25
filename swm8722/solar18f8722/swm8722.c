@@ -339,6 +339,7 @@
 //  40.1    Lots of global variables but embedded C is one trick monkey
 //  40.2    Dual charging of controller batteries and ganged fixes
 //  40.3    get local time, equilization function and full charge count fixes
+//  40.5    SD card updates
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
