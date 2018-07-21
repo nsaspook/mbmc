@@ -299,6 +299,9 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		cell[z].weight -= (float) ((hist[z].ah * hist[z].esr) * W_IR_F); // internal resistance factor
 		cell[z].weight -= (float) hist[z].udod * W_DOD_F; // user depth of discharge factor
 
+		if (hist[z].udod > 100)
+			cell[z].weight -= (INVPOINTS + INVPOINTS); // stop high discharge
+
 		if (cell[z].id == 'S')
 			cell[z].weight += SMALLCOMP; // Small Gell Cell  comp factor
 		if (cell[z].id == 'M')
