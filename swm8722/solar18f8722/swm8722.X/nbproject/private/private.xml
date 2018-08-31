@@ -5,8 +5,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="MBMC"/>
         <group>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/model.c</file>
             <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c</file>
             <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/power.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_vector.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/timelib.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_msg.h</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc.h</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/crc8_fast.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/sdspi.c</file>
             <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_defs.h</file>
         </group>
     </open-files>

@@ -463,7 +463,7 @@ struct battmodeltype bmt[HISTBATTNUM] = {0};
 #pragma idata gpr13
 far int8_t hms_string[16] = {0};
 volatile int16_t venttimer = VENTTIME, loggertime = LOGGERTIME;
-int16_t a50 = 0, a300 = 0, a50c = 0, therm = 0, worktick = 0, cef = 0, cef_calc = 0, cef_save = 0, sdret = 0;
+int16_t a50 = 0, a300 = 0, a50c = 0, therm = 0, worktick = 0, cef = 0, cef_calc = 0, cef_save = 0, sdret = 0, sderr = 0;
 
 volatile struct P_data P = {TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE,
 	FALSE, FALSE, FALSE, FALSE, FALSE, FALSE};
@@ -902,8 +902,8 @@ void system_data(void) // display system data on terminal
 	asctime(&local_tm, bootstr2, 0);
 	puts2USART(bootstr2);
 	sprintf(bootstr2,
-		"GMT, Boot Code %i\r\n Controller Status:\r\n SD time %lu, SD records %lu, SD status %d, Power status 1=OK %u, Config DIPSW %u%u%u%u%u%u%u%u lsb, Temp Raw %i, Temp Sensor %lu, Temp Offset %li, Ah Temp Comp %i",
-		(int16_t) BOOT_STATUS, SDC0.timekeep, SDC0.sdpos, sdret, P.PRIPOWEROK, DIPSW8, DIPSW7, DIPSW6, DIPSW5, DIPSW4, DIPSW3, DIPSW2, DIPSW1, therm, R.thermo_batt, R.thermo_batt - Temp_ZERO, C.temp_drate);
+		"GMT, Boot Code %i\r\n Controller Status:\r\n SD time %lu, SD records %lu, SD status %d:%d, Power status 1=OK %u, Config DIPSW %u%u%u%u%u%u%u%u lsb, Temp Raw %i, Temp Sensor %lu, Temp Offset %li, Ah Temp Comp %i",
+		(int16_t) BOOT_STATUS, SDC0.timekeep, SDC0.sdpos, sdret, sderr, P.PRIPOWEROK, DIPSW8, DIPSW7, DIPSW6, DIPSW5, DIPSW4, DIPSW3, DIPSW2, DIPSW1, therm, R.thermo_batt, R.thermo_batt - Temp_ZERO, C.temp_drate);
 	puts2USART(bootstr2);
 	sprintf(bootstr2,
 		"\r\n UTC counter %lu, Time Skew %li, Highint %lu, Lowint %lu, Timerint %lu, Workerint %lu, \r\n Com1rx INT %lu, Com1tx INT %lu, Com2int %lu, Bint %lu, PWMint %lu, Eint %lu, Aint %lu, Lowclocks %lu, Lowruns/S %lu,\r\n",
@@ -1359,7 +1359,8 @@ void mkbsstring(void) // generate status report string
 				battbuffer.good = TRUE; // buffer is ready to copy
 			}
 
-			sdret = mmc_write_block(SDC0.sdpos++); // write data log buffer block
+			if (sdret = mmc_write_block(SDC0.sdpos++)) // write data log buffer block
+				sderr++;
 			SDC0.sdnext = SDC0.sdpos; // update last block position
 			s_crit(HL);
 			SDC0.time = V.timerint_count; // update current time clock
@@ -1379,7 +1380,8 @@ void mkbsstring(void) // generate status report string
 				check_alarm(CCS.boc, " mkbstring2 SD card info block size too large");
 			}
 			memcpy((void *) &block_buffer[0], (void *) &SDC0, sizeof( SDC0));
-			sdret = (SDINFO); // write SD info block
+			if (sdret = mmc_write_block(SDINFO)) // write SD info block
+				sderr++;
 			battbuffer.copy = FALSE; // data block in on SD card
 		}
 	}
@@ -2069,7 +2071,7 @@ int16_t initsd(void)
 		// other data has already been set earlier
 		wipe_sdbuffer();
 		memcpy((void *) &block_buffer[0], (void *) &SDC0, sizeof( SDC0));
-		sdret = (SDINFO); // init new card block
+		sdret = mmc_write_block(SDINFO); // init new card block
 		W_SDC0_EEP(SDC0EEP); // mirror SDC0 data to eep at address
 		sprintf(bootstr2, "Update EEP/SD data.        ");
 		LCD_VC_puts(VC0, DS3, YES);

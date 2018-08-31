@@ -1070,7 +1070,7 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 			} else {
 				status_count++;
 				battbuffer.busy = FALSE;
-				battbuffer.copy = TRUE;
+				battbuffer.copy = TRUE; // trigger a SD card new data block write operation 
 			}
 		}
 	}

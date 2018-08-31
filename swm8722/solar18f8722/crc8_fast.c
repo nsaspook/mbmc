@@ -126,7 +126,7 @@ uint16_t crc16(uint8_t* addr, uint16_t num, uint16_t crc) // XMODEM crc-16
 {
 	int16_t i;
 
-	for (; num > 0; num--) /* Step through bytes in memory */ {
+	for (; num > 0U; num--) /* Step through bytes in memory */ {
 		crc = crc ^ (*addr++ << 8); /* Fetch byte from memory, XOR into CRC top byte*/
 		for (i = 0; i < 8; i++) /* Prepare to rotate 8 bits */ {
 			if (crc & 0x10000) /* b15 is set... */
@@ -142,9 +142,9 @@ uint16_t crc16(uint8_t* addr, uint16_t num, uint16_t crc) // XMODEM crc-16
 /* CRC16 implementation according to CCITT standards */
 uint16_t crc16_ccitt(uint8_t* buf, uint16_t len)
 {
-	int16_t counter;
+	uint16_t counter;
 	uint16_t crc = 0;
-	for (counter = 0; counter < len; counter++)
+	for (counter = 0U; counter < len; counter++)
 		crc = (crc << 8) ^ crc16tab[((crc >> 8) ^ *(uint8_t *) buf++)&0x00FF];
 	return crc;
 }

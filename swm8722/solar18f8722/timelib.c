@@ -157,7 +157,7 @@ void asctime(tm *p, int8_t *q, uint8_t format)
 
 	i = 0;
 
-	for (j = 0; j < 4; j++) {
+	for (j = 0; j < 4U; j++) {
 		if (tformat[format][j] == 0) {
 			i--;
 			break;

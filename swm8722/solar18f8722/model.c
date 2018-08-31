@@ -6,7 +6,7 @@ uint8_t model_learn(uint8_t mode) // constructs model data for battery state mat
 	static uint8_t lmode = 0, x, y;
 
 	for (x = 0; x < HISTBATTNUM; x++) { // count from 0 to 1
-		for (y = 0; y <= 3; y++) {
+		for (y = 0; y <= 3U; y++) {
 			if (bmt[x].soc[y].flags & BMT_FLAG_7) { // check full charge flag
 				lmode++;
 				if (bmt[x].soc[y].soc == hist[x + 1].bsoc) { // scan for bsoc matches
@@ -48,7 +48,7 @@ void model_data(void) // display model data on terminal
 	ClrWdt(); // reset the WDT timer
 
 	for (z = 0; z < HISTBATTNUM; z++) { // create, battery
-		for (x = 0; x < MODEL_SLOTS; x++) { // create, data slot
+		for (x = 0; x < MODEL_SLOTS; x++) { // create, data slot  
 			sprintf(bootstr2,
 				" Battery #%i: SOC %4i, ESR %5i, Current %5i, Volts %5i, Ah %5i, CEF %4i,Temp %4i, FLAGS %4i\n\r",
 				z + 1, bmt[z].soc[x].soc, bmt[z].soc[x].esr, bmt[z].soc[x].current, bmt[z].soc[x].voltage, bmt[z].soc[x].ah, bmt[z].soc[x].cef, bmt[z].soc[x].temp, bmt[z].soc[x].flags);

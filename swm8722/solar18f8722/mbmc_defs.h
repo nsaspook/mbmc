@@ -31,7 +31,7 @@
 #define NO		LOW
 #define YES		HIGH
 #if defined(__18CXX)
-#define NULL0           (uint8_t)0
+#define NULL0           (uint8_t)0U
 #else
 #define NULL            ((void *)0)
 #endif
@@ -352,15 +352,15 @@
 #define	MAX_TWEAK_CMD	4      	// number of T tweak command choices
 
 //	program constants
-#define	HISTBATTNUM	2       // we only really track the first two batteries
+#define	HISTBATTNUM	2U      // we only really track the first two batteries
 #define	ESRHIGH		1024	// starting ESR init value
 #define	SOC_100	0
 #define	SOC_85	1
 #define	SOC_70	2
 #define	SOC_50	3
-#define MODEL_SLOTS	4	// array sixe for model data
-#define DATA_SLOTS	5	// array size for battery data
-#define BUTH_SLOTS      1	// array size of update data
+#define MODEL_SLOTS	4U	// array sixe for model data
+#define DATA_SLOTS	5U	// array size for battery data
+#define BUTH_SLOTS      1U	// array size of update data
 #define	SDBUFFERSIZE	512l
 #define SDBUFFER_EXTRA  8l
 #define SDNAME_SIZE     6
@@ -372,9 +372,9 @@
 #define C_TEMP16	16		// temp string buffer size
 #define C_TEMP7		7		// float string buffer size
 #define HOST_TIMEOUT	256		// network timeout MBMC
-#define SDT1            1
-#define SDT2            2               // SD card types
-#define SDT6            6
+#define SDT1            1U
+#define SDT2            2U               // SD card types
+#define SDT6            6U
 #define MAX_Q           175             // Top Power Quality for one day
 #define TODAY_Q         30
 #define YESTER_Q        35
