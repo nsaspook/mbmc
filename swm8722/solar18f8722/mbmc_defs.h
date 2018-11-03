@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.7 FB  "                  // version text header
-#define	MAGIC		0x0407  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  40.8 FB  "                  // version text header
+#define	MAGIC		0x0408  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -288,6 +288,7 @@
 #define WFLOAT_LOW      24000.0 // divert power lowest weight for any battery
 #define MAXWEIGHT	50000.0	// highest weight value possible
 #define	MINWEIGHT	10000.0	// lowest weight value possible
+#define DEADWEIGHT	10050.0 // weight for a dead battery
 #define PLUSWEIGHT      1000.0	// must be at least this much diff to cause a alert
 #define ALERT_TIME      120	// delay between alerts
 #define W_BASE_F        100.0	// battery selection weigth factor base +, lower total weights pick next battery

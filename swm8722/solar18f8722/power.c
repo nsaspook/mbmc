@@ -391,7 +391,10 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			alarm_codes.alm_flag = TRUE;
 			check_alarm(z, " pick_batt0 "); // possible dead battery
 			battalarm(0, z, 0);
-			cell[z].weight = MAXWEIGHT; // don't pick the bad battery for charging
+			if (dead_times < 8)
+				cell[z].weight = DEADWEIGHT; // try pick the bad battery for charging
+			else
+				cell[z].weight = MAXWEIGHT;
 		}
 
 		s_crit(HL);
@@ -879,8 +882,10 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		cell[bn].discharged = TRUE;
 	if (cell[bn].voltage < BATTLOW)
 		cell[bn].dead = TRUE;
-	if ((cell[bn].noload > cell[bn].voltage) && (cell[bn].noload - cell[bn].voltage) > BATTDROP)
+	if ((cell[bn].noload > cell[bn].voltage) && (cell[bn].noload - cell[bn].voltage) > BATTDROP) {
 		cell[bn].dead = TRUE; // max voltage drop
+		dead_times++;
+	}
 
 	if (cell[bn].voltage < hist[bn].h[7]) { // check current voltage is lower
 		if (cell[bn].voltage > BATTLOW) { // check greater than dead

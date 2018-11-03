@@ -683,8 +683,11 @@ void tick_handler(void) // This is the high priority ISR routine
 			ALARMOUT = R_OFF;
 			HIDLED = R_OFF;
 			P.POWER_UNSTABLE = FALSE;
-			cell[B1].dead=FALSE;
-			cell[B2].dead=FALSE;
+			cell[B1].dead = FALSE;
+			cell[B2].dead = FALSE;
+			cell[B3].dead = FALSE;
+			cell[B4].dead = FALSE;
+			dead_times = 0;
 			UTC_ok = FALSE; // DEBUG test code
 		}
 		if (PERKOSWI) {

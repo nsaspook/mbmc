@@ -513,7 +513,7 @@ volatile union {
 	uint8_t netdbyte[4];
 } netd;
 volatile int32_t time_skew_base = 0, time_skew = 0;
-volatile uint8_t dsi = 0; //      LCD display string index to console 0
+volatile uint8_t dsi = 0, dead_times = 0; //      LCD display string index to console 0
 
 #pragma idata gpr4
 volatile struct mbmcdata MBMC = {0};
@@ -2743,6 +2743,7 @@ void main(void) // Lets Party
 						battalarm(0, z, 0);
 						cell[z].dead = FALSE;
 						cell[z].critical = TRUE;
+						dead_times++;
 					}
 					wdttime(BATRUNF);
 				}

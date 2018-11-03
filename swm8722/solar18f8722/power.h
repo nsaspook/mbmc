@@ -16,7 +16,7 @@
 extern volatile uint32_t c_on, c_off, d_on, d_off;
 extern uint32_t chrg_v;
 extern volatile int32_t end_amps;
-extern volatile uint8_t almctr, SIM_MODE, DIVERSION_set;
+extern volatile uint8_t almctr, SIM_MODE, DIVERSION_set, dead_times;
 extern volatile int16_t CCEFF, CCEFF_DIFF;
 extern volatile struct V_data V;
 extern volatile struct B_data B;
