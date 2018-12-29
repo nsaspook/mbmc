@@ -101,7 +101,7 @@
 #define SOLAROFF	LATJbits.LATJ7
 #define	CHARGERL	LATJbits.LATJ5
 #define VENTFAN		LATJbits.LATJ6
-#define ALARMOUT	LATJbits.LATJ4
+#define ALARMOUT	LATBbits.LATB2 		//LATJbits.LATJ4 // normal alarm port
 #define BAT1		LATEbits.LATE0
 #define BAT2		LATEbits.LATE1
 #define BAT3		LATEbits.LATE2
@@ -288,7 +288,7 @@
 #define WFLOAT_LOW      24000.0 // divert power lowest weight for any battery
 #define MAXWEIGHT	50000.0	// highest weight value possible
 #define	MINWEIGHT	10000.0	// lowest weight value possible
-#define DEADWEIGHT	10050.0 // weight for a dead battery
+#define DEADWEIGHT	49050.0 // weight for a dead battery
 #define PLUSWEIGHT      1000.0	// must be at least this much diff to cause a alert
 #define ALERT_TIME      120	// delay between alerts
 #define W_BASE_F        100.0	// battery selection weigth factor base +, lower total weights pick next battery
