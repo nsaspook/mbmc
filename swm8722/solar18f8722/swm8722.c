@@ -328,7 +328,7 @@
 //  25.7    Change the data logging format to make it easier to track variables.
 //  25.8-9  Add more bad battery detection
 //  26.0    Software fixes and cleanups
-//  26.1    Fixups for gellcell current limiters, add GELL_R_COMP and GELL_ESR_COMP defines
+//  26.1    Fixups for gell-cell current limiters, add GELL_R_COMP and GELL_ESR_COMP defines
 //  26.2    Start moving all the flags into structures.
 //  26.3    Add fresh data flag for remote data monitor and increase update rate while in charging modes
 //  26.4    Fix B_GANGED bug in daq.c
@@ -338,9 +338,10 @@
 //  40.0    New development branch
 //  40.1    Lots of global variables but embedded C is one trick monkey
 //  40.2    Dual charging of controller batteries and ganged fixes
-//  40.3    get local time, equilization function and full charge count fixes
+//  40.3    get local time, equalization function and full charge count fixes
 //  40.5    SD card updates
 //  40.6    adjust battery weight by DOD >100
+//  40.9    reduce number of static vars in routines and add diags to SD card failures
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
@@ -1389,7 +1390,7 @@ void mkbsstring(void) // generate status report string
 
 int8_t* hms(uint32_t sec) // convert int32_t (seconds) to time string
 {
-	static uint32_t h = 0, m = 0, s = 0;
+	uint32_t h = 0, m = 0, s = 0;
 
 	if (sec > MAXSECONDS) sec = MAXSECONDS; // max time in seconds
 	s = sec;
@@ -1403,7 +1404,7 @@ int8_t* hms(uint32_t sec) // convert int32_t (seconds) to time string
 
 int8_t* hm(uint32_t sec) // convert int32_t (seconds) to time string
 {
-	static uint32_t h = 0, m = 0, s = 0;
+	uint32_t h = 0, m = 0, s = 0;
 	if (sec > MAXSECONDS) sec = MAXSECONDS; // max time in seconds
 	s = sec;
 	h = (s / 3600);

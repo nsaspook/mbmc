@@ -1,7 +1,7 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.8 FB  "                  // version text header
+#define MBMC_VERSION 	"    MBMC  40.9 FB  "                  // version text header
 #define	MAGIC		0x0408  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message

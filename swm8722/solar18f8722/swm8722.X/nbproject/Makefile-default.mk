@@ -70,6 +70,7 @@ OBJECTFILES=${OBJECTDIR}/_ext/1472/swm8722.o ${OBJECTDIR}/_ext/1472/crc8_fast.o 
 SOURCEFILES=../swm8722.c ../crc8_fast.c ../xlcd/busyxlcd.c ../xlcd/openxlcd.c ../xlcd/putrxlcd.c ../xlcd/putsxlcd.c ../xlcd/readaddr.c ../xlcd/readdata.c ../xlcd/setcgram.c ../xlcd/setddram.c ../xlcd/wcmdxlcd.c ../xlcd/writdata.c ../crit.c ../sdspi.c ../hwconf.c ../model.c ../power.c ../mbmc_vector.c ../daq.c ../timelib.c
 
 
+
 CFLAGS=
 ASFLAGS=
 LDLIBSOPTIONS=

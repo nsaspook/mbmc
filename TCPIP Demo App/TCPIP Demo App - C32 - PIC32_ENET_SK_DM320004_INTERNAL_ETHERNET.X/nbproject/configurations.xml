@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="62">
+<configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -207,6 +207,9 @@
         <languageToolchainVersion>2.02</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
+      <packs>
+        <pack name="PIC32MX_DFP" vendor="Microchip" version="1.0.28"/>
+      </packs>
       <compileType>
         <linkerTool>
           <linkerLibItems>
@@ -241,7 +244,6 @@
         <property key="extra-include-directories"
                   value="..;../../Microchip/Include;../../Microchip/Include/TCPIP Stack;../Alternative Configurations;../../Microchip/Include/Crypto"/>
         <property key="generate-16-bit-code" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O2"/>
@@ -252,8 +254,6 @@
                   value="PIC32_ENET_SK_DM320004_INTERNAL_ETHERNET"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
-        <property key="use-cci" value="false"/>
-        <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
         <appendMe value="-membedded-data "/>
       </C32>
@@ -266,8 +266,6 @@
         <property key="extra-include-directories-for-preprocessor"
                   value="..;../../Microchip/Include;../../Microchip/Include/TCPIP Stack;../Alternative Configurations;../../Microchip/Include/Crypto"/>
         <property key="false-conditionals" value="false"/>
-        <property key="generate-16-bit-code" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
         <property key="keep-locals" value="false"/>
         <property key="list-assembly" value="false"/>
         <property key="list-source" value="false"/>
@@ -280,28 +278,18 @@
         <property key="warning-level" value=""/>
       </C32-AS>
       <C32-LD>
-        <property key="additional-options-use-response-files" value="false"/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
         <property key="extra-lib-directories" value=".."/>
-        <property key="fill-flash-options-addr" value=""/>
-        <property key="fill-flash-options-const" value=""/>
-        <property key="fill-flash-options-how" value="0"/>
-        <property key="fill-flash-options-inc-const" value="1"/>
-        <property key="fill-flash-options-increment" value=""/>
-        <property key="fill-flash-options-seq" value=""/>
-        <property key="fill-flash-options-what" value="0"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value="16000"/>
         <property key="input-libraries" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file"
                   value="&quot;${DISTDIR}/TCPIP_Demo_App_-_C32_-_PIC32_ENET_SK_DM320004_INTERNAL_ETHERNET.X.${IMAGE_TYPE}.map&quot;"/>
         <property key="no-startup-files" value="false"/>
-        <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value="-O3"/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="false"/>
