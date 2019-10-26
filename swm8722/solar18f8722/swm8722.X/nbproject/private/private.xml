@@ -6,8 +6,8 @@
         <group name="MBMC"/>
         <group>
             <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/swm8722.c</file>
-            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc.h</file>
-            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/mbmc_defs.h</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/daq.c</file>
+            <file>file:/nfs_nsma2/sma2/sma2/diske/audio/solarpic_rewrite/swm8722/solar18f8722/hwconf.c</file>
         </group>
     </open-files>
 </project-private>

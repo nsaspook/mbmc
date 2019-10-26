@@ -6,7 +6,7 @@
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
-#define BATTERY_CHANGE	" Battery Date: Mar 9, 2016\r\n"
+#define BATTERY_CHANGE	" Battery Date: Oct 10, 2019\r\n"
 #define	PIC_8722	8722
 #define	CHECK_DATE	1305123894ul
 #define CHECKMARK	0x57					// EEPROM checkmark
@@ -154,9 +154,9 @@
 #define	BATCHARGE_S	7200    	// seconds in 2 hours
 #define BATCAP_S	9       	// battery capacity range at 20H discharge rate
 #define	BATCHARGE_M	21600   	// seconds in 6 hours
-#define BATCAP_M	100
+#define BATCAP_M	50
 #define	BATCHARGE_L	43200   	// seconds in 12 hours
-#define BATCAP_L	225
+#define BATCAP_L	200
 #define	BTEST_DELAY	1800		// seconds between battery tests
 #define BFTEST		10		// number of loops for the charge loop
 #define	TIMEOFF		60      	// seconds in 1 min
