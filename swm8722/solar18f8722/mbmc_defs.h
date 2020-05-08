@@ -1,8 +1,8 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  40.9 FB  "                  // version text header
-#define	MAGIC		0x0408  				// data version checkmark
+#define MBMC_VERSION 	"    MBMC  41.0 FB  "                  // version text header
+#define	MAGIC		0x0410  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
@@ -303,19 +303,19 @@
 #define INV_LOADED	300	// amps to switch charge to inverter battery quickly
 
 /* Battery charge/discharge adjustment factors */
-#define Perk_ADJ_FL	1.10	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
+#define Perk_ADJ_FL	1.00	// If the peukert_adj is below this, adjust the Ah out by this Ah adjustment factor
 #define Perk_ADJ_FH	5.00	// If the peukert_adj is above this, adjust the Ah out by this Ah adjustment factor
 #define Temp_ADJ_FL	1.20	// Adjust the battery cap up or down 1C by this percentage from Temp_ZERO
 #define Temp_ZERO	267l	// Temperature for base battery rate capacity in tenths of C
-#define	CEF_HSOC	0.45    // Charge Efficiency Factor, high SOC
-#define CEF_MSOC	0.70    // middle
+#define	CEF_HSOC	0.70    // Charge Efficiency Factor, high SOC
+#define CEF_MSOC	0.80    // middle
 #define	CEF_LSOC	0.90    // Charge Efficiency Factor, low SOC
 #define CEF_OVER	0.99    // CEF overflow in calc
 #define CEF_MAX		0.95 	// Invalid charge factor above this, should be about the same as CEF_LOSC
 #define CEF_MIN		0.40	// Invalid charge factor below this
 #define CEF_RESET	0.80    // reset AH values below this point.
 #define CEF_DERATE	1.20	// Ahi derate factor to start dynamic CEF corrections
-#define	SOC_DERATE	70      // derate CEF above this
+#define	SOC_DERATE	90      // derate CEF above this
 #define SOC_CEF		100	// Max state of charge to update dynamic charge efficiency factors
 #define RFACTOR		15l	// default for battery Ah cap recovery factor [0..100]
 #define RFACTOR_MAX	100l	// 100 max factor * 100 to scale to .1A units

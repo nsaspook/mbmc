@@ -342,6 +342,7 @@
 //  40.5    SD card updates
 //  40.6    adjust battery weight by DOD >100
 //  40.9    reduce number of static vars in routines and add diags to SD card failures
+//  41.0    Adjust Peukert factors for AGM batteries
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags

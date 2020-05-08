@@ -66,7 +66,7 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 	return CHARGERL;
 }
 
-/* function to stop fast switching of diversion power, d_on and d_off are global static veriables */
+/* function to stop fast switching of diversion power, d_on and d_off are global static variables */
 
 /* 'sw' is the OFF/ON toggle/ 'now' is the timed action toggle YES/NO, the state of the DIVERSION output latch is returned */
 uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
@@ -76,7 +76,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 			alarm_buffer[almctr].bn = CCS.boc;
 			alarm_buffer[almctr++].alm_num = 10;
 			alarm_codes.alm_flag = TRUE;
-			check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alm_flag is set
+			check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
 		}
 		DIVERSION = R_ON;
 		return DIVERSION;
@@ -103,7 +103,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 					alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
 					alarm_buffer[almctr++].alm_num = 10;
 					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " divert1 "); // send alarm codes to terminal if alm_flag is set
+					check_alarm(CCS.boi, " divert1 "); // send alarm codes to terminal if alarm_flag is set
 				}
 			}
 		} else { // Wait to stop power glitching
@@ -114,7 +114,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 							alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
 							alarm_buffer[almctr++].alm_num = 10;
 							alarm_codes.alm_flag = TRUE;
-							check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alm_flag is set
+							check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
 						}
 						DIVERSION = R_ON; // check for inverter power
 					}
@@ -130,7 +130,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 				alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
 				alarm_buffer[almctr++].alm_num = 11;
 				alarm_codes.alm_flag = TRUE;
-				check_alarm(CCS.boi, " divert3 "); // send alarm codes to terminal if alm_flag is set
+				check_alarm(CCS.boi, " divert3 "); // send alarm codes to terminal if alarm_flag is set
 			}
 			DIVERSION = R_OFF;
 		} else {
@@ -139,7 +139,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 					alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
 					alarm_buffer[almctr++].alm_num = 11;
 					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " divert4 "); // send alarm codes to terminal if alm_flag is set
+					check_alarm(CCS.boi, " divert4 "); // send alarm codes to terminal if alarm_flag is set
 				}
 				DIVERSION = R_OFF;
 			}
@@ -148,7 +148,7 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 	return DIVERSION;
 }
 
-void pv_pwm_set(int16_t limit) // set the pwm duty-cycle in the hardware pwm channel
+void pv_pwm_set(int16_t limit) // set the PWM duty-cycle in the hardware PWM channel
 {
 	static int16_t duty_cycle;
 	duty_cycle = (int16_t) ((float) MBMC.diversion.power * 10.23);
@@ -158,7 +158,7 @@ void pv_pwm_set(int16_t limit) // set the pwm duty-cycle in the hardware pwm cha
 	SetDCPWM4(duty_cycle); // set PWM Duty Cycle [0..1023] for power
 }
 
-void pv_pwm_calc(float slope) // calc a duty-cycle from the PV power excess supply, CCEFF_DIFF is a global variabe
+void pv_pwm_calc(float slope) // calc a duty-cycle from the PV power excess supply, CCEFF_DIFF is a global variable
 {
 	static int16_t CCEFF_DIFF_tmp;
 	static float power_exp;
