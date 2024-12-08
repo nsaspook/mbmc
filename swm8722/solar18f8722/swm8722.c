@@ -343,6 +343,7 @@
 //  40.6    adjust battery weight by DOD >100
 //  40.9    reduce number of static vars in routines and add diags to SD card failures
 //  41.0    Adjust Peukert factors for AGM batteries
+//  50.0    adjust for LIPO4 type cells
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
