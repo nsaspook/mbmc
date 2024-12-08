@@ -66,17 +66,17 @@
 
 /* Battery Ah caps	in 1.0A units */
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4
-#define B1AH		208     	// FLA costco GC2 or large AGM
-#define	B2AH		208    		// FLA costco CG2 or large Agm
-#define B3AH		50      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
-#define	B4AH		50      	// AGM cell
-#define B1ID		'L'     	// FLA costco GC2 or large AGM
-#define	B2ID		'L'    		// FLA costco CG2 or large AGM
-#define B3ID		'M'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
-#define	B4ID		'M'      	// AGM cell
+#define B1AH		10     	// FLA costco GC2 or large AGM
+#define	B2AH		10    		// FLA costco CG2 or large Agm
+#define B3AH		20      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4AH		20      	// AGM cell
+#define B1ID		'S'     	// FLA costco GC2 or large AGM
+#define	B2ID		'S'    		// FLA costco CG2 or large AGM
+#define B3ID		'S'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4ID		'S'      	// AGM cell
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
-#define	PerkC1		1.05    	// Peukert Comp Batt #1
-#define PerkC2		1.05		// Peukert Comp Batt #2
+#define	PerkC1		1.00    	// Peukert Comp Batt #1
+#define PerkC2		1.00		// Peukert Comp Batt #2
 #define	DF		1.0     	// discharge floor of battery total Ah, normally 1.0  reduce below 1.0 to reserve Ah capacity
 #define KW_VOLTS        122l            // Volts for initial power calc in .kwo, set in noload_soc()
 #define USER_DOD        1.0/0.5         // Percent of battery cap that we normally use. 1.0 is a full discharge, 2.0 50% discharge

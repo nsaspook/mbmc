@@ -6,7 +6,7 @@ volatile void s_crit(uint8_t mode) // Start critical section of code that needs 
 	static uint8_t H_tmp = 0; // keep track of time spent in critical section
 
 	_asm nop _endasm // asm code to disable compiler optimizations
-		LCRIT[CRITC] = INTCONbits.GIEL;
+	LCRIT[CRITC] = INTCONbits.GIEL;
 	if (mode & 0x2) INTCONbits.GIEL = LOW;
 	HCRIT[CRITC] = INTCONbits.GIEH;
 	if (mode & 0x1) INTCONbits.GIEH = LOW;

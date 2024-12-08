@@ -1,7 +1,7 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  41.0 FB  "                  // version text header
+#define MBMC_VERSION 	"    MBMC  50.0 FB  "                  // version text header
 #define	MAGIC		0x0410  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
@@ -181,7 +181,7 @@
 /* battery condition defines */
 #define	LOAD_CHECK	100l		// 10A load
 #define	AHADJ		0.33		// dyn Ah adjustment factor for very low SOC, reduce the actual rate by this amount
-#define	CHRG_HIGH	19000ul   	// max voltage while in a charge cycle to have charger on.
+#define	CHRG_HIGH	20000ul   	// max voltage while in a charge cycle to have charger on.
 #define BATTHIGH	16500ul   	// over-voltage point from charge controller
 #define BATTABSORP	14000ul		// absorption voltage min
 #define BATTFRESH	13200ul   	// float voltage after charge
