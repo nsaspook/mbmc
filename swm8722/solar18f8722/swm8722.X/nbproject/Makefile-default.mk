@@ -84,8 +84,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/swm8722.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=18F8722
-MP_PROCESSOR_OPTION_LD=18f8722
+MP_PROCESSOR_OPTION=18F6722
+MP_PROCESSOR_OPTION_LD=18f6722
 MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble

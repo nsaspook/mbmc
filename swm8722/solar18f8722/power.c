@@ -6,64 +6,8 @@
 /* 'sw' is the OFF/ON toggle/ 'now' is the timed action toggle YES/NO, the state of the CHARGERL output latch is returned */
 uint8_t charger_power(uint8_t sw, uint8_t now)
 {
-	if (sw == ON) {
-		if (now == YES) { // Do it now
-			if (CHARGERL == R_OFF) { // if off then on
-				alarm_buffer[almctr].bn = CCS.boc;
-				alarm_buffer[almctr++].alm_num = 21;
-				alarm_codes.alm_flag = TRUE;
-				check_alarm(CCS.boi, " charger1 "); // send alarm codes to terminal if alm_flag is set
-			}
-			if (!AC_OFF_U) { // check for utility power
-				CHARGERL = R_ON;
-				s_crit(HL);
-				c_on = V.timerint_count;
-				e_crit();
-			}
-		} else { // Wait to stop power glitching
-			if (((c_on - c_off) > C_TIME) || (c_off == NULL0)) { // wait if charger was just shut off.
-				if (CHARGERL == R_OFF) { // if off then on
-					alarm_buffer[almctr].bn = CCS.boc;
-					alarm_buffer[almctr++].alm_num = 21;
-					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " charger2 "); // send alarm codes to terminal if alm_flag is set
-				}
-				if (!AC_OFF_U) { // check for utility power
-					CHARGERL = R_ON;
-					s_crit(HL);
-					c_on = V.timerint_count;
-					e_crit();
-				}
-			}
-		}
-	} else {
-		if (now == YES) { // Do it now
-			if (CHARGERL == R_ON) { // if on then off
-				alarm_buffer[almctr].bn = CCS.boi;
-				alarm_buffer[almctr++].alm_num = 22;
-				alarm_codes.alm_flag = TRUE;
-				check_alarm(CCS.boi, " charger3 "); // send alarm codes to terminal if alm_flag is set
-			}
-			CHARGERL = R_OFF;
-			s_crit(HL);
-			c_off = V.timerint_count;
-			e_crit();
-		} else {
-			if (((c_off - c_on) > C_TIME) || (c_on == NULL0)) { // wait if charger was just turned on.
-				if (CHARGERL == R_ON) { // if on then off
-					alarm_buffer[almctr].bn = CCS.boi;
-					alarm_buffer[almctr++].alm_num = 22;
-					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " charger4 "); // send alarm codes to terminal if alm_flag is set
-				}
-				CHARGERL = R_OFF;
-				s_crit(HL);
-				c_off = V.timerint_count;
-				e_crit();
-			}
-		}
-	}
-	return CHARGERL;
+
+	return 1;
 }
 
 /* function to stop fast switching of diversion power, d_on and d_off are global static variables */
@@ -71,81 +15,8 @@ uint8_t charger_power(uint8_t sw, uint8_t now)
 /* 'sw' is the OFF/ON toggle/ 'now' is the timed action toggle YES/NO, the state of the DIVERSION output latch is returned */
 uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 {
-	if (DIPSW8 || SIM_MODE || DIVERSION_set) { // just turn on "FORCE" DIVERSION and return it's status
-		if (DIVERSION == R_OFF) {
-			alarm_buffer[almctr].bn = CCS.boc;
-			alarm_buffer[almctr++].alm_num = 10;
-			alarm_codes.alm_flag = TRUE;
-			check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
-		}
-		DIVERSION = R_ON;
-		return DIVERSION;
-	}
 
-	if (AC_OFF_I && DIVERSION == R_ON) { /* the inverter has tripped while diversion is running */
-		if (DIVERSION == R_ON) { // if on then off
-			alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
-			alarm_buffer[almctr++].alm_num = 11;
-			alarm_codes.alm_flag = TRUE;
-			check_alarm(CCS.boi, " divert3 "); // send alarm codes to terminal if alm_flag is set
-		}
-		DIVERSION = R_OFF;
-		return DIVERSION;
-	}
-
-	if (sw == ON) {
-		s_crit(HL);
-		d_on = V.timerint_count;
-		e_crit();
-		if (now == YES) { // Do it now
-			if (!AC_OFF_I) {
-				if (DIVERSION == R_OFF) { // if off then on
-					alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
-					alarm_buffer[almctr++].alm_num = 10;
-					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " divert1 "); // send alarm codes to terminal if alarm_flag is set
-				}
-			}
-		} else { // Wait to stop power glitching
-			if (((d_on - d_off) > D_TIME) || (d_off == NULL0)) { // wait if diversion was just shut off.
-				if (!AC_OFF_I) {
-					if ((B.diversion <= PW_DIVERSION) && (B.today >= TODAY_Q) && (B.yesterday >= YESTER_Q)) { // check for good sunny weather
-						if (DIVERSION == R_OFF) { // if off then on, log
-							alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
-							alarm_buffer[almctr++].alm_num = 10;
-							alarm_codes.alm_flag = TRUE;
-							check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
-						}
-						DIVERSION = R_ON; // check for inverter power
-					}
-				}
-			}
-		}
-	} else {
-		s_crit(HL);
-		d_off = V.timerint_count;
-		e_crit();
-		if (now == YES) { // Do it now
-			if (DIVERSION == R_ON) { // if on then off
-				alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
-				alarm_buffer[almctr++].alm_num = 11;
-				alarm_codes.alm_flag = TRUE;
-				check_alarm(CCS.boi, " divert3 "); // send alarm codes to terminal if alarm_flag is set
-			}
-			DIVERSION = R_OFF;
-		} else {
-			if (((d_off - d_on) > D_TIME) || (d_on == NULL0)) { // wait if diversion was just turned on.
-				if (DIVERSION == R_ON) { // if on then off
-					alarm_buffer[almctr].bn = CCS.boi + (status_code << 4);
-					alarm_buffer[almctr++].alm_num = 11;
-					alarm_codes.alm_flag = TRUE;
-					check_alarm(CCS.boi, " divert4 "); // send alarm codes to terminal if alarm_flag is set
-				}
-				DIVERSION = R_OFF;
-			}
-		}
-	}
-	return DIVERSION;
+	return 1;
 }
 
 void pv_pwm_set(int16_t limit) // set the PWM duty-cycle in the hardware PWM channel
@@ -160,24 +31,6 @@ void pv_pwm_set(int16_t limit) // set the PWM duty-cycle in the hardware PWM cha
 
 void pv_pwm_calc(float slope) // calc a duty-cycle from the PV power excess supply, CCEFF_DIFF is a global variable
 {
-	static int16_t CCEFF_DIFF_tmp;
-	static float power_exp;
-
-	power_exp = PWM_EXP + slope;
-	CCEFF_DIFF_tmp = (int16_t) (99 - CCEFF); // power offset
-	if ((CHARGERL == R_ON) && !PWMTEST) { // set all PWM to zero if charger is on and not testing
-		pv_pwm_shutdown();
-		CCEFF_DIFF_tmp = 0;
-	}
-	if (CCEFF_DIFF_tmp > PWM_LIMIT)
-		CCEFF_DIFF_tmp = PWM_LIMIT;
-	if (CCEFF_DIFF_tmp > PWM_SLOPE) {
-		CCEFF_DIFF = (int16_t) lp_filter(pow((float) CCEFF_DIFF_tmp, power_exp), LP_PWM, TRUE); // control power
-	} else {
-		CCEFF_DIFF = (int16_t) lp_filter((float) CCEFF_DIFF_tmp, LP_PWM, TRUE); // control power
-	}
-	if (CCEFF_DIFF > 100)
-		CCEFF_DIFF = 100; // limit max value to 100% power
 
 }
 
@@ -330,59 +183,13 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 			if (cell[z].weight > MAXWEIGHT) cell[z].weight = MAXWEIGHT; // limit value
 			if (cell[z].weight < MINWEIGHT) cell[z].weight = MINWEIGHT; // limit values
 			if ((cell[z].weight < WCHARGER) && P.SYSTEM_STABLE) {
-				if ((CHARGERL) == R_ON && !C_MSG_STOP) {
-					term_time();
-					putrs2USART(charger1); // alert of relay went from off to on
-					C_MSG_STOP = TRUE;
-					cell[z].critical = TRUE;
-					CCS.boc = z;
-				}
-				if (CHARGERL == R_OFF)
-					C_MSG_STOP = FALSE;
-				if (DIPSW4 == HIGH) {
-					divert_power(OFF, YES, 0);
-					if (R.currentin < CHARGER_MIN) {
-						charger_power(ON, NO); // CHARGERL = R_ON; // if the power to the inverter gets low, turn on the charger.
-						PVLOAD = R_OFF;
-						if (!C_MSG_STOP) {
-							alarm_buffer[almctr].bn = z;
-							alarm_buffer[almctr++].alm_num = NULL0;
-							alarm_codes.alm_flag = TRUE;
-						}
-					}
-				}
+
 				check_alarm(CCS.boi, " pick_batt1 "); // send alarm codes to terminal if alm_flag is set
 			}
 		}
 		if (z <= HISTBATTNUM) {
 			s_crit(HL);
-			if (((R.primarypower[z] < ALERTLOW) || (hist[z].bsoc < BSOCLOW)) || ((CCS.bn == z) && (CCS.alert))) {
-				if (cell[z].weight > MAXWEIGHT)
-					cell[z].weight = MAXWEIGHT; // limit value
-				if (cell[z].weight < MINWEIGHT)
-					cell[z].weight = MINWEIGHT; // limit values
-				CCS.bn = z; // set to battery we wish to possibly charge next
-				if ((CCS.boc != CCS.bn) && (cell[CCS.boc].weight > (cell[CCS.bn].weight + PLUSWEIGHT)) && (cell[CCS.bn].weight < LOWPOINTS)) {
-					if (B_GANGED && (CCS.bn == B2)) { // stop bogus B2 alarms during ganged operation
-						CCS.bn = B1; // force to only B1 during ganged
-					} else {
-						CCS.alert = TRUE; // force system to recheck battery status if in charge routine
-						if (alert_pick == 0)
-							alert_pick = CCS.bn; // keep battery ID LOCKED for alert until alert is cleared
-						if ((R.inputvoltage < ALERTCHRG) && (DIPSW4 == HIGH)) {
-							divert_power(OFF, YES, 0);
-							if (R.currentin < CHARGER_MIN) {
-								charger_power(ON, NO); // CHARGERL = R_ON; // only if solar power is low
-								PVLOAD = R_OFF;
-								alarm_buffer[almctr].bn = z;
-								alarm_buffer[almctr++].alm_num = NULL0;
-								alarm_codes.alm_flag = TRUE;
-								check_alarm(CCS.boi, " pick_batt2 "); // send alarm codes to terminal if alm_flag is set
-							}
-						}
-					}
-				}
-			}
+
 			e_crit();
 		}
 		if (cell[z].dead) {
@@ -425,9 +232,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		boi = B1;
 	if (cell[B2].online)
 		boi = B2;
-	if (cell[boi].online && ((!cell[boi].cconline) || (!DIVERSION))) { // update real battery voltage if loaded and not charging
-		cell[boi].voltage = R.primarypower[boi];
-	}
+
 
 	s_crit(HL);
 	/* try to stop extra alerts with a delay timer */
@@ -516,14 +321,7 @@ uint8_t pick_batt(uint8_t choice, uint8_t bn)
 		sprintf(bootstr2, "Inv %sA, %u CCLED, D        ", f3, ccled_flag.ticks); // display weight factors
 		LCD_VC_puts(VC1, DS3, YES);
 
-		if ((D_ON++ > BATTCHECK) && ((B.r_soc[boi] >= DSOC_H))) {
-			if (DIPSW7 == LOW) { // if set divert power to external load
-				if (CHARGERL == R_OFF) divert_power(ON, NO, B.d_code); // Switch on power to extra loads but not when charging (waste)
-			} else {
-				divert_power(OFF, YES, B.d_code);
-			}
-			D_ON = LOW;
-		}
+
 	} else {
 		D_ON = LOW;
 		sprintf(bootstr2, "Inv %sA, %u CCLED, no D         ", f3, ccled_flag.ticks); // display weight factors
@@ -751,9 +549,9 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 		term_time();
 		putrs2USART(chrgcode10);
 		/*              battery test routine    */
-		SOLAROFF = R_ON; // PV off before C40
+//		SOLAROFF = R_ON; // PV off before C40
 		wdttime(BATRUNF);
-		CCOUTOPENSW = R_ON; // charge voltage relay/off
+//		CCOUTOPENSW = R_ON; // charge voltage relay/off
 		wdttime(BATRUNF);
 		ADC_read(); // read unloaded battery voltage from charge line.
 		if (bn <= HISTBATTNUM) {
@@ -765,7 +563,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			cell[bn].noload += GELL_R_COMP;
 		if (bn > HISTBATTNUM & cell[bn].id == 'M')
 			cell[bn].noload += AGM_R_COMP;
-		BATLOAD = R_ON; // battery load relay/on
+//		BATLOAD = R_ON; // battery load relay/on
 		wdttime(BATTEST); // drain the battery
 		if (!P.SYSTEM_STABLE) wdttime(BATTEST); // drain the battery MORE
 		ADC_read(); // read loaded battery voltage from charge line.
@@ -867,8 +665,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	putrs2USART(chrgcode7);
 	cell[bn].date = V.timerint_count; // load timer count at start of charging time
 
-	if (!cell[bn].critical && CHARGERL == R_OFF)
-		cell[bn].critical = FALSE; // reset battery flags
+
 	cell[bn].discharged = FALSE;
 	cell[bn].dead = FALSE;
 
@@ -899,12 +696,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 	}
 	e_crit();
 
-	BATLOAD = R_OFF; // battery load relay/off
-	BATLOAD_HI = R_OFF;
-	wdttime(BATRUNF);
-	CCOUTOPENSW = R_OFF; // charge voltage relay/on
-	wdttime(BATRUNF);
-	SOLAROFF = R_OFF; // PV back on
+
 	wdttime(BATRUNF);
 	/*              end battery test        */
 
@@ -1166,7 +958,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 			if (!CC_DONE && (CCMODE != IDLE_M)) { // only once per charge cycle
 				ClrWdt(); // reset the WDT timer
 				CC_DONE = TRUE;
-				PVLOAD = R_OFF;
+//				PVLOAD = R_OFF;
 				term_time();
 				if (CCMODE == FLOAT_M)
 					putrs2USART(runcode6);
@@ -1223,7 +1015,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 					}
 
 					if ((cell[B1].fresh) && (cell[B2].fresh) && (!P.CHARGEROVERRIDE)) {
-						charger_power(OFF, YES); // CHARGERL = R_OFF;
+						//(OFF, YES); // CHARGERL = R_OFF;
 						alarm_buffer[almctr].bn = bn;
 						alarm_buffer[almctr++].alm_num = 2;
 						alarm_codes.alm_flag = TRUE;
@@ -1346,18 +1138,7 @@ void ResetC40(uint8_t bn, uint8_t save_relay, uint8_t resetno)
 			bn, ABSL(absorp_current), (int32_t) ((float) hist[bn].rate * END_RATIO));
 	}
 	puts2USART(bootstr2);
-	SOLAROFF = R_ON; // PV off before C40
-	wdttime(BATRUNF);
-	CCOUTOPENSW = R_ON; // disconnect battery to reset C40
-	wdttime(BATRUNF);
-	CCOUTOPENSW = R_OFF; // connect battery C40 before solar
-	wdttime(BATRUNF);
-	if (save_relay) { // wait until the C40 controller power cycles.
-		pv_pwm_shutdown(); // kill power to PV PWM system
-		wdttime(BATRUN);
-		wdttime(BATRUN);
-	}
-	SOLAROFF = R_OFF; // PV back on
+
 	CCMODE = IDLE_M; // reset the charge mode flag
 	wdttime(BATRUNF);
 	wdttime(BATRUN);

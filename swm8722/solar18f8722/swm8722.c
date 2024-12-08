@@ -15,7 +15,7 @@
 
 // PIC18F8722 Configuration Bit Settings
 
-#include <p18f8722.h>
+#include <p18f6722.h>
 
 // CONFIG1H
 #pragma config OSC = HSPLL      // Oscillator Selection bits (HS oscillator, PLL enabled (Clock Frequency = 4 x FOSC1))
@@ -32,14 +32,14 @@
 #pragma config WDTPS = 4096     // Watchdog Timer Postscale Select bits (1:4096)
 
 // CONFIG3L
-#pragma config MODE = MC        // Processor Data Memory Mode Select bits (Microcontroller mode)
-#pragma config ADDRBW = ADDR20BIT// Address Bus Width Select bits (20-bit Address Bus)
-#pragma config DATABW = DATA16BIT// Data Bus Width Select bit (16-bit External Bus mode)
-#pragma config WAIT = OFF       // External Bus Data Wait Enable bit (Wait selections are unavailable for table reads and table writes)
+//#pragma config MODE = MC        // Processor Data Memory Mode Select bits (Microcontroller mode)
+//#pragma config ADDRBW = ADDR20BIT// Address Bus Width Select bits (20-bit Address Bus)
+//#pragma config DATABW = DATA16BIT// Data Bus Width Select bit (16-bit External Bus mode)
+//#pragma config WAIT = OFF       // External Bus Data Wait Enable bit (Wait selections are unavailable for table reads and table writes)
 
 // CONFIG3H
 #pragma config CCP2MX = PORTC   // CCP2 MUX bit (ECCP2 input/output is multiplexed with RC1)
-#pragma config ECCPMX = PORTE   // ECCP MUX bit (ECCP1/3 (P1B/P1C/P3B/P3C) are multiplexed onto RE6, RE5, RE4 and RE3 respectively)
+//#pragma config ECCPMX = PORTE   // ECCP MUX bit (ECCP1/3 (P1B/P1C/P3B/P3C) are multiplexed onto RE6, RE5, RE4 and RE3 respectively)
 #pragma config LPT1OSC = OFF    // Low-Power Timer1 Oscillator Enable bit (Timer1 configured for higher power operation)
 #pragma config MCLRE = ON       // MCLR Pin Enable bit (MCLR pin enabled; RG5 input pin disabled)
 
@@ -911,8 +911,7 @@ void system_data(void) // display system data on terminal
 		"\r\n UTC counter %lu, Time Skew %li, Highint %lu, Lowint %lu, Timerint %lu, Workerint %lu, \r\n Com1rx INT %lu, Com1tx INT %lu, Com2int %lu, Bint %lu, PWMint %lu, Eint %lu, Aint %lu, Lowclocks %lu, Lowruns/S %lu,\r\n",
 		utctime, time_skew, V.highint_count, V.lowint_count, V.timerint_count, worker_count, V.c1rx_int, V.c1tx_int, V.c2_int, V.buttonint_count, V.pwm4int_count, V.eeprom_count, V.adc_count, V.clock50, V.clock50 / V.timerint_count);
 	puts2USART(bootstr2);
-	sprintf(bootstr2, " %c,%c,%c,%c, CHARGER %u, H%u,L%u,B%u CRITC levels %u, CRITIC counts %lu, CCLED counts %u, ADC Zero Offset %u\r\n",
-		cell[B1].id, cell[B2].id, cell[B3].id, cell[B4].id, CHARGERL, hirez_count[0], hirez_count[1], hirez_count[4], critc_level, critc_count, ccled_flag.ticks, zero_ref);
+
 	puts2USART(bootstr2);
 	sprintf(bootstr2, " CCS status: pick %u, boi %u, boc %u, alert %u, bn %u : MBMC network  %u, MBMC Data Bytes %lu, Tx CPS: %li, Rx CPS: %li",
 		CCS.pick, CCS.boi, CCS.boc, CCS.alert, CCS.bn, mbmcflag.cmd_timeout ? 0 : 1, V.mbmcdata_count, LINK.tx_cps, LINK.rx_cps);
@@ -930,13 +929,7 @@ void system_data(void) // display system data on terminal
 	if (DIPSW3) putrs2USART(" Inverter Battery 1 only: DIPSW3,");
 	if (B_GANGED) putrs2USART(" \x1b[7mStrings 1&2 are GANGED\x1b[0m,");
 	if (!DIPSW7) putrs2USART(" Power Diversion enabled: DIPSW7,");
-	if (DIVERSION) {
-		sprintf(bootstr2, " Diversion Status Off: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) MBMC.diversion.power,
-			(int16_t) B.today, (int16_t) B.yesterday);
-	} else {
-		sprintf(bootstr2, " \x1b[7mDiversion Status On\x1b[0m: PWM %i%%\r\n Todays Power Q level: %i, Yesterdays Power Q level: %i", (int16_t) MBMC.diversion.power,
-			(int16_t) B.today, (int16_t) B.yesterday);
-	}
+
 	puts2USART(bootstr2);
 	sprintf(bootstr2,
 		"\r\n Total Charger Energy %liWh, Todays Charger energy %liWh, Prev Charger Energy %liWh, Diversion Energy: Total %liWh, Todays %liWh",
@@ -1284,8 +1277,7 @@ void mbmc_update(void)
 	//	MBMC.CHARGER_B = CHARGERL; //FIXME waste of 32 bits
 	//	MBMC.DIVERSION_B = DIVERSION; //FIXME waste of 32 bits
 	MBMC.diversion.flag = 0; // clear the status flag
-	MBMC.diversion.flag |= DIVERSION; // bit 0
-	MBMC.diversion.flag |= (CHARGERL << 1); // bit 1
+
 	MBMC.diversion.alarm = B.d_code;
 
 	MBMC.systemvoltage = R.systemvoltage;
@@ -1326,13 +1318,7 @@ void mkbsstring(void) // generate status report string
 					SDC0.harvest.energy, SDC0.harvest.usage, SDC0.harvest.prev_energy, SDC0.harvest.prev_usage,
 					SDC0.harvest.e_total, SDC0.harvest.u_total, SDC0.harvest.count, SDC0.harvest.charger,
 					SDC0.harvest.c_total, SDC0.harvest.prev_charger, SDC0.harvest.diversion);
-				sprintf(block_buffer + strlen(block_buffer), sd_data_layout2,
-					CHARGERL, DIVERSION, (int16_t) B_GANGED,
-					R.systemvoltage / 100, R.inputvoltage / 100, R.ccvoltage / 100, R.primarypower[B1] / 100,
-					R.primarypower[B2] / 100, R.currentin, R.current, C.currentload,
-					cell[B1].cconline, cell[B1].online, cell[B1].cycles, cell[B2].cconline, cell[B2].online,
-					cell[B2].cycles, cell[B1].id, cell[B2].id, cell[B3].id, cell[B4].id,
-					R.thermo_batt, (uint32_t) (hist[CCS.boc].cef * 100), (int16_t) MBMC.diversion.power);
+
 				sprintf(block_buffer + strlen(block_buffer), sd_data_layout3,
 					C.temp_drate, B.start_ahu, B.cef_raw, B.start_ahi, B.start_aho, B.absorp_ahi, B.absorp_time,
 					B.charge_time_left, (int16_t) B.yesterday, (int16_t) B.today);
@@ -1499,7 +1485,7 @@ void ChargeRelayOn(uint8_t bn, uint8_t FLOATSW) // switch relays for battery
 {
 	if (FLOATSW && (CCMODE == FLOAT_M)) {
 		cell[bn].cconline = TRUE; // charging from CC
-		CCOUTOPENSW = R_OFF;
+//		CCOUTOPENSW = R_OFF;
 		wdttime(BATRUNF);
 		CHRG2 = R_ON; // charge #2 relay/on ,use as float battery
 		wdttime(BATRUNF);
@@ -1527,7 +1513,7 @@ void ChargeRelayOn(uint8_t bn, uint8_t FLOATSW) // switch relays for battery
 		BMMODE = FLOAT_M;
 	} else {
 		cell[bn].cconline = TRUE; // charging from CC
-		SOLAROFF = R_ON; // PV off before C40
+//		SOLAROFF = R_ON; // PV off before C40
 		wdttime(BATRUNF);
 		switch (bn) {
 		case B1B:
@@ -1564,9 +1550,7 @@ void ChargeRelayOn(uint8_t bn, uint8_t FLOATSW) // switch relays for battery
 		}
 	}
 	wdttime(BATRUNF);
-	CCOUTOPENSW = R_OFF; //
-	wdttime(BATRUNF);
-	SOLAROFF = R_OFF;
+
 	wdttime(BATRUNF);
 	BMMODE = CHARGE_M;
 
@@ -1581,7 +1565,7 @@ void ChargeRelayOff(uint8_t bn, uint8_t FLOATSW)
 {
 	if (FLOATSW && (CCMODE == FLOAT_M)) {
 		cell[bn].cconline = FALSE; // not charging from CC
-		CCOUTOPENSW = R_OFF;
+//		CCOUTOPENSW = R_OFF;
 		wdttime(BATRUNF);
 		CHRG1 = R_ON; // charge #1 relay/on ,use as float battery
 		cell[B1].cconline = TRUE; // charging from CC
@@ -1608,12 +1592,12 @@ void ChargeRelayOff(uint8_t bn, uint8_t FLOATSW)
 			break;
 		}
 		wdttime(BATRUNF);
-		SOLAROFF = R_OFF;
+//		SOLAROFF = R_OFF;
 		wdttime(BATRUNF);
 		BMMODE = FLOAT_M;
 	} else {
 		cell[bn].cconline = FALSE; // not charging from CC
-		SOLAROFF = R_ON; // PV off before C40
+//		SOLAROFF = R_ON; // PV off before C40
 		wdttime(BATRUNF);
 		switch (bn) {
 		case B1B:
@@ -1646,7 +1630,7 @@ void ChargeRelayOff(uint8_t bn, uint8_t FLOATSW)
 			break;
 		}
 		wdttime(BATRUNF);
-		SOLAROFF = R_OFF;
+//		SOLAROFF = R_OFF;
 		wdttime(BATRUNF);
 		BMMODE = IDLE_M;
 	}
@@ -1786,7 +1770,7 @@ float update_cef(uint8_t bn, uint8_t mode) // try to find the real charge eff fa
 	}
 	if (hist[bn].cef > CEF_MAX) hist[bn].cef = CEF_MAX;
 	if (hist[bn].cef < CEF_MIN) hist[bn].cef = CEF_MIN;
-	if (CHARGERL == R_ON) divert_power(OFF, YES, 0); // Switch off power to extra loads when charging (waste)
+//	if (CHARGERL == R_ON) divert_power(OFF, YES, 0); // Switch off power to extra loads when charging (waste)
 	e_crit();
 	return hist[bn].cef;
 }
@@ -1864,9 +1848,7 @@ uint16_t Get_RestSOC(uint8_t z, uint8_t S_SOC, blendmode_t SOC_BLEND)
 void fail_safe(void)
 {
 	P.FAILSAFE = TRUE;
-	CCOUTOPENSW = R_OFF;
-	SOLAROFF = R_OFF;
-	if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF;
+
 	BCRELAYS = 0xFF;
 	BAT1 = R_ON; // battery #1 relay/off
 	CHRG1 = R_ON; // charge #1 relay/on
@@ -1893,7 +1875,7 @@ void fail_safe(void)
 	s_crit(HL);
 	c_off = V.timerint_count;
 	e_crit();
-	CHARGERL = R_OFF;
+//	CHARGERL = R_OFF;
 	alarm_buffer[almctr].bn = CCS.boc;
 	alarm_buffer[almctr++].alm_num = 3;
 	alarm_codes.alm_flag = TRUE;
@@ -2197,7 +2179,7 @@ void main(void) // Lets Party
 	CCEFF = (int16_t) lp_filter((float) 255, LP_CCEFF, FALSE); // update filter
 	sprintf(bootstr2, "\r\n^^^,0,No Status Report,###");
 
-#ifdef	__18F8722
+#ifdef	__18F6722
 	config_pic(PIC_8722); // configure all controller hardware to the correct settings and ports
 #endif
 
@@ -2212,7 +2194,7 @@ void main(void) // Lets Party
 	LCD_VC_puts(VC0, DS2, YES);
 	LCD_VC_puts(VC0, DS3, YES);
 
-#ifdef	__18F8722
+#ifdef	__18F6722
 	start_pic(PIC_8722); // configure external hardware to the correct startup conditions
 #endif
 	P.BLANK_LCD = FALSE;
@@ -2454,8 +2436,8 @@ void main(void) // Lets Party
 	}
 
 	zero_amploc_PV(); // zero input current sensor
-	CCOUTOPENSW = R_OFF; // charge voltage relay/on
-	if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF; // charge load relay/on
+//	CCOUTOPENSW = R_OFF; // charge voltage relay/on
+//	if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF; // charge load relay/on
 	term_time();
 	putrs2USART(" Read ADC data inputs \r\n");
 	wdttime(BATRUNF);
@@ -2488,7 +2470,7 @@ void main(void) // Lets Party
 	start_delay();
 
 	BCRELAYS = 0xFF; // turn on all battery relays/on
-	PVLOAD = R_ON; // charge load relay on before measuring PV input voltage
+//	PVLOAD = R_ON; // charge load relay on before measuring PV input voltage
 
 	wdttime(BATRUNF); // read battery and charging system voltages
 	ADC_read();
@@ -2787,8 +2769,8 @@ void main(void) // Lets Party
 				if (DIPSW4 == HIGH) {
 					divert_power(OFF, YES, 0);
 					if (R.currentin < CHARGER_MIN) {
-						charger_power(ON, NO); // CHARGERL = R_ON; // RB0 is external battery charger/generator relay
-						PVLOAD = R_OFF;
+						//(ON, NO); // CHARGERL = R_ON; // RB0 is external battery charger/generator relay
+//						PVLOAD = R_OFF;
 						alarm_buffer[almctr].bn = CCS.boc;
 						alarm_buffer[almctr++].alm_num = 4;
 						alarm_codes.alm_flag = TRUE;
@@ -2803,7 +2785,7 @@ void main(void) // Lets Party
 				model_learn(lmode);
 			}
 		}
-		PVLOAD = R_ON;
+//		PVLOAD = R_ON;
 		noload_soc();
 		update_hist();
 		term_time();
