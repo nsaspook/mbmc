@@ -68,10 +68,10 @@
 #define MAXBATT		4		// the number of batteries to keep charged, 2 or 4
 #define B1AH		10     	// FLA costco GC2 or large AGM
 #define	B2AH		10    		// FLA costco CG2 or large Agm
-#define B3AH		20      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
-#define	B4AH		20      	// AGM cell
-#define B1ID		'S'     	// FLA costco GC2 or large AGM
-#define	B2ID		'S'    		// FLA costco CG2 or large AGM
+#define B3AH		10      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
+#define	B4AH		10      	// AGM cell
+#define B1ID		'M'     	// FLA costco GC2 or large AGM
+#define	B2ID		'M'    		// FLA costco CG2 or large AGM
 #define B3ID		'S'      	// AGM cell, if these are changed for S to M or back the EEPROM must be reset with SW1
 #define	B4ID		'S'      	// AGM cell
 #define B12_GANGEDAH    B1AH+B2AH       // with perko switch on both power batteries.
