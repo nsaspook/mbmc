@@ -281,8 +281,8 @@
 #define PWM_SLOPE	4	// When to start using gain factor
 
 /* battery runtime charge factors	*/
-#define	SMALLCOMP	1200.0  // normalize factor for small gell cells in weight cals mV
-#define MIDCOMP		10.0	// normalize factor for small AGM cells
+#define	SMALLCOMP	10.0  // normalize factor for small gell cells in weight cals mV
+#define MIDCOMP		1000.0	// normalize factor for small AGM cells
 #define	DSOC_L		75      // divert power SOC setpoint for BOI
 #define	DSOC_H		85      // divert power SOC setpoint for BOI
 #define WFLOAT_LOW      24000.0 // divert power lowest weight for any battery
@@ -297,8 +297,8 @@
 #define W_AH_F          2.0	// pure Ah factor -
 #define W_CYC_F         10.0	// charge cycles factor, age/usage -
 #define	PRIPOINTS	0.0	// weight points for primary battery
-#define	INVPOINTS	2000.0	// weight points for battery on inverter
-#define	LOWPOINTS       20000.0	// weight points for a very low battery
+#define	INVPOINTS	100.0	// weight points for battery on inverter
+#define	LOWPOINTS       10000.0	// weight points for a very low battery
 #define INV_VOLT_LOW    11400L  // Low voltage alarm point for inverter
 #define INV_LOADED	300	// amps to switch charge to inverter battery quickly
 
