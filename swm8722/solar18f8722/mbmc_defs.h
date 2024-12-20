@@ -116,7 +116,7 @@
 #define	CCOUTOPENSW	LATJbits.LATJ2
 #define	PVLOAD		LATJbits.LATJ3
 #define	COOLFAN		LATJbits.LATJ3
-#define MPULED		LATHbits.LATH0
+#define MPULED		LATAbits.LATA0
 #define	DIPSW1		PORTDbits.RD0
 #define	DIPSW2		PORTDbits.RD1
 #define	DIPSW3		PORTDbits.RD2

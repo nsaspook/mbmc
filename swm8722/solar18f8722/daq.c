@@ -265,75 +265,11 @@ void set_adc_gain(void) // set ADC gains
 
 void zero_amploc(void) // set zero current setpoint from ADC reading from a50 a50c a300, write to EEPROM
 {
-	uint8_t z, E_SAVE = LATE;
 
-	putrs2USART(zero0);
-	YNKEY = WAIT_M;
-	while (YNKEY == WAIT_M) {
-		wdtdelay(10);
-		idle_loop();
-	}
-	if (YNKEY == NO_M) {
-		putrs2USART(zero2);
-		return;
-	}
-	putrs2USART(zero4);
-	adc_cal[10] = adc_cal[11] = adc_cal[12] = adc_cal[13] = ADC_NULL; // reset offsets to zero (ADC_NULL)
-	// read adc data for zero setpoint
-
-	SOLAROFF = R_ON;
-	CCOUTOPENSW = R_ON;
-	if (battnum > HISTBATTNUM) { // disconnect from controller power buss to get zero current in sensor
-		BAT1 = R_ON;
-		BAT2 = R_ON;
-		CHRG1 = R_OFF;
-		CHRG2 = R_OFF;
-	}
-	wdttime(BATRUNS); // wait for relays to remove PV input voltage
-
-	ADC_read(); // a50=adc_[10], a50c=adc_cal[11], a300=adc_cal[12]
-	SOLAROFF = R_OFF;
-	CCOUTOPENSW = R_OFF;
-	if (battnum > 3) { // reconnect to controller power buss
-		BAT1 = R_OFF;
-		BAT2 = R_OFF;
-	}
-
-	adc_cal[10] = (uint8_t) (ADC_NULL + (int16_t) ((int16_t) a50 - (int16_t) AMP50_OF));
-	sprintf(bootstr2, "\n\r Zero offset %i, PV current %i, AMP50_OF %i", (int16_t) adc_cal[10], a50, AMP50_OF);
-	puts2USART(bootstr2);
-
-	//      no a50c sensor yet
-	adc_cal[11] = (uint8_t) (ADC_NULL + (int16_t) ((int16_t) a50c - (int16_t) AMP50c_OF));
-	sprintf(bootstr2, "\n\r Zero offset %i, Charger current %i, AMP50c_OF %i", (int16_t) adc_cal[11], a50c, AMP50c_OF);
-	puts2USART(bootstr2);
-
-	adc_cal[12] = (uint8_t) (ADC_NULL + (int16_t) ((int16_t) a300 - (int16_t) AMP300_OF));
-	sprintf(bootstr2, "\n\r Zero offset %i, Inverter current %i, AMP300_OF %i", (int16_t) adc_cal[12], a300, AMP300_OF);
-	puts2USART(bootstr2);
-
-	for (z = 0; z < ADC_SLOTS; z++) {
-		write_data_eeprom(adc_cal[z], ADC_SLOTS, z, 8);
-	}
-	putrs2USART(zero1);
-	LATE = E_SAVE;
 }
 
 void zero_amploc_PV(void) // set zero current setpoint from ADC reading from a50, don't write to EEPROM
 {
 
-	adc_cal[10] = ADC_NULL; // reset offsets to zero (ADC_NULL)
-	// read adc data for zero setpoint
 
-	SOLAROFF = R_ON;
-	CCOUTOPENSW = R_ON;
-	wdttime(BATRUN); // wait for relays to remove PV input voltage
-	ADC_read(); // a50=adc_[10], a50c=adc_cal[11], a300=adc_cal[12]
-	SOLAROFF = R_OFF;
-	CCOUTOPENSW = R_OFF;
-	s_crit(HL);
-	adc_cal[10] = (uint8_t) (ADC_NULL + (int16_t) ((int16_t) a50 - (int16_t) AMP50_OF));
-	e_crit();
-	term_time();
-	putrs2USART(zero3);
 }
