@@ -1,12 +1,12 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  50.0 FB  "                  // version text header
+#define MBMC_VERSION 	"    MBMC  50.1 FB  "                  // version text header
 #define	MAGIC		0x0410  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
 #define SIMULA		" \x1b[7m RUNNING IN SIMULATION MODE \x1b[0m "
-#define BATTERY_CHANGE	" Battery Date: Oct 10, 2019\r\n"
+#define BATTERY_CHANGE	" Battery Date: Dec 20, 2024\r\n"
 #define	PIC_8722	8722
 #define	CHECK_DATE	1305123894ul
 #define CHECKMARK	0x57					// EEPROM checkmark

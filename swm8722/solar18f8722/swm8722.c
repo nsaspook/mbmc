@@ -344,6 +344,7 @@
 //  40.9    reduce number of static vars in routines and add diags to SD card failures
 //  41.0    Adjust Peukert factors for AGM batteries
 //  50.0    adjust for LIPO4 type cells
+//  50.1    check for low RSoc and use charger power when low
 //	***
 //  dipswitch settings PORTD
 //  1       on=reset battery charging counters and flags
@@ -567,6 +568,8 @@ volatile enum answer_t {
 } YNKEY;
 
 blendmode_t BLENDMODE = NO_BLEND;
+
+static void li_force_charger_on(void);
 
 /* ISR vectors */
 #pragma code tick_interrupt = HIGH_VECTOR
@@ -2558,6 +2561,8 @@ void main(void) // Lets Party
 		ADC_read();
 		while ((R.inputvoltage > SOLARHIGH) || P.BCHECK) {
 
+			li_force_charger_on(); // try to stop low-voltage cut-off
+
 			if (P.BCHECK) {
 				for (z = 1; z <= battnum; z++) {
 					if (P.PRIPOWEROK) {
@@ -2779,8 +2784,8 @@ void main(void) // Lets Party
 			P.BCHECK = TRUE;
 			ftest = 0;
 			if (P.SYSTEM_STABLE && (((R.primarypower[CCS.boi] < BATTFLAT)
-				&& (R.primarypower[CCS.boi] > BATTCRIT))
-				&& (cell[CCS.boi].valid == cell[B0].valid))) { // check for low B1
+			&& (R.primarypower[CCS.boi] > BATTCRIT))
+			&& (cell[CCS.boi].valid == cell[B0].valid))) { // check for low B1
 				if (P.PRIPOWEROK) { // went from good to bad
 					ALARMOUT = R_ON; // alert for bad power
 				}
@@ -2811,6 +2816,15 @@ void main(void) // Lets Party
 		putrs2USART(runcode1);
 
 		ClrWdt(); // reset the WDT timer
+	}
+}
+/*
+ * force AC charger on to reduce Li BMS protection low-voltage shutdown
+ */
+static void li_force_charger_on(void)
+{
+	if ((B.r_soc[1] + B.r_soc[3] + B.r_soc[4]) < 25) {
+		charger_power(ON, YES);
 	}
 }
 
