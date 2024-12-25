@@ -80,12 +80,11 @@ void tick_handler(void) // This is the high priority ISR routine
 		// PV reload logic / check before DAYCLOCK is updated (needs work)
 		//				if (P.SYSTEM_STABLE && !SDC0.DAYCLOCK && (R.inputvoltage > SOLARDOWN)) PVLOAD=R_ON;		//  load down the PV input
 		if (P.SYSTEM_STABLE && SDC0.DAYCLOCK && ((R.inputvoltage < LOADLOW) || (R.inputvoltage > CHRG_HIGH))) {
-//			if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF; //  unload the PV input
+			if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF; //  unload the PV input
 		}
 
 		/* daily housekeeping routines */
-//		if (((!SDC0.DAYCLOCK) && (R.inputvoltage > SOLARUP)) && P.SYSTEM_STABLE && (solarup_delay++ >= SUPDELAY) && CHARGERL) { // store sun up time
-		if (1) {
+		if (((!SDC0.DAYCLOCK) && (R.inputvoltage > SOLARUP)) && P.SYSTEM_STABLE && (solarup_delay++ >= SUPDELAY) && CHARGERL) { // store sun up time
 			dayclockup = V.timerint_count;
 			dayclocklocal = localtime; // set real local time from UTC offset clock
 			solarup_delay = NULL0;
@@ -107,7 +106,21 @@ void tick_handler(void) // This is the high priority ISR routine
 			alarm_buffer[almctr++].alm_num = 13;
 			alarm_codes.alm_flag = TRUE;
 			if ((uint8_t) hist[CCS.boi].bsoc <= (uint8_t) HELP_SOC) { // check for low soc,  TKS to BILL @ NAWS for the idea
-
+				if (DIPSW4 == HIGH) {
+					alarm_buffer[almctr].bn = CCS.boc;
+					alarm_buffer[almctr++].alm_num = 11;
+					alarm_codes.alm_flag = TRUE;
+					if (!DIPSW8 && !DIVERSION_set) DIVERSION = R_OFF; // don't override the switch
+					if (R.currentin < CHARGER_MIN) {
+						c_on = V.timerint_count;
+						CHARGERL = R_ON;
+						PVLOAD = R_OFF;
+						P.MORNING_HELP = TRUE;
+						alarm_buffer[almctr].bn = hist[CCS.boi].bsoc;
+						alarm_buffer[almctr++].alm_num = 5;
+						alarm_codes.alm_flag = TRUE;
+					}
+				}
 			}
 			P.UPDATE_EEP = TRUE;
 		}
@@ -119,7 +132,7 @@ void tick_handler(void) // This is the high priority ISR routine
 		if (SDC0.DAYCLOCK && P.MORNING_HELP && P.SYSTEM_STABLE) { // turn off charger after morning boost
 			if (((V.timerint_count - dayclockup) > HELP_TIME) && (hist[CCS.boi].bsoc >= HELP_SOC_END)) {
 				c_off = V.timerint_count;
-//				CHARGERL = R_OFF;
+				CHARGERL = R_OFF;
 				P.MORNING_HELP = FALSE;
 				solarup_delay = NULL0;
 				alarm_buffer[almctr].bn = hist[CCS.boi].bsoc;
@@ -128,8 +141,46 @@ void tick_handler(void) // This is the high priority ISR routine
 			}
 		}
 
+		if (((SDC0.DAYCLOCK) && (R.inputvoltage < SOLARDOWN) && P.SYSTEM_STABLE) || P.FORCEDAY) { // store sun down time or after 24 hour run
+			if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF; // charge load relay/off at end of day
+			if ((V.timerint_count - dayclockup) > DARKDELAY) { // Try not to short cycle
+				if ((V.timerint_count - dayclockup - DARKDELAY) > DARKDELAY) { // make sure it's really dark
+					dayclockdown = V.timerint_count;
+					SDC0.DAYCLOCK = FALSE;
+					if (P.FORCEDAY) {
+						P.FORCEDAY = FALSE;
+						dayclockup = V.timerint_count;
+						dayclocklocal = localtime;
+					}
+					solarup_delay = NULL0;
+					P.SAVE_DAILY = TRUE; // Flag to save data outside of the ISR daily
+					if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF;
+					hist[B1].aho += AH_DAY_LOSS1; // default daily Ah discharge batt1
+					hist[B2].aho += AH_DAY_LOSS2; // default daily Ah discharge batt2
+					hist[B1].ahop += AH_DAY_LOSS1; // default daily Ah discharge batt1
+					hist[B2].ahop += AH_DAY_LOSS2; // default daily Ah discharge batt2
+					B.watercounter = cell[B1].cycles + cell[B2].cycles + cell[B3].cycles + cell[B4].cycles;
+					if ((B.watercounter - B.watercounter_prev) >= BATTWATER || B.equal >= CHARGER_EQUAL) { //check for the next step in charge time
+						alarms.mbmc_alarm.absorp = 1;
+						if (B.equal >= CHARGER_EQUAL)
+							alarms.mbmc_alarm.equal = 1;
+					}
+					alarm_buffer[almctr].bn = CCS.boc;
+					alarm_buffer[almctr++].alm_num = 8;
+					alarm_codes.alm_flag = TRUE;
+				}
+			}
+		}
 
-
+		// check for charger on with high input voltage on array or too much current when on
+		if ((R.cin_fast > MAX_CHARGEAMPS) || (P.SYSTEM_STABLE && (!CHARGERL) && (R.inputvoltage > CHRG_HIGH) && (!cell[CCS.boc].critical) && (CCS.boc != B0))) {
+			c_off = V.timerint_count;
+			CHARGERL = R_OFF; // save grid power because PV is online and providing excess power
+			solarup_delay = NULL0;
+			alarm_buffer[almctr].bn = CCS.boc;
+			alarm_buffer[almctr++].alm_num = 7;
+			alarm_codes.alm_flag = TRUE;
+		}
 		/*
 		 * at max safe input current, we have an input fuse
 		 * but maybe we can include some active protection
@@ -190,7 +241,7 @@ void tick_handler(void) // This is the high priority ISR routine
 		}
 
 		if (((ccled_flag.ticks >= CCLEDSOLID) && ccled_flag.flag)
-			&& (CCMODE != IDLE_M) && ((R.ccvoltage > VCP) && P.SYSTEM_STABLE)) { // C40 led status routine (LED-lit,charging state and solar at correct voltage)
+		&& (CCMODE != IDLE_M) && ((R.ccvoltage > VCP) && P.SYSTEM_STABLE)) { // C40 led status routine (LED-lit,charging state and solar at correct voltage)
 			// overkill but lets really be sure
 			if ((cctimer < CCFLOATTIME) && (CCS.pick == CCS.boc)) {
 				cctimer = CCLEDTIME; // keep in float loop until "pick_batt" goes elsewhere
@@ -218,7 +269,19 @@ void tick_handler(void) // This is the high priority ISR routine
 		if (CCLED == S_ON)
 			ccled_flag.flag = TRUE; // set led on flag if LED is lit during the 1 second timer check
 
-
+		if (((C.currentload > INVERTERON) || (R.currentin > GASSING)) && VENTENABLE) {
+			VENTFAN = R_ON; // system is active, clear the air
+			venttimer = VENTTIME;
+		} else {
+			if (venttimer-- < 0) // check for zero
+				if (VENTFAN == R_ON) {
+					alarm_buffer[almctr].bn = CCS.boi;
+					alarm_buffer[almctr++].alm_num = 26;
+					alarm_codes.alm_flag = TRUE;
+					check_alarm(CCS.boi, " ventfan OFF "); // send alarm codes to terminal if alm_flag is set
+					VENTFAN = R_OFF;
+				}
+		}
 
 		// check auto logger timer for SD CARD block write
 		if (loggertime-- < HIGH) { // check for zero
@@ -229,18 +292,25 @@ void tick_handler(void) // This is the high priority ISR routine
 
 		/* battery monitor action routines */
 		if (P.SYSTEM_STABLE
-			&& ((((R.primarypower[B1] > BATTCRIT) && (R.primarypower[B1] < BATTFLAT))
-			&& (cell[B1].valid == cell[B0].valid))
-			|| (((R.primarypower[B2] > BATTCRIT) && (R.primarypower[B2] < BATTFLAT))
-			&& (cell[B2].valid == cell[B0].valid)))
-			) { // check for low battery condition not disconnected battery
+		&& ((((R.primarypower[B1] > BATTCRIT) && (R.primarypower[B1] < BATTFLAT))
+		&& (cell[B1].valid == cell[B0].valid))
+		|| (((R.primarypower[B2] > BATTCRIT) && (R.primarypower[B2] < BATTFLAT))
+		&& (cell[B2].valid == cell[B0].valid)))
+		) { // check for low battery condition not disconnected battery
 
 			if (P.PRIPOWEROK) { // went from good to bad
 				/*	do something?	*/
 			}
 			//	    P.PRIPOWEROK = FALSE; // set software flag and trigger HOUSE power charger/generator
 			if (DIPSW4 == HIGH) {
-
+				if (R.currentin < CHARGER_MIN) {
+					c_on = V.timerint_count;
+					CHARGERL = R_ON; // RB0 is external battery charger/generator relay
+					PVLOAD = R_OFF;
+					alarm_buffer[almctr].bn = CCS.boc;
+					alarm_buffer[almctr++].alm_num = 1;
+					alarm_codes.alm_flag = TRUE;
+				}
 			}
 		} else {
 			if ((R.primarypower[CCS.boi] > BATTFRESH) && (cell[CCS.boi].valid == cell[B0].valid)) { // if battery is full recharged
@@ -347,12 +417,12 @@ void tick_handler(void) // This is the high priority ISR routine
 					break;
 				case HOST_CMD_V:
 					c_on = V.timerint_count;
-//					CHARGERL = R_ON;
-//					PVLOAD = R_OFF;
+					//					CHARGERL = R_ON;
+					//					PVLOAD = R_OFF;
 					alarm_buffer[almctr].bn = CCS.boc;
 					alarm_buffer[almctr++].alm_num = 15;
 					alarm_codes.alm_flag = TRUE;
-					if (0) {
+					if (!CHARGERL) {
 					} else {
 						P.CHARGEROVERRIDE = FALSE;
 					}
@@ -361,7 +431,7 @@ void tick_handler(void) // This is the high priority ISR routine
 					break;
 				case HOST_CMD_v:
 					c_off = V.timerint_count;
-//					CHARGERL = R_OFF;
+					CHARGERL = R_OFF;
 					alarm_buffer[almctr].bn = CCS.boc;
 					alarm_buffer[almctr++].alm_num = 14;
 					alarm_codes.alm_flag = TRUE;
@@ -429,7 +499,15 @@ void tick_handler(void) // This is the high priority ISR routine
 			break;
 		case 'E': // switch to #2 battery in FAIL-SAFE mode
 			if (P.FAILSAFE) {
-
+				CCOUTOPENSW = R_OFF;
+				SOLAROFF = R_OFF;
+				if (LOADNOTFAN || !P.COOLING) PVLOAD = R_OFF;
+				BCRELAYS = 0xFF;
+				BAT1 = R_OFF; // battery #1 relay/on
+				CHRG1 = R_OFF; // charge #1 relay/off
+				BAT2 = R_ON; // battery #2 relay/off
+				CHRG2 = R_ON; // charge #2 relay/on
+				CCS.boc = B2;
 			}
 			break;
 		case 'F': // set charge break flag
@@ -488,8 +566,8 @@ void tick_handler(void) // This is the high priority ISR routine
 			break;
 		case 'V': // turn external charger on
 			c_on = V.timerint_count;
-//			CHARGERL = R_ON;
-//			PVLOAD = R_OFF;
+			CHARGERL = R_ON;
+			PVLOAD = R_OFF;
 			alarm_buffer[almctr].bn = CCS.boc;
 			alarm_buffer[almctr++].alm_num = 15;
 			alarm_codes.alm_flag = TRUE;
@@ -497,7 +575,7 @@ void tick_handler(void) // This is the high priority ISR routine
 			break;
 		case 'v': // turn external charger off
 			c_off = V.timerint_count;
-//			CHARGERL = R_OFF;
+			CHARGERL = R_OFF;
 			alarm_buffer[almctr].bn = CCS.boc;
 			alarm_buffer[almctr++].alm_num = 14;
 			alarm_codes.alm_flag = TRUE;
@@ -745,8 +823,12 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 			}
 
 
-
-
+			if (P.COOLING && (COOLFAN == R_OFF)) {
+				COOLFAN = R_ON; // it's getting hot hot hot!!
+				alarm_buffer[almctr].bn = CCS.boi;
+				alarm_buffer[almctr++].alm_num = 24;
+				alarm_codes.alm_flag = TRUE;
+			}
 
 			/* See if a real battery is being charged */
 			if (cell[B1].cconline) boc = B1;
@@ -787,11 +869,37 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 				hist[B2].kwo += (int32_t) (cell[B2].current * R.primarypower[B2]) / 360;
 			}
 
-
+			if (CHARGERL == LOW) { // if charger relay is on update charger energy else update the PV array energy
+				SDC0.harvest.charger += (int32_t) (R.currentin * R.inputvoltage) / 3600; // shift result right 1 zero with '3600'
+				if (!AC_OFF_U && (R.inputvoltage < CHARGER_MINV)) { // check for good utility power and for proper charger output voltage
+					if (cdelay++>CHARGER_DELAY) { // wait a bit before charger reset
+						H_tmp = INTCONbits.GIEH;
+						INTCONbits.GIEH = LOW;
+						c_off = V.timerint_count; // this gets updated in the high ISR so we protect reads in the low ISR
+						INTCONbits.GIEH = H_tmp;
+						CHARGERL = R_OFF; // The charger should be on but is not, so turn off the signal to reset a possible overload.
+						alarm_buffer[almctr].bn = CCS.boc;
+						alarm_buffer[almctr++].alm_num = 20;
+						alarm_codes.alm_flag = TRUE;
+					}
+				} else {
+					cdelay = NULL0;
+				}
+			} else { // We are not on the charger so update solar harvest
+				SDC0.harvest.energy += (int32_t) (R.currentin * R.inputvoltage) / 3600; // shift result right 1 zero with '3600'
+				B.today = (uint8_t) ((float) SDC0.harvest.energy / (float) PW_MAX); // This is the harvest quality factor from: 0 to 125
+				if (B.today > MAX_Q) B.today = MAX_Q; // check for merged days
+				if (B.yesterday == 0) B.yesterday = B.today;
+			}
 
 			/* AC Power transfer relay routines */
 			if ((C.currentload) > NULL0) { // make sure the result will be positive then if AC diversion relay is on update power to transfer box
 				SDC0.harvest.usage += (int32_t) ((C.currentload) * R.primarypower[boi]) / 3600; // shift result right 1 zero with '3600'
+				if (DIVERSION == R_ON) {
+					D_tmp = (int32_t) ((C.currentload) * R.primarypower[boi]) / 3600; // shift result right 1 zero with '3600'
+					SDC0.harvest.diversion += D_tmp;
+					B.diversion += D_tmp; // todays diversion power
+				}
 
 			}
 
@@ -921,7 +1029,27 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 		} // end of worksec functions
 
 		if (!PIE1bits.TX1IE) { // don't update during host xmit
+			// PWM Duty Cycle logic control
+			MBMC.diversion.power_control = 0; // reset control bits
+			if (((R.currentin * R.inputvoltage) / 10000) > PWM_POWER) MBMC.diversion.power_control |= PWM_FLAG_OK;
 
+			if ((MBMC.diversion.power_control & PWM_FLAG_OK) && ((R.inputvoltage > PWMHIGH) || (CCMODE == ABSORP_M) || ((CCMODE == FLOAT_W) || (CCMODE == FLOAT_M))) && ((CHARGERL == R_OFF) || PWMTEST)) {
+				MBMC.diversion.power = (uint8_t) CCEFF_DIFF;
+			} else {
+				if (MBMC.diversion.power > 1) {
+					if (!pwm_delay++) MBMC.diversion.power = MBMC.diversion.power / 2; // no power, slowly
+				} else {
+					MBMC.diversion.power = 0; // no power
+				}
+				if ((CHARGERL == R_ON) && !PWMTEST) { // set all PWM to zero if charger is on and not testing
+					MBMC.diversion.power = 0; // no power
+					CCEFF_DIFF = 0;
+				}
+			}
+			if (SIM_FLAG & 0b00001000) { // PWM SIM testing
+				SIM_FLAG &= 0b11110011; // reset PWM SIM flags
+			}
+			if (SIM_FLAG & 0b00000100) MBMC.diversion.power = 33;
 		}
 		/* C40 led status counting routines */
 		if (CCLED == S_ON) ccled_flag.count++; // bink speed routine
@@ -1056,7 +1184,12 @@ void idle_loop(void) // idle processe to allow for better isr triggers and backg
 		}
 	}
 	if (DIPSW8 || DIVERSION_set) {
-
+		if (DIVERSION == R_OFF) {
+			alarm_buffer[almctr].bn = CCS.boc;
+			alarm_buffer[almctr++].alm_num = 10;
+			alarm_codes.alm_flag = TRUE;
+		}
+		DIVERSION = R_ON; // DIVERSION ON override switch
 	}
 	pv_pwm_set(0); // control PWM signal output
 	if (P.SAVE_DAILY) save_daily();

@@ -1,7 +1,7 @@
 #ifndef MBMC_DEFS_H_INCLUDED
 #define MBMC_DEFS_H_INCLUDED
 /* Program operation parameters for MBMC controller */
-#define MBMC_VERSION 	"    MBMC  50.1 FB  "                  // version text header
+#define MBMC_VERSION 	"    MBMC  50.2 FB  "                  // version text header
 #define	MAGIC		0x0410  				// data version checkmark
 #define	START1		"Power Up, Init started, Fred Brooks"	// first LCD message
 #define BOOT_ALM1       "Boot ALM, Press ALM ACK Button     "   // boot code message
@@ -116,7 +116,7 @@
 #define	CCOUTOPENSW	LATJbits.LATJ2
 #define	PVLOAD		LATJbits.LATJ3
 #define	COOLFAN		LATJbits.LATJ3
-#define MPULED		LATAbits.LATA0
+#define MPULED		LATHbits.LATH0
 #define	DIPSW1		PORTDbits.RD0
 #define	DIPSW2		PORTDbits.RD1
 #define	DIPSW3		PORTDbits.RD2

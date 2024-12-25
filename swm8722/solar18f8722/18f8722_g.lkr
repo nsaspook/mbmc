@@ -12,13 +12,13 @@ LIBPATH .
   #IFDEF _EXTENDEDMODE
     FILES c018iz_e.o
     FILES clib_e.lib
-    FILES p18f6722_e.lib
+    FILES p18f8722_e.lib
 
   #ELSE
 // YOU MUST USE THE ZEROING VERSION
     FILES c018iz.o
     FILES clib.lib
-    FILES p18F6722.lib
+    FILES p18F8722.lib
   #FI
 
 #FI
