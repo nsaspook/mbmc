@@ -163,7 +163,7 @@ void start_pic(uint16_t hw_config)
 		CCOUTOPENSW = R_OFF; // charge voltage isolation relay/on
 		SOLAROFF = R_OFF; // connect PV power
 		BATLOAD = R_OFF; // battery load test relay/off
-		
+
 		BATLOAD_HI = R_OFF;
 		BCRELAYS = 0xFF; // turn off relay 0-3   battery power
 	}
