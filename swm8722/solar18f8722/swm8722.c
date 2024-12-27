@@ -2824,10 +2824,10 @@ void main(void) // Lets Party
  */
 static void li_force_charger_on(void)
 {
-	if ((B.r_soc[3]) < 90) {
+	if (hist[3].bsoc < 70) {
 		charger_power(ON, YES);
 	}
-	if (B.r_soc[1] < 5) {
+	if (hist[1].bsoc < 40) {
 		charger_power(ON, YES);
 	}
 }
