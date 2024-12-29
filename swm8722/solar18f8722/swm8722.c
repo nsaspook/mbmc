@@ -2768,6 +2768,7 @@ void main(void) // Lets Party
 		wdttime(BATRUNF);
 
 		while (R.inputvoltage < SOLARLOW) { // wait until we have charging power
+			li_force_charger_on();
 			solarup_delay = NULL0;
 			idle_loop();
 			check_alarm(CCS.boi, " main2 "); // send alarm codes to terminal if alm_flag is set
