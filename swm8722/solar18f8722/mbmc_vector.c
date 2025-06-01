@@ -440,10 +440,12 @@ void tick_handler(void) // This is the high priority ISR routine
 					mbmcflag.mbmc_cmd = HOST_CMD_v;
 					break;
 				case HOST_CMD_D: // Diversion on
-					DIVERSION_set = TRUE;
+                    pv_pwm_set(1023); 
+//					DIVERSION_set = TRUE;
 					mbmcflag.mbmc_cmd = HOST_CMD_D;
 					break;
 				case HOST_CMD_d: // Diversion off
+                    pv_pwm_set(1); 
 					DIVERSION_set = FALSE;
 					mbmcflag.mbmc_cmd = HOST_CMD_d;
 					break;
@@ -583,10 +585,12 @@ void tick_handler(void) // This is the high priority ISR routine
 			CCS.alert = FALSE;
 			break;
 		case 'D': // turn diversion on
-			DIVERSION_set = TRUE;
+//			DIVERSION_set = TRUE;
+            pv_pwm_set(1023); 
 			break;
 		case 'd': // turn diversion off
 			DIVERSION_set = FALSE;
+            pv_pwm_set(1); 
 			break;
 		case 'K': // lockup controller in loop force WDT timeout
 			while (TRUE);
@@ -1189,9 +1193,9 @@ void idle_loop(void) // idle processe to allow for better isr triggers and backg
 			alarm_buffer[almctr++].alm_num = 10;
 			alarm_codes.alm_flag = TRUE;
 		}
-		DIVERSION = R_ON; // DIVERSION ON override switch
+//		DIVERSION = R_ON; // DIVERSION ON override switch
+        pv_pwm_set(1023); 
 	}
-	pv_pwm_set(0); // control PWM signal output
 	if (P.SAVE_DAILY) save_daily();
 	ClrWdt();
 	idleflag = FALSE;

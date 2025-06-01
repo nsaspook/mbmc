@@ -78,7 +78,8 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 			alarm_codes.alm_flag = TRUE;
 			check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
 		}
-		DIVERSION = R_ON;
+//		DIVERSION = R_ON;
+        pv_pwm_set(1023); 
 		return DIVERSION;
 	}
 	if (AC_OFF_I && DIVERSION == R_ON) { /* the inverter has tripped while diversion is running */
@@ -115,7 +116,8 @@ uint8_t divert_power(uint8_t sw, uint8_t now, uint8_t status_code)
 							alarm_codes.alm_flag = TRUE;
 							check_alarm(CCS.boi, " divert2 "); // send alarm codes to terminal if alarm_flag is set
 						}
-						DIVERSION = R_ON; // check for inverter power
+//						DIVERSION = R_ON; // check for inverter power
+                        pv_pwm_set(1023); 
 					}
 				}
 			}
@@ -187,6 +189,7 @@ void pv_pwm_shutdown(void)
 	MBMC.diversion.power = NULL0; // no power
 	CCEFF_DIFF = NULL0; // shutdown the PWM system
 	lp_filter(0.0, LP_PWM, (-1)); // zero control power filter
+    pv_pwm_set(1); 
 }
 
 int16_t predict_energy(uint8_t mode) // use data collected to predict energy production/usage
@@ -1151,7 +1154,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				term_time();
 				putrs2USART(chrgcode5);
 				ResetC40(bn, TRUE, CC_RESET_MAX - (--ccreset)); // one less controller reset, count up reset times
-				pv_pwm_shutdown(); // kill power to PV PWM system
+//				pv_pwm_shutdown(); // kill power to PV PWM system
 				if (bn == CCS.boi) { // update some factors so we can divert power earlier if possible
 					hist[bn].udod = 0; // depth of discharge to 100%
 					hist[bn].bsoc = 100; // state of charge
@@ -1240,6 +1243,7 @@ uint8_t ChargeBatt(uint8_t bn, uint8_t FCHECK, uint8_t TIMED)
 				putrs2USART(chrgcode3);
 				divert_power(OFF, YES, 0);
 				cell[bn].critical = FALSE;
+                pv_pwm_set(1023); 
 				break;
 			}
 			if ((R.inputvoltage < SOLARLOW) && (CCMODE != IDLE_M)) { // input is too low to charge (normal)
