@@ -441,11 +441,13 @@ void tick_handler(void) // This is the high priority ISR routine
 					break;
 				case HOST_CMD_D: // Diversion on
                     pv_pwm_set(1023); 
+                    LATGbits.LATG3=1;
 //					DIVERSION_set = TRUE;
 					mbmcflag.mbmc_cmd = HOST_CMD_D;
 					break;
 				case HOST_CMD_d: // Diversion off
-                    pv_pwm_set(1); 
+                    pv_pwm_set(0); 
+                    LATGbits.LATG3=0;
 					DIVERSION_set = FALSE;
 					mbmcflag.mbmc_cmd = HOST_CMD_d;
 					break;
@@ -587,10 +589,12 @@ void tick_handler(void) // This is the high priority ISR routine
 		case 'D': // turn diversion on
 //			DIVERSION_set = TRUE;
             pv_pwm_set(1023); 
+            LATGbits.LATG3=1;
 			break;
 		case 'd': // turn diversion off
 			DIVERSION_set = FALSE;
-            pv_pwm_set(1); 
+            pv_pwm_set(0); 
+            LATGbits.LATG3=0;
 			break;
 		case 'K': // lockup controller in loop force WDT timeout
 			while (TRUE);
@@ -1044,9 +1048,13 @@ void work_handler(void) // This is the low priority ISR routine, the high ISR ro
 					if (!pwm_delay++) MBMC.diversion.power = MBMC.diversion.power / 2; // no power, slowly
 				} else {
 					MBMC.diversion.power = 0; // no power
+                    pv_pwm_set(0); 
+                    LATGbits.LATG3=0;
 				}
 				if ((CHARGERL == R_ON) && !PWMTEST) { // set all PWM to zero if charger is on and not testing
 					MBMC.diversion.power = 0; // no power
+                    pv_pwm_set(0); 
+                    LATGbits.LATG3=0;
 					CCEFF_DIFF = 0;
 				}
 			}
@@ -1195,6 +1203,7 @@ void idle_loop(void) // idle processe to allow for better isr triggers and backg
 		}
 //		DIVERSION = R_ON; // DIVERSION ON override switch
         pv_pwm_set(1023); 
+        LATGbits.LATG3=1;
 	}
 	if (P.SAVE_DAILY) save_daily();
 	ClrWdt();
